@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-primary":"#ecbda1","primary-container":"#8a644d","on-primary-fixed-variant":"#603f2b","surface-container-low":"#f5f3f0","surface-container":"#efeeeb","tertiary-fixed-dim":"#e5bfa9","on-tertiary-fixed":"#2b1709","secondary-fixed-dim":"#ebbd9f","primary-fixed":"#ffdbc8","on-secondary-fixed":"#2d1603","on-tertiary":"#ffffff","surface-dim":"#dbdad7","outline-variant":"#d4c3bb","surface":"#fbf9f6","on-primary-container":"#ffebe1","surface-container-high":"#eae8e5","on-secondary":"#ffffff","tertiary-fixed":"#ffdbc8","on-surface":"#1b1c1a","on-error-container":"#93000a","primary-fixed-dim":"#ecbda1","secondary-fixed":"#ffdcc5","background":"#fbf9f6","inverse-on-surface":"#f2f0ed","on-tertiary-container":"#ffece2","surface-container-lowest":"#ffffff","on-primary-fixed":"#2e1505","tertiary":"#6a4e3d","surface-bright":"#fbf9f6","outline":"#82746d","error":"#ba1a1a","on-tertiary-fixed-variant":"#5c4131","surface-container-highest":"#e4e2df","secondary":"#79573e","on-surface-variant":"#50443e","on-background":"#1b1c1a","secondary-container":"#ffd1b2","on-primary":"#ffffff","surface-tint":"#7b5640","error-container":"#ffdad6","tertiary-container":"#856654","primary":"#6f4c37","surface-variant":"#e4e2df","on-error":"#ffffff","on-secondary-fixed-variant":"#5f4029","on-secondary-container":"#7a583f","inverse-surface":"#30312f"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-md":"1rem","space-lg":"1.5rem","gutter-sm":"1rem","margin-mobile":"1rem","gutter":"1.5rem","space-sm":"0.5rem","margin-desktop":"3rem","margin":"2rem","space-xs":"0.25rem","gutter-lg":"2rem","space-xl":"2.5rem"},fontFamily:{"label-lg":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"title-md":["Inter"],"display-lg-mobile":["Space Grotesk"],"display-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"label-md":["Inter"],"headline-lg":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-md":["Inter"],"title-lg":["Space Grotesk"]},fontSize:{"label-lg":["13px",{lineHeight:"18px",letterSpacing:"0.03em",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"26px",letterSpacing:"0em",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}],"title-md":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-lg-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"500"}],"display-lg":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"500"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"600"}],"label-md":["11px",{lineHeight:"16px",letterSpacing:"0.06em",fontWeight:"600"}],"headline-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"500"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"500"}],"body-md":["14px",{lineHeight:"22px",letterSpacing:"0em",fontWeight:"400"}],"title-lg":["18px",{lineHeight:"26px",letterSpacing:"0em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(138,100,77,0.06)]"><div class="h-28 w-full max-w-[1440px] mx-auto px-margin-desktop flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-lg pt-space-xs"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[22px]">spa</span><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Aura Clinique</span><span class="font-label-md text-label-md text-primary-container bg-surface-container px-space-sm py-0.5 rounded-full uppercase tracking-wider">Medical Suites</span></div><div class="hidden xl:flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-full text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-primary">location_on</span><span class="font-label-lg text-label-lg text-on-surface font-medium">Riyadh Al-Olaya Flagship</span><span class="text-outline-variant font-light">•</span><span class="font-label-md text-label-md text-on-surface-variant">Suite 101 (Aesthetic Laser Wing)</span></div></div><div class="flex-1 max-w-md hidden md:block"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-md text-outline text-[18px]">search</span><input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm pl-10 pr-space-md py-space-sm rounded-full focus:outline-none shadow-[0_2px_8px_-2px_rgba(28,25,23,0.03)]" placeholder="Lookup Patient by Name, National ID, or Medical Record #..." type="search"/></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex flex-col text-right"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Dr. Vivienne Vance, MD</span><span class="font-label-md text-label-md text-primary">Laser Dermatologist • Lead Physician</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between gap-space-md pb-space-xs"><nav class="flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-full"><a class="font-label-lg text-label-lg px-space-md py-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="patient-chart-and-ehr" href="#">Patient Chart &amp; EHR</a><a class="font-label-lg text-label-lg px-space-md py-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="live-clinical-queue" href="#">Live Clinical Queue</a><a class="font-label-lg text-label-lg px-space-md py-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="treatment-console" href="#">Treatment Console</a><a class="font-label-lg text-label-lg px-space-md py-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="laser-physics-calibrations" href="#">Laser Physics Calibrations</a><a class="font-label-lg text-label-lg px-space-md py-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="in-kingdom-medical-vault" href="#">In-Kingdom Medical Vault</a></nav><div class="hidden sm:flex items-center gap-space-sm bg-surface-container px-space-md py-1 rounded-full text-on-surface-variant"><span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-md text-label-md text-on-surface-variant">EMR Live Sync</span><span class="text-outline-variant font-light">•</span><span class="font-label-md text-label-md text-primary">Sovereign Cryptography Active</span></div></div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Toast / Notification Layer (Micro-interaction) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-space-sm bg-[#084349] text-white px-space-md py-space-sm rounded-lg shadow-xl" id="toastNotification">
+<span class="material-symbols-outlined text-[18px] text-[#A7F3D0]">check_circle</span>
+<span class="font-label-lg text-label-lg tracking-wide" id="toastMessage">Action executed successfully</span>
+</div>
+<div class="w-full max-w-[1440px] mx-auto px-margin-desktop py-space-md flex flex-col gap-space-md">
+<!-- 1. PATIENT CLINICAL CONTEXT HEADER & TELEMETRY BAR -->
+<section class="w-full bg-[#FFFFFF] rounded-xl shadow-sm p-space-md flex flex-col gap-space-md relative overflow-hidden">
+<!-- Subtle Teal Atmospheric Accent Line -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0D5C63] via-[#137A84] to-[#E0F2F1]"></div>
+<!-- Top Row: Patient Persona & Urgent Actions -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pt-space-xs">
+<!-- Left: Patient Identification Cluster -->
+<div class="flex items-start sm:items-center gap-space-md min-w-0">
+<!-- Profile Token / Status Avatar -->
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-xl bg-[#E0F2F1] text-[#084349] flex items-center justify-center font-display-lg text-title-lg font-bold shadow-inner">
+              EV
+            </div>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-[#10B981] ring-2 ring-white" title="Patient Ready in Suite"></span>
+</div>
+<!-- Name & Core Identifiers -->
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-x-space-sm gap-y-1">
+<h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">Eleanor Vance</h1>
+<span class="font-label-md text-label-md px-2 py-0.5 rounded-full bg-[#F5F0E8] text-[#8A644D] font-semibold tracking-wider uppercase">VIP Elite Diamond</span>
+<span class="font-label-md text-label-md px-2 py-0.5 rounded-full bg-[#E0F2F1] text-[#084349] font-medium">Fem, 34 y/o</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="font-mono tracking-tight text-on-surface font-semibold">MRN: #AC-8842</span>
+<span>•</span>
+<span>Nat ID: <strong class="font-mono text-on-surface">1084920491</strong></span>
+<span>•</span>
+<span class="flex items-center gap-1 text-[#084349] font-medium">
+<span class="material-symbols-outlined text-[16px]">meeting_room</span> Suite 4 — L’Atelier Suite
+              </span>
+<span>•</span>
+<span>Attending: <strong class="text-on-surface">Dr. Vivienne Vance, MD</strong></span>
+</div>
+</div>
+</div>
+<!-- Right: Fast Keyboard Shortcuts Bar -->
+<div class="flex flex-wrap items-center gap-space-xs flex-shrink-0 self-start lg:self-auto">
+<button class="group flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-surface-container-low hover:bg-[#E0F2F1] text-on-surface transition-colors shadow-sm" onclick="triggerToast('Clinical Note Pad Initiated [F1]')">
+<kbd class="px-1.5 py-0.5 text-[10px] font-mono rounded bg-white text-on-surface-variant shadow-sm group-hover:text-[#084349]">F1</kbd>
+<span class="font-label-lg text-label-lg group-hover:text-[#084349]">Note</span>
+</button>
+<button class="group flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-surface-container-low hover:bg-[#E0F2F1] text-on-surface transition-colors shadow-sm" onclick="triggerToast('Baseline Scans Synced [F5]')">
+<kbd class="px-1.5 py-0.5 text-[10px] font-mono rounded bg-white text-on-surface-variant shadow-sm group-hover:text-[#084349]">F5</kbd>
+<span class="font-label-lg text-label-lg group-hover:text-[#084349]">Compare Scans</span>
+</button>
+<button class="group flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-surface-container-low hover:bg-[#E0F2F1] text-on-surface transition-colors shadow-sm" onclick="triggerToast('Laser Safety Interlock Engaged [F9]')">
+<kbd class="px-1.5 py-0.5 text-[10px] font-mono rounded bg-white text-on-surface-variant shadow-sm group-hover:text-[#084349]">F9</kbd>
+<span class="font-label-lg text-label-lg group-hover:text-[#084349]">Protocol Lock</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-error-container text-on-error-container hover:opacity-90 transition-opacity shadow-sm" onclick="triggerToast('Cryo Tech Notified for Room 4')">
+<span class="material-symbols-outlined text-[16px]">emergency</span>
+<span class="font-label-lg text-label-lg font-semibold">Call Cryo Tech</span>
+</button>
+</div>
+</div>
+<!-- Bottom Row: Telemetry Badges & Telemetry Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs bg-surface-container-low/60 p-space-sm rounded-lg">
+<div class="flex flex-wrap items-center gap-space-xs text-on-surface-variant">
+<!-- Check-in Time -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white text-on-surface shadow-xs font-label-md text-label-md font-medium">
+<span class="material-symbols-outlined text-[14px] text-[#0D5C63]">schedule</span> Checked-in: 14 mins ago
+          </span>
+<!-- Vitals Status -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white text-on-surface shadow-xs font-label-md text-label-md font-medium">
+<span class="material-symbols-outlined text-[14px] text-[#10B981]">monitor_heart</span> Vitals: BP 114/72 • HR 68 • SpO2 99%
+          </span>
+<!-- Legal Consent -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white text-on-surface shadow-xs font-label-md text-label-md font-medium">
+<span class="material-symbols-outlined text-[14px] text-[#0D5C63]">verified</span> Consent Signed: Dec 2024 (Active)
+          </span>
+<!-- Sovereign MOH Code -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#E0F2F1] text-[#084349] font-mono text-[11px] font-semibold">
+            MOH File: #KSA-DERM-8842
+          </span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-[#10B981] animate-ping"></span>
+<span class="font-mono uppercase tracking-wider text-[#084349] font-semibold">Dermal Optic Bus: Online</span>
+</div>
+</div>
+</section>
+<!-- 2. PROMINENT CLINICAL CONTRAINDICATION & SAFETY ALERT BANNER -->
+<section class="w-full bg-[#FEF2F2] rounded-xl shadow-sm p-space-md relative overflow-hidden">
+<!-- Visual Warning Border Accent -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#DC2626]"></div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md pl-space-xs">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-[#FEE2E2] text-[#DC2626] flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-title-md font-bold text-[#991B1B] uppercase tracking-wide">
+                Critical Safety Alert &amp; Clinical Interlocks
+              </span>
+<span class="px-2 py-0.5 rounded-full bg-[#DC2626] text-white font-label-md text-label-md font-semibold tracking-wider uppercase">
+                Washout Variance
+              </span>
+</div>
+<!-- Bulleted Warnings Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-space-lg gap-y-1.5 text-[#7F1D1D] font-body-sm text-body-sm mt-0.5">
+<div class="flex items-start gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#DC2626] flex-shrink-0 mt-0.5">gpp_maybe</span>
+<span><strong>CONTRAINDICATION:</strong> Topical Retinoid (Tretinoin 0.05%) stopped 3 days ago. <em>Standard protocol requires 7-day washout for 755nm Focus Array.</em></span>
+</div>
+<div class="flex items-start gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#DC2626] flex-shrink-0 mt-0.5">block</span>
+<span><strong>KNOWN ALLERGY:</strong> Topical Lidocaine (Erythema / Contact dermatitis reaction documented 2023). <em>Use Ice / Forced Air Cryo 6.</em></span>
+</div>
+<div class="flex items-start gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#15803D] flex-shrink-0 mt-0.5">check_circle</span>
+<span><strong>PREGNANCY / LACTATION:</strong> Confirmed Negative (Serum β-hCG negative, 12 Oct 2024).</span>
+</div>
+<div class="flex items-start gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#15803D] flex-shrink-0 mt-0.5">check_circle</span>
+<span><strong>PHOTOSENSITIZING DRUGS:</strong> Clear (Doxycycline protocol concluded 6 mos prior).</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Safety Action Interactive Override Pill -->
+<div class="flex-shrink-0 self-end lg:self-center">
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-[#991B1B] hover:bg-[#7F1D1D] text-white font-label-lg text-label-lg font-semibold shadow-md hover:shadow-lg transition-all" onclick="document.getElementById('overrideModal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[18px]">key</span>
+<span>Acknowledge &amp; Override Protocol [PIN Required]</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 3. SPLIT 2-COLUMN CLINICAL WORKSPACE -->
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- ========================================== -->
+<!-- LEFT COLUMN: History, Phototype & Intake  -->
+<!-- ~48% width (5 of 12 col or 6 col)          -->
+<!-- ========================================== -->
+<div class="lg:col-span-6 flex flex-col gap-space-lg">
+<!-- Dermatological Phototype & Optical Baseline Card -->
+<div class="w-full bg-[#FFFFFF] rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[#0D5C63] text-[22px]">dermatology</span>
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold">Dermatological Phototype &amp; Optical Physics</h2>
+</div>
+<span class="font-label-md text-label-md px-2 py-0.5 rounded-full bg-[#E0F2F1] text-[#084349] font-mono font-semibold">
+              CALIBRATED TODAY
+            </span>
+</div>
+<!-- Primary Fitzpatrick Banner -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div>
+<span class="font-label-md text-label-md uppercase text-on-surface-variant tracking-wider font-semibold">Classification</span>
+<div class="font-headline-sm text-title-lg text-[#084349] font-bold mt-0.5">
+                Fitzpatrick Skin Type III
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Medium tone • Burns moderately, tans gradually</p>
+</div>
+<div class="flex items-center gap-space-md bg-white px-space-md py-space-sm rounded-lg shadow-xs">
+<div class="text-center">
+<span class="font-label-md text-label-md text-on-surface-variant block">Melanin Index</span>
+<span class="font-mono text-title-md font-bold text-[#0D5C63]">32.4</span>
+<span class="font-label-md text-[10px] text-on-surface-variant block">Mexameter®</span>
+</div>
+<div class="w-px h-8 bg-surface-container"></div>
+<div class="text-center">
+<span class="font-label-md text-label-md text-on-surface-variant block">Erythema Index</span>
+<span class="font-mono text-title-md font-bold text-[#B45309]">18.2</span>
+<span class="font-label-md text-[10px] text-on-surface-variant block">Baseline Low</span>
+</div>
+</div>
+</div>
+<!-- Optical Baseline Metric Breakdown -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Glogau Scale Metric -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase font-semibold">Glogau Photodamage</span>
+<div class="font-title-md text-title-md font-semibold text-on-surface mt-1">Type II (Early / Moderate)</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Wrinkles in motion, parallel smile lines, mild senile lentigines in malar regions.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<span>Dermal Elasticity: <strong class="text-on-surface font-mono">82%</strong></span>
+<span class="text-[#084349] font-medium">Mild Chrono-aging</span>
+</div>
+</div>
+<!-- PIH Safety Envelope -->
+<div class="p-space-md rounded-xl bg-[#FFFBEB] flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1.5 text-[#B45309]">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="font-label-md text-label-md uppercase font-bold tracking-wider">PIH Vulnerability Margin</span>
+</div>
+<div class="font-title-md text-title-md font-semibold text-[#92400E] mt-1">High PIH Tendency</div>
+<p class="font-body-sm text-body-sm text-[#78350F] mt-1">Post-inflammatory hyperpigmentation risk elevates if Alexandrite pulse exceeds <strong>2.8 J/cm²</strong> on unprimed skin.</p>
+</div>
+<div class="mt-space-md pt-space-xs font-mono text-[11px] text-[#B45309] font-semibold bg-white/70 px-2 py-1 rounded">
+                Thermal Relaxation Time (TRT): 50–100ns target
+              </div>
+</div>
+</div>
+<!-- Melanogenesis Spectrogram Miniature Visualizer -->
+<div class="bg-surface-container-low/70 rounded-xl p-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Epidermal Target Absorption Vector</span>
+<span class="font-mono text-label-md text-label-md text-on-surface-variant">755nm Peak vs 1064nm Depth</span>
+</div>
+<!-- Simple clean inline SVG spectra curve (Melanin vs Oxyhemoglobin) -->
+<div class="w-full h-16 relative">
+<svg class="w-full h-full text-[#0D5C63]" fill="none" preserveaspectratio="none" viewbox="0 0 500 70">
+<!-- Grid guide lines -->
+<line stroke="#E2E8F0" stroke-dasharray="3 3" x1="0" x2="500" y1="20" y2="20"></line>
+<line stroke="#E2E8F0" stroke-dasharray="3 3" x1="0" x2="500" y1="45" y2="45"></line>
+<!-- Melanin Absorption curve -->
+<path d="M 0 10 Q 120 18, 250 35 T 500 58" stroke="currentColor" stroke-width="2.5"></path>
+<!-- Hemoglobin curve -->
+<path d="M 0 55 Q 160 48, 280 20 T 500 62" stroke="#EF4444" stroke-dasharray="4 2" stroke-width="1.5"></path>
+<!-- 755nm Alexandrite Marker -->
+<circle cx="230" cy="32" fill="#0D5C63" r="4.5"></circle>
+<line stroke="#0D5C63" stroke-dasharray="2 2" stroke-width="1" x1="230" x2="230" y1="5" y2="65"></line>
+</svg>
+</div>
+<div class="flex items-center justify-between text-[11px] font-mono text-on-surface-variant px-1">
+<span>532nm KTP</span>
+<span class="font-bold text-[#0D5C63]">755nm Alexandrite (Optimum Selective Photothermolysis)</span>
+<span>1064nm Nd:YAG</span>
+</div>
+</div>
+</div>
+<!-- Versioned Intake & Medical Questionnaire Responses -->
+<div class="w-full bg-[#FFFFFF] rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[#0D5C63] text-[22px]">assignment_turned_in</span>
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold">Clinical Pre-Laser Intake Questionnaire</h2>
+</div>
+<!-- Version Switcher Pills -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="intake-tab-btn px-2.5 py-1 rounded-md text-label-md font-semibold bg-white text-[#084349] shadow-xs" onclick="switchIntakeVersion(this, 'v3')">
+                v3.2 (Today)
+              </button>
+<button class="intake-tab-btn px-2.5 py-1 rounded-md text-label-md font-medium text-on-surface-variant hover:text-on-surface" onclick="switchIntakeVersion(this, 'v2')">
+                v2.0 (Oct '24)
+              </button>
+<button class="intake-tab-btn px-2.5 py-1 rounded-md text-label-md font-medium text-on-surface-variant hover:text-on-surface" onclick="switchIntakeVersion(this, 'v1')">
+                v1.0 (Baseline)
+              </button>
+</div>
+</div>
+<!-- Audit Checklist Body -->
+<div class="flex flex-col divide-y divide-surface-container">
+<!-- Item 1 -->
+<div class="py-space-sm flex items-start justify-between gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Sun Exposure / UV Tanning History</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Solarium, intentional sunbathing, or active sun holiday in past 28 days?</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-[#ECFDF5] text-[#065F46] font-label-md text-label-md font-semibold whitespace-nowrap">
+                Denied / Verified Clear
+              </span>
+</div>
+<!-- Item 2 -->
+<div class="py-space-sm flex items-start justify-between gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Keloid / Hypertrophic Scarring Tendency</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Abnormal wound healing response or collagenous scar formation?</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-[#ECFDF5] text-[#065F46] font-label-md text-label-md font-semibold whitespace-nowrap">
+                Negative
+              </span>
+</div>
+<!-- Item 3 -->
+<div class="py-space-sm flex items-start justify-between gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Herpes Simplex / Perioral Cold Sores</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Past flare-ups triggered by thermal light energy?</span>
+</div>
+<div class="text-right">
+<span class="px-2.5 py-1 rounded-full bg-[#E0F2F1] text-[#084349] font-label-md text-label-md font-semibold whitespace-nowrap inline-block">
+                  Valacyclovir Active
+                </span>
+<span class="block font-mono text-[11px] text-on-surface-variant mt-0.5">500mg taken 24h prior</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="py-space-sm flex items-start justify-between gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Metallic Implants / Pacemaker / Gold Therapy</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Facial metallic threads, surgical pins, or internal electrical devices?</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-[#ECFDF5] text-[#065F46] font-label-md text-label-md font-semibold whitespace-nowrap">
+                Negative
+              </span>
+</div>
+<!-- Item 5 -->
+<div class="py-space-sm flex items-start justify-between gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Prior Laser &amp; Energy-Based Procedures</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Documented tolerance to fractionated &amp; picosecond modalities?</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-medium text-on-surface">PicoSure Pro x3 • Fraxel x1</span>
+<span class="block font-label-md text-[11px] text-[#065F46]">Tolerated with expected erythema</span>
+</div>
+</div>
+</div>
+<!-- Cryptographic Medical Signature Footer -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-[#0D5C63]">verified_user</span>
+<span class="font-mono text-label-md text-label-md font-medium">Digital Hash: 8b4c-9f20-ksa-e71a-2024</span>
+</div>
+<span class="font-label-md text-[11px] text-[#084349] font-medium">
+              Signed via Patient Tablet @ 09:14 AST • MOH KSA Compliant
+            </span>
+</div>
+</div>
+</div>
+<!-- ============================================================== -->
+<!-- RIGHT COLUMN: Timeline, Comparative Scans & Physician Console  -->
+<!-- ~52% width (6 of 12 col or 7 col)                              -->
+<!-- ============================================================== -->
+<div class="lg:col-span-6 flex flex-col gap-space-lg">
+<!-- In-Kingdom Secure Cross-Polarized Dermal Scans -->
+<div class="w-full bg-[#FFFFFF] rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[#0D5C63] text-[22px]">compare</span>
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold">Dermatoscopy &amp; Polarized Optical Scans</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Comparative Epidermal Melanin Cluster &amp; Vascular Flow</p>
+</div>
+<!-- Sovereign Cloud Tag -->
+<span class="inline-flex items-center gap-1 font-label-md text-[11px] font-semibold text-[#084349] bg-[#E0F2F1] px-2.5 py-1 rounded-full self-start sm:self-auto">
+<span class="material-symbols-outlined text-[14px]">cloud_done</span> Sovereign Tier-IV Saudi Cloud
+            </span>
+</div>
+<!-- Dual Side-by-Side Medical Scan Comparison -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Scan 1: Baseline -->
+<div class="group relative rounded-xl overflow-hidden bg-surface-container-high shadow-xs">
+<div class="relative h-48 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="High-resolution clinical dermatology cross-polarized UV scan of a 34 year old female cheek with subtle epidermal solar lentigines, clinical lighting, skin texture analysis view, deep teal and warm white studio medical lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNV9LVgcs4c9hYwkirNmQEWni9nCcNjaGn1aArajSL5AV3S4I_Dxf90WbnUgdgV7vGVcKPrpEnLDIjGxgMq45v-ePRwHoauU66b0ZXU2CHhCYzAaLMt7RiczPpTYSvdwNfrbwh--oQlUmypxhnEi0DxtONuQqwh38rzA1Atwo030yxbVpQbQOHGP6mSTPsY6zihyJy54uqjHNNIXk6mu4ZigzV5A3c4hpN-A8oCYI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
+<!-- Badge Top -->
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-white font-mono text-label-md">
+                  DAY 0 • BASELINE
+                </span>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-amber-500/90 text-white font-mono text-[10px] font-bold">
+                  MELANIN: HIGH
+                </span>
+<!-- Text Bottom -->
+<div class="absolute bottom-2 left-2 right-2 text-white">
+<div class="font-label-lg text-label-lg font-semibold">Pre-Treatment Optical Profile</div>
+<div class="font-mono text-[11px] text-white/80">Cross-Polarized UV • Malar Zone A</div>
+</div>
+</div>
+<div class="p-space-sm bg-white flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Cluster Density: <strong class="text-on-surface font-mono">68.2/cm²</strong></span>
+<span class="text-error font-medium">Hyperactive melanocytes</span>
+</div>
+</div>
+<!-- Scan 2: Post-Session 3 -->
+<div class="group relative rounded-xl overflow-hidden bg-surface-container-high shadow-xs">
+<div class="relative h-48 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="High-resolution clinical dermatoscopy post-laser treatment follow-up scan showing significant pigment clearance and refined dermal texture, clean medical cross-polarized lighting with calm deep teal color highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeoquJsvjb82a_rPNI7FEdyaeUVj9cmS2X6gI1ZCWXf20PM8-bIMpZ_c_-Z9vCjgoPd2z4SZlyIUfAnLJeH8gfkhtmFDm1WAfjFr6SfA_zhPx0YngF1lrWzNhlH1oK9430TwCxcpzqFhGPJOXdOoAj4rdrd4IQbudkUHHbIrUExsT9Sm34HgOGmRnUocKG0b0yGqNg7twINUwRe0wexRqrg4gvVLVOGktPck_uqmc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
+<!-- Badge Top -->
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-[#084349]/90 backdrop-blur-md text-white font-mono text-label-md">
+                  DAY 60 • POST-SESS 3
+                </span>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-[#10B981] text-white font-mono text-[10px] font-bold">
+                  -42% MELANIN
+                </span>
+<!-- Text Bottom -->
+<div class="absolute bottom-2 left-2 right-2 text-white">
+<div class="font-label-lg text-label-lg font-semibold">Focus Array Photomechanical Clearance</div>
+<div class="font-mono text-[11px] text-white/80">Cross-Polarized UV • Target Cleared</div>
+</div>
+</div>
+<div class="p-space-sm bg-white flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Cluster Density: <strong class="text-[#0D5C63] font-mono">39.5/cm²</strong></span>
+<span class="text-[#10B981] font-semibold">Optimal Resolution</span>
+</div>
+</div>
+</div>
+<!-- Micro Analytics Bar for Scan Verification -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-lg text-on-surface-variant font-label-md text-label-md">
+<span>Dermal Optical Tomography: <strong>Visia-CR Gen 7</strong></span>
+<span class="font-mono text-[#084349] font-medium">AES-256 GCM Cryptographic Vault • CCHI Accredited</span>
+</div>
+</div>
+<!-- Clinical Timeline of Past Laser Procedures -->
+<div class="w-full bg-[#FFFFFF] rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[#0D5C63] text-[22px]">history_edu</span>
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold">Laser Procedure Progression Logs</h2>
+</div>
+<button class="font-label-md text-label-md text-[#0D5C63] hover:underline font-semibold flex items-center gap-1" onclick="triggerToast('Full Procedure Ledger Exported')">
+<span class="material-symbols-outlined text-[16px]">download</span> Export Ledger
+            </button>
+</div>
+<!-- Timeline Stack -->
+<div class="flex flex-col gap-space-md relative pl-6 before:content-[''] before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-[#D1E5E8]">
+<!-- Session 3: Recent -->
+<div class="relative flex flex-col gap-1.5 bg-surface-container-low p-space-md rounded-xl hover:shadow-xs transition-shadow">
+<span class="absolute -left-[27px] top-4 w-3.5 h-3.5 rounded-full bg-[#0D5C63] ring-4 ring-white"></span>
+<div class="flex flex-wrap items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Session 3 — Cellular Glow &amp; Micro-Toning</span>
+<span class="px-2 py-0.5 rounded bg-[#E0F2F1] text-[#084349] font-mono text-[11px] font-semibold">Completed</span>
+</div>
+<span class="font-mono text-label-md text-on-surface-variant">24 Oct 2024</span>
+</div>
+<!-- Laser Physics Badges Strip -->
+<div class="flex flex-wrap gap-1.5 my-1">
+<span class="px-2 py-0.5 rounded bg-white font-mono text-[11px] text-on-surface shadow-xs">
+                  Modality: <strong>PicoSure® Pro (755nm Alexandrite)</strong>
+</span>
+<span class="px-2 py-0.5 rounded bg-white font-mono text-[11px] text-on-surface shadow-xs">
+                  Fluence: <strong class="text-[#0D5C63]">2.4 J/cm²</strong>
+</span>
+<span class="px-2 py-0.5 rounded bg-white font-mono text-[11px] text-on-surface shadow-xs">
+                  Optic: <strong>8mm Flat Handpiece</strong>
+</span>
+<span class="px-2 py-0.5 rounded bg-white font-mono text-[11px] text-on-surface shadow-xs">
+                  Pulse Count: <strong>1,620 pulses</strong>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Mild transient erythema (Grade 1), fully resolved in 4 hours under Zimmer Cryo 6 forced cooling. Post-care regimen: SkinCeuticals Phyto Corrective Gel + Mineral UV Defense SPF50.
+              </p>
+<div class="text-right font-label-md text-[11px] text-on-surface-variant">
+                Physician Operator: <span class="text-on-surface font-semibold">Dr. Vivienne Vance, MD</span>
+</div>
+</div>
+<!-- Session 2: Mid-Cycle -->
+<div class="relative flex flex-col gap-1.5 bg-surface-container-low/70 p-space-md rounded-xl">
+<span class="absolute -left-[27px] top-4 w-3.5 h-3.5 rounded-full bg-[#137A84] ring-4 ring-white"></span>
+<div class="flex flex-wrap items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Session 2 — Pigment Fragmentation Protocol</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-[11px] font-semibold">Archived</span>
+</div>
+<span class="font-mono text-label-md text-on-surface-variant">18 Sep 2024</span>
+</div>
+<div class="flex flex-wrap gap-1.5 my-1">
+<span class="px-2 py-0.5 rounded bg-white font-mono text-[11px] text-on-surface shadow-xs">PicoSure® 755nm Focus Array</span>
+<span class="px-2 py-0.5 rounded bg-white font-mono text-[11px] text-[#0D5C63] shadow-xs">2.2 J/cm²</span>
+<span class="px-2 py-0.5 rounded bg-white font-mono text-[11px] text-on-surface shadow-xs">6mm Array • 1,450 pulses</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Targeted dyschromia and solar macules along bilateral zygomatic arches. Dermal frosting observed immediately with photomechanical snapping sound.
+              </p>
+</div>
+<!-- Session 1: Baseline Spot Assessment -->
+<div class="relative flex flex-col gap-1.5 bg-surface-container-low/50 p-space-md rounded-xl">
+<span class="absolute -left-[27px] top-4 w-3.5 h-3.5 rounded-full bg-outline-variant ring-4 ring-white"></span>
+<div class="flex flex-wrap items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Session 1 — Fitzpatrick Test Spot Calibration</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-[11px] font-semibold">Test Spot OK</span>
+</div>
+<span class="font-mono text-label-md text-on-surface-variant">10 Aug 2024</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Test spots evaluated at retroauricular baseline: 755nm Focus (2.0 J/cm²) &amp; 1064nm Nd:YAG (1.8 J/cm²). Zero adverse paradoxical pigmentation at 72-hour nurse check.
+              </p>
+</div>
+</div>
+</div>
+<!-- Primary Doctor Action Center & Console Launch -->
+<div class="w-full bg-[#FFFFFF] rounded-xl shadow-md p-space-lg flex flex-col gap-space-md border-t-2 border-[#0D5C63]">
+<div>
+<span class="font-label-md text-label-md font-bold tracking-wider text-[#0D5C63] uppercase">Immediate Clinical Directives</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-0.5">Session 4 Execution &amp; Treatment Control</h2>
+</div>
+<!-- Tactile Primary CTA Button -->
+<button class="group relative w-full flex items-center justify-between p-space-md rounded-xl bg-gradient-to-r from-[#0D5C63] via-[#084349] to-[#04282C] text-white shadow-lg hover:shadow-xl hover:brightness-105 active:scale-[0.99] transition-all overflow-hidden" onclick="triggerToast('Routing to Laser Console with Safety Overrides Engaged...')">
+<!-- Glow background blob -->
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-[#137A84]/40 rounded-full blur-2xl group-hover:scale-125 transition-transform"></div>
+<div class="flex items-center gap-space-md z-10">
+<div class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-[28px] text-[#A7F3D0]">mobile_ticket</span>
+</div>
+<div class="text-left">
+<div class="font-headline-sm text-title-lg font-bold tracking-tight">
+                  Start Clinical Assessment &amp; Open Laser Console
+                </div>
+<div class="font-label-md text-label-md text-white/80">
+                  Pre-configured to: <strong class="text-white">PicoSure Pro 755nm • Focus Optic</strong>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 z-10">
+<kbd class="hidden sm:inline-block px-2.5 py-1 text-xs font-mono font-bold rounded bg-white/20 text-white backdrop-blur-sm">
+                ↵ ENTER
+              </kbd>
+<span class="material-symbols-outlined text-[24px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</button>
+<!-- Secondary Tactical Medical Action Trio -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<button class="flex flex-col items-center justify-center p-space-sm rounded-lg bg-surface-container-low hover:bg-[#E0F2F1] text-on-surface hover:text-[#084349] transition-colors text-center shadow-xs" onclick="triggerToast('Patch Test Protocol Ordered for Suite 4')">
+<span class="material-symbols-outlined text-[20px] text-[#0D5C63] mb-1">colorize</span>
+<span class="font-label-lg text-label-lg font-semibold">Order Patch Test</span>
+<span class="font-label-md text-[10px] text-on-surface-variant">Calibrate new test spots</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-sm rounded-lg bg-surface-container-low hover:bg-[#E0F2F1] text-on-surface hover:text-[#084349] transition-colors text-center shadow-xs" onclick="triggerToast('Post-Laser Prescription Dispatched to Aura Pharmacy')">
+<span class="material-symbols-outlined text-[20px] text-[#0D5C63] mb-1">prescriptions</span>
+<span class="font-label-lg text-label-lg font-semibold">Issue Post-Laser Rx</span>
+<span class="font-label-md text-[10px] text-on-surface-variant">Soothing balms &amp; SPF</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-sm rounded-lg bg-surface-container-low hover:bg-error-container text-on-surface hover:text-on-error-container transition-colors text-center shadow-xs" onclick="triggerToast('Hold Session Placed • 4-Day Reschedule Window Opened')">
+<span class="material-symbols-outlined text-[20px] text-error mb-1">event_busy</span>
+<span class="font-label-lg text-label-lg font-semibold">Hold Session</span>
+<span class="font-label-md text-[10px] text-on-surface-variant">Enforce 4-day washout</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CLINICAL OVERRIDE MODAL (Interlock Mechanism) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4" id="overrideModal">
+<div class="w-full max-w-lg bg-[#FFFFFF] rounded-2xl shadow-2xl p-space-lg flex flex-col gap-space-md animate-in fade-in zoom-in-95 duration-200">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-[#FEE2E2] text-[#DC2626] flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">security_update_warning</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg font-bold text-on-surface">Physician Protocol Override</h3>
+<span class="font-label-md text-label-md text-on-surface-variant">MOH KSA Risk Exception Sign-off</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('overrideModal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg text-body-sm text-on-surface-variant">
+<strong>Active Conflict:</strong> Patient stopped Tretinoin 0.05% 3 days ago. Bypassing the 7-day protocol requires Attending Physician confirmation of reduced laser fluence (&lt; 2.2 J/cm²).
+      </div>
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-lg text-label-lg text-on-surface font-semibold">Clinical Justification &amp; Risk Mitigation</label>
+<select class="w-full bg-surface-container-low p-2.5 rounded-lg text-body-sm text-on-surface focus:outline-none">
+<option>Conservative 755nm Flat Optic selected without Micro-Lens Focus Array</option>
+<option>Fluence capped at 1.8 J/cm² with continuous Zimmer Cryo 6 Level 5 cooling</option>
+<option>Test spot cleared without anomalous photothermal erythema</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-lg text-label-lg text-on-surface font-semibold">Consultant Laser Dermatologist PIN</label>
+<input class="w-full bg-surface-container-low p-2.5 rounded-lg font-mono text-center tracking-widest text-title-lg text-on-surface focus:outline-none" id="overridePin" maxlength="6" placeholder="Enter 4-6 digit Doctor PIN..." type="password"/>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 rounded-lg font-label-lg text-label-lg text-on-surface hover:bg-surface-container transition-colors" onclick="document.getElementById('overrideModal').classList.add('hidden')">
+          Cancel
+        </button>
+<button class="px-space-md py-2 rounded-lg bg-[#991B1B] hover:bg-[#7F1D1D] text-white font-label-lg text-label-lg font-bold shadow-sm transition-colors" onclick="executeOverride()">
+          Authorize Override &amp; Unlock Laser
+        </button>
+</div>
+</div>
+</div>
+<!-- SCRIPT FOR CLINICAL INTERACTIONS -->
+<script>
+    function triggerToast(message) {
+      const toast = document.getElementById('toastNotification');
+      const toastMsg = document.getElementById('toastMessage');
+      if (!toast || !toastMsg) return;
+      toastMsg.textContent = message;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3500);
+    }
+
+    function switchIntakeVersion(element, versionKey) {
+      document.querySelectorAll('.intake-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-white', 'text-[#084349]', 'shadow-xs', 'font-semibold');
+        btn.classList.add('text-on-surface-variant', 'font-medium');
+      });
+      element.classList.add('bg-white', 'text-[#084349]', 'shadow-xs', 'font-semibold');
+      element.classList.remove('text-on-surface-variant', 'font-medium');
+      triggerToast('Loaded Historical Medical Intake: ' + element.innerText.trim());
+    }
+
+    function executeOverride() {
+      const pin = document.getElementById('overridePin').value;
+      if (!pin) {
+        alert('Please enter your Attending Physician PIN to authorize protocol override.');
+        return;
+      }
+      document.getElementById('overrideModal').classList.add('hidden');
+      document.getElementById('overridePin').value = '';
+      triggerToast('PIN Verified. Protocol Safety Interlock Overridden by Dr. Vivienne Vance, MD.');
+    }
+
+    // Keyboard shortcut listeners (F1, F5, F9, Enter)
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'F1') {
+        e.preventDefault();
+        triggerToast('Quick Clinical Note Composer [F1]');
+      } else if (e.key === 'F5') {
+        e.preventDefault();
+        triggerToast('Re-indexing Dermal Comparative Scans [F5]');
+      } else if (e.key === 'F9') {
+        e.preventDefault();
+        triggerToast('Laser Safety Lock Protocol [F9] Activated');
+      }
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="w-full max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">verified_user</span><span class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-semibold">MOH KSA Compliant</span></div><span class="text-outline-variant">•</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">lock</span><span class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-semibold">PDPL Certified</span></div><span class="text-outline-variant">•</span><span class="font-body-sm text-body-sm text-on-surface-variant">In-Kingdom Tier IV Data Residency</span></div><div class="flex items-center gap-space-lg text-on-surface-variant"><span class="font-body-sm text-body-sm">Aura Clinique Aesthetic Medical Suites © 2025</span><span class="font-label-md text-label-md text-outline uppercase tracking-wider">Clinical Portal v4.2-SA</span></div></div></footer></body></html>
