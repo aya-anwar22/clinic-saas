@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary":"#ffffff","surface-container":"#efeeeb","error-container":"#ffdad6","on-error-container":"#93000a","on-tertiary-fixed":"#2b1709","on-surface-variant":"#50443e","primary-fixed-dim":"#ecbda1","on-primary-fixed-variant":"#603f2b","surface-variant":"#e4e2df","primary-fixed":"#ffdbc8","secondary-fixed":"#ffdcc5","on-tertiary":"#ffffff","on-secondary-container":"#7a583f","surface":"#fbf9f6","tertiary-fixed":"#ffdbc8","tertiary-container":"#856654","on-tertiary-fixed-variant":"#5c4131","primary":"#6f4c37","primary-container":"#8a644d","on-secondary":"#ffffff","secondary":"#79573e","inverse-surface":"#30312f","tertiary-fixed-dim":"#e5bfa9","surface-dim":"#dbdad7","outline":"#82746d","secondary-container":"#ffd1b2","tertiary":"#6a4e3d","on-primary-fixed":"#2e1505","surface-container-low":"#f5f3f0","inverse-on-surface":"#f2f0ed","on-tertiary-container":"#ffece2","error":"#ba1a1a","surface-container-lowest":"#ffffff","on-secondary-fixed-variant":"#5f4029","surface-container-highest":"#e4e2df","surface-container-high":"#eae8e5","surface-bright":"#fbf9f6","surface-tint":"#7b5640","on-primary-container":"#ffebe1","inverse-primary":"#ecbda1","outline-variant":"#d4c3bb","on-background":"#1b1c1a","background":"#fbf9f6","on-error":"#ffffff","on-secondary-fixed":"#2d1603","on-surface":"#1b1c1a","secondary-fixed-dim":"#ebbd9f"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-lg":"1.5rem","space-xs":"0.25rem",margin:"2rem","gutter-sm":"1rem","space-xl":"2.5rem","margin-desktop":"3rem","space-md":"1rem","margin-mobile":"1rem","space-sm":"0.5rem","gutter-lg":"2rem",gutter:"1.5rem"},fontFamily:{"body-lg":["Inter"],"label-lg":["Inter"],"title-md":["Inter"],"headline-md":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"display-lg-mobile":["Space Grotesk"],"display-lg":["Space Grotesk"],"title-lg":["Space Grotesk"],"body-md":["Inter"],"body-sm":["Inter"],"label-md":["Inter"],"headline-sm":["Space Grotesk"],"headline-lg":["Space Grotesk"]},fontSize:{"body-lg":["16px",{lineHeight:"26px",letterSpacing:"0em",fontWeight:"400"}],"label-lg":["13px",{lineHeight:"18px",letterSpacing:"0.03em",fontWeight:"500"}],"title-md":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"500"}],"display-lg-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"500"}],"display-lg":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"500"}],"title-lg":["18px",{lineHeight:"26px",letterSpacing:"0em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"22px",letterSpacing:"0em",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}],"label-md":["11px",{lineHeight:"16px",letterSpacing:"0.06em",fontWeight:"600"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"600"}],"headline-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"500"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 pt-4 px-margin-mobile md:px-margin-desktop"><div class="h-20 max-w-[1440px] mx-auto px-gutter bg-surface-container-lowest/80 backdrop-blur-xl rounded-xl shadow-[0_8px_30px_-8px_rgba(138,100,77,0.06),0_2px_8px_-2px_rgba(28,25,23,0.03)] flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm flex-shrink-0"><img alt="Aura Clinique Rose Gold Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XEG46dUsqmsSNIM-uV2jCEKZ9sHKHLebOn9XmuULUH-FyeD1oGFnrejjNvNC0faTNc1kKvgzDPBQ0LNcM2B5m8FhUgJ3XXY33avRpaFRT4YeCqr6pPOoYQvIz3myBxEGwuw6hLOWQfoVmlMAcQJ_slpqnhPWe2bII9HbIgOckhOCR4oQovw6vzTa8AhFDtDBI0a2IcSHt0gA9SoD57tWZzywBZHzOA4c6q48RO0cs"/><span class="font-title-lg text-title-lg text-primary tracking-tight">Aura Clinique</span></div><nav class="hidden md:flex items-center gap-gutter px-space-xs py-space-xs rounded-full bg-surface-container-low/60" data-active-classes="bg-secondary-container text-on-secondary-container font-title-md rounded-full shadow-sm"><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="home" href="home.html">Home</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="bookings" href="booking.html">Bookings</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="wallet" href="package.html">Wallet</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="profile" href="medical.html">Profile</a><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-secondary-container text-on-secondary-container font-title-md rounded-full shadow-sm" data-path="session" href="session.html">History</a></nav><div class="flex items-center gap-space-md flex-shrink-0"><button aria-label="Notifications" class="p-space-sm rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="flex items-center gap-space-sm pl-space-xs"><a href="medical.html"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzXKiDgb7k40pAFdlmFNX00BTGVjUrAIgdPuKlJTb-mgVpHBKWAqG-luR9LVrxNkjmtljkFHtVPstc-_NuJj7R_QRIpNFa0D_-Wm0RnetbcR4ozFqN2LzI6HcOCAigSeYJJznTd2rByqOHwXZZpCKZIUnSH4JA_BPjPlOZ_hZoWE_9AC2SqycQn9VKadv5-F865dUwvUvv8zpmSdfQUW0y2WQlBWr258Dh4olMjhg"/></a></div></div></div></header><main class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-20 pb-space-xl bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Modal Wrapper (Hidden by default, toggled by JS) -->
+<div class="hidden fixed inset-0 z-50 items-center justify-center p-space-md sm:p-space-lg bg-inverse-surface/40 backdrop-blur-md transition-opacity duration-300" id="review-modal">
+<div class="relative w-full max-w-xl bg-surface-container-lowest rounded-xl shadow-2xl p-space-lg md:p-space-xl flex flex-col gap-space-lg max-h-[942px] overflow-y-auto">
+<!-- Modal Header -->
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-secondary-container text-on-secondary-container text-[12px]">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+<span class="font-label-md text-label-md tracking-wider uppercase text-primary">Confidential Evaluation</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Rate Your Clinical Experience</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">PicoSure® Pro Session 3 • Attending: Dr. Vivienne Vance, MD</p>
+</div>
+<button aria-label="Close modal" class="p-space-xs rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" id="close-modal-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Star Rating Block -->
+<div class="flex flex-col items-center justify-center py-space-md px-space-lg bg-surface-container-low rounded-lg gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary">
+<button class="star-btn transition-transform hover:scale-110 active:scale-95 text-primary" data-star="1" type="button">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="star-btn transition-transform hover:scale-110 active:scale-95 text-primary" data-star="2" type="button">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="star-btn transition-transform hover:scale-110 active:scale-95 text-primary" data-star="3" type="button">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="star-btn transition-transform hover:scale-110 active:scale-95 text-primary" data-star="4" type="button">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="star-btn transition-transform hover:scale-110 active:scale-95 text-primary" data-star="5" type="button">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+</div>
+<span class="font-title-md text-title-md text-primary mt-1">Exceptional Care &amp; Efficacy (5/5)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Validated clinical procedure rating</span>
+</div>
+<!-- Multi-Dimension Experience Assessment -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-md text-label-md tracking-wider uppercase text-on-surface-variant">Clinical Assessment Dimensions</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs">
+<div class="flex flex-col p-space-sm bg-surface-container rounded-lg gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Physician Expertise</span>
+<span class="font-label-lg text-label-lg text-primary font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Excellent
+            </span>
+</div>
+<div class="flex flex-col p-space-sm bg-surface-container rounded-lg gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cryo Comfort</span>
+<span class="font-label-lg text-label-lg text-primary font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Ultra-Gentle
+            </span>
+</div>
+<div class="flex flex-col p-space-sm bg-surface-container rounded-lg gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Suite Hygiene</span>
+<span class="font-label-lg text-label-lg text-primary font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Pristine Class-1
+            </span>
+</div>
+</div>
+</div>
+<!-- Anonymous Feedback Toggle -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-low rounded-lg gap-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-title-md text-title-md text-on-surface">Submit Anonymously to Clinical Medical Board</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Your identity will be masked from treating physician for unbiased quality audits.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input checked="" class="sr-only peer" id="anon-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Feedback Comment Box -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant" for="review-notes">Confidential Clinical Notes</label>
+<textarea class="w-full p-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-colors resize-none" id="review-notes" placeholder="Provide confidential observation regarding dosage comfort, skin reaction, or clinician communication..." rows="3">Dr. Vance adjusted the energy levels perfectly after assessing my dermal response from session 2. The post-laser cryo soothe made recovery effortless.</textarea>
+</div>
+<!-- Modal Actions -->
+<div class="flex flex-col-reverse sm:flex-row items-center justify-end gap-space-sm pt-space-xs">
+<button class="w-full sm:w-auto px-space-lg py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface font-body-md text-body-md hover:bg-surface-container transition-colors text-center" id="cancel-modal-btn" type="button">
+          Cancel
+        </button>
+<button class="w-full sm:w-auto px-space-xl py-space-sm rounded-lg bg-primary text-on-primary font-title-md text-title-md shadow-md hover:bg-primary-container transition-all flex items-center justify-center gap-space-xs" id="submit-review-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Submit Verified Review</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Breadcrumbs & Sovereignty Header -->
+<div class="flex flex-col gap-space-md mb-space-lg">
+<nav class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<span class="hover:text-primary transition-colors cursor-pointer" onclick="window.location.href='home.html'">Patient Portal</span>
+<span class="text-outline-variant">/</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Care Records</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-bold">Treatment History &amp; Clinical Reviews</span>
+</nav>
+<!-- Page Title & High Precision Subheading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[28px]">lock_reset</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Clinical Session History &amp; Telemetry</h1>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+          Review chronological records of locked laser protocols, certified before/after optical imaging, and submit confidential physician evaluations.
+        </p>
+</div>
+<!-- Quick Metrics Pill -->
+<div class="flex items-center gap-space-sm px-space-md py-space-sm bg-surface-container-low rounded-full self-start md:self-auto shadow-sm">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-lg text-label-lg text-on-surface">Course Progress:</span>
+<span class="font-title-md text-title-md text-primary font-bold">3 of 6 Completed</span>
+</div>
+</div>
+<!-- Trust & In-Kingdom Compliance Banner -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-md bg-surface-container-low rounded-xl gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-sm text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="font-label-md text-label-md tracking-wider uppercase">Sovereign Cloud EMR</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant sm:text-right">
+        In-Kingdom Data Residency Compliant (CITC &amp; Saudi Health Council Standards) • Cryptographically Sealed Electronic Medical Record (EMR) • 256-bit AES Sovereign Encryption
+      </p>
+</div>
+</div>
+<!-- Filter & Search Toolbar Bento -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md p-space-md bg-surface-container-lowest rounded-xl shadow-sm mb-space-xl items-center">
+<div class="lg:col-span-6 flex flex-wrap items-center gap-space-xs">
+<button class="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-title-md text-body-sm shadow-sm transition-transform active:scale-95">All Sessions</button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-body-md text-body-sm transition-colors">PicoSure® Pro</button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-body-md text-body-sm transition-colors">Candela GentleMax®</button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-body-md text-body-sm transition-colors">HydraFacial Platinum</button>
+</div>
+<div class="lg:col-span-4 flex items-center gap-space-sm justify-start lg:justify-end">
+<div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container rounded-lg text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_month</span>
+<span>Timeline: 2024 (Cycle 1)</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container rounded-lg text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">filter_list</span>
+<span>Filter Status</span>
+</div>
+</div>
+<div class="lg:col-span-2 flex items-center justify-end">
+<span class="px-space-md py-space-xs bg-secondary-container text-on-secondary-container font-label-md text-label-md tracking-wider uppercase rounded-full">
+        4 Locked Sessions
+      </span>
+</div>
+</div>
+<!-- Main Grid: Timeline Column + Data Residency Companion Drawer -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-xl">
+<!-- Chronological Session Records (8 Columns on desktop) -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- Session 1: Latest, Active Review CTA -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl p-space-lg md:p-space-xl shadow-md gap-space-lg relative overflow-hidden">
+<!-- Accent Top Bar -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary-fixed-dim to-primary"></div>
+<!-- Header Info & Badges -->
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md uppercase tracking-wider font-semibold">Latest Treatment</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nov 28, 2024 • 02:15 PM</span>
+<span class="font-body-sm text-body-sm text-primary font-mono">#AC-8842-S3</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1">PicoSure® Pro Cellular Glow &amp; Resurfacing (Session 3 of 6)</h2>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-[16px] text-primary">face_3</span>
+<span>Area: <strong class="text-on-surface font-medium">Full Facial &amp; Peri-Orbital Pigmentation</strong></span>
+</div>
+</div>
+<!-- Locked Status Badge -->
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-full self-start">
+<span class="material-symbols-outlined text-[16px] text-primary">lock</span>
+<span class="font-label-md text-label-md text-primary uppercase font-bold">Locked &amp; Signed EMR</span>
+</div>
+</div>
+<!-- Clinician & Suite Credentials -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md p-space-md bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Professional clinical headshot of Dr. Vivienne Vance, lead dermatologist in modern architectural clinical medical suite with rose gold interior tones and soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_8B3Lpbr13XYvaNWb1snsrXzSfw-dLc4ZrESQCskfOn0tyYKRJOExHWCDTfFi2Kse4u9HgnOS-EuW1T8jbb8qSgDLLUNSVdhEiToYV8Yy91Siq2-BRQhmFbLLBwGOiH45Q5lXNon86eqGrM4TcN9vlIBOhdX44qeJPzj6SeLBlnJ8Aiqsuo4VCHiYH6Fa1sCrlTDGr16x_V-h7jFH2Dep9bqJNiRIGTzKW83stBo"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Dr. Vivienne Vance, MD</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lead Dermatologist &amp; Laser Surgeon</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="p-space-xs rounded-full bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[20px]">meeting_room</span>
+</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">L’Atelier Suite 4</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Private Surgical Laser Wing</span>
+</div>
+</div>
+</div>
+<!-- Telemetry & Physics Parameters Pill Bar -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Calibrated Laser Telemetry</span>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs">
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Wavelength</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">755nm Alex</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fluence</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">2.8 J/cm²</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Spot Optics</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">6mm Focus</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pulse Count</span>
+<span class="font-title-md text-title-md text-primary font-semibold">1,840 Pulses</span>
+</div>
+</div>
+</div>
+<!-- Action Row with Primary Rating CTA -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">cloud_done</span>
+<span class="font-body-sm text-body-sm">In-Kingdom Encrypted Media • EMR Sealed</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors flex items-center gap-space-xs" onclick="alert('Opening scan viewer...')">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span>Inspect Scans</span>
+</button>
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors flex items-center gap-space-xs" onclick="alert('Downloading Rx Summary PDF...')">
+<span class="material-symbols-outlined text-[18px]">description</span>
+<span>Rx Summary (PDF)</span>
+</button>
+<button class="px-space-lg py-space-xs rounded-lg bg-primary hover:bg-primary-container text-on-primary font-title-md text-body-sm transition-all shadow-md flex items-center gap-space-xs" id="open-rate-modal-btn">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>Rate Your Experience</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Session 2: Previous Completed & Locked with Review State -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl p-space-lg md:p-space-xl shadow-sm gap-space-lg relative">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nov 04, 2024 • 11:30 AM</span>
+<span class="font-body-sm text-body-sm text-primary font-mono">#AC-8842-S2</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1">PicoSure® Pro Collagen Induction &amp; Micro-Toning (Session 2 of 6)</h2>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-[16px] text-primary">face</span>
+<span>Area: <strong class="text-on-surface font-medium">Full Facial &amp; Upper Neck</strong></span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low rounded-full self-start">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">verified</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase font-medium">EMR Sealed</span>
+</div>
+</div>
+<!-- Telemetry Parameters -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs">
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Wavelength</span>
+<span class="font-title-md text-title-md text-on-surface">755nm Alex</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fluence</span>
+<span class="font-title-md text-title-md text-on-surface">2.4 J/cm²</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Spot Optics</span>
+<span class="font-title-md text-title-md text-on-surface">8mm Flat</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pulse Count</span>
+<span class="font-title-md text-title-md text-primary font-semibold">1,620 Pulses</span>
+</div>
+</div>
+<!-- Attached Patient Review Card -->
+<div class="flex flex-col p-space-md bg-surface-container-low rounded-lg gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold ml-1">5.0</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Signed Review</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+            "Noticeable reduction in hyperpigmentation. Gentle cooling post-care made recovery completely seamless."
+          </p>
+</div>
+<!-- Action Row -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dr. Vivienne Vance, MD • Suite 400</span>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors" onclick="alert('Opening before/after scans...')">Inspect Before / After Scans</button>
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors" onclick="alert('Viewing session summary...')">View Session Summary</button>
+</div>
+</div>
+</article>
+<!-- Session 3: Baseline Sealed -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl p-space-lg md:p-space-xl shadow-sm gap-space-lg relative">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Oct 12, 2024 • 04:00 PM</span>
+<span class="font-body-sm text-body-sm text-primary font-mono">#AC-8842-S1</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1">Baseline Dermal Optical Assessment &amp; Test Spots (Session 1 of 6)</h2>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-[16px] text-primary">analytics</span>
+<span>Area: <strong class="text-on-surface font-medium">Bilateral Malar Eminence &amp; Forehead</strong></span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low rounded-full self-start">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">verified_user</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase font-medium">Baseline Sealed</span>
+</div>
+</div>
+<!-- Telemetry Parameters -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col gap-1">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Dermal Calibration Protocol</span>
+<p class="font-body-md text-body-md text-on-surface">
+            Wavelength: 755nm &amp; Nd:YAG 1064nm Dual-Test | Fitzpatrick III Protocol Baseline Calibration
+          </p>
+</div>
+<!-- Attached Patient Review Card -->
+<div class="flex flex-col p-space-md bg-surface-container-low rounded-lg gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold ml-1">5.0</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Signed Review</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+            "Felt very secure with the physician guidance and phototype calibration."
+          </p>
+</div>
+<!-- Action Row -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dr. Vivienne Vance, MD • Diagnostic Lab</span>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors" onclick="alert('Opening baseline imaging...')">Inspect Baseline Imaging</button>
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors" onclick="alert('Viewing session summary...')">View Session Summary</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Right Side Information & Sovereign Privacy Safeguards Drawer (4 Columns) -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Visual Scan Teaser Card -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<div class="relative w-full h-48">
+<img class="w-full h-full object-cover" data-alt="High precision cross polarized dermatological facial scan showing detailed dermal melanin reduction mapping on warm beige aesthetic backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTGDRcl_SYllUQLuRFzLlyRy6B80idvgpmRPqODgSpdT0vGYW7GWJaFr88tci8zJ_VgyMaNdDDIcL0kggwaxj8ViinBDrxPjFBdwodwc9fYO4YvuVLITxIDYM9_vCGoN2hZbDfuwEgtthXqa9zh3cpPjQlK8fs25i78HBAycZNieYr98p7ieosqO_FQ2r2GafsU4brEhxuxT1v0_SEJW7k9T4oPF_DERvwMLA3sfE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-space-md left-space-md right-space-md flex items-center justify-between">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-md text-label-md uppercase tracking-wider font-semibold">Optical Polarized Scan</span>
+<span class="font-body-sm text-body-sm text-on-surface bg-surface-container-lowest/80 px-2 py-0.5 rounded-full font-mono">ΔE: -38% Pigment</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<h3 class="font-title-md text-title-md text-on-surface">Synchronized Telemetry Record</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Cross-polarized high-resolution diagnostic photography calibrated to Session 3 parameters.
+          </p>
+<button class="mt-space-xs w-full py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors flex items-center justify-center gap-1" onclick="alert('Launching dual-scan comparison...')">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+<span>Launch Dual-Scan Comparison</span>
+</button>
+</div>
+</div>
+<!-- In-Kingdom Data Storage & Privacy Drawer / Info Card -->
+<div class="flex flex-col p-space-lg bg-surface-container-lowest rounded-xl shadow-sm gap-space-md">
+<div class="flex items-center gap-space-sm text-primary">
+<span class="p-space-xs rounded-full bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-[24px]">vpn_lock</span>
+</span>
+<div class="flex flex-col">
+<h3 class="font-title-md text-title-md text-on-surface">Encrypted Medical Safeguards</h3>
+<span class="font-label-md text-label-md text-primary tracking-wider uppercase">Sovereign Cloud Node KSA</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          High-resolution cross-polarized 3D scans and laser dosage histories are hosted locally within sovereign KSA cloud infrastructure, strictly adhering to the Personal Data Protection Law (PDPL) and Saudi Health Council regulations.
+        </p>
+<!-- Compliance List Items -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary flex-shrink-0 mt-0.5">verified</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Immutable Audit Trail</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Every laser pulse, wavelength shift, and clinician sign-off is time-stamped.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary flex-shrink-0 mt-0.5">fingerprint</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Zero-Knowledge Telemetry</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Reviews submitted to the Medical Board remain dissociated from clinician view.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary flex-shrink-0 mt-0.5">download</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Sovereign Data Export</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Request certified clinical dossier package for inter-hospital transfer.</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-space-sm py-space-xs px-space-md rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-title-md text-body-sm transition-colors text-center" onclick="alert('Opening Clinical Governance Charter...')">
+          Review Clinical Governance Charter
+        </button>
+</div>
+<!-- Quick Need Help Card -->
+<div class="flex items-center justify-between p-space-md bg-secondary-container/40 rounded-xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-on-secondary-container text-[24px]">support_agent</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-secondary-container">Concierge Clinician</span>
+<span class="font-body-sm text-body-sm text-on-secondary-container">Post-laser recovery questions?</span>
+</div>
+</div>
+<button class="px-space-md py-space-xs rounded-full bg-secondary-container text-on-secondary-container hover:bg-secondary-container/80 font-title-md text-body-sm transition-colors" onclick="alert('Opening live chat with concierge...')">
+          Inquire
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive modal controller
+  const reviewModal = document.getElementById('review-modal');
+  const openModalBtn = document.getElementById('open-rate-modal-btn');
+  const closeModalBtn = document.getElementById('close-modal-btn');
+  const cancelModalBtn = document.getElementById('cancel-modal-btn');
+  const submitReviewBtn = document.getElementById('submit-review-btn');
+  const starBtns = document.querySelectorAll('.star-btn');
+
+  function openModal() {
+    if (reviewModal) {
+      reviewModal.classList.remove('hidden');
+      reviewModal.classList.add('flex');
+    }
+  }
+
+  function closeModal() {
+    if (reviewModal) {
+      reviewModal.classList.add('hidden');
+      reviewModal.classList.remove('flex');
+    }
+  }
+
+  if (openModalBtn) openModalBtn.addEventListener('click', openModal);
+  if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+  if (cancelModalBtn) cancelModalBtn.addEventListener('click', closeModal);
+
+  if (submitReviewBtn) {
+    submitReviewBtn.addEventListener('click', () => {
+      submitReviewBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Submitting...</span>';
+      setTimeout(() => {
+        closeModal();
+        submitReviewBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified_user</span><span>Submit Verified Review</span>';
+        alert('Review submitted successfully! Thank you for your feedback.');
+      }, 700);
+    });
+  }
+
+  // Star rating selector interaction
+  starBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const selectedValue = parseInt(btn.getAttribute('data-star') || '5', 10);
+      starBtns.forEach((star) => {
+        const starVal = parseInt(star.getAttribute('data-star') || '1', 10);
+        const icon = star.querySelector('span');
+        if (icon) {
+          if (starVal <= selectedValue) {
+            icon.style.fontVariationSettings = "'FILL' 1";
+          } else {
+            icon.style.fontVariationSettings = "'FILL' 0";
+          }
+        }
+      });
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-lowest/60 py-space-lg"><div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-sm text-center md:text-left"><span class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Aura Clinique Aesthetic Laser Medicine. All rights reserved.</span><div class="flex items-center gap-space-md text-on-surface-variant font-label-md text-label-md tracking-wider uppercase"><a class="hover:text-primary transition-colors" href="#">Clinical Privacy</a><a class="hover:text-primary transition-colors" href="#">Patient Guidelines</a><a class="hover:text-primary transition-colors" href="#">Concierge Support</a></div></div></footer></body></html>

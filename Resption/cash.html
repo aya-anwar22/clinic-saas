@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#ffdbc8", "on-secondary": "#ffffff", "error-container": "#ffdad6", "on-primary": "#ffffff", "on-background": "#1b1c1a", "surface-container-high": "#eae8e5", "tertiary-fixed-dim": "#e5bfa9", "surface-variant": "#e4e2df", "on-surface": "#1b1c1a", "secondary-fixed-dim": "#ebbd9f", "secondary-container": "#ffd1b2", "surface-dim": "#dbdad7", "on-primary-fixed-variant": "#603f2b", "error": "#ba1a1a", "tertiary": "#6a4e3d", "inverse-primary": "#ecbda1", "secondary-fixed": "#ffdcc5", "surface": "#fbf9f6", "inverse-surface": "#30312f", "on-secondary-fixed-variant": "#5f4029", "background": "#fbf9f6", "surface-container-highest": "#e4e2df", "on-tertiary-fixed": "#2b1709", "secondary": "#79573e", "surface-container-low": "#f5f3f0", "on-primary-fixed": "#2e1505", "primary-fixed-dim": "#ecbda1", "primary": "#6f4c37", "outline-variant": "#d4c3bb", "surface-tint": "#7b5640", "surface-container": "#efeeeb", "on-secondary-container": "#7a583f", "on-tertiary-container": "#ffece2", "tertiary-fixed": "#ffdbc8", "on-tertiary": "#ffffff", "on-primary-container": "#ffebe1", "inverse-on-surface": "#f2f0ed", "tertiary-container": "#856654", "surface-bright": "#fbf9f6", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "outline": "82746d", "on-surface-variant": "#50443e", "on-secondary-fixed": "#2d1603", "on-error-container": "#93000a", "primary-container": "#8a644d", "on-tertiary-fixed-variant": "#5c4131" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin": "2rem", "gutter-lg": "2rem", "space-lg": "1.5rem", "gutter-sm": "1rem", "space-md": "1rem", "space-xl": "2.5rem", "margin-desktop": "3rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "gutter": "1.5rem" }, "fontFamily": { "title-lg": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "label-lg": [ "Inter" ], "body-md": [ "Inter" ], "title-md": [ "Inter" ], "display-lg-mobile": [ "Space Grotesk" ], "body-sm": [ "Inter" ], "display-lg": [ "Space Grotesk" ], "headline-lg-mobile": [ "Space Grotesk" ], "body-lg": [ "Inter" ], "headline-sm": [ "Space Grotesk" ], "headline-md": [ "Space Grotesk" ], "label-md": [ "Inter" ] }, "fontSize": { "title-lg": [ "18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "label-lg": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.03em", "fontWeight": "500" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ], "title-md": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display-lg-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "500" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "label-md": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container font-title-lg text-title-lg tracking-tight">A</div><div class="flex flex-col"><span class="font-title-lg text-title-lg text-on-surface leading-none tracking-tight">AURA CLINIQUE</span><span class="font-label-md text-label-md text-primary font-medium tracking-wider uppercase mt-0.5">Medical Aesthetic Suites</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-low text-on-surface"><span class="material-symbols-outlined text-[16px] text-primary">location_on</span><span class="font-label-lg text-label-lg font-medium">Riyadh Al-Olaya Flagship</span><span class="text-outline-variant">•</span><span class="font-label-lg text-label-lg text-on-surface-variant">Suite 101</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant cursor-pointer hover:text-on-surface">expand_more</span></div><div class="hidden 2xl:flex items-center gap-space-xs px-space-md py-1 rounded-full bg-secondary-container text-on-secondary-container"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-md text-label-md font-semibold tracking-wide">Shift #04: Active</span><span class="text-on-secondary-container/60">•</span><span class="font-label-md text-label-md">Reconciling Drawer #1</span></div></div><div class="hidden md:flex flex-1 max-w-xs lg:max-w-sm items-center relative"><span class="material-symbols-outlined absolute left-space-md text-[18px] text-on-surface-variant pointer-events-none">search</span><input class="w-full pl-10 pr-space-md py-2 bg-surface-container-lowest rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant placeholder:font-body-sm focus:outline-none focus:bg-surface-container-low transition-colors duration-200" placeholder="Search client MRN, appointment, or practitioner..." type="text"/></div><nav class="hidden lg:flex items-center gap-space-xs bg-surface-container-low p-1 rounded-full" data-active-classes="bg-primary text-on-primary font-semibold rounded-full"><a class="px-space-md py-1.5 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-150" data-path="live-reception-queue" href="#">Live Reception Queue</a><a class="px-space-md py-1.5 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-150" data-path="checkout-console" href="#">Checkout Console</a><a class="px-space-md py-1.5 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-150" data-path="cash-drawer-shift-close" href="#">Cash Drawer &amp; Shift Close</a><a class="px-space-md py-1.5 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-150" data-path="zatca-audit-vault" href="#">ZATCA Audit Vault</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex flex-col text-right"><span class="font-title-md text-title-md text-on-surface leading-tight">Noura Al-Hassan</span><span class="font-label-md text-label-md text-on-surface-variant font-medium">Concierge Lead • Desk A</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Operational Shift Context Header Bar -->
+<div class="w-full px-margin-mobile lg:px-margin-desktop py-space-md">
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md lg:p-space-lg flex flex-col xl:flex-row xl:items-center xl:justify-between gap-space-md">
+<!-- Left Metadata Cluster -->
+<div class="flex flex-col sm:flex-row sm:items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-md flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">point_of_sale</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface">Register #01 — Primary Front Desk Drawer</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              Live Shift #04
+            </span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm flex-wrap mt-0.5">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+              Morning/Afternoon Shift • 08:30 AM – 04:30 PM AST
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">badge</span>
+              Noura Al-Hassan (Staff ID #AC-092)
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-primary font-medium">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+              Sovereign Audit Vault Synced • Dual-Signoff Required
+            </span>
+</div>
+</div>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex items-center gap-space-xs flex-wrap self-start xl:self-auto">
+<button class="px-space-md py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-lg text-label-lg flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">eject</span>
+<span>Open Drawer Pop <span class="text-on-surface-variant font-normal">[F12]</span></span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-lg text-label-lg flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">receipt_long</span>
+<span>Print X-Report (Mid-Shift)</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-error-container text-on-error-container hover:opacity-90 transition-opacity font-label-lg text-label-lg flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+<span>Emergency Lock</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Top KPI Financial Summary Cards (5-Column Responsive Grid) -->
+<div class="w-full px-margin-mobile lg:px-margin-desktop py-space-xs">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-space-md">
+<!-- Card 1: Opening Float -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Opening Float</span>
+<span class="w-7 h-7 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">account_balance_wallet</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-md text-headline-md text-on-surface tabular-nums">SAR 2,000.00</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>
+            Verified 08:30 AM AST
+          </div>
+</div>
+</div>
+<!-- Card 2: Cash Clinical & Retail Sales -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Cash Clinical &amp; Retail</span>
+<span class="w-7 h-7 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-md text-headline-md text-on-surface tabular-nums">SAR 4,850.00</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">spa</span>
+            14 Derm &amp; Skincare Invoices
+          </div>
+</div>
+</div>
+<!-- Card 3: Patient Wallet Cash Reloads -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Patient Wallet Top-Ups</span>
+<span class="w-7 h-7 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">add_card</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-md text-headline-md text-on-surface tabular-nums">SAR 1,200.00</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">savings</span>
+            3 In-Clinic Member Credits
+          </div>
+</div>
+</div>
+<!-- Card 4: Petty Cash Disbursements -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Branch Cash Paid-Outs</span>
+<span class="w-7 h-7 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">outbox</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-md text-headline-md text-error tabular-nums">- SAR 380.00</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error">receipt</span>
+            2 Logged Petty Disbursements
+          </div>
+</div>
+</div>
+<!-- Card 5: Expected Cash in Drawer -->
+<div class="bg-primary text-on-primary rounded-xl p-space-md shadow-lg flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 rounded-full bg-primary-container opacity-30 pointer-events-none"></div>
+<div class="flex items-center justify-between relative z-10">
+<span class="font-label-md text-label-md text-primary-fixed uppercase tracking-wider font-semibold">Expected Cash in Drawer</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">
+            Calculated
+          </span>
+</div>
+<div class="mt-space-md relative z-10">
+<div class="font-headline-lg text-headline-lg text-on-primary tabular-nums tracking-tight">SAR 7,670.00</div>
+<div class="font-body-sm text-body-sm text-primary-fixed mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calculate</span>
+            Float + Sales + Wallets - Paid-Outs
+          </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Dual-Column Analytical & Reconciliation Layout -->
+<div class="w-full px-margin-mobile lg:px-margin-desktop py-space-md">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column (~58% = 7 Cols): Denomination Counter & Physical Cash Count -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Physical Cash Tally Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-lg text-title-lg text-on-surface">Physical Currency Tally &amp; Bill Breakdown</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-md text-label-md">SAR Denominations</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Input physical notes and coin counts verified inside Drawer #01.</p>
+</div>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1 self-start sm:self-auto" id="resetCountsBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+              Clear Tally
+            </button>
+</div>
+<!-- Denomination Interactive Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<th class="py-2.5 px-3 rounded-l-lg">Denomination</th>
+<th class="py-2.5 px-3">Type</th>
+<th class="py-2.5 px-3 w-32 text-center">Count</th>
+<th class="py-2.5 px-3 text-right rounded-r-lg">Subtotal (SAR)</th>
+</tr>
+</thead>
+<tbody class="divide-y-0" id="denominationTableBody">
+<!-- 500 SAR Note -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-3 font-title-md text-title-md text-on-surface">500 SAR</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[12px]">payments</span> Banknote
+                    </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-semibold text-sm select-none" onclick="decrementCount(500)" type="button">-</button>
+<input class="w-14 text-center py-1 rounded bg-surface-container font-title-md text-title-md text-on-surface focus:outline-none focus:bg-surface-container-lowest tabular-nums" id="count-500" min="0" oninput="updateCalculations()" type="number" value="11"/>
+<button class="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-semibold text-sm select-none" onclick="incrementCount(500)" type="button">+</button>
+</div>
+</td>
+<td class="py-2.5 px-3 text-right font-title-md text-title-md text-on-surface tabular-nums" id="subtotal-500">5,500.00</td>
+</tr>
+<!-- 200 SAR Note -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-3 font-title-md text-title-md text-on-surface">200 SAR</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[12px]">payments</span> Banknote
+                    </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-semibold text-sm select-none" onclick="decrementCount(200)" type="button">-</button>
+<input class="w-14 text-center py-1 rounded bg-surface-container font-title-md text-title-md text-on-surface focus:outline-none focus:bg-surface-container-lowest tabular-nums" id="count-200" min="0" oninput="updateCalculations()" type="number" value="5"/>
+<button class="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-semibold text-sm select-none" onclick="incrementCount(200)" type="button">+</button>
+</div>
+</td>
+<td class="py-2.5 px-3 text-right font-title-md text-title-md text-on-surface tabular-nums" id="subtotal-200">1,000.00</td>
+</tr>
+<!-- 100 SAR Note -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-3 font-title-md text-title-md text-on-surface">100 SAR</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[12px]">payments</span> Banknote
+                    </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-semibold text-sm select-none" onclick="decrementCount(100)" type="button">-</button>
+<input class="w-14 text-center py-1 rounded bg-surface-container font-title-md text-title-md text-on-surface focus:outline-none focus:bg-surface-container-lowest tabular-nums" id="count-100" min="0" oninput="updateCalculations()" type="number" value="8"/>
+<button class="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-semibold text-sm select-none" onclick="incrementCount(100)" type="button">+</button>
+</div>
+</td>
+<td class="py-2.5 px-3 text-right font-title-md text-title-md text-on-surface tabular-nums" id="subtotal-100">800.00</td>
+</tr>
+<!-- 50 SAR Note -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-3 font-title-md text-title-md text-on-surface">50 SAR</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[12px]">payments</span> Banknote
+                    </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-semibold text-sm select-none" onclick="decrementCount(50)" type="button">-</button>
+<input class="w-14 text-center py-1 rounded bg-surface-container font-title-md text-title-md text-on-surface focus:outline-none focus:bg-surface-container-lowest tabular-nums" id="count-50" min="0" oninput="updateCalculations()" type="number" value="6"/>
+<button class="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-semibold text-sm select-none" onclick="incrementCount(50)" type="button">+</button>
+</div>
+</td>
+<td class="py-2.5 px-3 text-right font-title-md text-title-md text-on-surface tabular-nums" id="subtotal-50">300.00</td>
+</tr>
+<!-- 10 SAR Note -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-3 font-title-md text-title-md text-on-surface">10 SAR</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[12px]">payments</span> Banknote
+                    </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-semibold text-sm select-none" onclick="decrementCount(10)" type="button">-</button>
+<input class="w-14 text-center py-1 rounded bg-surface-container font-title-md text-title-md text-on-surface focus:outline-none focus:bg-surface-container-lowest tabular-nums" id="count-10" min="0" oninput="updateCalculations()" type="number" value="5"/>
+<button class="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-semibold text-sm select-none" onclick="incrementCount(10)" type="button">+</button>
+</div>
+</td>
+<td class="py-2.5 px-3 text-right font-title-md text-title-md text-on-surface tabular-nums" id="subtotal-10">50.00</td>
+</tr>
+<!-- 5 SAR Note -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-3 font-title-md text-title-md text-on-surface">5 SAR</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[12px]">payments</span> Banknote
+                    </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-semibold text-sm select-none" onclick="decrementCount(5)" type="button">-</button>
+<input class="w-14 text-center py-1 rounded bg-surface-container font-title-md text-title-md text-on-surface focus:outline-none focus:bg-surface-container-lowest tabular-nums" id="count-5" min="0" oninput="updateCalculations()" type="number" value="4"/>
+<button class="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-semibold text-sm select-none" onclick="incrementCount(5)" type="button">+</button>
+</div>
+</td>
+<td class="py-2.5 px-3 text-right font-title-md text-title-md text-on-surface tabular-nums" id="subtotal-5">20.00</td>
+</tr>
+<!-- Coins (1 & 2 SAR) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-3 font-title-md text-title-md text-on-surface">1 &amp; 2 SAR Coins</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[12px]">toll</span> Metallic Coins
+                    </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-semibold text-sm select-none" onclick="decrementCount('coins')" type="button">-</button>
+<input class="w-14 text-center py-1 rounded bg-surface-container font-title-md text-title-md text-on-surface focus:outline-none focus:bg-surface-container-lowest tabular-nums" id="count-coins" min="0" oninput="updateCalculations()" type="number" value="0"/>
+<button class="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface font-semibold text-sm select-none" onclick="incrementCount('coins')" type="button">+</button>
+</div>
+</td>
+<td class="py-2.5 px-3 text-right font-title-md text-title-md text-on-surface tabular-nums" id="subtotal-coins">0.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Total Counted Real-Time Callout Banner -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-md mt-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">currency_exchange</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">Total Physical Cash Counted</span>
+<span class="font-body-sm text-body-sm text-on-surface">39 items tallies across 7 denominations</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-primary font-bold tabular-nums" id="totalCountedDisplay">SAR 7,670.00</span>
+</div>
+</div>
+<!-- Sealed Cash Security Bag Metadata -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">enhanced_encryption</span>
+<div>
+<span class="font-title-md text-title-md text-on-surface block">Tamper-Evident Security Safe Bag</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Required for courier vault transfer to Alinma Bank escort</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<input class="px-3 py-1.5 rounded-lg bg-surface-container-lowest font-title-md text-title-md text-on-surface font-mono tracking-wider focus:outline-none uppercase w-36 text-center" type="text" value="SA-99420-B"/>
+<span class="px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> Scanned
+              </span>
+</div>
+</div>
+</div>
+<!-- Analytical Sparkline / Shift Cash Flow Graph -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-title-lg text-title-lg text-on-surface">Drawer Hourly Velocity Timeline</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cumulative cash movements recorded through Register #01 today.</p>
+</div>
+<span class="font-label-md text-label-md text-primary bg-secondary-container px-2.5 py-1 rounded-full font-medium">8 Hourly Intervals</span>
+</div>
+<!-- Inline SVG Cash Accumulation Timeline -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md flex flex-col gap-2">
+<div class="h-32 w-full flex items-end">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 700 120">
+<defs>
+<lineargradient id="cashFillGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#8a644d" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#8a644d" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Area Path -->
+<path d="M 0,90 Q 70,85 100,75 T 200,60 T 300,65 T 400,45 T 500,50 T 600,25 T 700,10 L 700,120 L 0,120 Z" fill="url(#cashFillGrad)"></path>
+<!-- Line Path -->
+<path d="M 0,90 Q 70,85 100,75 T 200,60 T 300,65 T 400,45 T 500,50 T 600,25 T 700,10" fill="none" stroke="#6f4c37" stroke-linecap="round" stroke-width="3"></path>
+<!-- Milestone Dots -->
+<circle cx="0" cy="90" fill="#6f4c37" r="4"></circle>
+<circle cx="100" cy="75" fill="#6f4c37" r="4"></circle>
+<circle cx="200" cy="60" fill="#6f4c37" r="4"></circle>
+<circle cx="300" cy="65" fill="#6f4c37" r="4"></circle>
+<circle cx="400" cy="45" fill="#6f4c37" r="4"></circle>
+<circle cx="500" cy="50" fill="#6f4c37" r="4"></circle>
+<circle cx="600" cy="25" fill="#6f4c37" r="4"></circle>
+<circle cx="700" cy="10" fill="#ffd1b2" r="5" stroke="#6f4c37" stroke-width="2"></circle>
+</svg>
+</div>
+<div class="flex justify-between font-label-md text-label-md text-on-surface-variant pt-2 border-t-0 px-1">
+<span>08:30 (Float)</span>
+<span>10:00</span>
+<span>11:30 (Courier Out)</span>
+<span>01:00 PM</span>
+<span>02:40 PM (Pantry Out)</span>
+<span>03:30 PM</span>
+<span>04:30 PM (Close)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (~42% = 5 Cols): Real-time Variance Calculation & Dual Approval -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Shift Reconciliation & Variance Status Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-title-lg text-title-lg text-on-surface">Reconciliation &amp; Variance Status</span>
+<span class="material-symbols-outlined text-primary text-[20px]">balance</span>
+</div>
+<!-- Formula Breakdown Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Physical Counted Total</span>
+<span class="font-title-md text-title-md text-on-surface tabular-nums" id="formulaCounted">SAR 7,670.00</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>System Expected Drawer Balance</span>
+<span class="font-title-md text-title-md text-on-surface tabular-nums">SAR 7,670.00</span>
+</div>
+<div class="w-full h-px bg-surface-variant my-0.5"></div>
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Calculated Drawer Variance</span>
+<span class="font-title-lg text-title-lg text-primary tabular-nums font-bold" id="varianceValueDisplay">SAR 0.00</span>
+</div>
+</div>
+<!-- Dynamic Status Pill -->
+<div class="p-space-md rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-between transition-colors" id="varianceBadge">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[24px]" id="varianceIcon">verified</span>
+<div>
+<span class="font-title-md text-title-md leading-tight block" id="varianceTitle">Zero Variance • Perfect Balance</span>
+<span class="font-body-sm text-body-sm opacity-80" id="varianceSubtitle">Halala-accurate match with ZATCA ledger records</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+</div>
+<!-- Audit Policy Pill Alert -->
+<div class="flex items-start gap-2 p-2.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-primary mt-0.5">policy</span>
+<span>Over/Short Protocol: Discrepancies &gt; SAR 50.00 trigger mandatory incident reporting and internal audit camera review.</span>
+</div>
+</div>
+<!-- Daily Branch Expenses & Petty Cash Quick-Log Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-title-lg text-title-lg text-on-surface">Petty Cash Disbursements</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">2 expense slips authorized and deducted today.</p>
+</div>
+<button class="px-2.5 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary/90 font-label-md text-label-md flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+              + Log Expense
+            </button>
+</div>
+<!-- Disbursement 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-md">
+<div class="w-12 h-14 rounded-lg bg-surface-container flex-shrink-0 overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="High-resolution digital scan of official clinical laboratory receipt for dermal biopsy rush dispatch with purple medical stamp and Arabic VAT registration details on parchment paper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDes5IiLFBQBrUcaAuv6YDdieNxeUHLq85OYgeQVDvsHNzKvcYrAQPOIKaFscfzhEUSAn-w1yr_gXxT0ykxH2y9HXkPCHjntc1N1B1AH5ZubfZFLabVp133i4iDaQG20ohAfb690Q_vUAEMe6vMV_Pb6WMTY1DqAyJDKu9Z1miDT2ANS27XqbZ0GQoSrrHa5mVGrZqWUOYBaHCawwtqVIV9Shqdx57HMOl-s2ZvNm8"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[16px] text-on-primary">visibility</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Medical Courier Dispatch</span>
+<span class="font-title-md text-title-md text-error tabular-nums font-semibold">- SAR 160.00</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Urgent Lab Dermal Biopsy Specimen Dispatch</span>
+<div class="flex items-center gap-space-sm mt-1 text-on-surface-variant font-label-md text-label-md">
+<span class="font-mono text-primary font-medium">#REC-884</span>
+<span>•</span>
+<span>11:15 AM AST</span>
+<span>•</span>
+<span class="text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">attachment</span> Receipt Attached
+                </span>
+</div>
+</div>
+</div>
+<!-- Disbursement 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-md">
+<div class="w-12 h-14 rounded-lg bg-surface-container flex-shrink-0 overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="Official boutique hospitality vendor receipt on thermal paper showing Arabic coffee premium blend and lounge refreshments purchase with tax QR code." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2N3xr7_JN2OayJrm9qGXAeAqRfoN9hS9O3A6FRpJJtI5gp50EJTr5V06i9sSUTjhDwjWPrF4ZwMUMogeAu24bx4FuWeW284gnO5F-Cu81Cg8eI4vTjW8zP_ttOZ6MYUjC6-K-RG88Vt13vdYUi81crG0dG_U3H6JIQDdAxPRs2l0QPE4SgAC6C7gIote-vVi7NDQtWNSBPVeTdUcPKRHkUvC_BNEUN_CDG-oUTws"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[16px] text-on-primary">visibility</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">VIP Hospitality &amp; Coffee</span>
+<span class="font-title-md text-title-md text-error tabular-nums font-semibold">- SAR 220.00</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">VIP Lounge Refreshments &amp; Arabic Coffee Refill</span>
+<div class="flex items-center gap-space-sm mt-1 text-on-surface-variant font-label-md text-label-md">
+<span class="font-mono text-primary font-medium">#REC-889</span>
+<span>•</span>
+<span>02:40 PM AST</span>
+<span>•</span>
+<span class="text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">attachment</span> Receipt Attached
+                </span>
+</div>
+</div>
+</div>
+<!-- Drag and Drop Receipt Preview Mini Area -->
+<div class="rounded-xl bg-surface-container p-3 flex items-center justify-center gap-2 cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary text-[20px]">upload_file</span>
+<span class="font-body-sm text-body-sm text-on-surface">Drop additional VAT voucher or expense slip to attach</span>
+</div>
+</div>
+<!-- Dual-Witness Shift Close & Clearance Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-title-lg text-title-lg text-on-surface">Dual-Witness Authentication</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold">Stage 2 of 2</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Signer 1: Lead Cashier -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Cashier Signoff</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface">Noura Al-Hassan</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lead Concierge • ID #AC-092</span>
+<div class="mt-1 flex items-center gap-1 font-label-md text-label-md text-primary font-mono bg-secondary-container/50 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">key</span> Token: #8849-OK
+              </div>
+</div>
+<!-- Signer 2: Clinic Supervisor -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Witness / Supervisor</span>
+<span class="material-symbols-outlined text-primary text-[18px]">fingerprint</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface">Dr. Tariq Al-Mansoor</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Operations Director</span>
+<div class="mt-1 flex items-center gap-1 font-label-md text-label-md text-primary font-mono bg-secondary-container/50 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">lock_clock</span> PIN &amp; Face-ID Verified
+              </div>
+</div>
+</div>
+<!-- Shift Handoff Clinical / Administrative Notes -->
+<div class="flex flex-col gap-1">
+<label class="font-label-lg text-label-lg text-on-surface font-medium flex items-center justify-between" for="shiftNotes">
+<span>Mandatory Shift Handoff Notes</span>
+<span class="text-on-surface-variant font-normal">Audit-Logged</span>
+</label>
+<textarea class="w-full p-space-md rounded-xl bg-surface-container font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest transition-colors resize-none" id="shiftNotes" rows="3">All PicoSure and GentleMax cash copays settled. Drawer balanced to exact halala. Night shift float reset to SAR 2,000.00.</textarea>
+</div>
+<!-- Final Primary Close Action Button -->
+<button class="w-full py-3.5 px-space-md rounded-xl bg-primary text-on-primary font-title-md text-title-md hover:bg-primary/95 transition-all shadow-md flex items-center justify-center gap-2 group" id="finalizeBtn" type="button">
+<span class="material-symbols-outlined text-[22px] group-hover:scale-110 transition-transform">lock</span>
+<span id="finalizeBtnLabel">Finalize Shift Close &amp; Generate Z-Report (SAR 7,670.00)</span>
+</button>
+<!-- Export & Secondary Options -->
+<div class="flex items-center justify-center gap-space-md pt-1 font-label-lg text-label-lg text-primary">
+<button class="flex items-center gap-1 hover:underline" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+              Print Settlement Slip
+            </button>
+<span class="text-surface-variant">•</span>
+<button class="flex items-center gap-1 hover:underline" type="button">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+              Export PDF Ledger
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- End of Day Success Modal (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm hidden items-center justify-center p-space-md" id="closeSuccessModal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-space-xl shadow-2xl flex flex-col items-center text-center gap-space-md animate-in fade-in zoom-in-95 duration-200">
+<div class="w-16 h-16 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[36px]">verified</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Shift Closed &amp; Reconciled</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Z-Report #Z-2024-0982 generated and transmitted to ZATCA Sovereign Ledger vault.</p>
+</div>
+<div class="w-full bg-surface-container-low rounded-xl p-space-md text-left font-body-sm text-body-sm flex flex-col gap-2">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Reconciled Cash:</span>
+<span class="font-bold text-on-surface" id="modalFinalCash">SAR 7,670.00</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Variance Recorded:</span>
+<span class="text-primary font-semibold" id="modalFinalVariance">SAR 0.00 (Zero Variance)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Sealed Safe Bag ID:</span>
+<span class="font-mono font-medium text-on-surface">SA-99420-B</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">ZATCA Cryptographic Hash:</span>
+<span class="font-mono text-primary truncate max-w-[200px]">e3b0c44298fc1c149afbf4c8996...</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full">
+<button class="flex-1 py-2.5 px-space-md rounded-xl bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary/95 transition-colors" onclick="closeModalAndReload()" type="button">
+          Print Z-Report &amp; Reset Drawer
+        </button>
+<button class="py-2.5 px-space-md rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors" onclick="document.getElementById('closeSuccessModal').classList.add('hidden'); document.getElementById('closeSuccessModal').classList.remove('flex');" type="button">
+          Dismiss
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Logic Script -->
+<script>
+    const EXPECTED_AMOUNT = 7670.00;
+
+    const denominations = [
+      { id: 500, value: 500 },
+      { id: 200, value: 200 },
+      { id: 100, value: 100 },
+      { id: 50, value: 50 },
+      { id: 10, value: 10 },
+      { id: 5, value: 5 },
+      { id: 'coins', value: 1 }
+    ];
+
+    function incrementCount(denomId) {
+      const input = document.getElementById('count-' + denomId);
+      if (input) {
+        input.value = (parseInt(input.value, 10) || 0) + 1;
+        updateCalculations();
+      }
+    }
+
+    function decrementCount(denomId) {
+      const input = document.getElementById('count-' + denomId);
+      if (input) {
+        const val = parseInt(input.value, 10) || 0;
+        if (val > 0) {
+          input.value = val - 1;
+          updateCalculations();
+        }
+      }
+    }
+
+    function updateCalculations() {
+      let totalCounted = 0;
+
+      denominations.forEach(d => {
+        const input = document.getElementById('count-' + d.id);
+        const subtotalEl = document.getElementById('subtotal-' + d.id);
+        const count = Math.max(0, parseInt(input.value, 10) || 0);
+        const subtotal = count * d.value;
+        totalCounted += subtotal;
+
+        if (subtotalEl) {
+          subtotalEl.textContent = subtotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+      });
+
+      const formattedTotal = 'SAR ' + totalCounted.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      
+      const totalDisplay = document.getElementById('totalCountedDisplay');
+      if (totalDisplay) totalDisplay.textContent = formattedTotal;
+
+      const formulaCounted = document.getElementById('formulaCounted');
+      if (formulaCounted) formulaCounted.textContent = formattedTotal;
+
+      const finalizeLabel = document.getElementById('finalizeBtnLabel');
+      if (finalizeLabel) {
+        finalizeLabel.textContent = `Finalize Shift Close & Generate Z-Report (${formattedTotal})`;
+      }
+
+      // Variance Calculation
+      const variance = totalCounted - EXPECTED_AMOUNT;
+      const varianceDisplay = document.getElementById('varianceValueDisplay');
+      const badge = document.getElementById('varianceBadge');
+      const icon = document.getElementById('varianceIcon');
+      const title = document.getElementById('varianceTitle');
+      const subtitle = document.getElementById('varianceSubtitle');
+
+      if (varianceDisplay) {
+        if (variance === 0) {
+          varianceDisplay.textContent = 'SAR 0.00';
+          varianceDisplay.className = 'font-title-lg text-title-lg text-primary tabular-nums font-bold';
+        } else if (variance > 0) {
+          varianceDisplay.textContent = '+ SAR ' + variance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+          varianceDisplay.className = 'font-title-lg text-title-lg text-primary tabular-nums font-bold';
+        } else {
+          varianceDisplay.textContent = '- SAR ' + Math.abs(variance).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+          varianceDisplay.className = 'font-title-lg text-title-lg text-error tabular-nums font-bold';
+        }
+      }
+
+      if (badge && icon && title && subtitle) {
+        if (Math.abs(variance) < 0.01) {
+          badge.className = 'p-space-md rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-between transition-colors';
+          icon.textContent = 'verified';
+          title.textContent = 'Zero Variance • Perfect Balance';
+          subtitle.textContent = 'Halala-accurate match with ZATCA ledger records';
+        } else if (variance > 0) {
+          badge.className = 'p-space-md rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-between transition-colors';
+          icon.textContent = 'trending_up';
+          title.textContent = `Cash Surplus (+SAR ${variance.toFixed(2)})`;
+          subtitle.textContent = 'Surplus noted for supervisor reconciliation approval';
+        } else {
+          badge.className = 'p-space-md rounded-xl bg-error-container text-on-error-container flex items-center justify-between transition-colors';
+          icon.textContent = 'warning';
+          title.textContent = `Cash Shortage (-SAR ${Math.abs(variance).toFixed(2)})`;
+          subtitle.textContent = Math.abs(variance) > 50 
+            ? 'Shortage > SAR 50 requires mandatory incident documentation'
+            : 'Minor discrepancy recorded on shift closing voucher';
+        }
+      }
+    }
+
+    document.getElementById('resetCountsBtn')?.addEventListener('click', () => {
+      denominations.forEach(d => {
+        const input = document.getElementById('count-' + d.id);
+        if (input) input.value = 0;
+      });
+      updateCalculations();
+    });
+
+    document.getElementById('finalizeBtn')?.addEventListener('click', () => {
+      const modal = document.getElementById('closeSuccessModal');
+      const totalDisplay = document.getElementById('totalCountedDisplay');
+      const varianceDisplay = document.getElementById('varianceValueDisplay');
+      
+      if (document.getElementById('modalFinalCash')) {
+        document.getElementById('modalFinalCash').textContent = totalDisplay?.textContent || 'SAR 7,670.00';
+      }
+      if (document.getElementById('modalFinalVariance')) {
+        document.getElementById('modalFinalVariance').textContent = varianceDisplay?.textContent || 'SAR 0.00';
+      }
+
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    });
+
+    function closeModalAndReload() {
+      const modal = document.getElementById('closeSuccessModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="w-full px-margin-mobile lg:px-margin-desktop py-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex flex-wrap items-center gap-space-md font-label-md text-label-md text-on-surface-variant"><span class="flex items-center gap-1.5 font-medium text-on-surface"><span class="material-symbols-outlined text-primary text-[16px]">verified</span> ZATCA Phase II Sovereign Integration</span><span>•</span><span>Cryptographic Stamp Validated</span><span>•</span><span>UUID: 9f82c4-e81a-4c28-98e3-ksa-einv</span></div><div class="flex items-center gap-space-lg font-label-md text-label-md text-on-surface-variant"><span>Aura Health Solutions v4.9.2</span><span>•</span><span class="text-on-surface">Riyadh Al-Olaya Concierge Desk</span></div></div></footer></body></html>
