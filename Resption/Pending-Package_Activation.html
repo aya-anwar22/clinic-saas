@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary-fixed-variant":"#4f319c","secondary":"#674bb5","inverse-surface":"#332e3d","surface-tint":"#732ee4","outline-variant":"#ccc3d8","surface-container-highest":"#e8dff3","primary-fixed-dim":"#d2bbff","surface-container-high":"#eee4f9","surface-container-lowest":"#ffffff","on-primary-fixed-variant":"#5a00c6","on-primary-fixed":"#25005a","primary-container":"#7c3aed","secondary-fixed":"#e8ddff","tertiary-fixed":"#89f5e7","primary":"#630ed4","error-container":"#ffdad6","on-background":"#1e1927","inverse-primary":"#d2bbff","surface-container-low":"#f9f1ff","tertiary-container":"#00746a","secondary-container":"#ab8ffe","on-tertiary-container":"#8df9ea","tertiary-fixed-dim":"#6bd8cb","on-surface":"#1e1927","on-secondary-container":"#3f1e8c","on-surface-variant":"#4a4455","on-primary":"#ffffff","on-tertiary":"#ffffff","on-secondary-fixed":"#21005e","error":"#ba1a1a","surface-container":"#f4eafe","background":"#fef7ff","on-tertiary-fixed":"#00201d","on-error":"#ffffff","outline":"#7b7487","surface-variant":"#e8dff3","inverse-on-surface":"#f7edff","secondary-fixed-dim":"#cebdff","on-tertiary-fixed-variant":"#005049","tertiary":"#005952","primary-fixed":"#eaddff","on-secondary":"#ffffff","on-primary-container":"#ede0ff","surface":"#fef7ff","surface-dim":"#e0d6ea","on-error-container":"#93000a","surface-bright":"#fef7ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-md":"0.875rem","margin":"1rem","gutter-tablet":"1.25rem","space-sm":"0.5rem","space-xs":"0.25rem","margin-tablet":"1.5rem","space-lg":"1.25rem","space-xl":"2rem","gutter":"1rem"},"fontFamily":{"headline-sm":["Inter"],"headline-lg":["Inter"],"body-sm":["Inter"],"label-md":["Inter"],"timer-display":["Inter"],"headline-md":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"label-lg":["Inter"],"label-sm":["Inter"],"display-lg":["Inter"]},"fontSize":{"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"timer-display":["16px",{"lineHeight":"20px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"22px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-lg":["15px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-space-lg lg:px-space-xl flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">local_hospital</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Lumea Clinic</span><span class="font-label-sm text-label-sm text-on-surface-variant">منظومة الاستقبال والعيادات</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container rounded-xl"><span class="material-symbols-outlined text-primary text-[20px]">location_on</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant">الفرع الحالي</span><span class="font-label-md text-label-md text-on-surface font-semibold">فرع العليا التخصصي - الرياض</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px] mr-space-xs">expand_more</span></div></div><nav class="hidden lg:flex items-center gap-space-xs p-space-xs bg-surface-container-low rounded-xl" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl shadow-sm"><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-xl" data-path="live-queue" href="live-quee.html">طابور الانتظار</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-xl" data-path="booking-board" href="booking.html">لوحة المواعيد</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-xl" data-path="pos-and-invoices" href="POS_Checkout.html">نقطة البيع والفواتير</a><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-semibold rounded-xl shadow-sm" data-path="package-activation" href="Pending-Package_Activation.html">تفعيل الباقات</a><a class="px-space-md py-space-sm font-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-xl" data-path="cash-and-register" href="Shift_and_Cash_Drawer.html">الصندوق والعهد</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-sm px-space-md py-space-xs bg-surface-container rounded-xl"><div class="w-2.5 h-2.5 rounded-full bg-tertiary-container animate-pulse"></div><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold">سارة العتيبي</span><span class="font-label-sm text-label-sm text-on-surface-variant">موظفة استقبال • مناوبة نشطة</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Interactive Scenario Controller Bar (Prototype Switcher) -->
+<div class="w-full bg-surface-container-high border-b border-surface-container-highest px-space-md py-space-sm sticky top-20 z-40">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">سيناريوهات العرض التفاعلية:</span>
+</div>
+<div class="flex items-center flex-wrap gap-space-xs" id="scenarioButtons">
+<button class="scenario-btn px-space-sm py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all bg-primary-container text-on-primary shadow-sm flex items-center gap-1" data-state="default" onclick="setScenario('default')">
+<span class="material-symbols-outlined text-[16px]">view_sidebar</span>
+<span>الافتراضي (درج التفعيل)</span>
+</button>
+<button class="scenario-btn px-space-sm py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-highest flex items-center gap-1" data-state="success" onclick="setScenario('success')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>تم التفعيل بنجاح</span>
+</button>
+<button class="scenario-btn px-space-sm py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-highest flex items-center gap-1" data-state="exception" onclick="setScenario('exception')">
+<span class="material-symbols-outlined text-[16px]">supervisor_account</span>
+<span>طلب استثناء المشرف</span>
+</button>
+<button class="scenario-btn px-space-sm py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-highest flex items-center gap-1" data-state="error" onclick="setScenario('error')">
+<span class="material-symbols-outlined text-[16px]">error</span>
+<span>تعذر السداد (خطأ)</span>
+</button>
+<button class="scenario-btn px-space-sm py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-highest flex items-center gap-1" data-state="empty" onclick="setScenario('empty')">
+<span class="material-symbols-outlined text-[16px]">inbox</span>
+<span>قائمة فارغة</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-space-sm bg-surface-container hover:bg-primary-container hover:text-on-primary text-on-surface font-label-sm text-label-sm font-semibold rounded-lg transition-colors flex items-center gap-1" id="langToggleBtn" onclick="toggleDirection()">
+<span class="material-symbols-outlined text-[16px]">translate</span>
+<span id="langLabel">English (LTR)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Work Area Container -->
+<div class="w-full px-space-md lg:px-space-xl py-space-lg flex flex-col gap-space-lg transition-all" id="localizedWrapper">
+<!-- Screen Title Header Section -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">قسم الاستقبال والفوترة السريرية</span>
+<span class="text-on-surface-variant text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+            نظام متزامن لحظياً مع العيادات
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight" id="txtPageTitle">
+          تفعيل الباقات المعلقة بانتظار السداد
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl" id="txtPageSubtitle">
+          مراجعة واعتماد باقات المراجعين المحجوزة إلكترونياً أو المسجلة مسبقاً وتأكيد السداد لتنشيط الجلسات السريرية فوراً.
+        </p>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="flex items-center flex-wrap gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-xl flex items-center gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">pending_actions</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="kpiLabel1">باقات معلقة</span>
+<span class="font-timer-display text-timer-display text-primary">7 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">(14,850 ر.س)</span></span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex items-center gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">schedule</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="kpiLabel2">متوسط التعليق</span>
+<span class="font-timer-display text-timer-display text-on-surface">18 ساعة</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex items-center gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">assignment_turned_in</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="kpiLabel3">استثناءات قيد التدقيق</span>
+<span class="font-timer-display text-timer-display text-tertiary">2 طلبات</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Global Error Alert (Hidden by default, shown in error scenario) -->
+<div class="hidden w-full bg-error-container text-on-error-container p-space-md rounded-xl shadow-sm flex items-center justify-between gap-space-md transition-all" id="paymentErrorBanner">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-error text-on-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">credit_card_off</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold">تعذر استكمال السداد الإلكتروني (خطأ اتصال بالشبكة 104-ECR)</span>
+<span class="font-body-sm text-body-sm opacity-90">انتهت مهلة استجابة نقطة البيع POS Geidea مع البطاقة البنكية للمريضة نورة الحربي. يرجى إعادة المحاولة أو التبديل للسداد النقدي.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="h-10 px-space-md bg-error text-on-error font-label-md text-label-md font-semibold rounded-lg hover:opacity-90 flex items-center gap-1 shadow-sm" onclick="retryPayment()">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span>إعادة المحاولة فوراً</span>
+</button>
+</div>
+</div>
+<!-- Filter Bar & Search Tools -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md bg-surface-container-low p-space-sm rounded-2xl shadow-sm">
+<div class="flex items-center overflow-x-auto gap-space-xs pb-1 md:pb-0" id="filterTabs">
+<button class="filter-chip h-10 px-space-md rounded-xl font-label-md text-label-md font-semibold bg-primary-container text-on-primary whitespace-nowrap transition-all shadow-sm">الكل (7)</button>
+<button class="filter-chip h-10 px-space-md rounded-xl font-label-md text-label-md font-semibold bg-surface-container text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-all">اليوم (4)</button>
+<button class="filter-chip h-10 px-space-md rounded-xl font-label-md text-label-md font-semibold bg-surface-container text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-all">معلقة أكثر من 24 ساعة (3)</button>
+<button class="filter-chip h-10 px-space-md rounded-xl font-label-md text-label-md font-semibold bg-surface-container text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-all">استثناءات المشرف (1)</button>
+</div>
+<div class="flex items-center gap-space-sm flex-1 md:max-w-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 start-3 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-11 ps-10 pe-10 bg-surface-container rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:bg-surface-container-lowest transition-colors shadow-inner" placeholder="البحث برقم الملف (LUM)، اسم المريض، أو الجوال (050xxxxxxx)..." type="text"/>
+<button class="absolute top-1/2 -translate-y-1/2 end-2 w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Workspace Layout: Table + Side Drawer (Flex / Grid Split) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Pending List (Width adapts if drawer is active) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md transition-all duration-300" id="tableContainerCol">
+<!-- Empty State View (Shown when empty scenario activated) -->
+<div class="hidden bg-surface-container-lowest rounded-2xl p-12 text-center flex-col items-center justify-center gap-space-md shadow-sm" id="emptyStateView">
+<div class="w-20 h-20 rounded-full bg-secondary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[44px]">task_alt</span>
+</div>
+<div class="flex flex-col gap-1 max-w-md">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">لا توجد باقات معلقة بانتظار السداد حالياً</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">تم تدقيق وتفعيل كافة الباقات الطبية. جميع جلسات المراجعين نشطة وجاهزة للحجز السريري في النظام.</p>
+</div>
+<button class="h-11 px-space-lg bg-surface-container text-primary font-label-md text-label-md font-semibold rounded-xl hover:bg-surface-container-high transition-colors" onclick="setScenario('default')">
+            تحديث القائمة والبحث عن طلبات جديدة
+          </button>
+</div>
+<!-- Pending Items List Card -->
+<div class="flex flex-col gap-space-sm" id="pendingCardsList">
+<!-- Row 1: Selected Item (نورة الحربي) -->
+<div class="package-row cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-200 rounded-2xl p-space-md shadow-md ring-2 ring-primary-container relative overflow-hidden" id="packageRow1" onclick="selectRow(1)">
+<div class="absolute top-0 end-0 bg-primary-container text-on-primary px-space-md py-1 rounded-bl-xl font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">touch_app</span>
+<span>قيد المعاينة والدفع</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-2">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary font-bold text-headline-sm shrink-0">
+                  ن
+                </div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">نورة عبد الله الحربي</span>
+<span class="font-label-sm text-label-sm text-on-secondary-fixed-variant bg-secondary-fixed px-2 py-0.5 rounded-md">LUM-10492</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">0509876543</span>
+</div>
+<div class="font-body-md text-body-md text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">spa</span>
+<span>باقة ليزر الجسم الكامل مع الرتوش (8 جلسات)</span>
+<span class="text-on-surface-variant font-normal text-body-sm">[جهاز Candela Pro]</span>
+</div>
+<div class="flex items-center gap-3 text-body-sm text-on-surface-variant mt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                      اليوم، 09:15 ص (15 فبراير 2026)
+                    </span>
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">person</span>
+                      د. ريما الشعلان
+                    </span>
+</div>
+</div>
+</div>
+<!-- Price & Status Badges -->
+<div class="flex flex-row sm:flex-col items-end justify-between sm:justify-center gap-2 pt-2 sm:pt-0 border-t sm:border-0 border-surface-container-high">
+<div class="flex flex-col sm:items-end">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">3,200.00 ر.س</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">شامل الضريبة (15%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                    منذ ساعتين
+                  </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                    معلقة بانتظار السداد
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 2: أماني المالكي -->
+<div class="package-row cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-200 rounded-2xl p-space-md shadow-sm border border-transparent" id="packageRow2" onclick="selectRow(2)">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-headline-sm shrink-0">
+                  أ
+                </div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">أماني المالكي</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-md">LUM-08241</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">0554128963</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-tertiary">water_drop</span>
+<span>باقة نضارة ميزوثيرابي وتفتيح متقدم (3 جلسات)</span>
+</div>
+<div class="flex items-center gap-3 text-body-sm text-on-surface-variant mt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                      أمس، 04:30 م (14 فبراير)
+                    </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">stethoscope</span>
+                      أخصائية هالة السيد
+                    </span>
+</div>
+</div>
+</div>
+<!-- Price & Status Badges -->
+<div class="flex flex-row sm:flex-col items-end justify-between sm:justify-center gap-2 pt-2 sm:pt-0">
+<div class="flex flex-col sm:items-end">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">1,150.00 ر.س</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">شامل الضريبة (15%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+                    منذ 21 ساعة
+                  </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    حجز تطبيق
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 3: سارة الدوسري (Late / Attention) -->
+<div class="package-row cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-200 rounded-2xl p-space-md shadow-sm border border-transparent" id="packageRow3" onclick="selectRow(3)">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center font-bold text-headline-sm shrink-0">
+                  س
+                </div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">سارة الدوسري</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-md">LUM-07619</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">0532145890</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">auto_fix_high</span>
+<span>باقة تقشير بارد كوزميلان + جلستين متابعة</span>
+</div>
+<div class="flex items-center gap-3 text-body-sm text-on-surface-variant mt-1">
+<span class="flex items-center gap-1 text-error">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+                      13 فبراير 2026 (تجاوزت مهلة الحجز 48 ساعة)
+                    </span>
+</div>
+</div>
+</div>
+<!-- Price & Status Badges -->
+<div class="flex flex-row sm:flex-col items-end justify-between sm:justify-center gap-2 pt-2 sm:pt-0">
+<div class="flex flex-col sm:items-end">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">1,800.00 ر.س</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">شامل الضريبة (15%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+                    منذ يومين (متأخرة)
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 4: شهد العتيبي -->
+<div class="package-row cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-200 rounded-2xl p-space-md shadow-sm border border-transparent" id="packageRow4" onclick="selectRow(4)">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center font-bold text-headline-sm shrink-0">
+                  ش
+                </div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">شهد العتيبي</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-md">LUM-11025</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">0568974123</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-tertiary">clean_hands</span>
+<span>باقة هيدرافيشل لتنظيف ونضارة البشرة (4 جلسات)</span>
+</div>
+<div class="flex items-center gap-3 text-body-sm text-on-surface-variant mt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                      اليوم، 10:45 ص (جديدة)
+                    </span>
+</div>
+</div>
+</div>
+<!-- Price & Status Badges -->
+<div class="flex flex-row sm:flex-col items-end justify-between sm:justify-center gap-2 pt-2 sm:pt-0">
+<div class="flex flex-col sm:items-end">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">1,200.00 ر.س</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">شامل الضريبة (15%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+                    منذ 30 دقيقة
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 5: هند الشمري (Exception flagged) -->
+<div class="package-row cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-200 rounded-2xl p-space-md shadow-sm border border-transparent" id="packageRow5" onclick="selectRow(5)">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-headline-sm shrink-0">
+                  هـ
+                </div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">هند الشمري</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-md">LUM-09532</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">0501478523</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">healing</span>
+<span>باقة إبر النضارة البروفايلو (جلسات مكثفة - جلستان)</span>
+</div>
+<div class="flex items-center gap-3 text-body-sm text-on-surface-variant mt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                      12 فبراير 2026
+                    </span>
+</div>
+</div>
+</div>
+<!-- Price & Status Badges -->
+<div class="flex flex-row sm:flex-col items-end justify-between sm:justify-center gap-2 pt-2 sm:pt-0">
+<div class="flex flex-col sm:items-end">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">2,400.00 ر.س</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">شامل الضريبة (15%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-blue-100 text-blue-800 font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+                    استثناء مطلوب
+                  </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Tablet Helpful Notice Bar -->
+<div class="bg-surface-container-low p-space-md rounded-2xl flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">info</span>
+<span>انقر فوق أي صف لاستعراض التفاصيل وفتح مسار التحصيل الفوري أو رفع استثناء للمشرف.</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-1 rounded-md">تحديث تلقائي: كل 60 ثانية</span>
+</div>
+</div>
+<!-- Right Column: Interactive Activation Drawer Panel (Fixed/Embedded Tablet Drawer) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-2xl shadow-xl p-space-lg flex flex-col gap-space-md transition-all duration-300 relative" id="drawerColumn">
+<!-- Close Drawer Button for mobile/tablet toggle -->
+<button class="absolute top-4 start-4 w-9 h-9 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-colors" onclick="toggleDrawer(false)">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<!-- VIEW A: Standard Payment & Activation Drawer -->
+<div class="flex flex-col gap-space-md" id="drawerViewStandard">
+<!-- Drawer Header -->
+<div class="flex flex-col gap-1 pe-10">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">LUM-10492</span>
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+<span class="font-label-sm text-label-sm text-amber-700 font-semibold">بانتظار السداد المالي</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold" id="drawerTitle">
+              تأكيد تحصيل وتفعيل الباقة
+            </h2>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">المريضة: نورة عبد الله الحربي (0509876543)</span>
+</div>
+<!-- Strict Clinic Policy Notice Banner (Soft lavender / purple) -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">policy</span>
+<div class="flex flex-col gap-0.5 font-body-sm text-body-sm text-on-surface">
+<span class="font-bold text-primary">قاعدة نظامية سريرية ملزمة:</span>
+<p class="text-on-surface-variant leading-relaxed">
+                تصبح الباقة نشطة (Active) ومتاحة لحجز الجلسات الطبية فقط وحصرياً بعد تسجيل السداد الفعلي في نقطة البيع أو صدور موافقة استثناء المشرف.
+              </p>
+</div>
+</div>
+<!-- Package Details Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">تفاصيل الباقة المحجوزة</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-0.5">ليزر الجسم الكامل مع الرتوش</h4>
+</div>
+<span class="px-2 py-1 bg-surface-container-highest rounded-lg font-label-md text-label-md text-primary font-bold">8 جلسات</span>
+</div>
+<!-- Price Breakdown Grid -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs border-t border-surface-container">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">المبلغ الصافي الخاضع</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">2,782.61 ر.س</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">ضريبة القيمة المضافة (15%)</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">417.39 ر.س</span>
+</div>
+<div class="col-span-2 flex items-center justify-between bg-surface-container-lowest p-space-sm rounded-lg mt-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">الإجمالي المستحق للتحصيل:</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">3,200.00 ر.س</span>
+</div>
+</div>
+<!-- Expiry & Policy -->
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant pt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">event_repeat</span>
+                الصلاحية: 12 شهر من التفعيل
+              </span>
+<span class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                شامل الرتوش المجانية
+              </span>
+</div>
+</div>
+<!-- Payment Method Selection Grid (Min 48px touch targets) -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface font-bold">طريقة السداد:</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                جاهزية جهاز Geidea ECR متصل
+              </span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs" id="paymentOptions">
+<!-- Option 1: Card/POS (Default Active) -->
+<button class="pay-method-btn min-h-[52px] p-space-sm rounded-xl font-label-md text-label-md font-semibold text-start flex items-center gap-space-sm bg-primary-container text-on-primary shadow-sm transition-all" id="payBtnPos" onclick="selectPaymentMethod('pos')">
+<span class="material-symbols-outlined text-[24px]">contactless</span>
+<div class="flex flex-col leading-tight">
+<span>بطاقة / مدى (ECR)</span>
+<span class="font-label-sm text-label-sm opacity-80">Geidea POS متصل</span>
+</div>
+</button>
+<!-- Option 2: Cash -->
+<button class="pay-method-btn min-h-[52px] p-space-sm rounded-xl font-label-md text-label-md font-semibold text-start flex items-center gap-space-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" id="payBtnCash" onclick="selectPaymentMethod('cash')">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+<div class="flex flex-col leading-tight">
+<span>نقداً (Cash)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">صندوق الاستقبال</span>
+</div>
+</button>
+<!-- Option 3: Bank Transfer -->
+<button class="pay-method-btn min-h-[52px] p-space-sm rounded-xl font-label-md text-label-md font-semibold text-start flex items-center gap-space-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" id="payBtnTransfer" onclick="selectPaymentMethod('transfer')">
+<span class="material-symbols-outlined text-[24px]">account_balance</span>
+<div class="flex flex-col leading-tight">
+<span>تحويل بنكي</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">الراجحي / الأهلي</span>
+</div>
+</button>
+<!-- Option 4: Patient Wallet -->
+<button class="pay-method-btn min-h-[52px] p-space-sm rounded-xl font-label-md text-label-md font-semibold text-start flex items-center gap-space-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" id="payBtnWallet" onclick="selectPaymentMethod('wallet')">
+<span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+<div class="flex flex-col leading-tight">
+<span>محفظة المريض</span>
+<span class="font-label-sm text-label-sm text-tertiary">رصيد: 450.00 ر.س</span>
+</div>
+</button>
+</div>
+<!-- Dynamic Input for Bank Transfer (Toggled via JS) -->
+<div class="hidden mt-2 p-space-sm bg-surface-container rounded-xl flex-col gap-1" id="transferReferenceBlock">
+<label class="font-label-sm text-label-sm text-on-surface-variant">رقم الحوالة البنكية المرجعي (ZATCA Ref):</label>
+<input class="h-10 px-3 bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none" placeholder="مثال: TR-9823487123" type="text"/>
+</div>
+</div>
+<!-- Primary Pay & Activate Action Button (52px height) -->
+<div class="flex flex-col gap-2 pt-2">
+<button class="h-[52px] w-full bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg font-bold rounded-xl shadow-md flex items-center justify-center gap-space-sm transition-all transform active:scale-[0.99]" id="btnExecuteActivation" onclick="executePayment()">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+<span>تسجيل السداد وتفعيل الباقة فوراً (Pay & Activate)</span>
+</button>
+<span class="text-center font-label-sm text-label-sm text-on-surface-variant">
+              يصدر إشعار فوري إلى ملف الطبيب المعالج ومنظومة المواعيد فور الضغط.
+            </span>
+</div>
+<!-- Manager Authorized Exception Flow Accordion / Trigger -->
+<div class="mt-space-xs pt-space-md border-t border-surface-container-high flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[20px]">admin_panel_settings</span>
+                مسار الاستثناء الإداري (Manager Exception)
+              </span>
+<button class="font-label-sm text-label-sm text-primary hover:underline font-semibold" onclick="openExceptionForm()">
+                طلب اعتماد قبل السداد
+              </button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              في الحالات الطارئة أو لكبار المراجعين، يمكن السماح بحجز أول جلسة قبل تسجيل السداد مع تحويل الفاتورة لذمم المراجعين.
+            </p>
+</div>
+</div>
+<!-- VIEW B: Manager Exception Flow Form (Shown when triggered) -->
+<div class="hidden flex-col gap-space-md" id="drawerViewException">
+<div class="flex items-center gap-space-sm">
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface" onclick="backToStandardView()">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">طلب استثناء المشرف: السماح بالحجز قبل السداد</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">إنشاء ذمة مالية مؤقتة للمريضة: نورة الحربي</span>
+</div>
+</div>
+<div class="bg-amber-50 text-amber-900 p-space-md rounded-xl font-body-sm text-body-sm flex items-start gap-2">
+<span class="material-symbols-outlined text-amber-600 text-[20px] shrink-0 mt-0.5">warning</span>
+<span>سيتم إرسال إشعار لحظي للمشرف المناوب (سلطان السبيعي) للموافقة برقم سري أو عبر تطبيقه الخاص. المريضة ستتمكن من بدء الجلسة فوراً.</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-md text-label-md text-on-surface font-bold">سبب الاستثناء الإداري:</label>
+<div class="grid grid-cols-1 gap-2">
+<label class="flex items-center gap-2 p-space-sm rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container">
+<input checked="" class="w-4 h-4 text-primary" name="exception_reason" type="radio"/>
+<span class="font-body-sm text-body-sm text-on-surface">عطل مؤقت ببطاقة الصراف للمريض / جاري التحويل</span>
+</label>
+<label class="flex items-center gap-2 p-space-sm rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container">
+<input class="w-4 h-4 text-primary" name="exception_reason" type="radio"/>
+<span class="font-body-sm text-body-sm text-on-surface">عميلة VIP معتمدة ولديها موعد سريري يبدأ الآن</span>
+</label>
+<label class="flex items-center gap-2 p-space-sm rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container">
+<input class="w-4 h-4 text-primary" name="exception_reason" type="radio"/>
+<span class="font-body-sm text-body-sm text-on-surface">ضمان مالي أو جهة تعاقد تحت الفوترة الآجلة</span>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-bold">ملاحظات موظفة الاستقبال:</label>
+<textarea class="w-full p-space-sm bg-surface-container rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest transition-colors resize-none" placeholder="اكتب تفاصيل إضافية للمشرف المناوب..." rows="3"></textarea>
+</div>
+<div class="flex items-center gap-space-sm pt-2">
+<button class="h-12 flex-1 bg-secondary hover:bg-on-secondary-fixed-variant text-on-secondary font-label-md text-label-md font-bold rounded-xl shadow-md flex items-center justify-center gap-2 transition-colors" onclick="submitExceptionRequest()">
+<span class="material-symbols-outlined text-[20px]">send_time_extension</span>
+<span>إرسال طلب الاعتماد وتفعيل مؤقت</span>
+</button>
+<button class="h-12 px-space-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold rounded-xl" onclick="backToStandardView()">
+              إلغاء
+            </button>
+</div>
+</div>
+<!-- VIEW C: Dignified Clean Success State (Zero Confetti) -->
+<div class="hidden flex-col items-center justify-center py-space-xl px-space-sm text-center gap-space-md" id="drawerViewSuccess">
+<div class="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 shadow-sm animate-bounce">
+<span class="material-symbols-outlined text-[48px]">check_circle</span>
+</div>
+<div class="flex flex-col gap-1 max-w-sm">
+<span class="font-label-md text-label-md text-emerald-700 font-bold uppercase tracking-wider">تم الاعتماد والتنشيط</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold">
+              تم تفعيل الباقة بنجاح!
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+              الباقة أصبحت <span class="font-bold text-emerald-700">نشطة (Active)</span> الآن وتم ربط <span class="font-bold text-on-surface">8 جلسات</span> بملف المريضة في جدول العيادات.
+            </p>
+</div>
+<!-- Invoice Snapshot Pill -->
+<div class="w-full bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2 text-start">
+<div class="flex justify-between items-center text-body-sm text-on-surface-variant">
+<span>رقم الفاتورة الضريبية:</span>
+<span class="font-mono font-semibold text-on-surface">INV-2026-0892</span>
+</div>
+<div class="flex justify-between items-center text-body-sm text-on-surface-variant">
+<span>المبلغ المسدد:</span>
+<span class="font-bold text-emerald-700">3,200.00 ر.س (مدى ECR)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm text-on-surface-variant">
+<span>حالة الجلسات:</span>
+<span class="font-semibold text-primary">8 جلسات متاحة للحجز الفوري</span>
+</div>
+</div>
+<!-- Success Actions -->
+<div class="w-full flex flex-col gap-2 pt-2">
+<button class="h-12 w-full bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-bold rounded-xl shadow-md flex items-center justify-center gap-2 transition-colors" onclick="simulateBookSession()">
+<span class="material-symbols-outlined text-[20px]">calendar_add_on</span>
+<span>حجز أول جلسة الآن في العيادة</span>
+</button>
+<div class="flex items-center gap-2">
+<button class="h-11 flex-1 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold rounded-xl flex items-center justify-center gap-1.5 transition-colors" onclick="simulatePrintReceipt()">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>طباعة إيصال الزكاة ZATCA</span>
+</button>
+<button class="h-11 px-space-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold rounded-xl" onclick="backToStandardView()">
+                إغلاق
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Scenario Switcher Logic for Interactive Showcase
+  let currentDir = 'rtl';
+
+  function setScenario(type) {
+    // Update scenario toolbar buttons active appearance
+    document.querySelectorAll('.scenario-btn').forEach(btn => {
+      if (btn.getAttribute('data-state') === type) {
+        btn.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+        btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      } else {
+        btn.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+        btn.classList.add('bg-surface-container', 'text-on-surface-variant');
+      }
+    });
+
+    const standardView = document.getElementById('drawerViewStandard');
+    const successView = document.getElementById('drawerViewSuccess');
+    const exceptionView = document.getElementById('drawerViewException');
+    const errorBanner = document.getElementById('paymentErrorBanner');
+    const emptyView = document.getElementById('emptyStateView');
+    const pendingList = document.getElementById('pendingCardsList');
+    const drawerCol = document.getElementById('drawerColumn');
+
+    // Reset base views
+    standardView.classList.add('hidden');
+    successView.classList.add('hidden');
+    exceptionView.classList.add('hidden');
+    errorBanner.classList.add('hidden');
+    emptyView.classList.add('hidden');
+    pendingList.classList.remove('hidden');
+    drawerCol.classList.remove('hidden');
+
+    if (type === 'default') {
+      standardView.classList.remove('hidden');
+    } else if (type === 'success') {
+      successView.classList.remove('hidden');
+    } else if (type === 'exception') {
+      exceptionView.classList.remove('hidden');
+    } else if (type === 'error') {
+      standardView.classList.remove('hidden');
+      errorBanner.classList.remove('hidden');
+    } else if (type === 'empty') {
+      pendingList.classList.add('hidden');
+      emptyView.classList.remove('hidden');
+      drawerCol.classList.add('hidden');
+    }
+  }
+
+  // Switch between drawer views
+  function openExceptionForm() {
+    setScenario('exception');
+  }
+
+  function backToStandardView() {
+    setScenario('default');
+  }
+
+  function executePayment() {
+    // Transition smoothly to dignified success state
+    setScenario('success');
+  }
+
+  function submitExceptionRequest() {
+    // Simulated manager approval
+    alert('تم إرسال طلب استثناء المشرف بنجاح (المشرف المناوب: سلطان السبيعي). تم تحديث حالة الباقة إلى: استثناء قيد التدقيق.');
+    setScenario('default');
+  }
+
+  function retryPayment() {
+    const errorBanner = document.getElementById('paymentErrorBanner');
+    errorBanner.innerHTML = `
+      <div class="flex items-center gap-space-sm">
+        <span class="material-symbols-outlined text-primary animate-spin text-[24px]">progress_activity</span>
+        <span class="font-label-md text-label-md font-bold">جاري إعادة محاذاة نقطة البيع Geidea POS وإعادة إرسال العملية...</span>
+      </div>
+    `;
+    setTimeout(() => {
+      setScenario('success');
+    }, 1400);
+  }
+
+  function selectPaymentMethod(method) {
+    const buttons = document.querySelectorAll('.pay-method-btn');
+    buttons.forEach(btn => {
+      btn.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+      btn.classList.add('bg-surface-container', 'text-on-surface');
+    });
+
+    const transferRef = document.getElementById('transferReferenceBlock');
+    if (method === 'transfer') {
+      transferRef.classList.remove('hidden');
+      transferRef.classList.add('flex');
+    } else {
+      transferRef.classList.add('hidden');
+      transferRef.classList.remove('flex');
+    }
+
+    if (method === 'pos') {
+      document.getElementById('payBtnPos').classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+      document.getElementById('payBtnPos').classList.remove('bg-surface-container', 'text-on-surface');
+    } else if (method === 'cash') {
+      document.getElementById('payBtnCash').classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+      document.getElementById('payBtnCash').classList.remove('bg-surface-container', 'text-on-surface');
+    } else if (method === 'transfer') {
+      document.getElementById('payBtnTransfer').classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+      document.getElementById('payBtnTransfer').classList.remove('bg-surface-container', 'text-on-surface');
+    } else if (method === 'wallet') {
+      document.getElementById('payBtnWallet').classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+      document.getElementById('payBtnWallet').classList.remove('bg-surface-container', 'text-on-surface');
+    }
+  }
+
+  function selectRow(index) {
+    // Visual row highlight
+    for (let i = 1; i <= 5; i++) {
+      const row = document.getElementById(`packageRow${i}`);
+      if (row) {
+        if (i === index) {
+          row.classList.add('ring-2', 'ring-primary-container', 'shadow-md');
+          row.classList.remove('shadow-sm');
+        } else {
+          row.classList.remove('ring-2', 'ring-primary-container', 'shadow-md');
+          row.classList.add('shadow-sm');
+        }
+      }
+    }
+    // Open drawer in standard mode
+    setScenario('default');
+  }
+
+  function toggleDrawer(show) {
+    const drawerCol = document.getElementById('drawerColumn');
+    const tableCol = document.getElementById('tableContainerCol');
+    if (show) {
+      drawerCol.classList.remove('hidden');
+      tableCol.classList.remove('lg:col-span-12');
+      tableCol.classList.add('lg:col-span-7');
+    } else {
+      drawerCol.classList.add('hidden');
+      tableCol.classList.remove('lg:col-span-7');
+      tableCol.classList.add('lg:col-span-12');
+    }
+  }
+
+  function simulateBookSession() {
+    alert('توجيه فوري إلى: لوحة حجز الجلسات الطبية مع ربط الجلسة 1 من 8 بالباقة النشطة.');
+  }
+
+  function simulatePrintReceipt() {
+    window.print();
+  }
+
+  // Bilingual Arabic/English Flip Toggle
+  function toggleDirection() {
+    const htmlTag = document.documentElement;
+    const wrapper = document.getElementById('localizedWrapper');
+    const langBtnLabel = document.getElementById('langLabel');
+    const title = document.getElementById('txtPageTitle');
+    const sub = document.getElementById('txtPageSubtitle');
+    const kpi1 = document.getElementById('kpiLabel1');
+    const kpi2 = document.getElementById('kpiLabel2');
+    const kpi3 = document.getElementById('kpiLabel3');
+    const drawerTitle = document.getElementById('drawerTitle');
+
+    if (currentDir === 'rtl') {
+      htmlTag.setAttribute('dir', 'ltr');
+      htmlTag.setAttribute('lang', 'en');
+      currentDir = 'ltr';
+      langBtnLabel.textContent = 'العربية (RTL)';
+      title.textContent = 'Pending Packages & Pre-payment Activation';
+      sub.textContent = 'Review, reconcile, and activate booked clinical packages upon receipt of payment or managerial override.';
+      kpi1.textContent = 'Pending Packages';
+      kpi2.textContent = 'Avg Queue Age';
+      kpi3.textContent = 'Exception Reviews';
+      drawerTitle.textContent = 'Reconciliation & Activation Drawer';
+    } else {
+      htmlTag.setAttribute('dir', 'rtl');
+      htmlTag.setAttribute('lang', 'ar');
+      currentDir = 'rtl';
+      langBtnLabel.textContent = 'English (LTR)';
+      title.textContent = 'تفعيل الباقات المعلقة بانتظار السداد';
+      sub.textContent = 'مراجعة واعتماد باقات المراجعين المحجوزة إلكترونياً أو المسجلة مسبقاً وتأكيد السداد لتنشيط الجلسات السريرية فوراً.';
+      kpi1.textContent = 'باقات معلقة';
+      kpi2.textContent = 'متوسط التعليق';
+      kpi3.textContent = 'استثناءات قيد التدقيق';
+      drawerTitle.textContent = 'تأكيد تحصيل وتفعيل الباقة';
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-low py-space-lg"><div class="w-full px-space-lg lg:px-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-wrap"><div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container rounded-lg"><span class="material-symbols-outlined text-tertiary text-[18px]">verified</span><span class="font-label-sm text-label-sm text-on-surface">متوافق مع هيئة الزكاة والضريبة والجمارك (ZATCA) المرحلة الثانية</span></div><div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container rounded-lg"><span class="material-symbols-outlined text-primary text-[18px]">security</span><span class="font-label-sm text-label-sm text-on-surface">حماية البيانات الصحية والخصوصية (PDPL)</span></div></div><div class="flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-on-surface-variant">نظام لوميا لإدارة العيادات الطبية v2.4</span><span class="font-label-sm text-label-sm text-on-surface-variant">© 2025 جميع الحقوق محفوظة</span></div></div></footer></body></html>

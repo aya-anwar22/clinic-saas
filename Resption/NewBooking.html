@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"tertiary-container":"#00746a","on-primary":"#ffffff","on-error":"#ffffff","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","background":"#fef7ff","on-secondary-fixed":"#21005e","on-surface-variant":"#4a4455","outline-variant":"#ccc3d8","tertiary-fixed-dim":"#6bd8cb","inverse-on-surface":"#f7edff","inverse-primary":"#d2bbff","on-tertiary-container":"#8df9ea","error-container":"#ffdad6","error":"#ba1a1a","primary-container":"#7c3aed","surface-container":"#f4eafe","on-tertiary-fixed":"#00201d","outline":"#7b7487","primary-fixed":"#eaddff","on-primary-fixed":"#25005a","surface-container-low":"#f9f1ff","tertiary":"#005952","on-secondary-fixed-variant":"#4f319c","secondary-fixed-dim":"#cebdff","surface-bright":"#fef7ff","on-secondary-container":"#3f1e8c","surface":"#fef7ff","surface-container-highest":"#e8dff3","primary":"#630ed4","on-primary-container":"#ede0ff","tertiary-fixed":"#89f5e7","secondary-container":"#ab8ffe","primary-fixed-dim":"#d2bbff","on-tertiary-fixed-variant":"#005049","surface-dim":"#e0d6ea","surface-container-high":"#eee4f9","surface-variant":"#e8dff3","on-surface":"#1e1927","secondary-fixed":"#e8ddff","surface-tint":"#732ee4","inverse-surface":"#332e3d","secondary":"#674bb5","on-background":"#1e1927","on-primary-fixed-variant":"#5a00c6","on-error-container":"#93000a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-tablet":"1.25rem","space-md":"0.875rem","margin-tablet":"1.5rem","space-xs":"0.25rem","space-lg":"1.25rem","space-sm":"0.5rem","margin":"1rem","gutter":"1rem","space-xl":"2rem"},"fontFamily":{"headline-md":["Inter"],"body-md":["Inter"],"label-lg":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"display-lg":["Inter"],"timer-display":["Inter"],"label-sm":["Inter"],"headline-sm":["Inter"]},"fontSize":{"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"22px","fontWeight":"400"}],"label-lg":["15px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"timer-display":["16px",{"lineHeight":"20px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-40 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-margin-tablet flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm bg-surface-container px-space-md py-space-sm rounded-xl"><span class="material-symbols-outlined text-primary text-[20px]">local_hospital</span><div class="flex flex-col text-right"><span class="font-label-sm text-on-surface-variant">المركز الطبي المعتمد</span><span class="font-label-md text-on-surface">فرع العليا التخصصي - الرياض</span></div></div><nav class="flex items-center gap-space-xs bg-surface-container-low p-1.5 rounded-xl" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-xl"><a class="px-space-md py-2.5 rounded-xl font-label-lg text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all" data-path="live-queue" href="live-quee.html">طابور الانتظار المباشر</a><a aria-current="page" class="px-space-md py-2.5 transition-all bg-primary-container text-on-primary font-label-lg rounded-xl" data-path="booking-board" href="booking.html">لوحة الحجوزات</a><a class="px-space-md py-2.5 rounded-xl font-label-lg text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all" data-path="pos" href="POS_Checkout.html">نقطة البيع POS</a><a class="px-space-md py-2.5 rounded-xl font-label-lg text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all" data-path="cash-drawer" href="Shift_and_Cash_Drawer.html">صندوق النقدية</a></nav></div><div class="flex items-center gap-space-md flex-1 max-w-md"><div class="relative w-full"><span class="material-symbols-outlined absolute right-space-md top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[20px]">search</span><input class="w-full h-12 pr-11 pl-space-md rounded-xl bg-surface-container-lowest text-on-surface font-body-sm placeholder:text-outline outline-none focus:ring-2 focus:ring-primary shadow-[0_1px_4px_rgba(0,0,0,0.03)] transition-all" placeholder="بحث سريع برقم الهوية، الملف الطبي، أو الاسم..." type="text"/></div></div><div class="flex items-center gap-space-md shrink-0"><button class="h-12 px-space-lg rounded-xl bg-primary text-on-primary font-label-lg flex items-center gap-space-xs hover:bg-primary-container transition-colors shadow-[0_2px_8px_rgba(124,58,237,0.25)]" type="button"><span class="material-symbols-outlined text-[20px]">add</span><span>حجز / دخول فوري</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-left"><span class="font-label-md text-on-surface">سارة العتيبي</span><span class="font-label-sm text-tertiary font-semibold">موظفة الاستقبال • متصلة</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full relative">
+<!-- Interactive State Scripts & Mock Engine -->
+<script>
+    window.bookingState = {
+      lang: 'ar',
+      activeStep: 3,
+      isWalkIn: true,
+      selectedScenario: 'default',
+      holdSeconds: 167,
+      timerInterval: null
+    };
+
+    function setStep(step) {
+      window.bookingState.activeStep = step;
+      document.querySelectorAll('.step-pane').forEach(el => el.classList.add('hidden'));
+      const activePane = document.getElementById('step-pane-' + step);
+      if(activePane) activePane.classList.remove('hidden');
+
+      // Update stepper header visuals
+      for(let i=1; i<=4; i++) {
+        const btn = document.getElementById('step-tab-' + i);
+        const num = document.getElementById('step-num-' + i);
+        if(!btn) continue;
+        if(i < step) {
+          btn.className = "flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md transition-all bg-surface-container text-tertiary";
+          if(num) num.innerHTML = `<span class="material-symbols-outlined text-[16px]">check</span>`;
+        } else if(i === step) {
+          btn.className = "flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md transition-all bg-primary-container text-on-primary shadow-sm";
+          if(num) num.textContent = i;
+        } else {
+          btn.className = "flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md transition-all text-on-surface-variant hover:bg-surface-container-low";
+          if(num) num.textContent = i;
+        }
+      }
+    }
+
+    function setBookingType(isWalkIn) {
+      window.bookingState.isWalkIn = isWalkIn;
+      const walkinBtn = document.getElementById('toggle-walkin');
+      const scheduledBtn = document.getElementById('toggle-scheduled');
+      const badge = document.getElementById('booking-mode-indicator');
+      
+      if(isWalkIn) {
+        walkinBtn.className = "flex items-center justify-center gap-space-xs px-space-md h-12 rounded-xl bg-primary text-on-primary font-label-md shadow-sm transition-all";
+        scheduledBtn.className = "flex items-center justify-center gap-space-xs px-space-md h-12 rounded-xl text-on-surface-variant font-label-md hover:bg-surface-container transition-all";
+        if(badge) badge.innerHTML = `<span class="material-symbols-outlined text-[18px] text-tertiary">bolt</span><span class="font-label-md text-tertiary">تدفق دخول فوري نشط (Walk-in Live)</span>`;
+      } else {
+        scheduledBtn.className = "flex items-center justify-center gap-space-xs px-space-md h-12 rounded-xl bg-primary text-on-primary font-label-md shadow-sm transition-all";
+        walkinBtn.className = "flex items-center justify-center gap-space-xs px-space-md h-12 rounded-xl text-on-surface-variant font-label-md hover:bg-surface-container transition-all";
+        if(badge) badge.innerHTML = `<span class="material-symbols-outlined text-[18px] text-secondary">calendar_clock</span><span class="font-label-md text-secondary">حجز موعد مسبق مجدول</span>`;
+      }
+    }
+
+    function triggerScenario(key) {
+      window.bookingState.selectedScenario = key;
+      const bannerContainer = document.getElementById('scenario-alert-container');
+      const confirmButton = document.getElementById('final-confirm-btn');
+      const buttons = document.querySelectorAll('.scenario-chip');
+      
+      buttons.forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary');
+        b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+      });
+      const activeBtn = document.getElementById('scenario-btn-' + key);
+      if(activeBtn) {
+        activeBtn.classList.add('bg-primary', 'text-on-primary');
+        activeBtn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+      }
+
+      if(!bannerContainer) return;
+      bannerContainer.innerHTML = '';
+      if(confirmButton) {
+        confirmButton.disabled = false;
+        confirmButton.classList.remove('opacity-50', 'cursor-not-allowed');
+      }
+
+      if (key === 'default') {
+        // Normal state
+        bannerContainer.classList.add('hidden');
+      } else if (key === 'walkin') {
+        bannerContainer.classList.remove('hidden');
+        setBookingType(true);
+        setStep(3);
+        bannerContainer.innerHTML = `
+          <div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-highest text-on-surface shadow-sm">
+            <div class="flex items-center gap-space-md">
+              <div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center"><span class="material-symbols-outlined">bolt</span></div>
+              <div class="flex flex-col text-right">
+                <span class="font-label-lg">المريضة حاضرة في الاستقبال الآن (Walk-in Activated)</span>
+                <span class="font-body-sm text-on-surface-variant">تم تخصيص أولوية التوجيه المباشر للغرفة رقم 3 فور إتمام التأكيد بدون انتظار بالصالة.</span>
+              </div>
+            </div>
+            <span class="px-space-md py-1 bg-primary text-on-primary rounded-full font-label-sm">أولوية فورية</span>
+          </div>`;
+      } else if (key === 'intake') {
+        bannerContainer.classList.remove('hidden');
+        if(confirmButton) { confirmButton.disabled = true; confirmButton.classList.add('opacity-50', 'cursor-not-allowed'); }
+        bannerContainer.innerHTML = `
+          <div class="flex items-center justify-between p-space-md rounded-xl bg-error-container text-on-error-container shadow-sm">
+            <div class="flex items-center gap-space-md">
+              <span class="material-symbols-outlined text-[28px] text-error">assignment_late</span>
+              <div class="flex flex-col text-right">
+                <span class="font-label-lg text-error">⛔ إقرار طبي وتاريخ صحي منتهي الصلاحية</span>
+                <span class="font-body-sm">يجب على المريضة استكمال وتوقيع نموذج الموافقة المستنيرة المحدث لليزر قبل بدء الجلسة.</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-space-sm">
+              <button type="button" class="h-10 px-space-md bg-on-error-container text-on-primary rounded-xl font-label-md flex items-center gap-1 hover:opacity-90">
+                <span class="material-symbols-outlined text-[18px]">send_to_mobile</span>
+                <span>إرسال واتساب للمريضة</span>
+              </button>
+              <button type="button" class="h-10 px-space-md bg-surface-container-lowest text-error rounded-xl font-label-md">فتح بالجهاز اللوحي</button>
+            </div>
+          </div>`;
+      } else if (key === 'contraindication') {
+        bannerContainer.classList.remove('hidden');
+        if(confirmButton) { confirmButton.disabled = true; confirmButton.classList.add('opacity-50', 'cursor-not-allowed'); }
+        bannerContainer.innerHTML = `
+          <div class="flex items-center justify-between p-space-md rounded-xl bg-error-container text-on-error-container shadow-sm">
+            <div class="flex items-center gap-space-md">
+              <span class="material-symbols-outlined text-[28px] text-error">warning</span>
+              <div class="flex flex-col text-right">
+                <span class="font-label-lg text-error">⚠️ تعارض سريري نشط (Hard Contraindication)</span>
+                <span class="font-body-sm">أشارت المراجعة لتناول علاج Roaccutane خلال آخر 6 أشهر. تم حظر إصدار النبضات آلياً لمنع الحروق.</span>
+              </div>
+            </div>
+            <button type="button" class="h-10 px-space-md bg-error text-on-error rounded-xl font-label-md flex items-center gap-1">
+              <span class="material-symbols-outlined text-[18px]">medical_services</span>
+              <span>تحويل استشارة الطبيب المشرف</span>
+            </button>
+          </div>`;
+      } else if (key === 'unpaid') {
+        bannerContainer.classList.remove('hidden');
+        if(confirmButton) { confirmButton.disabled = true; confirmButton.classList.add('opacity-50', 'cursor-not-allowed'); }
+        bannerContainer.innerHTML = `
+          <div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-highest text-on-surface shadow-sm">
+            <div class="flex items-center gap-space-md">
+              <span class="material-symbols-outlined text-[28px] text-primary">credit_card_off</span>
+              <div class="flex flex-col text-right">
+                <span class="font-label-lg text-primary">💳 باقة معلقة غير مسددة بالكامل</span>
+                <span class="font-body-sm text-on-surface-variant">يوجد قسط مستحق بقيمة 450.00 ر.س على عقد الباقة قبل فتح الجلسة رقم 2.</span>
+              </div>
+            </div>
+            <button type="button" class="h-10 px-space-md bg-primary text-on-primary rounded-xl font-label-md flex items-center gap-1">
+              <span class="material-symbols-outlined text-[18px]">point_of_sale</span>
+              <span>تحصيل عبر POS الآن</span>
+            </button>
+          </div>`;
+      } else if (key === 'exhausted') {
+        bannerContainer.classList.remove('hidden');
+        if(confirmButton) { confirmButton.disabled = true; confirmButton.classList.add('opacity-50', 'cursor-not-allowed'); }
+        bannerContainer.innerHTML = `
+          <div class="flex items-center justify-between p-space-md rounded-xl bg-error-container text-on-error-container shadow-sm">
+            <div class="flex items-center gap-space-md">
+              <span class="material-symbols-outlined text-[28px] text-error">hourglass_disabled</span>
+              <div class="flex flex-col text-right">
+                <span class="font-label-lg text-error">❌ تم استنفاد نبضات العدسة والقبضة</span>
+                <span class="font-body-sm">عدسة الـ 22mm في Candela #2 تجاوزت الحد الأقصى الآمن (25,000 / 25,000 نبضة). يلزم استبدال القبضة.</span>
+              </div>
+            </div>
+            <button type="button" class="h-10 px-space-md bg-error text-on-error rounded-xl font-label-md flex items-center gap-1">
+              <span class="material-symbols-outlined text-[18px]">build</span>
+              <span>تبديل المورد للغرفة 4</span>
+            </button>
+          </div>`;
+      }
+    }
+
+    function toggleLanguage() {
+      const html = document.documentElement;
+      const isRtl = html.getAttribute('dir') === 'rtl';
+      if(isRtl) {
+        html.setAttribute('dir', 'ltr');
+        html.setAttribute('lang', 'en');
+        document.getElementById('lang-toggle-text').innerText = 'العربية (RTL)';
+      } else {
+        html.setAttribute('dir', 'rtl');
+        html.setAttribute('lang', 'ar');
+        document.getElementById('lang-toggle-text').innerText = 'English (LTR)';
+      }
+    }
+
+    // Live 3-minute hold counter ticker
+    function startHoldTimer() {
+      if(window.bookingState.timerInterval) clearInterval(window.bookingState.timerInterval);
+      window.bookingState.timerInterval = setInterval(() => {
+        if(window.bookingState.holdSeconds > 0) {
+          window.bookingState.holdSeconds--;
+          const mins = Math.floor(window.bookingState.holdSeconds / 60).toString().padStart(2, '0');
+          const secs = (window.bookingState.holdSeconds % 60).toString().padStart(2, '0');
+          const el = document.getElementById('hold-timer-display');
+          if(el) el.innerText = `${mins}:${secs}`;
+        }
+      }, 1000);
+    }
+    window.addEventListener('DOMContentLoaded', startHoldTimer);
+  </script>
+<!-- CLINIC BACKGROUND SIMULATION (Booking Board Backdrop under overlay) -->
+<div class="w-full filter blur-[6px] opacity-40 pointer-events-none select-none px-margin-tablet py-space-lg">
+<div class="flex items-center justify-between mb-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="h-10 px-space-md rounded-xl bg-surface-container-high flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+<span class="font-headline-sm">جدول عيادات الليزر والتجميل - اليوم الثلاثاء</span>
+</div>
+<div class="h-10 px-space-md rounded-xl bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="font-label-md">14 مراجع مكتمل • 5 في الجلسة • 3 قيد الانتظار</span>
+</div>
+</div>
+<div class="flex gap-space-sm">
+<div class="w-32 h-10 bg-surface-container rounded-xl"></div>
+<div class="w-10 h-10 bg-surface-container rounded-xl"></div>
+</div>
+</div>
+<!-- Simulated Kanban / Resource Grid behind modal -->
+<div class="grid grid-cols-4 gap-gutter-tablet">
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md h-96">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-lg text-on-surface">غرفة 1 - د. نادية</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm">3 مواعيد</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm h-24"></div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm h-24"></div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md h-96">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-lg text-on-surface">غرفة 2 - د. أحمد</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm">4 مواعيد</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm h-24"></div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm h-24"></div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md h-96">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-lg text-on-surface">غرفة 3 - د. ريم</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm">متاح الآن</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm h-24"></div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm h-24"></div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md h-96">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-lg text-on-surface">غرفة 4 - د. مها</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm">2 مواعيد</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm h-24"></div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm h-24"></div>
+</div>
+</div>
+</div>
+<!-- PERSISTENT DEMO SCENARIO TOOLBAR FOR FRONT-DESK EVALUATION -->
+<div class="fixed top-24 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
+<div class="bg-surface-container-lowest/95 backdrop-blur-md rounded-xl shadow-xl px-space-md py-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">science</span>
+<span class="font-label-sm text-on-surface-variant font-bold">محاكي سيناريوهات الاستقبال:</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5">
+<button class="scenario-chip h-9 px-3 rounded-lg font-label-sm bg-primary text-on-primary shadow-sm hover:opacity-90 transition-all" id="scenario-btn-default" onclick="triggerScenario('default')" type="button">الافتراضي (تأكيد ناجح)</button>
+<button class="scenario-chip h-9 px-3 rounded-lg font-label-sm bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-all" id="scenario-btn-walkin" onclick="triggerScenario('walkin')" type="button">مراجع فوري (Walk-in)</button>
+<button class="scenario-chip h-9 px-3 rounded-lg font-label-sm bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-all text-error" id="scenario-btn-intake" onclick="triggerScenario('intake')" type="button">إقرار منتهي ⛔</button>
+<button class="scenario-chip h-9 px-3 rounded-lg font-label-sm bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-all text-error" id="scenario-btn-contraindication" onclick="triggerScenario('contraindication')" type="button">تعارض سريري ⚠️</button>
+<button class="scenario-chip h-9 px-3 rounded-lg font-label-sm bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-all" id="scenario-btn-unpaid" onclick="triggerScenario('unpaid')" type="button">باقة غير مسددة 💳</button>
+<button class="scenario-chip h-9 px-3 rounded-lg font-label-sm bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-all text-error" id="scenario-btn-exhausted" onclick="triggerScenario('exhausted')" type="button">استنفاد العدسة ❌</button>
+</div>
+<button class="h-9 px-space-md bg-surface-container rounded-lg font-label-sm text-primary flex items-center gap-1 hover:bg-surface-container-high transition-all" onclick="toggleLanguage()" type="button">
+<span class="material-symbols-outlined text-[16px]">translate</span>
+<span id="lang-toggle-text">English (LTR)</span>
+</button>
+</div>
+</div>
+<!-- MAIN CENTERING MODAL SHEET OVERLAY -->
+<div class="fixed inset-0 z-40 bg-inverse-surface/40 backdrop-blur-sm flex items-center justify-center p-space-md sm:p-space-lg overflow-y-auto">
+<div class="w-full max-w-5xl bg-surface-container-lowest rounded-2xl shadow-2xl flex flex-col overflow-hidden max-h-[942px] my-auto">
+<!-- MODAL TOP BAR: TITLE, TOGGLE, AND CLOSE -->
+<div class="p-space-lg bg-surface-container-low flex flex-wrap items-center justify-between gap-space-md shrink-0">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[28px]">domain_verification</span>
+</div>
+<div class="flex flex-col text-right">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-lg text-on-surface">حجز موعد جديد / استقبال فوري</span>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm">العيادات التخصصية</span>
+</div>
+<span class="font-body-sm text-on-surface-variant">تسجيل وتأمين الموارد والقبضات الطبية مع ضمان عدم التضارب</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<!-- Toggle Walk-in vs Scheduled with 48px Touch Targets -->
+<div class="flex p-1 bg-surface-container-lowest rounded-xl shadow-sm">
+<button class="flex items-center justify-center gap-space-xs px-space-md h-12 rounded-xl bg-primary text-on-primary font-label-md shadow-sm transition-all min-w-[130px]" id="toggle-walkin" onclick="setBookingType(true)" type="button">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>دخول فوري (الآن)</span>
+</button>
+<button class="flex items-center justify-center gap-space-xs px-space-md h-12 rounded-xl text-on-surface-variant font-label-md hover:bg-surface-container transition-all min-w-[130px]" id="toggle-scheduled" onclick="setBookingType(false)" type="button">
+<span class="material-symbols-outlined text-[20px]">event_upcoming</span>
+<span>موعد مجدول</span>
+</button>
+</div>
+<!-- Close Modal Action Target (48x48px) -->
+<button class="w-12 h-12 rounded-xl bg-surface-container hover:bg-surface-container-highest text-on-surface-variant flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+</div>
+<!-- INTERACTIVE MULTI-STEP PROGRESS STEPPER -->
+<div class="px-space-lg py-space-md bg-surface-container-lowest shrink-0 shadow-sm">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm">
+<button class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md transition-all bg-surface-container text-tertiary" id="step-tab-1" onclick="setStep(1)" type="button">
+<span class="w-7 h-7 rounded-full bg-surface-container-lowest text-tertiary flex items-center justify-center font-bold text-[14px]" id="step-num-1">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<div class="flex flex-col text-right truncate">
+<span class="font-label-md">1. المريض والملف</span>
+<span class="font-label-sm text-outline truncate">نورة الحربي (محدد)</span>
+</div>
+</button>
+<button class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md transition-all bg-surface-container text-tertiary" id="step-tab-2" onclick="setStep(2)" type="button">
+<span class="w-7 h-7 rounded-full bg-surface-container-lowest text-tertiary flex items-center justify-center font-bold text-[14px]" id="step-num-2">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<div class="flex flex-col text-right truncate">
+<span class="font-label-md">2. الخدمة والباقة</span>
+<span class="font-label-sm text-outline truncate">ليزر كانديلا (باقة)</span>
+</div>
+</button>
+<button class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md transition-all bg-primary-container text-on-primary shadow-sm" id="step-tab-3" onclick="setStep(3)" type="button">
+<span class="w-7 h-7 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center font-bold text-[14px]" id="step-num-3">3</span>
+<div class="flex flex-col text-right truncate">
+<span class="font-label-md">3. الموارد والوقت</span>
+<span class="font-label-sm text-on-primary-container truncate">غرفة 3 • عدسة 22mm</span>
+</div>
+</button>
+<button class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md transition-all text-on-surface-variant hover:bg-surface-container-low" id="step-tab-4" onclick="setStep(4)" type="button">
+<span class="w-7 h-7 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-bold text-[14px]" id="step-num-4">4</span>
+<div class="flex flex-col text-right truncate">
+<span class="font-label-md">4. المراجعة والتأكيد</span>
+<span class="font-label-sm text-outline truncate">حجز المقعد النهائي</span>
+</div>
+</button>
+</div>
+</div>
+<!-- DYNAMIC CLINICAL SCENARIO ALERT INJECTION CONTAINER -->
+<div class="hidden px-space-lg pt-space-md" id="scenario-alert-container"></div>
+<!-- MODAL SCROLLABLE BODY CONTENT -->
+<div class="p-space-lg overflow-y-auto flex-1 flex flex-col gap-space-lg">
+<!-- ==================== STEP 1: PATIENT SEARCH / CREATE ==================== -->
+<div class="step-pane hidden flex-col gap-space-lg" id="step-pane-1">
+<div class="flex flex-col md:flex-row gap-space-md items-center justify-between">
+<div class="relative flex-1 w-full">
+<span class="material-symbols-outlined absolute right-space-md top-1/2 -translate-y-1/2 text-outline text-[22px]">person_search</span>
+<input class="w-full h-12 pr-12 pl-space-md rounded-xl bg-surface-container-low font-body-md text-on-surface outline-none focus:bg-surface-container-lowest shadow-sm transition-all" placeholder="ابحث برقم الجوال، اسم المريض، أو الهوية الوطنية..." type="text" value="0551239841"/>
+</div>
+<button class="h-12 px-space-lg rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-lg flex items-center gap-space-xs shrink-0 transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>تسجيل مريض جديد فوري</span>
+</button>
+</div>
+<!-- Found Patient Result Card -->
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary font-headline-md">
+<span>ن.ح</span>
+</div>
+<div class="flex flex-col text-right">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-on-surface font-bold">نورة عبد العزيز الحربي</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm font-semibold">ملف نشط #LUM-88412</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-md text-on-surface-variant font-body-sm mt-1">
+<span>الهوية: 1089****32</span>
+<span>•</span>
+<span>الجوال: 9841 123 055</span>
+<span>•</span>
+<span>فصيلة الدم: +O</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span class="font-label-sm text-tertiary font-medium">تم التحقق من التأمين والأهلية • آخر زيارة: قبل 28 يوم</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="px-space-md py-2 rounded-xl bg-surface-container-lowest text-primary font-label-md shadow-sm">المريضة المحددة ✓</span>
+<button class="h-12 px-space-lg rounded-xl bg-primary text-on-primary font-label-lg hover:bg-primary-container transition-all" onclick="setStep(2)" type="button">متابعة للخدمة →</button>
+</div>
+</div>
+</div>
+<!-- ==================== STEP 2: SERVICE & PACKAGE SELECTION ==================== -->
+<div class="step-pane hidden flex-col gap-space-lg" id="step-pane-2">
+<div class="flex items-center justify-between">
+<div class="flex flex-col text-right">
+<span class="font-headline-sm text-on-surface">اختيار الخدمة المطلوبة للمراجعة</span>
+<span class="font-body-sm text-on-surface-variant">تم فحص سجل المريضة والعثور على باقة نشطة صالحة للاستخدام</span>
+</div>
+<span class="px-space-md py-1 bg-surface-container text-tertiary rounded-full font-label-sm">قسم الجلدية والليزر المعتمد</span>
+</div>
+<!-- Existing Active Package Detected Card -->
+<div class="p-space-md rounded-2xl bg-surface-container-high flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container text-on-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">redeem</span>
+</div>
+<div class="flex flex-col text-right">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-lg text-on-surface font-bold">باقة ليزر الجسم الكامل المعتمدة (Full Body 6+2)</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary text-on-tertiary font-label-sm font-semibold">متبقي 5 جلسات</span>
+</div>
+<span class="font-body-sm text-on-surface-variant">رقم الاشتراك: PKG-9921 • تنتهي في 14 نوفمبر 2025 • الاستهلاك اليوم: 0.00 ر.س (مخصوم من الرصيد)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-tertiary font-label-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>تطبيق خصم الباقة تلقائياً</span>
+</span>
+</div>
+</div>
+<!-- Services Grid Selection -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Selected Service -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between cursor-pointer">
+<div class="flex flex-col gap-space-xs text-right">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-primary font-bold">جلسة كانديلا برو - جسم كامل</span>
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-[14px]">✓</span>
+</div>
+<span class="font-body-sm text-on-surface-variant">تشمل اليدين، الساقين، الظهر ومنطقة الوجه مع تبريد ديناميكي DCD</span>
+</div>
+<div class="mt-space-lg flex items-center justify-between pt-space-sm">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-outline">المدة المقدرة</span>
+<span class="font-label-md text-on-surface">60 دقيقة</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-outline">السعر العادي</span>
+<span class="font-headline-sm text-primary font-bold">650 ر.س</span>
+</div>
+</div>
+</div>
+<!-- Alternative Service 1 -->
+<div class="p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between cursor-pointer">
+<div class="flex flex-col gap-space-xs text-right">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-on-surface">جلسة رتوش سريعة (Touch-up)</span>
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center text-[12px]"></span>
+</div>
+<span class="font-body-sm text-on-surface-variant">مراجعة المناطق المتبقية خلال 14 يوماً من الجلسة الأساسية</span>
+</div>
+<div class="mt-space-lg flex items-center justify-between pt-space-sm">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-outline">المدة المقدرة</span>
+<span class="font-label-md text-on-surface">20 دقيقة</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-outline">السعر</span>
+<span class="font-headline-sm text-on-surface font-semibold">180 ر.س</span>
+</div>
+</div>
+</div>
+<!-- Alternative Service 2 -->
+<div class="p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between cursor-pointer">
+<div class="flex flex-col gap-space-xs text-right">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-on-surface">فراكشنال ليزر وتجديد البشرة</span>
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center text-[12px]"></span>
+</div>
+<span class="font-body-sm text-on-surface-variant">علاج آثار الندبات وتحفيز الكولاجين بجهاز DEKA CO2 المعتمد</span>
+</div>
+<div class="mt-space-lg flex items-center justify-between pt-space-sm">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-outline">المدة المقدرة</span>
+<span class="font-label-md text-on-surface">45 دقيقة</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-outline">السعر</span>
+<span class="font-headline-sm text-on-surface font-semibold">890 ر.س</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<button class="h-12 px-space-lg rounded-xl bg-surface-container text-on-surface font-label-md" onclick="setStep(1)" type="button">← العودة للمريض</button>
+<button class="h-12 px-space-lg rounded-xl bg-primary text-on-primary font-label-lg hover:bg-primary-container" onclick="setStep(3)" type="button">متابعة لتحديد الموارد والغرفة →</button>
+</div>
+</div>
+<!-- ==================== STEP 3: AVAILABLE SLOTS & 4 CLINICAL RESOURCES ==================== -->
+<div class="step-pane flex flex-col gap-space-lg" id="step-pane-3">
+<!-- Live Hold Banner active notification -->
+<div class="p-space-md rounded-xl bg-surface-container-high flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">timer</span>
+</div>
+<div class="flex flex-col text-right">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-lg text-primary font-bold">تم حجز الوقت والموارد والقبضة مؤقتاً لمدة:</span>
+<span class="font-timer-display text-primary bg-surface-container-lowest px-2.5 py-0.5 rounded-lg shadow-sm" id="hold-timer-display">02:47</span>
+</div>
+<span class="font-body-sm text-on-surface-variant">القبضة الطبية والغرفة محجوزة لك على النظام لمنع أي تضارب مع موظفي الاستقبال الآخرين.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-xl bg-surface-container-lowest shadow-sm" id="booking-mode-indicator">
+<span class="material-symbols-outlined text-[18px] text-tertiary">bolt</span>
+<span class="font-label-md text-tertiary font-semibold">تدفق دخول فوري نشط (Walk-in Live)</span>
+</div>
+</div>
+<!-- Resources Section Title -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col text-right">
+<span class="font-headline-sm text-on-surface">الموارد السريرية المتاحة (Clinical Resource Allocation)</span>
+<span class="font-body-sm text-on-surface-variant">يتم التحقق تلقائياً من تزامن الطبيب، الغرفة، الجهاز الطبي، ونبضات العدسة</span>
+</div>
+<span class="font-label-md text-on-surface-variant">اليوم، 14 أكتوبر 2025</span>
+</div>
+<!-- Clinical Slots Container -->
+<div class="flex flex-col gap-space-md">
+<!-- SLOT 1: RECOMMENDED & SELECTED (Dr. Reem Al-Fahad) -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-md flex flex-col gap-space-md transition-all">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="px-space-md py-2 rounded-xl bg-primary text-on-primary font-headline-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>11:00 ص - متاح الآن (Immediate Walk-in)</span>
+</div>
+<span class="px-space-md py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm font-bold">جاهزية كاملة 100%</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+<span>المدة: 60 دقيقة (حتى 12:00 م)</span>
+</div>
+</div>
+<!-- 4 Clinical Resources Grid for Slot 1 -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md pt-space-xs">
+<!-- Resource 1: Practitioner -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[24px]">clinical_notes</span>
+</div>
+<div class="flex flex-col text-right truncate">
+<span class="font-label-sm text-outline">1. الأخصائية الطبية</span>
+<span class="font-label-lg text-on-surface font-bold truncate">د. ريم الفهد</span>
+<span class="font-label-sm text-tertiary truncate">أخصائية ليزر مرخصة</span>
+</div>
+</div>
+<!-- Resource 2: Clinic Room -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[24px]">meeting_room</span>
+</div>
+<div class="flex flex-col text-right truncate">
+<span class="font-label-sm text-outline">2. العيادة والغرفة</span>
+<span class="font-label-lg text-on-surface font-bold truncate">عيادة رقم 3 (Suite 3)</span>
+<span class="font-label-sm text-on-surface-variant truncate">تم التعقيم والتجهيز</span>
+</div>
+</div>
+<!-- Resource 3: Medical Device -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[24px]">precision_manufacturing</span>
+</div>
+<div class="flex flex-col text-right truncate">
+<span class="font-label-sm text-outline">3. الجهاز الطبي</span>
+<span class="font-label-lg text-on-surface font-bold truncate">Candela GentleMax Pro+</span>
+<span class="font-label-sm text-on-surface-variant truncate">معاير اليوم #DEV-02</span>
+</div>
+</div>
+<!-- Resource 4: Handpiece & Pulse Counter with Elegant Life Meter -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-outline">4. القبضة والعدسة</span>
+<span class="font-label-sm text-tertiary font-bold">78% متبقي</span>
+</div>
+<div class="flex items-center justify-between my-1">
+<span class="font-label-md text-on-surface font-bold">عدسة 22mm Spot</span>
+<span class="font-label-sm text-on-surface-variant">18,400 / 25k</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+</div>
+<!-- Quick action footer for Slot 1 -->
+<div class="flex items-center justify-between pt-space-xs mt-space-xs">
+<div class="flex items-center gap-space-sm text-tertiary font-label-md">
+<span class="material-symbols-outlined text-[18px]">lock_clock</span>
+<span>تم تثبيت الموارد الأربعة لهذه المراجعة</span>
+</div>
+<button class="h-12 px-space-xl rounded-xl bg-primary text-on-primary font-label-lg shadow-sm hover:bg-primary-container transition-all flex items-center gap-space-xs" onclick="setStep(4)" type="button">
+<span>متابعة لملخص التأكيد</span>
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+</button>
+</div>
+</div>
+<!-- SLOT 2: ALTERNATIVE (Dr. Maha Al-Sudairi) -->
+<div class="p-space-md rounded-2xl bg-surface-container-low opacity-80 hover:opacity-100 transition-all flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-lg text-right">
+<div class="flex flex-col">
+<span class="font-headline-sm text-on-surface font-bold">11:30 ص (بعد 30 دقيقة)</span>
+<span class="font-label-sm text-on-surface-variant">د. مها السديري • عيادة 4</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="px-space-md py-1 bg-surface-container rounded-lg font-label-sm text-on-surface">DEKA CO2 SmartXide</span>
+<span class="px-space-md py-1 bg-surface-container rounded-lg font-label-sm text-tertiary font-bold">عدسة Dot Scan (89% عمر متبقي)</span>
+</div>
+</div>
+<button class="h-11 px-space-lg rounded-xl bg-surface-container-highest text-primary font-label-md hover:bg-surface-container transition-all" type="button">اختيار هذا التوقيت</button>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<button class="h-12 px-space-lg rounded-xl bg-surface-container text-on-surface font-label-md" onclick="setStep(2)" type="button">← العودة للخدمة</button>
+<button class="h-12 px-space-lg rounded-xl bg-primary text-on-primary font-label-lg hover:bg-primary-container" onclick="setStep(4)" type="button">الانتقال للمراجعة النهائية →</button>
+</div>
+</div>
+<!-- ==================== STEP 4: REVIEW & CONFIRMATION ==================== -->
+<div class="step-pane hidden flex-col gap-space-lg" id="step-pane-4">
+<div class="flex items-center justify-between">
+<div class="flex flex-col text-right">
+<span class="font-headline-sm text-on-surface">المراجعة والاعتماد النهائي للموعد</span>
+<span class="font-body-sm text-on-surface-variant">تحقق من صحة تفاصيل المريض، الطاقم الطبي، والمستحقات المالية قبل طباعة التذكرة</span>
+</div>
+<span class="px-space-md py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-sm font-semibold">حجز جاهز للإصدار</span>
+</div>
+<!-- Comprehensive Summary Bento Box -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Patient & Visit Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm text-primary">
+<span class="material-symbols-outlined text-[22px]">person</span>
+<span class="font-label-lg font-bold">المراجعة والبيانات الشخصية</span>
+</div>
+<div class="flex flex-col gap-space-xs text-right">
+<span class="font-headline-sm text-on-surface font-bold">نورة عبد العزيز الحربي</span>
+<span class="font-body-sm text-on-surface-variant">الملف: LUM-88412 • الجوال: 0551239841</span>
+<span class="font-body-sm text-on-surface-variant">الهوية: 1089****32 (سعودية)</span>
+</div>
+<div class="pt-space-sm mt-auto">
+<div class="px-space-md py-2 rounded-xl bg-surface-container text-tertiary font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>الإقرار الطبي وتاريخ الموانع معتمد وسارٍ</span>
+</div>
+</div>
+</div>
+<!-- Clinical Resource Allocation Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm text-primary">
+<span class="material-symbols-outlined text-[22px]">medical_services</span>
+<span class="font-label-lg font-bold">الموارد والعيادة المخصصة</span>
+</div>
+<div class="flex flex-col gap-space-xs text-right">
+<span class="font-label-md text-on-surface font-bold">د. ريم الفهد (أخصائية ليزر)</span>
+<span class="font-body-sm text-on-surface-variant">المكان: عيادة رقم 3 (Suite 3)</span>
+<span class="font-body-sm text-on-surface-variant">الجهاز: Candela GentleMax Pro Plus #2</span>
+<span class="font-body-sm text-on-surface-variant">العدسة: 22mm Spot (78% نبضات متبقية)</span>
+</div>
+<div class="pt-space-sm mt-auto">
+<div class="px-space-md py-2 rounded-xl bg-surface-container text-primary font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>اليوم • 11:00 ص حتى 12:00 م (دخول فوري)</span>
+</div>
+</div>
+</div>
+<!-- Financial & Invoice Summary Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm text-primary">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+<span class="font-label-lg font-bold">المستحقات المالية والفوترة</span>
+</div>
+<div class="flex flex-col gap-space-xs text-right">
+<div class="flex justify-between font-body-sm text-on-surface-variant">
+<span>سعر الجلسة العادية:</span>
+<span class="line-through">650.00 ر.س</span>
+</div>
+<div class="flex justify-between font-body-sm text-tertiary font-bold">
+<span>خصم الباقة النشطة (PKG-9921):</span>
+<span>- 650.00 ر.س</span>
+</div>
+<div class="flex justify-between font-body-sm text-on-surface-variant">
+<span>ضريبة القيمة المضافة (مشمولة):</span>
+<span>0.00 ر.س</span>
+</div>
+<div class="flex justify-between font-headline-sm text-primary font-bold pt-space-xs">
+<span>المبلغ المطلوب سداده:</span>
+<span>0.00 ر.س</span>
+</div>
+</div>
+<div class="pt-space-sm mt-auto">
+<span class="font-label-sm text-outline">سيتم خصم جلسة 1 من أصل 5 جلسات متبقية في رصيد المريضة.</span>
+</div>
+</div>
+</div>
+<!-- Bottom Action Buttons -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-sm">
+<button class="h-12 px-space-lg rounded-xl bg-surface-container text-on-surface font-label-md" onclick="setStep(3)" type="button">← تعديل الموارد والوقت</button>
+<div class="flex items-center gap-space-md">
+<button class="h-12 px-space-lg rounded-xl bg-surface-container text-on-surface-variant hover:text-error font-label-md transition-colors" type="button">إلغاء العملية</button>
+<button class="h-12 px-space-xl rounded-xl bg-primary text-on-primary font-label-lg shadow-md hover:bg-primary-container transition-all flex items-center gap-space-sm min-w-[200px] justify-center" id="final-confirm-btn" type="button">
+<span class="material-symbols-outlined text-[22px]">how_to_reg</span>
+<span>تأكيد الحجز النهائي (Confirm)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- MODAL PERSISTENT FOOTER STATUS BAR -->
+<div class="px-space-lg py-space-sm bg-surface-container-low flex flex-wrap items-center justify-between text-on-surface-variant font-label-sm shrink-0">
+<div class="flex items-center gap-space-md">
+<span class="inline-flex items-center gap-1.5 text-tertiary font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+            نظام حجز الموارد الطبية متزامن لحظياً
+          </span>
+<span>•</span>
+<span>معرف الجلسة: SES-9841-B</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span>الموظفة المسؤولة: سارة العتيبي (كاونتر الاستقبال 1)</span>
+</div>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low py-space-md mt-space-xl"><div class="w-full px-margin-tablet flex items-center justify-between text-on-surface-variant font-label-sm"><span>نظام الاستقبال والعيادات التخصصية الذكي © 2025</span><div class="flex items-center gap-space-md"><span class="inline-flex items-center gap-1.5 text-tertiary font-medium"><span class="w-2 h-2 rounded-full bg-tertiary"></span>الخادم متزامن لحظياً</span><span>الدعم الفني الداخلي: تحويلة 104</span></div></div></footer></body></html>

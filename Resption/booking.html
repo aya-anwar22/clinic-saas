@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#eaddff","primary":"#630ed4","on-primary-fixed":"#25005a","on-secondary-container":"#3f1e8c","surface-container-low":"#f9f1ff","on-secondary-fixed-variant":"#4f319c","surface-container":"#f4eafe","on-primary-fixed-variant":"#5a00c6","secondary-fixed":"#e8ddff","error-container":"#ffdad6","on-tertiary":"#ffffff","on-surface-variant":"#4a4455","tertiary-fixed":"#89f5e7","on-secondary-fixed":"#21005e","surface-tint":"#732ee4","outline":"#7b7487","on-tertiary-fixed":"#00201d","surface-container-high":"#eee4f9","secondary":"#674bb5","inverse-surface":"#332e3d","outline-variant":"#ccc3d8","on-primary-container":"#ede0ff","on-primary":"#ffffff","on-tertiary-fixed-variant":"#005049","on-background":"#1e1927","secondary-container":"#ab8ffe","on-error":"#ffffff","inverse-on-surface":"#f7edff","secondary-fixed-dim":"#cebdff","on-surface":"#1e1927","tertiary-fixed-dim":"#6bd8cb","surface-variant":"#e8dff3","error":"#ba1a1a","surface":"#fef7ff","primary-fixed-dim":"#d2bbff","inverse-primary":"#d2bbff","on-error-container":"#93000a","surface-bright":"#fef7ff","tertiary-container":"#00746a","primary-container":"#7c3aed","on-tertiary-container":"#8df9ea","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","tertiary":"#005952","surface-dim":"#e0d6ea","surface-container-highest":"#e8dff3","background":"#fef7ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-sm":"0.5rem","space-xs":"0.25rem","margin":"1rem","gutter":"1rem","gutter-tablet":"1.25rem","space-xl":"2rem","space-lg":"1.25rem","margin-tablet":"1.5rem","space-md":"0.875rem"},fontFamily:{"display-lg":["Inter"],"timer-display":["Inter"],"body-md":["Inter"],"headline-lg":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"headline-md":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"headline-sm":["Inter"],"body-lg":["Inter"]},fontSize:{"display-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"timer-display":["16px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"700"}],"body-md":["15px",{lineHeight:"22px",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"label-lg":["15px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-sm":["18px",{lineHeight:"24px",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(124,58,237,0.06)]"><div class="h-20 w-full px-gutter-tablet flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-[0_2px_8px_rgba(99,14,212,0.25)]"><span class="material-symbols-outlined text-[24px]">local_hospital</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none">لوميا ريسبشن</span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase leading-none mt-1">LUMEA RECEPTION</span></div></div><div class="hidden xl:flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-full border border-surface-container"><span class="material-symbols-outlined text-primary text-[18px]">storefront</span><span class="font-label-md text-label-md text-on-surface">فرع العليا التخصصي - الرياض</span><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></div></div><nav class="flex items-center gap-space-xs bg-surface-container px-space-xs py-space-xs rounded-xl" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl shadow-[0_2px_6px_rgba(124,58,237,0.15)]"><a class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center gap-space-xs" data-path="queue" href="live-quee.html">طابور الانتظار</a><a aria-current="page" class="px-space-md py-space-xs transition-all flex items-center gap-space-xs bg-primary-container text-on-primary-container font-label-lg rounded-xl shadow-[0_2px_6px_rgba(124,58,237,0.15)]" data-path="bookings" href="booking.html">المواعيد</a><a class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center gap-space-xs" data-path="pos" href="POS_Checkout.html">نقاط البيع</a><a class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center gap-space-xs" data-path="cash" href="Shift_and_Cash_Drawer.html">الصندوق</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center bg-surface-container-low px-space-md py-space-xs rounded-xl border border-surface-container-high focus-within:border-primary-container transition-all"><span class="material-symbols-outlined text-outline text-[18px] ml-space-xs">search</span><input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline w-44 lg:w-56 text-right" placeholder="بحث عن مريض، ملف، موعد..." type="text"/></div><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded-full"><span class="w-2.5 h-2.5 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary">متصل بالنظام</span></div><div class="flex items-center gap-space-sm pr-space-xs"><div class="hidden lg:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-none">سارة العتيبي</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-1">موظفة استقبال</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Interactive Prototype Scenario Switcher -->
+<aside aria-label="شريط سيناريوهات المحاكاة التفاعلية" class="w-full bg-surface-container-high px-gutter-tablet py-space-sm flex flex-wrap items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">سيناريوهات العرض السريع:</span>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="px-space-md py-space-xs rounded-xl bg-primary text-on-primary font-label-sm text-label-sm shadow-sm transition-all flex items-center gap-space-xs min-h-[38px]" id="btn-state-default" onclick="setDemoState('default')">
+<span class="material-symbols-outlined text-[16px]">calendar_view_week</span>
+<span>الافتراضي (Default)</span>
+</button>
+<button class="px-space-md py-space-xs rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-sm text-label-sm shadow-sm transition-all flex items-center gap-space-xs min-h-[38px]" id="btn-state-drawer" onclick="setDemoState('drawer')">
+<span class="material-symbols-outlined text-[16px]">side_navigation</span>
+<span>ملف الموعد (Drawer Active)</span>
+</button>
+<button class="px-space-md py-space-xs rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-sm text-label-sm shadow-sm transition-all flex items-center gap-space-xs min-h-[38px]" id="btn-state-new" onclick="setDemoState('new-booking')">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>حجز جديد (New Booking)</span>
+</button>
+<button class="px-space-md py-space-xs rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-error font-label-sm text-label-sm shadow-sm transition-all flex items-center gap-space-xs min-h-[38px]" id="btn-state-conflict" onclick="setDemoState('conflict')">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>تنبيه تعارض الموارد (Conflict)</span>
+</button>
+<button class="px-space-md py-space-xs rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-sm text-label-sm shadow-sm transition-all flex items-center gap-space-xs min-h-[38px]" id="btn-state-loading" onclick="toggleLoadingState()">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>هيكل التحميل (Skeleton)</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-xs rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-md text-label-md shadow-sm transition-all flex items-center gap-space-xs min-h-[38px]" id="btn-lang-toggle" onclick="toggleDirection()">
+<span class="material-symbols-outlined text-[18px]">translate</span>
+<span id="lang-label">English (LTR)</span>
+</button>
+<div class="hidden md:flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+<span>مزامنة الأجهزة الفورية نشطة</span>
+</div>
+</div>
+</aside>
+<!-- Top Control, Filters & Operational Sub-header -->
+<section class="w-full px-gutter-tablet py-space-md flex flex-col gap-space-md bg-surface-container-lowest shadow-sm">
+<!-- Date Navigation & Quick Day Bar -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center bg-surface-container-low p-space-xs rounded-xl shadow-inner">
+<button class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-colors" onclick="shiftDay(-1)" title="اليوم السابق">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+<button class="px-space-md h-10 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm flex items-center gap-space-xs" onclick="resetToToday()">
+<span class="material-symbols-outlined text-[18px]">today</span>
+<span>اليوم</span>
+</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-colors" onclick="shiftDay(1)" title="اليوم التالي">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h1 class="font-headline-md text-headline-md text-on-surface font-bold">الأحد، 15 شعبان 1446 هـ</h1>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm">اليوم الحالي</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">الموافق 15 فبراير 2026 م • جدول المواعيد النشط لفرع العليا</p>
+</div>
+</div>
+<!-- Days of Week Ribbon -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 max-w-full">
+<button class="flex flex-col items-center justify-center min-w-[70px] h-[64px] px-space-sm rounded-xl bg-primary text-on-primary shadow-md transition-transform scale-105">
+<span class="font-label-sm text-label-sm opacity-90">الأحد</span>
+<span class="font-headline-sm text-headline-sm font-bold">15</span>
+<span class="font-label-sm text-label-sm opacity-80">14 موعد</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[70px] h-[64px] px-space-sm rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors">
+<span class="font-label-sm text-label-sm text-on-surface-variant">الإثنين</span>
+<span class="font-headline-sm text-headline-sm font-bold">16</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">19 موعد</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[70px] h-[64px] px-space-sm rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors">
+<span class="font-label-sm text-label-sm text-on-surface-variant">الثلاثاء</span>
+<span class="font-headline-sm text-headline-sm font-bold">17</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">22 موعد</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[70px] h-[64px] px-space-sm rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors">
+<span class="font-label-sm text-label-sm text-on-surface-variant">الأربعاء</span>
+<span class="font-headline-sm text-headline-sm font-bold">18</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">18 موعد</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[70px] h-[64px] px-space-sm rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors">
+<span class="font-label-sm text-label-sm text-on-surface-variant">الخميس</span>
+<span class="font-headline-sm text-headline-sm font-bold">19</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">25 موعد</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[70px] h-[64px] px-space-sm rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors opacity-75">
+<span class="font-label-sm text-label-sm text-on-surface-variant">الجمعة</span>
+<span class="font-headline-sm text-headline-sm font-bold">20</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">عطلة</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[70px] h-[64px] px-space-sm rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors">
+<span class="font-label-sm text-label-sm text-on-surface-variant">السبت</span>
+<span class="font-headline-sm text-headline-sm font-bold">21</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">16 موعد</span>
+</button>
+</div>
+</div>
+<!-- Grouping Pills, Search, Zoom Density, and "+ New Booking" CTA -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<!-- Grouping Segmented -->
+<div class="flex items-center bg-surface-container p-space-xs rounded-xl">
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm flex items-center gap-space-xs transition-all" id="group-doctor" onclick="setGrouping('doctor')">
+<span class="material-symbols-outlined text-[18px]">stethoscope</span>
+<span>حسب الطبيب (By Clinician)</span>
+</button>
+<button class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-space-xs transition-all" id="group-room" onclick="setGrouping('room')">
+<span class="material-symbols-outlined text-[18px]">meeting_room</span>
+<span>حسب الغرفة (By Room)</span>
+</button>
+<button class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-space-xs transition-all" id="group-device" onclick="setGrouping('device')">
+<span class="material-symbols-outlined text-[18px]">conversion_path</span>
+<span>حسب الجهاز (By Device)</span>
+</button>
+</div>
+<!-- Filter Dropdown & Status -->
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center bg-surface-container-low px-space-md py-space-xs rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-outline text-[18px] ml-1">filter_list</span>
+<select class="bg-transparent border-none outline-none font-label-md text-label-md text-on-surface cursor-pointer">
+<option value="all">جميع الحالات السريرية</option>
+<option value="confirmed">المؤكدة فقط</option>
+<option value="checkedin">المسجلة بالانتظار</option>
+<option value="insession">قيد الجلسة الآن</option>
+</select>
+</div>
+<!-- Density Zoom Switcher -->
+<div class="hidden sm:flex items-center bg-surface-container-low p-space-xs rounded-xl shadow-sm">
+<button class="px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:text-primary font-label-sm text-label-sm" id="btn-zoom-30" onclick="setDensity(30)">30 دقيقة</button>
+<button class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest text-primary shadow-sm font-label-sm text-label-sm" id="btn-zoom-60" onclick="setDensity(60)">60 دقيقة</button>
+</div>
+</div>
+</div>
+<!-- Action Button: + New Booking -->
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">إجمالي مواعيد اليوم:</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">54</span>
+</div>
+<button class="px-space-lg h-12 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-surface-tint active:scale-[0.98] transition-all flex items-center justify-center gap-space-xs min-h-[48px]" onclick="openNewBookingModal('11:30', 'د. مها السديري')">
+<span class="material-symbols-outlined text-[22px]">add</span>
+<span>+ حجز جديد (New Booking)</span>
+</button>
+</div>
+</div>
+<!-- Status Legend -->
+<div class="flex items-center gap-space-sm flex-wrap pt-space-xs text-on-surface-variant font-label-sm text-label-sm overflow-x-auto">
+<span class="font-semibold text-on-surface">دليل الحالات:</span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-amber-50 text-amber-800">
+<span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> محجوز مؤقت (Held)
+      </span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-blue-50 text-blue-800">
+<span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span> مؤكد (Confirmed)
+      </span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span> تم تسجيل الحضور (Checked In)
+      </span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-emerald-50 text-emerald-800">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span> في الجلسة (In Session)
+      </span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-slate-100 text-slate-700">
+<span class="material-symbols-outlined text-[13px]">lock</span> محمي سريرياً (Locked)
+      </span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-red-50 text-red-800 line-through">
+        ملغي (Cancelled)
+      </span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-rose-50 text-rose-800">
+<span class="w-2 h-2 rounded-full bg-rose-600"></span> لم يحضر (No-show)
+      </span>
+</div>
+</section>
+<!-- Interactive Conflict / Maintenance Alert Banner (Dynamic State) -->
+<div class="hidden w-full bg-inverse-surface text-inverse-on-surface px-gutter-tablet py-space-md shadow-lg flex items-center justify-between gap-space-md transition-all" id="conflict-global-banner">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">build</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-amber-300">تنبيه تعارض في الموارد السريرية — Candela GentleMax Pro #2</p>
+<p class="font-body-sm text-body-sm text-inverse-on-surface opacity-90">الجهاز مجدول لصيانة معايرة العدسات من 12:00 م حتى 02:00 م. يوجد حجز للمريضة "نورة الحربي" يتعارض مع هذا التوقيت.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-md h-10 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-surface-tint shadow-sm transition-all min-h-[40px]" onclick="resolveConflictDemo()">
+        نقل إلى جهاز بديل (Candela #1)
+      </button>
+<button class="w-10 h-10 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors" onclick="dismissConflictBanner()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Main Schedule Interactive Grid Area -->
+<main class="w-full relative px-gutter-tablet py-space-lg overflow-x-auto min-h-[750px]">
+<!-- Skeleton Loading Placeholder Layer -->
+<div class="hidden w-full space-y-4 animate-pulse" id="loading-skeleton">
+<div class="h-16 bg-surface-container-high rounded-2xl w-full"></div>
+<div class="grid grid-cols-5 gap-4">
+<div class="h-[600px] bg-surface-container-low rounded-2xl col-span-1"></div>
+<div class="h-[600px] bg-surface-container-high rounded-2xl col-span-1"></div>
+<div class="h-[600px] bg-surface-container-low rounded-2xl col-span-1"></div>
+<div class="h-[600px] bg-surface-container-high rounded-2xl col-span-1"></div>
+<div class="h-[600px] bg-surface-container-low rounded-2xl col-span-1"></div>
+</div>
+</div>
+<!-- Booking Board Matrix Container -->
+<div class="min-w-[1080px] bg-surface-container-lowest rounded-2xl shadow-md p-space-md flex flex-col" id="booking-board-matrix">
+<!-- Matrix Header: Clinician Resource Columns -->
+<div class="grid grid-cols-12 gap-space-sm pb-space-md border-b-0">
+<!-- Right Ruler Header Placeholder (RTL) -->
+<div class="col-span-1 flex items-center justify-center bg-surface-container-low rounded-xl py-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">الوقت</span>
+</div>
+<!-- Clinician 1 -->
+<div class="col-span-3 bg-surface-container-low rounded-2xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">medical_services</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">د. مها السديري</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">استشارية جلدية وتجميل • عيادة 4</span>
+</div>
+</div>
+<span class="px-space-xs py-1 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold">متاح</span>
+</div>
+<!-- Clinician 2 -->
+<div class="col-span-3 bg-surface-container-low rounded-2xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">vital_signs</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">د. ريم الفهد</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">أخصائية ليزر وتجميل • عيادة 3</span>
+</div>
+</div>
+<span class="px-space-xs py-1 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold">متاح</span>
+</div>
+<!-- Clinician 3 -->
+<div class="col-span-3 bg-surface-container-low rounded-2xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">spa</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">أ. العنود المطيري</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">فنية ليزر وعناية • غرفة 2</span>
+</div>
+</div>
+<span class="px-space-xs py-1 rounded-full bg-amber-50 text-amber-700 font-label-sm text-label-sm font-semibold">جلسة نشطة</span>
+</div>
+<!-- Clinician 4 -->
+<div class="col-span-2 bg-surface-container-low rounded-2xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">clinical_notes</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">د. خالد العمري</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">جراحة جلدية • عيادة 1</span>
+</div>
+</div>
+<span class="px-space-xs py-1 rounded-full bg-slate-100 text-slate-700 font-label-sm text-label-sm font-semibold">محجوز</span>
+</div>
+</div>
+<!-- Schedule Time Rows Body (09:00 - 20:00) -->
+<div class="relative mt-space-sm flex flex-col gap-2">
+<!-- Live Current Time Indicator Marker (10:45 ص) -->
+<div class="absolute top-[182px] left-0 right-0 z-20 flex items-center pointer-events-none">
+<div class="bg-primary text-on-primary text-[11px] font-bold px-2 py-0.5 rounded-full shadow-md mr-1">
+            10:45 ص (الآن)
+          </div>
+<div class="flex-1 h-[2px] bg-primary"></div>
+</div>
+<!-- Hour Row 09:00 -->
+<div class="grid grid-cols-12 gap-space-sm min-h-[92px] items-stretch">
+<div class="col-span-1 bg-surface-container-low rounded-xl flex items-center justify-center font-label-md text-label-md text-on-surface-variant font-semibold">
+            09:00 ص
+          </div>
+<!-- Col 1 (د. مها): Confirmed -->
+<div class="col-span-3">
+<div class="h-full w-full bg-blue-50/80 hover:bg-blue-100/80 text-blue-950 p-space-md rounded-2xl shadow-sm cursor-pointer transition-all hover:scale-[1.01] flex flex-col justify-between" onclick="openPatientDrawer('سارة الدوسري', '09:00 ص', 'فراكشنال ليزر للوجه', 'د. مها السديري', 'عيادة 4', 'DEKA SmartXide Fractional', 'Dot Scan 1.5mm', 'مؤكد')">
+<div class="flex items-start justify-between gap-1">
+<div>
+<span class="px-2 py-0.5 rounded-full bg-blue-200 text-blue-900 font-label-sm text-label-sm font-bold">09:00 - 09:45 ص</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">سارة الدوسري</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">فراكشنال ليزر للوجه (جلسة 2)</p>
+</div>
+<span class="px-2 py-1 rounded-lg bg-blue-600 text-white font-label-sm text-label-sm font-semibold">مؤكد</span>
+</div>
+<div class="grid grid-cols-2 gap-1 pt-space-xs text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-1">🚪 عيادة 4</span>
+<span class="flex items-center gap-1">⚡ DEKA CO2 Pro</span>
+<span class="flex items-center gap-1">🎯 عدسة Dot Scan</span>
+<span class="flex items-center gap-1">👩‍⚕️ د. مها</span>
+</div>
+</div>
+</div>
+<!-- Col 2 (د. ريم): Held / محجوز مؤقت -->
+<div class="col-span-3">
+<div class="h-full w-full bg-amber-50/90 hover:bg-amber-100 text-amber-950 p-space-md rounded-2xl shadow-sm cursor-pointer transition-all hover:scale-[1.01] flex flex-col justify-between" onclick="openPatientDrawer('هند الشمري', '09:15 ص', 'استشارة ليزر وتجديد بشرة', 'د. ريم الفهد', 'عيادة 3', 'Candela GentleMax Pro', '15mm Spot', 'محجوز مؤقت')">
+<div class="flex items-start justify-between">
+<div>
+<span class="px-2 py-0.5 rounded-full bg-amber-200 text-amber-900 font-label-sm text-label-sm font-bold">09:15 - 10:00 ص</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">هند الشمري</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">استشارة ليزر وتجديد بشرة</p>
+</div>
+<span class="px-2 py-1 rounded-lg bg-amber-500 text-white font-label-sm text-label-sm font-bold">محجوز مؤقت</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-amber-900 pt-space-xs">
+<span>🚪 عيادة 3 • ⚡ Candela #1</span>
+<span>بانتظار السداد</span>
+</div>
+</div>
+</div>
+<!-- Col 3 (العنود): Checked In -->
+<div class="col-span-3">
+<div class="h-full w-full bg-primary-fixed/60 hover:bg-primary-fixed/80 p-space-md rounded-2xl shadow-sm cursor-pointer transition-all hover:scale-[1.01] flex flex-col justify-between" onclick="openPatientDrawer('ريم السبيعي', '09:00 ص', 'جلسة كانديلا برو - جسم كامل', 'أ. العنود المطيري', 'غرفة 2', 'Candela GentleMax Pro Plus', '24mm Large Spot', 'تم تسجيل الحضور')">
+<div class="flex items-start justify-between">
+<div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold">09:00 - 10:15 ص</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">ريم السبيعي</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">جلسة كانديلا برو - جسم كامل</p>
+</div>
+<span class="px-2 py-1 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold">بالانتظار</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-space-xs">
+<span>🚪 غرفة 2 • ⚡ Candela Pro+ • 🎯 24mm</span>
+<span class="text-primary font-bold">جاهزة للدخول</span>
+</div>
+</div>
+</div>
+<!-- Col 4 (د. خالد): Empty Slot -->
+<div class="col-span-2">
+<div class="h-full w-full rounded-2xl bg-surface-container-low/70 hover:bg-surface-container flex flex-col items-center justify-center text-on-surface-variant cursor-pointer transition-all" onclick="openNewBookingModal('09:00 ص', 'د. خالد العمري')">
+<span class="material-symbols-outlined text-[24px] text-outline">add_circle_outline</span>
+<span class="font-label-sm text-label-sm mt-1">فترة متاحة (+ حجز)</span>
+</div>
+</div>
+</div>
+<!-- Hour Row 10:00 (In Session Active & Striped Maintenance Block) -->
+<div class="grid grid-cols-12 gap-space-sm min-h-[96px] items-stretch">
+<div class="col-span-1 bg-surface-container-low rounded-xl flex items-center justify-center font-label-md text-label-md text-on-surface-variant font-semibold">
+            10:00 ص
+          </div>
+<!-- Col 1 (د. مها): In session -->
+<div class="col-span-3">
+<div class="h-full w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-950 p-space-md rounded-2xl shadow-md cursor-pointer transition-all hover:scale-[1.01] flex flex-col justify-between" onclick="openPatientDrawer('عبير القحطاني', '10:00 ص', 'حقن بوتوكس للجبهة وحول العين', 'د. مها السديري', 'عيادة 4', 'Allergan Botox Unit Box', 'Micro-Needle 32G', 'في الجلسة')">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-bold text-emerald-800">10:00 - 10:45 ص (جارية الآن)</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">عبير القحطاني</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">حقن بوتوكس للجبهة وحول العين</p>
+</div>
+<span class="px-2 py-1 rounded-lg bg-emerald-600 text-white font-label-sm text-label-sm font-bold">في الجلسة</span>
+</div>
+<div class="grid grid-cols-2 gap-1 pt-space-xs text-[11px] text-emerald-900 font-medium">
+<span>🚪 عيادة 4</span>
+<span>⚡ Allergan Botox</span>
+<span>🎯 إبرة 32G</span>
+<span>👩‍⚕️ د. مها السديري</span>
+</div>
+</div>
+</div>
+<!-- Col 2 (د. ريم): Confirmed Detailed -->
+<div class="col-span-3">
+<div class="h-full w-full bg-blue-50/90 hover:bg-blue-100 text-blue-950 p-space-md rounded-2xl shadow-sm cursor-pointer transition-all hover:scale-[1.01] flex flex-col justify-between" id="card-noura-alharbi" onclick="openPatientDrawer('نورة الحربي', '10:30 ص', 'جلسة ليزر كانديلا برو كلي', 'د. ريم الفهد', 'عيادة 3', 'Candela GentleMax Pro Plus #2', 'عدسة 22mm Spot', 'مؤكد')">
+<div class="flex items-start justify-between">
+<div>
+<span class="px-2 py-0.5 rounded-full bg-blue-200 text-blue-900 font-label-sm text-label-sm font-bold">10:30 - 11:30 ص</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">نورة الحربي</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">ليزر جسم كامل وتفتيح كانديلا</p>
+</div>
+<span class="px-2 py-1 rounded-lg bg-blue-600 text-white font-label-sm text-label-sm font-semibold">مؤكد</span>
+</div>
+<div class="grid grid-cols-2 gap-1 pt-space-xs text-[11px] text-blue-900">
+<span>🚪 عيادة 3</span>
+<span class="font-semibold text-primary">⚡ Candela Pro+ #2</span>
+<span>🎯 عدسة 22mm</span>
+<span>👩‍⚕️ د. ريم الفهد</span>
+</div>
+</div>
+</div>
+<!-- Col 3 (العنود): Diagonal Hatched Striped Maintenance -->
+<div class="col-span-3">
+<div class="h-full w-full rounded-2xl p-space-md flex flex-col justify-center items-center text-center shadow-inner relative overflow-hidden" style="background: repeating-linear-gradient(45deg, #f4eafe, #f4eafe 12px, #eee4f9 12px, #eee4f9 24px);">
+<div class="flex items-center gap-space-xs text-secondary font-headline-sm text-headline-sm font-bold">
+<span class="material-symbols-outlined text-[20px]">build_circle</span>
+<span>صيانة دورية ومعايرة</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1 font-semibold">جهاز كانديلا برو #2 — تعقيم وفحص رؤوس التبريد</p>
+<span class="text-[11px] text-secondary-container bg-surface-container px-2 py-0.5 rounded-full mt-1">10:00 ص إلى 11:30 ص</span>
+</div>
+</div>
+<!-- Col 4 (د. خالد): Locked Clinical Session -->
+<div class="col-span-2">
+<div class="h-full w-full bg-slate-100/90 text-slate-800 p-space-md rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-slate-700">10:00 - 11:00 ص</span>
+<span class="flex items-center gap-0.5 text-slate-600 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">lock</span> محمي
+                </span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-bold text-slate-900">إجراء جراحي صغرى</p>
+<p class="font-body-sm text-body-sm text-slate-600">استئصال شامة تحت التخدير الموضعي</p>
+</div>
+<span class="text-[11px] text-slate-500">مغلق للخصوصية الطبية</span>
+</div>
+</div>
+</div>
+<!-- Hour Row 11:00 -->
+<div class="grid grid-cols-12 gap-space-sm min-h-[92px] items-stretch">
+<div class="col-span-1 bg-surface-container-low rounded-xl flex items-center justify-center font-label-md text-label-md text-on-surface-variant font-semibold">
+            11:00 ص
+          </div>
+<!-- Col 1 (د. مها): Cancelled Slot Display -->
+<div class="col-span-3">
+<div class="h-full w-full bg-red-50/70 p-space-md rounded-2xl shadow-sm flex flex-col justify-between opacity-80">
+<div class="flex items-start justify-between">
+<div>
+<span class="px-2 py-0.5 rounded-full bg-red-200 text-red-900 font-label-sm text-label-sm line-through">11:00 - 11:30 ص</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-red-900 line-through mt-1">مها التميمي</h4>
+<p class="font-body-sm text-body-sm text-red-700 line-through">جلسة هايدرافاشيال متقدمة</p>
+</div>
+<span class="px-2 py-0.5 rounded-lg bg-red-600 text-white font-label-sm text-label-sm font-bold">ملغي بالهاتف</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-red-800">
+<span>اعتذار مسبق قبل ساعتين</span>
+<button class="px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-bold shadow-xs hover:bg-surface-container" onclick="openNewBookingModal('11:00 ص', 'د. مها السديري')">إتاحة الحجز</button>
+</div>
+</div>
+</div>
+<!-- Col 2 (د. ريم): Empty Slot (Click to Book) -->
+<div class="col-span-3">
+<div class="h-full w-full rounded-2xl bg-surface-container-low/70 hover:bg-surface-container flex flex-col items-center justify-center text-on-surface-variant cursor-pointer transition-all" onclick="openNewBookingModal('11:30 ص', 'د. ريم الفهد')">
+<span class="material-symbols-outlined text-[24px] text-primary">add_circle</span>
+<span class="font-label-sm text-label-sm font-bold text-primary mt-1">11:30 ص — حجز شاغر</span>
+<span class="text-[11px] text-outline">انقر للجدولة الفورية</span>
+</div>
+</div>
+<!-- Col 3 (العنود): No-Show Case -->
+<div class="col-span-3">
+<div class="h-full w-full bg-rose-50/90 text-rose-950 p-space-md rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="px-2 py-0.5 rounded-full bg-rose-200 text-rose-900 font-label-sm text-label-sm font-bold">11:00 - 11:45 ص</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-rose-950 mt-1">أشواق المنصور</h4>
+<p class="font-body-sm text-body-sm text-rose-800">ليزر رتوش سريع</p>
+</div>
+<span class="px-2 py-1 rounded-lg bg-rose-600 text-white font-label-sm text-label-sm font-bold">لم يحضر (No-show)</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-rose-900 pt-space-xs">
+<span>تجاوزت 25 دقيقة انتظار</span>
+<button class="text-rose-700 font-bold hover:underline">الاتصال بالمريضة</button>
+</div>
+</div>
+</div>
+<!-- Col 4 (د. خالد): Confirmed -->
+<div class="col-span-2">
+<div class="h-full w-full bg-blue-50/90 hover:bg-blue-100 p-space-md rounded-2xl shadow-sm cursor-pointer transition-all flex flex-col justify-between" onclick="openPatientDrawer('محمد الغامدي', '11:00 ص', 'كشف ندبات وإجراء تسليك', 'د. خالد العمري', 'عيادة 1', 'Subcision Kit', 'N/A', 'مؤكد')">
+<div class="flex items-start justify-between">
+<div>
+<span class="px-2 py-0.5 rounded-full bg-blue-200 text-blue-900 font-label-sm text-label-sm font-bold">11:00 ص</span>
+<h4 class="font-label-md text-label-md font-bold text-on-surface mt-1 truncate">محمد الغامدي</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">تسليك ندبات جراحية</p>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-blue-600 text-white font-label-sm text-label-sm">مؤكد</span>
+</div>
+<span class="text-[11px] text-on-surface-variant">عيادة 1 • د. خالد</span>
+</div>
+</div>
+</div>
+<!-- Hour Row 12:00 (Clinic Doctor Break Striped Pattern) -->
+<div class="grid grid-cols-12 gap-space-sm min-h-[72px] items-stretch">
+<div class="col-span-1 bg-surface-container-low rounded-xl flex items-center justify-center font-label-md text-label-md text-on-surface-variant font-semibold">
+            12:00 م
+          </div>
+<!-- Wide Striped Break Slot across all doctors -->
+<div class="col-span-11 rounded-2xl p-space-md flex items-center justify-between shadow-inner" style="background: repeating-linear-gradient(-45deg, #f9f1ff, #f9f1ff 15px, #f4eafe 15px, #f4eafe 30px);">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed text-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[22px]">restaurant</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-primary">استراحة صلاة الظهر والفريق الطبي (Clinicians &amp; Staff Break)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">توقف العمليات السريرية من 12:00 م حتى 01:00 م • مكتب الاستقبال مستمر في الإجراءات الإدارية وتأكيد المواعيد</p>
+</div>
+</div>
+<span class="px-space-md py-space-xs rounded-xl bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm font-semibold shadow-xs">
+              فترة محجوبة تلقائياً
+            </span>
+</div>
+</div>
+<!-- Hour Row 13:00 to 14:00 (Afternoon slots preview) -->
+<div class="grid grid-cols-12 gap-space-sm min-h-[92px] items-stretch">
+<div class="col-span-1 bg-surface-container-low rounded-xl flex items-center justify-center font-label-md text-label-md text-on-surface-variant font-semibold">
+            01:00 م
+          </div>
+<!-- Col 1 (د. مها): Confirmed Filler -->
+<div class="col-span-3">
+<div class="h-full w-full bg-blue-50/80 hover:bg-blue-100 p-space-md rounded-2xl shadow-sm cursor-pointer transition-all flex flex-col justify-between" onclick="openPatientDrawer('خلود الشايع', '01:00 م', 'حقن فيلر شفايف وتحديد', 'د. مها السديري', 'عيادة 4', 'Juvederm Ultra Plus', 'Cannula 25G', 'مؤكد')">
+<div class="flex items-start justify-between">
+<div>
+<span class="px-2 py-0.5 rounded-full bg-blue-200 text-blue-900 font-label-sm text-label-sm font-bold">01:00 - 01:45 م</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">خلود الشايع</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">حقن فيلر شفايف (تحديد طبيعي)</p>
+</div>
+<span class="px-2 py-1 rounded-lg bg-blue-600 text-white font-label-sm text-label-sm font-semibold">مؤكد</span>
+</div>
+<div class="grid grid-cols-2 gap-1 text-[11px] text-on-surface-variant pt-1">
+<span>🚪 عيادة 4</span>
+<span>⚡ Juvederm Ultra</span>
+<span>🎯 قنية 25G</span>
+<span>👩‍⚕️ د. مها السديري</span>
+</div>
+</div>
+</div>
+<!-- Col 2 (د. ريم): Checked In -->
+<div class="col-span-3">
+<div class="h-full w-full bg-primary-fixed/60 hover:bg-primary-fixed/80 p-space-md rounded-2xl shadow-sm cursor-pointer transition-all flex flex-col justify-between" onclick="openPatientDrawer('أماني المالكي', '01:15 م', 'فوتونا 4D لشد البشرة', 'د. ريم الفهد', 'عيادة 3', 'Fotona Dynamis Pro', 'Fotona Scanner PS03', 'تم تسجيل الحضور')">
+<div class="flex items-start justify-between">
+<div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold">01:15 - 02:15 م</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">أماني المالكي</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">فوتونا 4D لنضارة الوجه والشد</p>
+</div>
+<span class="px-2 py-1 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold">بالانتظار</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-1">
+<span>🚪 عيادة 3 • ⚡ Fotona Dynamis</span>
+<span class="text-primary font-bold">تم تجهيز الملف</span>
+</div>
+</div>
+</div>
+<!-- Col 3 (العنود): Confirmed Body Laser -->
+<div class="col-span-3">
+<div class="h-full w-full bg-blue-50/80 hover:bg-blue-100 p-space-md rounded-2xl shadow-sm cursor-pointer transition-all flex flex-col justify-between" onclick="openPatientDrawer('شهد العتيبي', '01:00 م', 'كانديلا - ليزر ذراعين وساقين', 'أ. العنود المطيري', 'غرفة 2', 'Candela GentleMax Pro #1', '18mm Spot Size', 'مؤكد')">
+<div class="flex items-start justify-between">
+<div>
+<span class="px-2 py-0.5 rounded-full bg-blue-200 text-blue-900 font-label-sm text-label-sm font-bold">01:00 - 01:45 م</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">شهد العتيبي</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">كانديلا - ليزر ذراعين وساقين</p>
+</div>
+<span class="px-2 py-1 rounded-lg bg-blue-600 text-white font-label-sm text-label-sm font-semibold">مؤكد</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-blue-900 pt-1">
+<span>🚪 غرفة 2 • ⚡ Candela #1</span>
+<span>🎯 قبضة 18mm</span>
+</div>
+</div>
+</div>
+<!-- Col 4 (د. خالد): Empty Slot -->
+<div class="col-span-2">
+<div class="h-full w-full rounded-2xl bg-surface-container-low/70 hover:bg-surface-container flex flex-col items-center justify-center text-on-surface-variant cursor-pointer transition-all" onclick="openNewBookingModal('01:00 م', 'د. خالد العمري')">
+<span class="material-symbols-outlined text-[24px] text-outline">add_circle_outline</span>
+<span class="font-label-sm text-label-sm mt-1">شاغر 01:00 م</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Interactive Slide-In Side Detail Drawer (Patient Dossier) -->
+<aside aria-labelledby="drawer-patient-name" class="fixed top-0 bottom-0 left-0 w-full sm:w-[480px] z-50 bg-surface-container-lowest shadow-2xl p-space-lg flex flex-col justify-between transform -translate-x-full transition-transform duration-300 ease-in-out border-r-0" id="patient-detail-drawer">
+<div>
+<!-- Drawer Header -->
+<div class="flex items-start justify-between pb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center font-bold text-headline-md">
+            ن
+          </div>
+<div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface" id="drawer-patient-name">نورة الحربي</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">ملف رقم #LUM-88412 • هاتف: 0551239841</p>
+</div>
+</div>
+<button class="w-10 h-10 rounded-xl bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface transition-colors" onclick="closePatientDrawer()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Time & Status Pills -->
+<div class="flex items-center justify-between bg-surface-container-low p-space-md rounded-2xl my-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">schedule</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">وقت الموعد</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface" id="drawer-appointment-time">10:30 ص - 11:30 ص</span>
+</div>
+</div>
+<div class="px-space-md py-1 rounded-xl bg-blue-100 text-blue-800 font-label-md text-label-md font-bold" id="drawer-status-badge">
+          مؤكد (Confirmed)
+        </div>
+</div>
+<!-- Clinical Resource Assignment Grid (4 Mandatory Resources) -->
+<div class="my-space-md">
+<h4 class="font-label-md text-label-md font-bold text-on-surface mb-space-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]">hub</span>
+<span>الموارد السريرية المخصصة (4 Clinical Resources):</span>
+</h4>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Resource 1: Clinician -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center gap-space-xs">
+<span class="text-[24px]">👩‍⚕️</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">الطبيب / الأخصائي</span>
+<span class="font-label-md text-label-md font-bold text-on-surface" id="drawer-clinician">د. ريم الفهد</span>
+</div>
+</div>
+<!-- Resource 2: Room -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center gap-space-xs">
+<span class="text-[24px]">🚪</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">العيادة / الغرفة</span>
+<span class="font-label-md text-label-md font-bold text-on-surface" id="drawer-room">عيادة 3</span>
+</div>
+</div>
+<!-- Resource 3: Device -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center gap-space-xs">
+<span class="text-[24px]">⚡</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">الجهاز الطبي المجدول</span>
+<span class="font-label-md text-label-md font-bold text-on-surface truncate" id="drawer-device">Candela GentleMax Pro+ #2</span>
+</div>
+</div>
+<!-- Resource 4: Handpiece -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center gap-space-xs">
+<span class="text-[24px]">🎯</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">العدسة / القبضة (Spot)</span>
+<span class="font-label-md text-label-md font-bold text-on-surface" id="drawer-handpiece">عدسة 22mm Spot</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Service Dossier Details -->
+<div class="space-y-space-xs py-space-xs">
+<div class="flex items-center justify-between text-body-sm py-1 border-b border-surface-container">
+<span class="text-on-surface-variant">الخدمة المطلوبة:</span>
+<span class="font-bold text-on-surface" id="drawer-service">جلسة ليزر كانديلا برو كلي</span>
+</div>
+<div class="flex items-center justify-between text-body-sm py-1 border-b border-surface-container">
+<span class="text-on-surface-variant">نوع التغطية المالية:</span>
+<span class="font-bold text-on-surface">سداد مباشر (دفع مسبق 150 ر.س)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm py-1">
+<span class="text-on-surface-variant">الملاحظات التمريضية:</span>
+<span class="text-on-surface font-medium">البشرة حساسة، تفضيل تبريد DCD مرتفع</span>
+</div>
+</div>
+<!-- Dynamic Resource Conflict Alert Box -->
+<div class="my-space-md p-space-md rounded-2xl bg-amber-50 text-amber-950 flex flex-col gap-space-xs shadow-sm" id="drawer-conflict-box">
+<div class="flex items-center gap-space-xs text-amber-800 font-bold">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+<span class="font-label-md text-label-md">⚠️ تعارض سريري نشط (Clinical Conflict)</span>
+</div>
+<p class="font-body-sm text-body-sm text-amber-900 leading-relaxed">
+          هذا الجهاز (Candela GentleMax Pro Plus #2) يخضع لصيانة دورية ومعايرة مجدولة خلال هذا النطاق الزمني.
+        </p>
+<div class="flex items-center gap-space-xs mt-1">
+<button class="px-space-md py-1.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-label-sm text-label-sm shadow-xs transition-colors" onclick="reassignDeviceDemo()">
+            تحويل إلى كانديلا برو #1
+          </button>
+<span class="text-amber-800 text-[11px]">متاح في نفس التوقيت</span>
+</div>
+</div>
+</div>
+<!-- Action Drawer Buttons -->
+<div class="pt-space-md flex flex-col gap-space-xs bg-surface-container-lowest">
+<button class="w-full h-12 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-surface-tint active:scale-[0.98] transition-all flex items-center justify-center gap-space-xs min-h-[48px]" onclick="checkInPatientAction()">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+<span>تسجيل الحضور الآن (Check In)</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="h-12 rounded-xl bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md transition-all flex items-center justify-center gap-space-xs min-h-[48px]" onclick="alert('فتح نافذة إعادة الجدولة');">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span>إعادة جدولة (Reschedule)</span>
+</button>
+<button class="h-12 rounded-xl bg-red-50 hover:bg-red-100 text-red-700 font-label-md text-label-md transition-all flex items-center justify-center gap-space-xs min-h-[48px]" onclick="cancelAppointmentAction()">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+<span>إلغاء الموعد (Cancel)</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Interactive New Booking Side Modal / Flow -->
+<div class="hidden fixed inset-0 z-50 bg-black/40 backdrop-blur-xs flex items-center justify-center p-space-md" id="new-booking-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-2xl shadow-2xl p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">add_task</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">+ حجز موعد جديد</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">الفرع: العليا التخصصي • التخصيص الآلي للغرف والأجهزة</p>
+</div>
+</div>
+<button class="w-10 h-10 rounded-xl bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface transition-colors" onclick="closeNewBookingModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Quick Patient Search Input -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">المريض / العميل</label>
+<div class="flex items-center bg-surface-container-low px-space-md py-space-xs rounded-xl shadow-xs">
+<span class="material-symbols-outlined text-outline text-[20px] ml-2">person_search</span>
+<input class="w-full bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline text-right" placeholder="ابحث برقم الهوية، الاسم أو رقم الجوال..." type="text" value="نورة الحربي"/>
+</div>
+</div>
+<!-- Pre-selected Doctor & Time -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">الطبيب المختار</label>
+<input class="w-full mt-1 bg-surface-container-low px-space-md py-2.5 rounded-xl font-label-md text-label-md text-on-surface border-none outline-none" id="modal-clinician-input" readonly="" type="text" value="د. مها السديري"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">توقيت الموعد</label>
+<input class="w-full mt-1 bg-surface-container-low px-space-md py-2.5 rounded-xl font-label-md text-label-md text-on-surface border-none outline-none" id="modal-time-input" readonly="" type="text" value="11:30 ص"/>
+</div>
+</div>
+<!-- Service Dropdown -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">نوع الخدمة السريرية</label>
+<select class="w-full bg-surface-container-low px-space-md py-2.5 rounded-xl font-body-sm text-body-sm text-on-surface border-none outline-none cursor-pointer">
+<option selected="">فراكشنال ليزر للوجه - CO2 Fractional Laser</option>
+<option>جلسة كانديلا برو - جسم كامل مع الرتوش</option>
+<option>حقن بوتوكس وتجميل التجاعيد</option>
+<option>تنظيف هايدرافاشيال سريري متطور</option>
+</select>
+</div>
+<!-- Resource Auto-Allocation Info -->
+<div class="p-space-sm bg-surface-container rounded-xl flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+<span class="font-label-sm text-label-sm">التخصيص التلقائي: عيادة 4 • جهاز DEKA CO2 • عدسة 1.5mm</span>
+</div>
+<span class="text-tertiary font-bold text-[11px]">متاح ومتوافق</span>
+</div>
+<!-- Modal Actions -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 h-12 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-surface-tint active:scale-[0.98] transition-all min-h-[48px]" onclick="saveNewBookingMock()">
+          تثبيت وحجز الموعد
+        </button>
+<button class="px-space-lg h-12 rounded-xl bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all min-h-[48px]" onclick="closeNewBookingModal()">
+          إلغاء
+        </button>
+</div>
+</div>
+</div>
+<!-- Drawer Backdrop (Closes on outside click) -->
+<div class="hidden fixed inset-0 z-40 bg-black/25 backdrop-blur-xs transition-opacity" id="drawer-backdrop" onclick="closePatientDrawer()"></div>
+</div>
+<script>
+  // Interactive State Controller for Lumea Clinic Demo
+  function setDemoState(state) {
+    // Reset highlights
+    ['default', 'drawer', 'new', 'conflict'].forEach(s => {
+      const btn = document.getElementById('btn-state-' + s);
+      if (btn) {
+        btn.classList.remove('bg-primary', 'text-on-primary');
+        btn.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+      }
+    });
+
+    const activeBtn = document.getElementById('btn-state-' + (state === 'new-booking' ? 'new' : state));
+    if (activeBtn) {
+      activeBtn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+      activeBtn.classList.add('bg-primary', 'text-on-primary');
+    }
+
+    const drawer = document.getElementById('patient-detail-drawer');
+    const backdrop = document.getElementById('drawer-backdrop');
+    const modal = document.getElementById('new-booking-modal');
+    const conflictBanner = document.getElementById('conflict-global-banner');
+    const drawerConflictBox = document.getElementById('drawer-conflict-box');
+
+    if (state === 'default') {
+      closePatientDrawer();
+      closeNewBookingModal();
+      conflictBanner.classList.add('hidden');
+    } else if (state === 'drawer') {
+      closeNewBookingModal();
+      openPatientDrawer('نورة الحربي', '10:30 ص', 'جلسة ليزر كانديلا برو كلي', 'د. ريم الفهد', 'عيادة 3', 'Candela GentleMax Pro Plus #2', 'عدسة 22mm Spot', 'مؤكد');
+      conflictBanner.classList.add('hidden');
+    } else if (state === 'new-booking') {
+      closePatientDrawer();
+      openNewBookingModal('11:30 ص', 'د. مها السديري');
+      conflictBanner.classList.add('hidden');
+    } else if (state === 'conflict') {
+      closeNewBookingModal();
+      conflictBanner.classList.remove('hidden');
+      openPatientDrawer('نورة الحربي', '10:30 ص', 'جلسة ليزر كانديلا برو كلي', 'د. ريم الفهد', 'عيادة 3', 'Candela GentleMax Pro Plus #2', 'عدسة 22mm Spot', 'مؤكد');
+      if (drawerConflictBox) drawerConflictBox.classList.remove('hidden');
+    }
+  }
+
+  function openPatientDrawer(name, time, service, doctor, room, device, handpiece, status) {
+    document.getElementById('drawer-patient-name').textContent = name;
+    document.getElementById('drawer-appointment-time').textContent = time;
+    document.getElementById('drawer-service').textContent = service;
+    document.getElementById('drawer-clinician').textContent = doctor;
+    document.getElementById('drawer-room').textContent = room;
+    document.getElementById('drawer-device').textContent = device;
+    document.getElementById('drawer-handpiece').textContent = handpiece;
+    document.getElementById('drawer-status-badge').textContent = status;
+
+    const drawer = document.getElementById('patient-detail-drawer');
+    const backdrop = document.getElementById('drawer-backdrop');
+    
+    // RTL vs LTR slide check
+    const isLtr = document.documentElement.getAttribute('dir') === 'ltr';
+    if (isLtr) {
+      drawer.style.right = '0';
+      drawer.style.left = 'auto';
+      drawer.classList.remove('translate-x-full');
+      drawer.classList.add('translate-x-0');
+    } else {
+      drawer.style.left = '0';
+      drawer.style.right = 'auto';
+      drawer.classList.remove('-translate-x-full');
+      drawer.classList.add('translate-x-0');
+    }
+
+    backdrop.classList.remove('hidden');
+  }
+
+  function closePatientDrawer() {
+    const drawer = document.getElementById('patient-detail-drawer');
+    const backdrop = document.getElementById('drawer-backdrop');
+    const isLtr = document.documentElement.getAttribute('dir') === 'ltr';
+
+    if (isLtr) {
+      drawer.classList.add('translate-x-full');
+      drawer.classList.remove('translate-x-0');
+    } else {
+      drawer.classList.add('-translate-x-full');
+      drawer.classList.remove('translate-x-0');
+    }
+    backdrop.classList.add('hidden');
+  }
+
+  function openNewBookingModal(time, doctor) {
+    document.getElementById('modal-time-input').value = time || '11:30 ص';
+    document.getElementById('modal-clinician-input').value = doctor || 'د. مها السديري';
+    document.getElementById('new-booking-modal').classList.remove('hidden');
+  }
+
+  function closeNewBookingModal() {
+    document.getElementById('new-booking-modal').classList.add('hidden');
+  }
+
+  function saveNewBookingMock() {
+    closeNewBookingModal();
+    alert('تم حفظ وتثبيت الموعد الجديد بنجاح في عيادة لوميا!');
+  }
+
+  function checkInPatientAction() {
+    document.getElementById('drawer-status-badge').textContent = 'تم تسجيل الحضور (Checked In)';
+    document.getElementById('drawer-status-badge').className = 'px-space-md py-1 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold';
+    alert('تم تسجيل حضور المريضة بنجاح وإرسال إشعار لطبيب العيادة.');
+  }
+
+  function cancelAppointmentAction() {
+    if (confirm('هل أنت متأكد من رغبتك في إلغاء هذا الموعد وتحرير الجهاز والعيادة؟')) {
+      closePatientDrawer();
+    }
+  }
+
+  function resolveConflictDemo() {
+    document.getElementById('conflict-global-banner').classList.add('hidden');
+    alert('تم تحويل حجز المريضة نورة الحربي بنجاح إلى جهاز كانديلا برو #1 وحل التعارض السريري.');
+  }
+
+  function dismissConflictBanner() {
+    document.getElementById('conflict-global-banner').classList.add('hidden');
+  }
+
+  function reassignDeviceDemo() {
+    document.getElementById('drawer-device').textContent = 'Candela GentleMax Pro #1 (بديل)';
+    const box = document.getElementById('drawer-conflict-box');
+    box.className = 'my-space-md p-space-md rounded-2xl bg-emerald-50 text-emerald-950 flex flex-col gap-space-xs';
+    box.innerHTML = '<span class="font-bold text-emerald-800">✅ تم حل التعارض: تم تحويل الموعد إلى جهاز Candela #1 بنجاح.</span>';
+  }
+
+  function toggleLoadingState() {
+    const skeleton = document.getElementById('loading-skeleton');
+    const matrix = document.getElementById('booking-board-matrix');
+    const isHidden = skeleton.classList.contains('hidden');
+
+    if (isHidden) {
+      skeleton.classList.remove('hidden');
+      matrix.classList.add('hidden');
+      setTimeout(() => {
+        skeleton.classList.add('hidden');
+        matrix.classList.remove('hidden');
+      }, 1400);
+    }
+  }
+
+  function toggleDirection() {
+    const html = document.documentElement;
+    const currentDir = html.getAttribute('dir') || 'rtl';
+    const label = document.getElementById('lang-label');
+    
+    if (currentDir === 'rtl') {
+      html.setAttribute('dir', 'ltr');
+      label.textContent = 'العربية (RTL)';
+    } else {
+      html.setAttribute('dir', 'rtl');
+      label.textContent = 'English (LTR)';
+    }
+    closePatientDrawer();
+  }
+
+  function setGrouping(type) {
+    ['doctor', 'room', 'device'].forEach(g => {
+      const btn = document.getElementById('group-' + g);
+      if (btn) {
+        btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btn.classList.add('text-on-surface-variant');
+      }
+    });
+    const current = document.getElementById('group-' + type);
+    if (current) {
+      current.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      current.classList.remove('text-on-surface-variant');
+    }
+  }
+
+  function setDensity(minutes) {
+    const b30 = document.getElementById('btn-zoom-30');
+    const b60 = document.getElementById('btn-zoom-60');
+    if (minutes === 30) {
+      b30.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      b60.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+    } else {
+      b60.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      b30.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+    }
+  }
+
+  function shiftDay(direction) {
+    alert(direction > 0 ? 'الانتقال لليوم التالي: الإثنين 16 شعبان' : 'الانتقال لليوم السابق: السبت 14 شعبان');
+  }
+
+  function resetToToday() {
+    alert('تمت العودة إلى جدول اليوم: الأحد 15 شعبان 1446 هـ');
+  }
+</script></main><footer class="w-full bg-surface-container-low py-space-lg"><div class="w-full px-gutter-tablet flex flex-col sm:flex-row items-center justify-between gap-space-sm"><div class="flex items-center gap-space-md"><span class="font-label-md text-label-md text-on-surface">عيادات لوميا التخصصية</span><span class="text-outline">•</span><span class="font-body-sm text-body-sm text-on-surface-variant">فرع العليا التخصصي - طريق التخصصي، الرياض</span></div><div class="font-body-sm text-body-sm text-on-surface-variant">© 2025 عيادات لوميا الطبية. جميع الحقوق محفوظة لفرع الاستقبال ومكتب الدخول.</div></div></footer></body></html>

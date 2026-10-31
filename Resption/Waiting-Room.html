@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-fixed-dim":"#6bd8cb","error":"#ba1a1a","on-tertiary-fixed-variant":"#005049","primary-container":"#7c3aed","outline":"#7b7487","surface-container-high":"#eee4f9","on-tertiary-container":"#8df9ea","surface-container-lowest":"#ffffff","inverse-surface":"#332e3d","on-tertiary":"#ffffff","on-primary-container":"#ede0ff","on-error-container":"#93000a","secondary-fixed-dim":"#cebdff","secondary-container":"#ab8ffe","on-surface":"#1e1927","on-background":"#1e1927","background":"#fef7ff","on-tertiary-fixed":"#00201d","surface-dim":"#e0d6ea","surface-variant":"#e8dff3","surface-container":"#f4eafe","inverse-on-surface":"#f7edff","on-surface-variant":"#4a4455","tertiary-container":"#00746a","tertiary":"#005952","surface-tint":"#732ee4","primary-fixed-dim":"#d2bbff","inverse-primary":"#d2bbff","surface":"#fef7ff","secondary":"#674bb5","primary":"#630ed4","surface-container-low":"#f9f1ff","secondary-fixed":"#e8ddff","outline-variant":"#ccc3d8","on-secondary-fixed-variant":"#4f319c","tertiary-fixed":"#89f5e7","on-secondary-container":"#3f1e8c","on-error":"#ffffff","error-container":"#ffdad6","surface-container-highest":"#e8dff3","primary-fixed":"#eaddff","on-primary-fixed":"#25005a","on-secondary":"#ffffff","on-secondary-fixed":"#21005e","surface-bright":"#fef7ff","on-primary":"#ffffff","on-primary-fixed-variant":"#5a00c6"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin":"1rem","space-xl":"2rem","gutter-tablet":"1.25rem","space-sm":"0.5rem","margin-tablet":"1.5rem","gutter":"1rem","space-md":"0.875rem","space-xs":"0.25rem","space-lg":"1.25rem"},fontFamily:{"display-lg":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"timer-display":["Inter"],"label-md":["Inter"],"label-lg":["Inter"],"label-sm":["Inter"],"headline-sm":["Inter"],"body-sm":["Inter"],"headline-md":["Inter"]},fontSize:{"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"22px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"timer-display":["16px",{"lineHeight":"20px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"label-lg":["15px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-lg text-on-surface antialiased min-h-screen selection:bg-primary selection:text-on-primary"><main class="w-full min-h-screen flex flex-col justify-start items-stretch bg-surface"><div class="flex flex-col w-full text-on-surface select-none overflow-hidden relative">
+<!-- Interactive Demo Control Ribbon (Floating Non-intrusive Top Bar for Presenters/Staff) -->
+<div class="w-full bg-surface-container-high/90 backdrop-blur-md px-6 py-2.5 flex items-center justify-between shadow-sm z-50 transition-all duration-300" id="demo-toolbar">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">tv_gen</span>
+<span class="font-label-md text-on-surface-variant font-semibold">شاشة صالة الانتظار الذكية • نظام النداء الآلي (Lumea Display Engine v4.2)</span>
+<span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">1080p / 4K Wall Mount Mode</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-primary hover:bg-primary-container text-on-primary px-4 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 shadow-sm transition active:scale-95 cursor-pointer" onclick="triggerChimeCall()">
+<span class="material-symbols-outlined text-base">notifications_active</span>
+<span>محاكاة نداء مراجع جديد (Call Chime)</span>
+</button>
+<button class="bg-surface hover:bg-surface-variant text-primary px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 shadow-sm transition cursor-pointer" id="lang-btn" onclick="toggleLanguage()">
+<span class="material-symbols-outlined text-base">translate</span>
+<span id="lang-btn-text">English LTR Mode</span>
+</button>
+<button class="bg-surface hover:bg-surface-variant text-on-surface-variant px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 shadow-sm transition cursor-pointer" id="dim-btn" onclick="toggleNightDim()">
+<span class="material-symbols-outlined text-base" id="dim-icon">bedtime</span>
+<span id="dim-btn-text">نمط الإضاءة الهادئة</span>
+</button>
+</div>
+</div>
+<!-- Audio Tone Synthesizer Context (Web Audio API) -->
+<script>
+    function playHospitalityChime() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const now = audioCtx.currentTime;
+        
+        // Gentle hospital chime: 3 harmonious soft sinusoids (C5 -> E5 -> G5)
+        const notes = [523.25, 659.25, 783.99];
+        notes.forEach((freq, idx) => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, now + idx * 0.18);
+          gain.gain.setValueAtTime(0.0001, now + idx * 0.18);
+          gain.gain.exponentialRampToValueAtTime(0.18, now + idx * 0.18 + 0.05);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + idx * 0.18 + 1.2);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(now + idx * 0.18);
+          osc.stop(now + idx * 0.18 + 1.3);
+        });
+      } catch(e) {
+        // Fallback silently if audio context is restricted
+      }
+    }
+  </script>
+<!-- Main Wall Display Container: 16:9 Aspect Ratio Enforced / High Visibility from 4m -->
+<div class="w-full flex flex-col justify-between p-6 lg:p-10 transition-colors duration-500 relative min-h-[calc(100vh-45px)]" id="tv-canvas" style="background: radial-gradient(circle at 15% 15%, rgba(124, 58, 237, 0.04) 0%, transparent 60%), radial-gradient(circle at 85% 85%, rgba(107, 216, 203, 0.03) 0%, transparent 50%);">
+<!-- 1. TOP HEADER BAR -->
+<header class="w-full flex items-center justify-between pb-6 mb-4">
+<!-- Brand & Branch Info -->
+<div class="flex items-center gap-5">
+<!-- Logo Emblem -->
+<div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-on-primary shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-4xl">spa</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-3">
+<h1 class="font-display-lg text-display-lg tracking-tight text-on-surface font-bold" id="brand-title">
+              عيادات لوميا التخصصية
+            </h1>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full font-label-md text-label-md font-semibold">
+              LUMEA CLINIC
+            </span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-lg text-primary">location_on</span>
+<span id="branch-text">فرع العليا التخصصي — صالة الاستقبال والانتظار الرئيسية</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="flex items-center gap-1.5 text-tertiary font-semibold">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim animate-ping inline-block"></span>
+<span id="active-status-text">نظام الاستدعاء متصل ومباشر</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Time & Live Dual Date (Optimized for 4-meter glance readability) -->
+<div class="flex items-center gap-6">
+<!-- Hijri & Gregorian Date Container -->
+<div class="flex flex-col items-end text-left bg-surface-container/70 backdrop-blur px-5 py-3 rounded-2xl shadow-sm">
+<div class="flex items-center gap-2 font-headline-sm text-headline-sm font-semibold text-on-surface" id="date-hijri">
+<span class="material-symbols-outlined text-primary text-xl">calendar_month</span>
+<span>١٥ شعبان ١٤٤٦ هـ</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant tracking-wide mt-0.5" id="date-gregorian">
+            14 فبراير 2025 م • Friday
+          </div>
+</div>
+<!-- High-Legibility Digital Clock -->
+<div class="flex items-center gap-3 bg-gradient-to-r from-surface-container to-surface-container-high px-6 py-3 rounded-2xl shadow-md">
+<div class="w-3 h-3 rounded-full bg-primary animate-pulse"></div>
+<div class="font-display-lg text-display-lg font-bold text-primary tracking-tight" id="live-clock">
+            10:42:15
+          </div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary/70" id="live-ampm">
+            ص
+          </span>
+</div>
+</div>
+</header>
+<div class="w-full px-gutter-tablet bg-surface-container-lowest flex items-center justify-between overflow-x-auto"><nav class="flex items-center gap-space-sm py-2 min-w-max" data-active-classes="bg-primary-fixed text-on-primary-fixed font-bold rounded-lg"><a aria-current="page" class="h-11 px-space-lg flex items-center transition-colors bg-primary-fixed text-on-primary-fixed font-bold rounded-lg" data-path="patient-queue" href="Waiting-Room.html">طابور الانتظار / Queue</a><a class="h-11 px-space-lg flex items-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors rounded-lg font-label-lg text-label-lg" data-path="appointments" href="booking.html">المواعيد / Bookings</a><a class="h-11 px-space-lg flex items-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors rounded-lg font-label-lg text-label-lg" data-path="pos-checkout" href="POS_Checkout.html">نقاط البيع / POS</a><a class="h-11 px-space-lg flex items-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors rounded-lg font-label-lg text-label-lg" data-path="cash-drawer" href="Shift_and_Cash_Drawer.html">الصندوق / Cash</a></nav><div class="hidden md:flex items-center gap-space-sm py-2 text-outline font-label-sm text-label-sm"><span class="material-symbols-outlined text-[18px]">schedule</span><span>تحديث مباشر</span></div></div>
+<!-- 2. MAIN SPLIT CONTENT GRID (4-Meter Legibility Focus) -->
+<main class="w-full grid grid-cols-12 gap-8 my-auto items-stretch">
+<!-- COLUMN 1: ACTIVE / NOW SERVING (Width: 7 of 12) - Bold Prominence -->
+<section class="col-span-12 lg:col-span-7 flex flex-col gap-6 justify-center">
+<!-- Section Header Badge -->
+<div class="flex items-center justify-between px-2">
+<div class="flex items-center gap-3">
+<span class="relative flex h-4 w-4">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-4 w-4 bg-primary"></span>
+</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-wide" id="now-serving-title">
+              النداء الحالي • تفضل بالدخول
+            </h2>
+</div>
+<span class="bg-primary text-on-primary text-label-md font-label-md px-4 py-1.5 rounded-full font-bold shadow-sm flex items-center gap-2" id="call-pill-text">
+<span class="material-symbols-outlined text-sm">campaign</span>
+<span>استدعاء مباشر</span>
+</span>
+</div>
+<!-- PRIMARY HERO CARD: FIRST ACTIVE PATIENT -->
+<div class="relative bg-surface-container-lowest rounded-3xl p-8 lg:p-10 shadow-xl overflow-hidden transition-all duration-700" id="hero-call-card">
+<!-- Subtle Soft Purple Glow Accent -->
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Top Meta Row -->
+<div class="flex items-center justify-between pb-6 mb-6">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-primary text-2xl">person_check</span>
+<span id="patient-label-lead">المراجع الكريم (الاسم الأول فقط):</span>
+</div>
+<div class="bg-primary/10 text-primary px-4 py-1.5 rounded-xl font-label-lg text-label-lg font-bold flex items-center gap-2 animate-pulse">
+<span class="material-symbols-outlined text-lg">volume_up</span>
+<span id="chime-badge-state">تم نداء المراجع الآن</span>
+</div>
+</div>
+<!-- Giant Patient First Name (Massive 4m Readable Scale) -->
+<div class="flex flex-col items-start gap-1 mb-8">
+<div class="w-full flex items-baseline justify-between">
+<span class="font-display-lg text-[68px] lg:text-[84px] leading-none font-bold text-on-surface tracking-tight text-primary" id="hero-patient-name">
+                نورة
+              </span>
+<!-- English Transliteration Pill -->
+<span class="font-headline-lg text-headline-lg font-bold text-outline uppercase tracking-wider bg-surface-container px-4 py-2 rounded-2xl" id="hero-patient-en">
+                NOURA
+              </span>
+</div>
+</div>
+<!-- Clinic & Room Destination Block (High Contrast Container) -->
+<div class="bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-2xl p-6 lg:p-8 flex items-center justify-between shadow-md">
+<div class="flex items-center gap-6">
+<div class="w-20 h-20 rounded-2xl bg-on-primary/15 backdrop-blur flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-on-primary">meeting_room</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-primary-container text-label-lg font-label-lg uppercase tracking-wider font-semibold" id="destination-lead-text">
+                  يرجى التوجه فوراً إلى
+                </span>
+<span class="text-on-primary font-display-lg text-[44px] lg:text-[52px] leading-tight font-extrabold tracking-tight" id="hero-room-number">
+                  عيادة 02
+                </span>
+</div>
+</div>
+<!-- Attending Doctor Badge (No Medical details - Physician only) -->
+<div class="text-left bg-on-primary/15 backdrop-blur px-6 py-4 rounded-xl flex flex-col items-end">
+<span class="text-on-primary-container text-label-sm font-label-sm font-medium" id="dr-label-text">الطبيب المعالج</span>
+<span class="text-on-primary font-headline-md text-headline-md font-bold tracking-tight mt-0.5" id="hero-doctor-name">
+                د. ريما الشعلان
+              </span>
+</div>
+</div>
+</div>
+<!-- SECONDARY SIMULTANEOUS CALL CARD (Dual Intake Support) -->
+<div class="bg-surface-container-lowest/90 backdrop-blur rounded-2xl p-6 shadow-md flex items-center justify-between transition-all duration-500" id="secondary-call-card">
+<div class="flex items-center gap-5">
+<div class="w-14 h-14 rounded-xl bg-secondary/15 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">door_front</span>
+</div>
+<div>
+<div class="flex items-center gap-3">
+<span class="font-display-lg text-[36px] font-bold text-on-surface" id="sec-patient-name">سارة</span>
+<span class="font-label-md text-label-md text-outline font-semibold bg-surface-container px-2.5 py-1 rounded-lg" id="sec-patient-en">SARA</span>
+</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm mt-0.5 flex items-center gap-2">
+<span id="sec-proceed-text">تفضلي بالدخول إلى:</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary" id="sec-room-name">عيادة 04</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="text-left">
+<div class="text-on-surface-variant font-label-sm text-label-sm" id="sec-doc-label">العيادة بإشراف</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface" id="sec-doctor-name">د. مها الماجد</div>
+</div>
+<div class="w-3 h-3 rounded-full bg-secondary-container animate-ping"></div>
+</div>
+</div>
+</section>
+<!-- COLUMN 2: NEXT UP / UPCOMING QUEUE (Width: 5 of 12) -->
+<section class="col-span-12 lg:col-span-5 flex flex-col gap-5 justify-center">
+<!-- Section Title with Soft Privacy Chip -->
+<div class="flex items-center justify-between px-2">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-2xl">hourglass_top</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface" id="upcoming-title">
+              المراجعون القادمون
+            </h2>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant text-label-md font-label-md font-semibold px-3 py-1 rounded-full" id="queue-count-pill">
+            ٤ في الانتظار
+          </span>
+</div>
+<!-- Upcoming Patients Queue Container -->
+<div class="flex flex-col gap-3.5">
+<!-- Queue Item 1: Next in Line Directly -->
+<div class="bg-surface-container-lowest rounded-2xl p-4.5 px-6 shadow-sm flex items-center justify-between hover:bg-surface-container-low transition">
+<div class="flex items-center gap-4">
+<span class="w-9 h-9 rounded-xl bg-primary/10 text-primary font-headline-sm text-headline-sm font-bold flex items-center justify-center">
+                1
+              </span>
+<div>
+<div class="flex items-center gap-2.5">
+<span class="font-headline-md text-headline-md font-bold text-on-surface q-pat-name">هند</span>
+<span class="text-label-sm font-label-sm text-outline q-pat-en">HIND</span>
+</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm flex items-center gap-2 mt-0.5">
+<span class="q-dest-text">عيادة 01</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="q-doc-text">د. طارق الشمري</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold px-3 py-1 rounded-lg q-status-text">
+                التالي مباشرة
+              </span>
+<span class="text-outline font-label-sm text-label-sm mt-1 q-wait-time">~ 3 دقائق</span>
+</div>
+</div>
+<!-- Queue Item 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4.5 px-6 shadow-sm flex items-center justify-between hover:bg-surface-container-low transition">
+<div class="flex items-center gap-4">
+<span class="w-9 h-9 rounded-xl bg-surface-container text-on-surface font-headline-sm text-headline-sm font-bold flex items-center justify-center">
+                2
+              </span>
+<div>
+<div class="flex items-center gap-2.5">
+<span class="font-headline-md text-headline-md font-bold text-on-surface q-pat-name">أمل</span>
+<span class="text-label-sm font-label-sm text-outline q-pat-en">AMAL</span>
+</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm flex items-center gap-2 mt-0.5">
+<span class="q-dest-text">عيادة 03</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="q-doc-text">أخصائية هالة السيد</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold px-3 py-1 rounded-lg q-status-text">
+                الموعد القادم
+              </span>
+<span class="text-outline font-label-sm text-label-sm mt-1 q-wait-time">~ 8 دقائق</span>
+</div>
+</div>
+<!-- Queue Item 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4.5 px-6 shadow-sm flex items-center justify-between hover:bg-surface-container-low transition">
+<div class="flex items-center gap-4">
+<span class="w-9 h-9 rounded-xl bg-surface-container text-on-surface font-headline-sm text-headline-sm font-bold flex items-center justify-center">
+                3
+              </span>
+<div>
+<div class="flex items-center gap-2.5">
+<span class="font-headline-md text-headline-md font-bold text-on-surface q-pat-name">ريما</span>
+<span class="text-label-sm font-label-sm text-outline q-pat-en">REEMA</span>
+</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm flex items-center gap-2 mt-0.5">
+<span class="q-dest-text">عيادة 02</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="q-doc-text">د. ريما الشعلان</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm font-medium px-3 py-1 rounded-lg q-status-text">
+                في الانتظار
+              </span>
+<span class="text-outline font-label-sm text-label-sm mt-1 q-wait-time">~ 14 دقيقة</span>
+</div>
+</div>
+<!-- Queue Item 4 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4.5 px-6 shadow-sm flex items-center justify-between hover:bg-surface-container-low transition">
+<div class="flex items-center gap-4">
+<span class="w-9 h-9 rounded-xl bg-surface-container text-on-surface font-headline-sm text-headline-sm font-bold flex items-center justify-center">
+                4
+              </span>
+<div>
+<div class="flex items-center gap-2.5">
+<span class="font-headline-md text-headline-md font-bold text-on-surface q-pat-name">شهد</span>
+<span class="text-label-sm font-label-sm text-outline q-pat-en">SHAHAD</span>
+</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm flex items-center gap-2 mt-0.5">
+<span class="q-dest-text">عيادة 05</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="q-doc-text">د. منى الراجحي</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm font-medium px-3 py-1 rounded-lg q-status-text">
+                في الانتظار
+              </span>
+<span class="text-outline font-label-sm text-label-sm mt-1 q-wait-time">~ 20 دقيقة</span>
+</div>
+</div>
+</div>
+<!-- Strict PDPL Saudi Privacy Compliance Badge -->
+<div class="bg-surface-container-high/60 rounded-xl px-4 py-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">verified_user</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="pdpl-notice">
+            لحماية خصوصيتكم، يتم عرض الاسم الأول ورقم العيادة فقط طبقاً للائحة حماية البيانات الشخصية (PDPL) في المملكة.
+          </p>
+</div>
+</section>
+</main>
+<!-- 3. BOTTOM ROTATING STRIP / HOSPITALITY TICKER & QR HUB -->
+<footer class="w-full mt-6 pt-4 flex items-center justify-between gap-6">
+<!-- Smooth Scrolling Hospitality Ticker Ribbon -->
+<div class="flex-1 bg-surface-container rounded-2xl px-6 py-4 flex items-center gap-4 shadow-sm overflow-hidden">
+<div class="flex items-center gap-2 bg-primary text-on-primary font-label-md text-label-md px-3.5 py-1.5 rounded-xl shrink-0 font-bold">
+<span class="material-symbols-outlined text-base">local_cafe</span>
+<span id="ticker-badge">ضيافة لوميا</span>
+</div>
+<!-- Rotating Ticker Messages -->
+<div class="flex-1 overflow-hidden relative h-7">
+<div class="font-headline-sm text-headline-sm text-on-surface font-medium transition-all duration-700 transform" id="ticker-text">
+            ضيافتكم تسعدنا: تتوفر القهوة السعودية والمشروبات المنعشة في ركن الضيافة مجاناً
+          </div>
+</div>
+</div>
+<!-- Quick QR Hub for Clinic Concierge / Wi-Fi -->
+<div class="bg-surface-container rounded-2xl px-5 py-3 flex items-center gap-4 shadow-sm shrink-0">
+<!-- SVG Generated Crisp Functional QR representation -->
+<div class="w-12 h-12 bg-surface-container-lowest p-1 rounded-xl flex items-center justify-center shadow-inner">
+<svg class="w-full h-full text-on-surface fill-current" viewbox="0 0 33 33">
+<path d="M0 0h13v13H0V0zm3 3v7h7V3H3zm17-3h13v13H20V0zm3 3v7h7V3h-7zM0 20h13v13H0V20zm3 3v7h7v-7H3zm17 0h3v3h-3v-3zm7 0h3v3h-3v-3zm-7 7h3v3h-3v-3zm7 3h6v3h-6v-3zm3-7h3v3h-3v-3zm-3 3h3v3h-3v-3zm-4-10h4v4h-4v-4zm-8 4h3v3h-3v-3zm3 3h3v3h-3v-3zm-3 4h4v3h-4v-3z"></path>
+</svg>
+</div>
+<div class="flex flex-col text-right" id="qr-desc-block">
+<span class="font-label-md text-label-md font-bold text-on-surface" id="qr-title">دليل الخدمات والواي فاي</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="qr-sub">امسح بجوالك للاطلاع على خدمات لوميا</span>
+</div>
+</div>
+</footer>
+</div>
+<!-- Interactive Logic Engine: Clocks, Chime Simulations, English Toggle, Ticker Rotation -->
+<script>
+    // Live Precise Clock
+    function updateClock() {
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      const isArabic = document.documentElement.dir !== 'ltr';
+      
+      let ampm = '';
+      if (isArabic) {
+        ampm = hours >= 12 ? 'م' : 'ص';
+      } else {
+        ampm = hours >= 12 ? 'PM' : 'AM';
+      }
+      
+      hours = hours % 12;
+      hours = hours ? hours : 12; // 12-hour format
+      const formattedHours = String(hours).padStart(2, '0');
+
+      const clockEl = document.getElementById('live-clock');
+      const ampmEl = document.getElementById('live-ampm');
+      if (clockEl) clockEl.textContent = `${formattedHours}:${minutes}:${seconds}`;
+      if (ampmEl) ampmEl.textContent = ampm;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Bottom Ticker Rotating Content (Gentle Hospitality)
+    const arabicTips = [
+      "ضيافتكم تسعدنا: تتوفر القهوة السعودية والتمور الفاخرة بركن الضيافة الترحيبي",
+      "خدمة الواي فاي المجانية للزوار متوفرة عبر شبكة Lumea-Guest (بدون كلمة مرور)",
+      "نتمنى لكم وقتاً مريحاً • فريق الاستقبال وسفراء لوميا في خدمتكم لأي استفسار",
+      "يرجى التفضل بمراجعة موظف الاستقبال في حال الحاجة لأي مساعدة خاصة أو كرسي متحرك"
+    ];
+
+    const englishTips = [
+      "Welcome to Lumea: Complimentary Saudi coffee and dates are available at our hospitality bar",
+      "Free High-Speed Guest Wi-Fi: Connect to 'Lumea-Guest' network (No password required)",
+      "Wishing you a serene visit • Our concierge and front desk team are here to assist you",
+      "Please alert the reception desk if you need personalized assistance or mobility escort"
+    ];
+
+    let currentTipIndex = 0;
+    function rotateTicker() {
+      const tickerEl = document.getElementById('ticker-text');
+      if (!tickerEl) return;
+      const isEnglish = document.documentElement.dir === 'ltr';
+      const tipsList = isEnglish ? englishTips : arabicTips;
+
+      tickerEl.style.opacity = '0';
+      tickerEl.style.transform = 'translateY(12px)';
+
+      setTimeout(() => {
+        currentTipIndex = (currentTipIndex + 1) % tipsList.length;
+        tickerEl.textContent = tipsList[currentTipIndex];
+        tickerEl.style.opacity = '1';
+        tickerEl.style.transform = 'translateY(0px)';
+      }, 500);
+    }
+    setInterval(rotateTicker, 6500);
+
+    // Call Patient Audio & Visual Chime Animation
+    function triggerChimeCall() {
+      playHospitalityChime();
+
+      const heroCard = document.getElementById('hero-call-card');
+      const chimeState = document.getElementById('chime-badge-state');
+      
+      if (!heroCard) return;
+
+      // Visual breathing pulse activation
+      heroCard.classList.add('scale-[1.02]', 'ring-4', 'ring-primary', 'shadow-2xl');
+      if (chimeState) {
+        chimeState.parentElement.classList.remove('bg-primary/10', 'text-primary');
+        chimeState.parentElement.classList.add('bg-primary', 'text-on-primary');
+      }
+
+      setTimeout(() => {
+        heroCard.classList.remove('scale-[1.02]', 'ring-4', 'ring-primary', 'shadow-2xl');
+        if (chimeState) {
+          chimeState.parentElement.classList.remove('bg-primary', 'text-on-primary');
+          chimeState.parentElement.classList.add('bg-primary/10', 'text-primary');
+        }
+      }, 2400);
+    }
+
+    // Toggle English LTR / Arabic RTL Complete Interface
+    let isEnglishMode = false;
+    function toggleLanguage() {
+      isEnglishMode = !isEnglishMode;
+      const html = document.documentElement;
+      const langBtnText = document.getElementById('lang-btn-text');
+      const brandTitle = document.getElementById('brand-title');
+      const branchText = document.getElementById('branch-text');
+      const activeStatusText = document.getElementById('active-status-text');
+      const dateHijri = document.getElementById('date-hijri');
+      const dateGreg = document.getElementById('date-gregorian');
+      const nowServingTitle = document.getElementById('now-serving-title');
+      const callPillText = document.getElementById('call-pill-text');
+      const patientLead = document.getElementById('patient-label-lead');
+      const chimeBadgeState = document.getElementById('chime-badge-state');
+      const heroPatientName = document.getElementById('hero-patient-name');
+      const heroPatientEn = document.getElementById('hero-patient-en');
+      const destLead = document.getElementById('destination-lead-text');
+      const heroRoomNumber = document.getElementById('hero-room-number');
+      const drLabel = document.getElementById('dr-label-text');
+      const heroDoctorName = document.getElementById('hero-doctor-name');
+
+      const secPatientName = document.getElementById('sec-patient-name');
+      const secProceedText = document.getElementById('sec-proceed-text');
+      const secRoomName = document.getElementById('sec-room-name');
+      const secDocLabel = document.getElementById('sec-doc-label');
+      const secDoctorName = document.getElementById('sec-doctor-name');
+
+      const upcomingTitle = document.getElementById('upcoming-title');
+      const queueCountPill = document.getElementById('queue-count-pill');
+      const pdplNotice = document.getElementById('pdpl-notice');
+      const tickerBadge = document.getElementById('ticker-badge');
+      const tickerText = document.getElementById('ticker-text');
+      const qrTitle = document.getElementById('qr-title');
+      const qrSub = document.getElementById('qr-sub');
+      const qrDescBlock = document.getElementById('qr-desc-block');
+
+      if (isEnglishMode) {
+        html.dir = 'ltr';
+        html.lang = 'en';
+        langBtnText.textContent = 'الوضع العربي (RTL)';
+        
+        brandTitle.textContent = 'Lumea Specialty Clinics';
+        branchText.textContent = 'Al Olaya Flagship Branch — Main Waiting Lounge';
+        activeStatusText.textContent = 'Live Queue System Connected';
+        
+        dateHijri.innerHTML = `<span class="material-symbols-outlined text-primary text-xl">calendar_month</span><span>15 Sha'ban 1446 AH</span>`;
+        dateGreg.textContent = 'February 14, 2025 • Friday';
+
+        nowServingTitle.textContent = 'NOW SERVING • PLEASE PROCEED';
+        callPillText.innerHTML = `<span class="material-symbols-outlined text-sm">campaign</span><span>Active Call</span>`;
+        patientLead.textContent = 'Patient (First Name only):';
+        chimeBadgeState.textContent = 'Calling Now';
+
+        heroPatientName.textContent = 'Noura';
+        heroPatientEn.textContent = 'نورة';
+        destLead.textContent = 'Please proceed immediately to';
+        heroRoomNumber.textContent = 'Clinic 02';
+        drLabel.textContent = 'Attending Physician';
+        heroDoctorName.textContent = 'Dr. Reema Al-Shaalan';
+
+        secPatientName.textContent = 'Sara';
+        secProceedText.textContent = 'Please proceed to:';
+        secRoomName.textContent = 'Clinic 04';
+        secDocLabel.textContent = 'Under care of';
+        secDoctorName.textContent = 'Dr. Maha Al-Majed';
+
+        upcomingTitle.textContent = 'Upcoming Patients';
+        queueCountPill.textContent = '4 in queue';
+        pdplNotice.textContent = 'For your privacy, only first name and room number are shown per Saudi PDPL privacy compliance.';
+
+        tickerBadge.textContent = 'Hospitality';
+        tickerText.textContent = englishTips[0];
+
+        qrTitle.textContent = 'Service Directory & Wi-Fi';
+        qrSub.textContent = 'Scan for Lumea concierge & treatment menu';
+        if (qrDescBlock) qrDescBlock.className = 'flex flex-col text-left';
+
+        // Translate Upcoming Queue List
+        const enQueueNames = ['Hind', 'Amal', 'Reema', 'Shahad'];
+        const arQueueNames = ['هند', 'أمل', 'ريما', 'شهد'];
+        const enRooms = ['Clinic 01', 'Clinic 03', 'Clinic 02', 'Clinic 05'];
+        const enDocs = ['Dr. Tariq Al-Shammari', 'Specialist Hala Al-Sayed', 'Dr. Reema Al-Shaalan', 'Dr. Muna Al-Rajhi'];
+        const enStatus = ['Next Immediately', 'Next Appointment', 'Waiting', 'Waiting'];
+        const enWait = ['~ 3 mins', '~ 8 mins', '~ 14 mins', '~ 20 mins'];
+
+        document.querySelectorAll('.q-pat-name').forEach((el, i) => el.textContent = enQueueNames[i]);
+        document.querySelectorAll('.q-pat-en').forEach((el, i) => el.textContent = arQueueNames[i]);
+        document.querySelectorAll('.q-dest-text').forEach((el, i) => el.textContent = enRooms[i]);
+        document.querySelectorAll('.q-doc-text').forEach((el, i) => el.textContent = enDocs[i]);
+        document.querySelectorAll('.q-status-text').forEach((el, i) => el.textContent = enStatus[i]);
+        document.querySelectorAll('.q-wait-time').forEach((el, i) => el.textContent = enWait[i]);
+
+      } else {
+        html.dir = 'rtl';
+        html.lang = 'ar';
+        langBtnText.textContent = 'English LTR Mode';
+
+        brandTitle.textContent = 'عيادات لوميا التخصصية';
+        branchText.textContent = 'فرع العليا التخصصي — صالة الاستقبال والانتظار الرئيسية';
+        activeStatusText.textContent = 'نظام الاستدعاء متصل ومباشر';
+
+        dateHijri.innerHTML = `<span class="material-symbols-outlined text-primary text-xl">calendar_month</span><span>١٥ شعبان ١٤٤٦ هـ</span>`;
+        dateGreg.textContent = '14 فبراير 2025 م • Friday';
+
+        nowServingTitle.textContent = 'النداء الحالي • تفضل بالدخول';
+        callPillText.innerHTML = `<span class="material-symbols-outlined text-sm">campaign</span><span>استدعاء مباشر</span>`;
+        patientLead.textContent = 'المراجع الكريم (الاسم الأول فقط):';
+        chimeBadgeState.textContent = 'تم نداء المراجع الآن';
+
+        heroPatientName.textContent = 'نورة';
+        heroPatientEn.textContent = 'NOURA';
+        destLead.textContent = 'يرجى التوجه فوراً إلى';
+        heroRoomNumber.textContent = 'عيادة 02';
+        drLabel.textContent = 'الطبيب المعالج';
+        heroDoctorName.textContent = 'د. ريما الشعلان';
+
+        secPatientName.textContent = 'سارة';
+        secProceedText.textContent = 'تفضلي بالدخول إلى:';
+        secRoomName.textContent = 'عيادة 04';
+        secDocLabel.textContent = 'العيادة بإشراف';
+        secDoctorName.textContent = 'د. مها الماجد';
+
+        upcomingTitle.textContent = 'المراجعون القادمون';
+        queueCountPill.textContent = '٤ في الانتظار';
+        pdplNotice.textContent = 'لحماية خصوصيتكم، يتم عرض الاسم الأول ورقم العيادة فقط طبقاً للائحة حماية البيانات الشخصية (PDPL) في المملكة.';
+
+        tickerBadge.textContent = 'ضيافة لوميا';
+        tickerText.textContent = arabicTips[0];
+
+        qrTitle.textContent = 'دليل الخدمات والواي فاي';
+        qrSub.textContent = 'امسح بجوالك للاطلاع على خدمات لوميا';
+        if (qrDescBlock) qrDescBlock.className = 'flex flex-col text-right';
+
+        // Revert Queue List to Arabic
+        const arQueueNames2 = ['هند', 'أمل', 'ريما', 'شهد'];
+        const enQueueNames2 = ['HIND', 'AMAL', 'REEMA', 'SHAHAD'];
+        const arRooms = ['عيادة 01', 'عيادة 03', 'عيادة 02', 'عيادة 05'];
+        const arDocs = ['د. طارق الشمري', 'أخصائية هالة السيد', 'د. ريما الشعلان', 'د. منى الراجحي'];
+        const arStatus = ['التالي مباشرة', 'الموعد القادم', 'في الانتظار', 'في الانتظار'];
+        const arWait = ['~ 3 دقائق', '~ 8 دقائق', '~ 14 دقيقة', '~ 20 دقيقة'];
+
+        document.querySelectorAll('.q-pat-name').forEach((el, i) => el.textContent = arQueueNames2[i]);
+        document.querySelectorAll('.q-pat-en').forEach((el, i) => el.textContent = enQueueNames2[i]);
+        document.querySelectorAll('.q-dest-text').forEach((el, i) => el.textContent = arRooms[i]);
+        document.querySelectorAll('.q-doc-text').forEach((el, i) => el.textContent = arDocs[i]);
+        document.querySelectorAll('.q-status-text').forEach((el, i) => el.textContent = arStatus[i]);
+        document.querySelectorAll('.q-wait-time').forEach((el, i) => el.textContent = arWait[i]);
+      }
+      updateClock();
+    }
+
+    // Toggle Night Relaxation Dimming Mode
+    let isNightDim = false;
+    function toggleNightDim() {
+      isNightDim = !isNightDim;
+      const canvas = document.getElementById('tv-canvas');
+      const dimBtnText = document.getElementById('dim-btn-text');
+      const dimIcon = document.getElementById('dim-icon');
+      
+      if (isNightDim) {
+        canvas.style.filter = 'brightness(0.92) contrast(1.05)';
+        dimBtnText.textContent = 'إعادة السطوع القياسي';
+        dimIcon.textContent = 'light_mode';
+      } else {
+        canvas.style.filter = 'none';
+        dimBtnText.textContent = 'نمط الإضاءة الهادئة';
+        dimIcon.textContent = 'bedtime';
+      }
+    }
+  </script>
+</div></main></body></html>

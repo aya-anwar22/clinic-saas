@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Lumea Clinic OS - منظومة عيادات لوميا</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#d2bbff", "on-secondary-fixed": "#21005e", "surface-container": "#f4eafe", "on-error-container": "#93000a", "on-secondary": "#ffffff", "tertiary": "#005952", "surface-dim": "#e0d6ea", "tertiary-fixed": "#89f5e7", "on-tertiary-fixed-variant": "#005049", "surface-tint": "#732ee4", "surface-bright": "#fef7ff", "surface-container-highest": "#e8dff3", "on-primary": "#ffffff", "background": "#fef7ff", "on-background": "#1e1927", "primary-fixed-dim": "#d2bbff", "on-primary-fixed-variant": "#5a00c6", "on-secondary-container": "#3f1e8c", "surface": "#fef7ff", "on-surface": "#1e1927", "primary": "#630ed4", "primary-container": "#7c3aed", "on-primary-container": "#ede0ff", "secondary": "#674bb5", "surface-container-high": "#eee4f9", "surface-container-lowest": "#ffffff", "secondary-fixed-dim": "#cebdff", "on-tertiary-container": "#8df9ea", "tertiary-fixed-dim": "#6bd8cb", "inverse-on-surface": "#f7edff", "inverse-surface": "#332e3d", "on-tertiary": "#ffffff", "on-surface-variant": "#4a4455", "on-error": "#ffffff", "on-primary-fixed": "#25005a", "tertiary-container": "#00746a", "on-tertiary-fixed": "#00201d", "secondary-fixed": "#e8ddff", "surface-variant": "#e8dff3", "on-secondary-fixed-variant": "#4f319c", "error": "#ba1a1a", "primary-fixed": "#eaddff", "outline-variant": "#ccc3d8", "surface-container-low": "#f9f1ff", "outline": "#7b7487", "error-container": "#ffdad6", "secondary-container": "#ab8ffe" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin-tablet": "1.5rem", "gutter-tablet": "1.25rem", "space-lg": "1.25rem", "gutter": "1rem", "margin": "1rem", "space-md": "0.875rem", "space-sm": "0.5rem", "space-xl": "2rem" }, "fontFamily": { "timer-display": ["Inter"], "headline-sm": ["Inter"], "label-md": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Inter"], "label-sm": ["Inter"], "label-lg": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "display-lg": ["Inter"] }, "fontSize": { "timer-display": ["16px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-on-primary font-display-lg text-headline-sm">L</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none">LUMEA</span><span class="font-label-sm text-label-sm text-on-surface-variant">عيادات لوميا الطبية</span></div></div><div class="h-6 w-px bg-surface-container-high"></div><button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-primary text-[18px]">store</span><span class="font-label-md text-label-md text-on-surface">فرع العليا التخصصي - الرياض</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></button></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors whitespace-nowrap" data-path="live-queue" href="live-quee.html">طابور الانتظار</a><a class="px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors whitespace-nowrap" data-path="booking-board" href="booking.html">لوحة المواعيد</a><a class="px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors whitespace-nowrap" data-path="new-booking" href="NewBooking.html">حجز جديد</a><a class="px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors whitespace-nowrap" data-path="pos-checkout" href="POS_Checkout.html">نقطة البيع</a><a class="px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors whitespace-nowrap" data-path="packages" href="Pending-Package_Activation.html">تفعيل الباقات</a><a class="px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors whitespace-nowrap" data-path="invoices" href="Invoices.html">سجل الفواتير</a><a aria-current="page" class="px-space-md py-2 rounded-lg transition-colors whitespace-nowrap bg-primary-container text-on-primary font-semibold" data-path="shift-and-cash-drawer" href="Shift_and_Cash_Drawer.html">الصندوق والوردية</a></nav><div class="flex items-center gap-space-md"><button aria-label="الإشعارات" class="relative w-10 h-10 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 left-2 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface">سارة العتيبي</span><span class="font-label-sm text-label-sm text-on-surface-variant">موظفة استقبال</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 flex-1 bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Scenario Bar / App Toolbar -->
+<section class="w-full bg-surface-container-low px-gutter py-space-sm border-b-0 shadow-sm" id="scenario-toolbar">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-primary-container text-on-primary font-headline-sm">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface" data-key="sim_title">محاكي سيناريوهات الإغلاق النقدي السريع</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-key="sim_subtitle">اختبر فوراً حالات المطابقة، العجز، الفائض، واعتماد المشرف</span>
+</div>
+</div>
+<!-- Quick Scenario Switcher Chips -->
+<div aria-label="سيناريوهات الجرد" class="flex flex-wrap items-center gap-1.5" role="toolbar">
+<button class="scen-btn px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all bg-tertiary-container text-on-tertiary shadow-sm" id="btn-scen-matched" onclick="setScenario('matched')" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span data-key="scen_1">1. مطابقة تامة (0.00 ر.س)</span>
+</button>
+<button class="scen-btn px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all bg-surface hover:bg-surface-container text-error" id="btn-scen-shortage" onclick="setScenario('shortage')" type="button">
+<span class="material-symbols-outlined text-[16px]">error</span>
+<span data-key="scen_2">2. عجز نقدي (-50.00 ر.س)</span>
+</button>
+<button class="scen-btn px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all bg-surface hover:bg-surface-container text-amber-700" id="btn-scen-overage" onclick="setScenario('overage')" type="button">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span data-key="scen_3">3. فائض نقدي (+70.00 ر.س)</span>
+</button>
+<button class="scen-btn px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all bg-surface hover:bg-surface-container text-secondary" id="btn-scen-waiting" onclick="setScenario('waiting')" type="button">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+<span data-key="scen_4">4. بانتظار الاعتماد</span>
+</button>
+<button class="scen-btn px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all bg-surface hover:bg-surface-container text-primary" id="btn-scen-approved" onclick="setScenario('approved')" type="button">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span data-key="scen_5">5. تم الإغلاق (Z-Report)</span>
+</button>
+<!-- LTR / RTL Language Toggle -->
+<button class="min-h-[38px] px-3.5 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 bg-surface-container-highest hover:bg-secondary-fixed text-on-surface-variant transition-colors shadow-sm ml-auto" id="lang-toggle-btn" onclick="toggleLanguage()" type="button">
+<span class="material-symbols-outlined text-[16px]">translate</span>
+<span id="lang-btn-text">English (LTR)</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Shift & Cashier Meta Ribbon -->
+<section class="w-full bg-surface-container-lowest px-gutter py-space-md shadow-[0_1px_4px_rgba(0,0,0,0.03)]">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+<span data-key="shift_badge">الوردية الصباحية • كاونتر الاستقبال 01</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">badge</span>
+<span data-key="cashier_lbl">أمين الصندوق:</span>
+<strong class="text-on-surface font-semibold" data-key="cashier_name">هدى ناصر القحطاني</strong>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary">schedule</span>
+<span data-key="opened_lbl">وقت الافتتاح:</span>
+<span class="font-timer-display text-on-surface font-semibold">09:02 ص</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">point_of_sale</span>
+<span data-key="drawer_id">درج نقدية: #DRW-2025-04</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-tertiary-fixed/30 text-on-tertiary-fixed-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">cloud_done</span>
+<span data-key="sync_status">مزامنة سحابية نشطة • متصل</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Locked / Approved State Banner (Shown in Scenario 4 and 5) -->
+<div class="hidden w-full max-w-7xl mx-auto px-gutter mt-4" id="state-banner-container">
+<!-- Waiting Banner -->
+<div class="hidden rounded-2xl bg-secondary-fixed p-4 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-3 text-on-secondary-fixed" id="banner-waiting">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center text-on-secondary shrink-0">
+<span class="material-symbols-outlined text-[26px] animate-spin">sync</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm font-bold" data-key="wait_title">⏳ بانتظار مراجعة واعتماد المشرف المالي</h4>
+<p class="font-body-sm text-body-sm text-on-secondary-container mt-0.5" data-key="wait_desc">تم تجميد حركة درج النقدية وتوثيق الفئات إلكترونياً. المشرف المناوب: <strong>عبد الله الشمري</strong> (منذ 4 دقائق).</p>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="px-3 py-2 rounded-xl bg-surface-container-lowest text-primary font-timer-display text-sm font-bold shadow-sm">⏱️ 00:04:18</span>
+<button class="h-12 px-4 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-sm" onclick="setScenario('approved')" type="button">
+<span data-key="simulate_appr_btn">محاكاة موافقة المشرف</span>
+</button>
+</div>
+</div>
+<!-- Approved Banner -->
+<div class="hidden rounded-2xl bg-tertiary text-on-tertiary p-4 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-3" id="banner-approved">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="font-headline-sm text-headline-sm font-bold" data-key="appr_title">تم اعتماد الإغلاق وطباعة تقرير Z-Report بنجاح</h4>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed/30 text-on-tertiary-fixed text-xs font-semibold">مغلقة نظامياً</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-tertiary-container mt-0.5" data-key="appr_desc">المشرف المعتمد: عبد الله الشمري • رقم وثيقة الإغلاق: #CLS-88914 • الرصيد تم توريده للخزينة المركزية.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="h-12 px-4 rounded-xl bg-surface-container-lowest text-tertiary font-label-md text-label-md hover:bg-surface-bright transition-all shadow-sm flex items-center gap-2" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span data-key="reprint_z_btn">إعادة طباعة Z-Report</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Tablet Workspace Grid -->
+<main class="w-full max-w-7xl mx-auto px-gutter py-space-lg flex-1">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start" id="layout-grid">
+<!-- Side 1: Cash Denominations Counter (7 Cols on large tablet/desktop) -->
+<section class="lg:col-span-7 flex flex-col gap-space-md order-1">
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm">
+<!-- Denomination Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<span class="p-2 rounded-xl bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface" data-key="denom_title">جرد فئات النقدية بالدرج</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1" data-key="denom_desc">قم بعدّ الأوراق والقطع النقدية في الدرج الفعلي بدقة قبل تسليم الوردية</p>
+</div>
+<!-- Quick Action Counters -->
+<div class="flex items-center gap-2">
+<button class="min-h-[44px] px-3.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md flex items-center gap-1.5 transition-colors" onclick="autoFillMatched()" type="button">
+<span class="material-symbols-outlined text-[18px]">auto_fix_high</span>
+<span data-key="btn_autofill">ملء مطابق</span>
+</button>
+<button class="min-h-[44px] px-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 transition-colors" onclick="resetCounts()" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span data-key="btn_reset">تصفير</span>
+</button>
+</div>
+</div>
+<!-- Total Count Display Tile -->
+<div class="rounded-2xl bg-gradient-to-r from-primary to-primary-container p-space-md text-on-primary flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm shadow-md mb-space-md">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest/15 backdrop-blur-md flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px] text-on-primary">calculate</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-primary-container block uppercase tracking-wider" data-key="actual_lbl">المجموع الفعلي المحسوب بالدرج</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-display-lg text-display-lg font-bold font-timer-display tracking-tight" id="counted-total-display">3,890.00</span>
+<span class="font-label-md text-label-md text-on-primary-container" data-key="currency_sar">ر.س</span>
+</div>
+</div>
+</div>
+<div class="flex sm:flex-col items-end justify-between sm:justify-center border-t sm:border-t-0 sm:border-r border-on-primary/10 pt-2 sm:pt-0 sm:pr-4">
+<span class="font-label-sm text-label-sm text-on-primary-container" data-key="bills_sum_lbl">إجمالي القطع والأوراق</span>
+<span class="font-headline-sm text-headline-sm font-bold font-timer-display" id="total-pieces-display">33 ورقة وقطعة</span>
+</div>
+</div>
+<!-- Denomination Items List -->
+<div class="flex flex-col gap-2.5" id="denomination-list">
+<!-- 500 SAR -->
+<div class="denom-row flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all gap-2" data-value="500">
+<div class="flex items-center gap-3 min-w-[150px]">
+<div class="w-12 h-11 rounded-lg bg-secondary text-on-secondary flex flex-col items-center justify-center font-bold shadow-sm shrink-0">
+<span class="font-timer-display text-sm leading-none">500</span>
+<span class="text-[9px] uppercase tracking-wider opacity-80" data-key="sar_cur">ر.س</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold" data-key="note_500">خمسمائة ريال</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-key="type_bill">ورقة نقدية</span>
+</div>
+</div>
+<!-- Stepper Controls (Min 48px touch boundaries) -->
+<div class="flex items-center justify-between sm:justify-end gap-3 flex-1">
+<div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded-xl shadow-xs">
+<button aria-label="تنقيص ورقة" class="w-12 h-12 rounded-lg bg-surface-container-low hover:bg-surface-container active:scale-95 text-on-surface flex items-center justify-center transition-all select-none" onclick="adjustCount('500', -1)" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<input aria-label="عدد أوراق 500" class="w-14 h-12 text-center font-timer-display font-headline-sm text-headline-sm font-bold bg-transparent text-on-surface focus:outline-none focus:ring-0" id="count-500" min="0" onchange="manualInput('500')" oninput="manualInput('500')" type="number" value="5"/>
+<button aria-label="زيادة ورقة" class="w-12 h-12 rounded-lg bg-primary-container text-on-primary hover:bg-primary active:scale-95 flex items-center justify-center transition-all select-none" onclick="adjustCount('500', 1)" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<div class="text-left w-32 shrink-0">
+<span class="font-timer-display text-body-md font-bold text-on-surface block" id="subtotal-500">2,500.00 ر.س</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block" id="calc-500">5 × 500</span>
+</div>
+</div>
+</div>
+<!-- 200 SAR -->
+<div class="denom-row flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all gap-2" data-value="200">
+<div class="flex items-center gap-3 min-w-[150px]">
+<div class="w-12 h-11 rounded-lg bg-amber-800 text-white flex flex-col items-center justify-center font-bold shadow-sm shrink-0">
+<span class="font-timer-display text-sm leading-none">200</span>
+<span class="text-[9px] uppercase tracking-wider opacity-80" data-key="sar_cur">ر.س</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold" data-key="note_200">مائتا ريال</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-key="type_bill">ورقة نقدية</span>
+</div>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-3 flex-1">
+<div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded-xl shadow-xs">
+<button class="w-12 h-12 rounded-lg bg-surface-container-low hover:bg-surface-container active:scale-95 text-on-surface flex items-center justify-center transition-all select-none" onclick="adjustCount('200', -1)" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<input class="w-14 h-12 text-center font-timer-display font-headline-sm text-headline-sm font-bold bg-transparent text-on-surface focus:outline-none" id="count-200" min="0" onchange="manualInput('200')" oninput="manualInput('200')" type="number" value="3"/>
+<button class="w-12 h-12 rounded-lg bg-primary-container text-on-primary hover:bg-primary active:scale-95 flex items-center justify-center transition-all select-none" onclick="adjustCount('200', 1)" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<div class="text-left w-32 shrink-0">
+<span class="font-timer-display text-body-md font-bold text-on-surface block" id="subtotal-200">600.00 ر.س</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block" id="calc-200">3 × 200</span>
+</div>
+</div>
+</div>
+<!-- 100 SAR -->
+<div class="denom-row flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all gap-2" data-value="100">
+<div class="flex items-center gap-3 min-w-[150px]">
+<div class="w-12 h-11 rounded-lg bg-red-700 text-white flex flex-col items-center justify-center font-bold shadow-sm shrink-0">
+<span class="font-timer-display text-sm leading-none">100</span>
+<span class="text-[9px] uppercase tracking-wider opacity-80" data-key="sar_cur">ر.س</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold" data-key="note_100">مائة ريال</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-key="type_bill">ورقة نقدية</span>
+</div>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-3 flex-1">
+<div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded-xl shadow-xs">
+<button class="w-12 h-12 rounded-lg bg-surface-container-low hover:bg-surface-container active:scale-95 text-on-surface flex items-center justify-center transition-all select-none" onclick="adjustCount('100', -1)" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<input class="w-14 h-12 text-center font-timer-display font-headline-sm text-headline-sm font-bold bg-transparent text-on-surface focus:outline-none" id="count-100" min="0" onchange="manualInput('100')" oninput="manualInput('100')" type="number" value="4"/>
+<button class="w-12 h-12 rounded-lg bg-primary-container text-on-primary hover:bg-primary active:scale-95 flex items-center justify-center transition-all select-none" onclick="adjustCount('100', 1)" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<div class="text-left w-32 shrink-0">
+<span class="font-timer-display text-body-md font-bold text-on-surface block" id="subtotal-100">400.00 ر.س</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block" id="calc-100">4 × 100</span>
+</div>
+</div>
+</div>
+<!-- 50 SAR -->
+<div class="denom-row flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all gap-2" data-value="50">
+<div class="flex items-center gap-3 min-w-[150px]">
+<div class="w-12 h-11 rounded-lg bg-teal-700 text-white flex flex-col items-center justify-center font-bold shadow-sm shrink-0">
+<span class="font-timer-display text-sm leading-none">50</span>
+<span class="text-[9px] uppercase tracking-wider opacity-80" data-key="sar_cur">ر.س</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold" data-key="note_50">خمسون ريالاً</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-key="type_bill">ورقة نقدية</span>
+</div>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-3 flex-1">
+<div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded-xl shadow-xs">
+<button class="w-12 h-12 rounded-lg bg-surface-container-low hover:bg-surface-container active:scale-95 text-on-surface flex items-center justify-center transition-all select-none" onclick="adjustCount('50', -1)" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<input class="w-14 h-12 text-center font-timer-display font-headline-sm text-headline-sm font-bold bg-transparent text-on-surface focus:outline-none" id="count-50" min="0" onchange="manualInput('50')" oninput="manualInput('50')" type="number" value="4"/>
+<button class="w-12 h-12 rounded-lg bg-primary-container text-on-primary hover:bg-primary active:scale-95 flex items-center justify-center transition-all select-none" onclick="adjustCount('50', 1)" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<div class="text-left w-32 shrink-0">
+<span class="font-timer-display text-body-md font-bold text-on-surface block" id="subtotal-50">200.00 ر.س</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block" id="calc-50">4 × 50</span>
+</div>
+</div>
+</div>
+<!-- 20 SAR -->
+<div class="denom-row flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all gap-2" data-value="20">
+<div class="flex items-center gap-3 min-w-[150px]">
+<div class="w-12 h-11 rounded-lg bg-orange-700 text-white flex flex-col items-center justify-center font-bold shadow-sm shrink-0">
+<span class="font-timer-display text-sm leading-none">20</span>
+<span class="text-[9px] uppercase tracking-wider opacity-80" data-key="sar_cur">ر.س</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold" data-key="note_20">عشرون ريالاً</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-key="type_bill">ورقة نقدية</span>
+</div>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-3 flex-1">
+<div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded-xl shadow-xs">
+<button class="w-12 h-12 rounded-lg bg-surface-container-low hover:bg-surface-container active:scale-95 text-on-surface flex items-center justify-center transition-all select-none" onclick="adjustCount('20', -1)" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<input class="w-14 h-12 text-center font-timer-display font-headline-sm text-headline-sm font-bold bg-transparent text-on-surface focus:outline-none" id="count-20" min="0" onchange="manualInput('20')" oninput="manualInput('20')" type="number" value="4"/>
+<button class="w-12 h-12 rounded-lg bg-primary-container text-on-primary hover:bg-primary active:scale-95 flex items-center justify-center transition-all select-none" onclick="adjustCount('20', 1)" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<div class="text-left w-32 shrink-0">
+<span class="font-timer-display text-body-md font-bold text-on-surface block" id="subtotal-20">80.00 ر.س</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block" id="calc-20">4 × 20</span>
+</div>
+</div>
+</div>
+<!-- 10 SAR -->
+<div class="denom-row flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all gap-2" data-value="10">
+<div class="flex items-center gap-3 min-w-[150px]">
+<div class="w-12 h-11 rounded-lg bg-amber-900 text-white flex flex-col items-center justify-center font-bold shadow-sm shrink-0">
+<span class="font-timer-display text-sm leading-none">10</span>
+<span class="text-[9px] uppercase tracking-wider opacity-80" data-key="sar_cur">ر.س</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold" data-key="note_10">عشرة ريالات</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-key="type_bill">ورقة نقدية</span>
+</div>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-3 flex-1">
+<div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded-xl shadow-xs">
+<button class="w-12 h-12 rounded-lg bg-surface-container-low hover:bg-surface-container active:scale-95 text-on-surface flex items-center justify-center transition-all select-none" onclick="adjustCount('10', -1)" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<input class="w-14 h-12 text-center font-timer-display font-headline-sm text-headline-sm font-bold bg-transparent text-on-surface focus:outline-none" id="count-10" min="0" onchange="manualInput('10')" oninput="manualInput('10')" type="number" value="8"/>
+<button class="w-12 h-12 rounded-lg bg-primary-container text-on-primary hover:bg-primary active:scale-95 flex items-center justify-center transition-all select-none" onclick="adjustCount('10', 1)" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<div class="text-left w-32 shrink-0">
+<span class="font-timer-display text-body-md font-bold text-on-surface block" id="subtotal-10">80.00 ر.س</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block" id="calc-10">8 × 10</span>
+</div>
+</div>
+</div>
+<!-- 5 SAR -->
+<div class="denom-row flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all gap-2" data-value="5">
+<div class="flex items-center gap-3 min-w-[150px]">
+<div class="w-12 h-11 rounded-lg bg-purple-900 text-white flex flex-col items-center justify-center font-bold shadow-sm shrink-0">
+<span class="font-timer-display text-sm leading-none">5</span>
+<span class="text-[9px] uppercase tracking-wider opacity-80" data-key="sar_cur">ر.س</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold" data-key="note_5">خمسة ريالات</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-key="type_bill">ورقة نقدية</span>
+</div>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-3 flex-1">
+<div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded-xl shadow-xs">
+<button class="w-12 h-12 rounded-lg bg-surface-container-low hover:bg-surface-container active:scale-95 text-on-surface flex items-center justify-center transition-all select-none" onclick="adjustCount('5', -1)" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<input class="w-14 h-12 text-center font-timer-display font-headline-sm text-headline-sm font-bold bg-transparent text-on-surface focus:outline-none" id="count-5" min="0" onchange="manualInput('5')" oninput="manualInput('5')" type="number" value="5"/>
+<button class="w-12 h-12 rounded-lg bg-primary-container text-on-primary hover:bg-primary active:scale-95 flex items-center justify-center transition-all select-none" onclick="adjustCount('5', 1)" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<div class="text-left w-32 shrink-0">
+<span class="font-timer-display text-body-md font-bold text-on-surface block" id="subtotal-5">25.00 ر.س</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block" id="calc-5">5 × 5</span>
+</div>
+</div>
+</div>
+<!-- 1 SAR Coin/Note -->
+<div class="denom-row flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all gap-2" data-value="1">
+<div class="flex items-center gap-3 min-w-[150px]">
+<div class="w-12 h-11 rounded-full bg-yellow-600 text-white flex flex-col items-center justify-center font-bold shadow-sm shrink-0 border-2 border-yellow-400">
+<span class="font-timer-display text-sm leading-none">1</span>
+<span class="text-[8px] uppercase tracking-wider opacity-90" data-key="sar_cur">ر.س</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold" data-key="note_1">ريال واحد</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-key="type_coin">قطع معدنية / ورقية</span>
+</div>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-3 flex-1">
+<div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded-xl shadow-xs">
+<button class="w-12 h-12 rounded-lg bg-surface-container-low hover:bg-surface-container active:scale-95 text-on-surface flex items-center justify-center transition-all select-none" onclick="adjustCount('1', -1)" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<input class="w-14 h-12 text-center font-timer-display font-headline-sm text-headline-sm font-bold bg-transparent text-on-surface focus:outline-none" id="count-1" min="0" onchange="manualInput('1')" oninput="manualInput('1')" type="number" value="5"/>
+<button class="w-12 h-12 rounded-lg bg-primary-container text-on-primary hover:bg-primary active:scale-95 flex items-center justify-center transition-all select-none" onclick="adjustCount('1', 1)" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<div class="text-left w-32 shrink-0">
+<span class="font-timer-display text-body-md font-bold text-on-surface block" id="subtotal-1">5.00 ر.س</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block" id="calc-1">5 × 1</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Side 2: Expected Breakdown & Variance Panel (5 Cols on large tablet/desktop) -->
+<section class="lg:col-span-5 flex flex-col gap-space-md order-2">
+<!-- Card 1: Expected Cash Breakdown -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="p-2 rounded-xl bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface" data-key="exp_title">تفصيل النقد المتوقع نظامياً</h3>
+</div>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm" data-key="system_verified">موثق آلياً</span>
+</div>
+<div class="flex flex-col gap-3 font-body-sm text-body-sm text-on-surface">
+<!-- Opening Float -->
+<div class="flex items-center justify-between py-1.5 px-3 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">lock_open</span>
+<span data-key="float_lbl">الرصيد الافتتاحي للدرج (Float)</span>
+</div>
+<span class="font-timer-display font-semibold text-on-surface">500.00 ر.س</span>
+</div>
+<!-- Cash Invoices -->
+<div class="flex items-center justify-between py-1.5 px-3 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">add_circle</span>
+<div>
+<span data-key="inv_cash_lbl">فواتير العيادات النقدية</span>
+<span class="text-xs text-on-surface-variant block" data-key="inv_count">(6 فواتير كشف وعلاج)</span>
+</div>
+</div>
+<span class="font-timer-display font-semibold text-tertiary">+2,840.00 ر.س</span>
+</div>
+<!-- Wallet Top-ups -->
+<div class="flex items-center justify-between py-1.5 px-3 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">add_circle</span>
+<div>
+<span data-key="wallet_lbl">شحن المحفظة نقداً</span>
+<span class="text-xs text-on-surface-variant block" data-key="wallet_count">(عمليتان - باقات ليزر)</span>
+</div>
+</div>
+<span class="font-timer-display font-semibold text-tertiary">+750.00 ر.س</span>
+</div>
+<!-- Refunds -->
+<div class="flex items-center justify-between py-1.5 px-3 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-error">remove_circle</span>
+<div>
+<span data-key="refund_lbl">المرتجعات والاسترداد نقداً</span>
+<span class="text-xs text-on-surface-variant block" data-key="refund_count">(عملية واحدة معتمدة)</span>
+</div>
+</div>
+<span class="font-timer-display font-semibold text-error">-200.00 ر.س</span>
+</div>
+<!-- Summary Total Line -->
+<div class="p-3 rounded-xl bg-surface-container flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold" data-key="exp_sum_lbl">إجمالي النقد المتوقع بالدرج:</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-key="exp_formula">(افتتاحي + تحصيل - استرداد)</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-timer-display font-headline-lg text-headline-lg font-bold text-primary" id="expected-cash-total">3,890.00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-key="currency_sar">ر.س</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Variance & Settlement Status -->
+<div class="rounded-2xl p-space-lg shadow-sm transition-all duration-300 bg-surface-container-lowest" id="variance-card">
+<div class="flex items-center justify-between mb-3">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface" data-key="var_title">حالة المطابقة والتسوية</h3>
+<span class="px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 bg-tertiary text-on-tertiary" id="variance-badge">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+<span id="variance-status-text">متطابق 100%</span>
+</span>
+</div>
+<!-- Dynamic Variance Hero Display -->
+<div class="rounded-xl p-4 mb-4 transition-all duration-300 bg-tertiary-fixed/30 text-on-tertiary-fixed-variant flex items-center justify-between" id="variance-hero-box">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-tertiary text-on-tertiary flex items-center justify-center shrink-0" id="variance-icon-box">
+<span class="material-symbols-outlined text-[26px]" id="var-main-icon">check_circle</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm block opacity-90" id="var-headline-label">فارق الدرج المحسوب</span>
+<h4 class="font-display-lg text-display-lg font-bold font-timer-display tracking-tight" id="variance-amount-text">0.00 ر.س</h4>
+</div>
+</div>
+<div class="text-left">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-lg bg-surface-container-lowest/80 text-tertiary font-bold" id="variance-pill-desc">لا يوجد أي فارق</span>
+</div>
+</div>
+<!-- Explanatory dynamic note based on state -->
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4" id="variance-dynamic-note">
+            الرصيد الفعلي في الدرج يتطابق بدقة تامة مع القيود المحاسبية للفواتير وحركات الصندوق.
+          </p>
+<!-- Cashier Shift Notes / Explanation -->
+<div class="flex flex-col gap-1.5 mb-4">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="cashier-notes">
+<span data-key="notes_lbl">ملاحظات أمين الصندوق وتبرير الفروقات (إن وجدت):</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-key="optional_lbl">إلزامية في حال العجز/الفائض</span>
+</label>
+<textarea class="w-full rounded-xl bg-surface-container-low p-3 text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface focus:ring-2 focus:ring-primary-container resize-none" id="cashier-notes" placeholder="اكتب تفاصيل التبرير أو ملحوظات استلام الوردية..." rows="3"></textarea>
+</div>
+<!-- Regulatory & Governance Banner -->
+<div class="rounded-xl bg-surface-container-high p-3.5 flex items-start gap-2.5 text-on-surface-variant mb- space-md">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">shield</span>
+<div class="font-body-sm text-body-sm leading-relaxed">
+<strong class="text-on-surface block font-semibold mb-0.5" data-key="gov_title">تنبيه نظام الحوكمة والفوترة (ZATCA):</strong>
+<span data-key="gov_body">سيتم إنشاء مستند تسوية عجز أو فائض مستقل تلقائياً؛ لا يتم تعديل أو حذف أي فاتورة ضريبية صادرة نهائياً طبقاً للوائح هيئة الزكاة والضريبة والجمارك (المرحلة الثانية).</span>
+</div>
+</div>
+<!-- Primary Actions -->
+<div class="flex flex-col sm:flex-row gap-2.5 pt-2">
+<button class="flex-1 min-h-[48px] px-4 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.98]" id="btn-submit-review" onclick="submitForReview()" type="button">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span data-key="btn_submit" id="btn-submit-text">إرسال لاعتماد المشرف المالي</span>
+</button>
+<button class="min-h-[48px] px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-colors" onclick="printXReport()" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span data-key="btn_print_x">طباعة X-Report</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Interactive JavaScript logic -->
+<script>
+    // State management
+    const EXPECTED_TOTAL = 3890.00;
+    
+    // Denominations object with current piece counts
+    let counts = {
+      '500': 5,
+      '200': 3,
+      '100': 4,
+      '50': 4,
+      '20': 4,
+      '10': 8,
+      '5': 5,
+      '1': 5
+    };
+
+    let currentLanguage = 'ar';
+    let isFrozen = false;
+
+    // Translation dictionary
+    const i18n = {
+      ar: {
+        sim_title: 'محاكي سيناريوهات الإغلاق النقدي السريع',
+        sim_subtitle: 'اختبر فوراً حالات المطابقة، العجز، الفائض، واعتماد المشرف',
+        scen_1: '1. مطابقة تامة (0.00 ر.س)',
+        scen_2: '2. عجز نقدي (-50.00 ر.س)',
+        scen_3: '3. فائض نقدي (+70.00 ر.س)',
+        scen_4: '4. بانتظار الاعتماد',
+        scen_5: '5. تم الإغلاق (Z-Report)',
+        shift_badge: 'الوردية الصباحية • كاونتر الاستقبال 01',
+        cashier_lbl: 'أمين الصندوق:',
+        cashier_name: 'هدى ناصر القحطاني',
+        opened_lbl: 'وقت الافتتاح:',
+        drawer_id: 'درج نقدية: #DRW-2025-04',
+        sync_status: 'مزامنة سحابية نشطة • متصل',
+        denom_title: 'جرد فئات النقدية بالدرج',
+        denom_desc: 'قم بعدّ الأوراق والقطع النقدية في الدرج الفعلي بدقة قبل تسليم الوردية',
+        btn_autofill: 'ملء مطابق',
+        btn_reset: 'تصفير',
+        actual_lbl: 'المجموع الفعلي المحسوب بالدرج',
+        bills_sum_lbl: 'إجمالي القطع والأوراق',
+        sar_cur: 'ر.س',
+        currency_sar: 'ر.س',
+        note_500: 'خمسمائة ريال',
+        note_200: 'مائتا ريال',
+        note_100: 'مائة ريال',
+        note_50: 'خمسون ريالاً',
+        note_20: 'عشرون ريالاً',
+        note_10: 'عشرة ريالات',
+        note_5: 'خمسة ريالات',
+        note_1: 'ريال واحد',
+        type_bill: 'ورقة نقدية',
+        type_coin: 'قطع معدنية / ورقية',
+        exp_title: 'تفصيل النقد المتوقع نظامياً',
+        system_verified: 'موثق آلياً',
+        float_lbl: 'الرصيد الافتتاحي للدرج (Float)',
+        inv_cash_lbl: 'فواتير العيادات النقدية',
+        inv_count: '(6 فواتير كشف وعلاج)',
+        wallet_lbl: 'شحن المحفظة نقداً',
+        wallet_count: '(عمليتان - باقات ليزر)',
+        refund_lbl: 'المرتجعات والاسترداد نقداً',
+        refund_count: '(عملية واحدة معتمدة)',
+        exp_sum_lbl: 'إجمالي النقد المتوقع بالدرج:',
+        exp_formula: '(افتتاحي + تحصيل - استرداد)',
+        var_title: 'حالة المطابقة والتسوية',
+        notes_lbl: 'ملاحظات أمين الصندوق وتبرير الفروقات (إن وجدت):',
+        optional_lbl: 'إلزامية في حال العجز/الفائض',
+        gov_title: 'تنبيه نظام الحوكمة والفوترة (ZATCA):',
+        gov_body: 'سيتم إنشاء مستند تسوية عجز أو فائض مستقل تلقائياً؛ لا يتم تعديل أو حذف أي فاتورة ضريبية صادرة نهائياً طبقاً للوائح هيئة الزكاة والضريبة والجمارك (المرحلة الثانية).',
+        btn_submit: 'إرسال لاعتماد المشرف المالي',
+        btn_print_x: 'طباعة X-Report',
+        wait_title: '⏳ بانتظار مراجعة واعتماد المشرف المالي',
+        wait_desc: 'تم تجميد حركة درج النقدية وتوثيق الفئات إلكترونياً. المشرف المناوب: عبد الله الشمري (منذ 4 دقائق).',
+        simulate_appr_btn: 'محاكاة موافقة المشرف',
+        appr_title: 'تم اعتماد الإغلاق وطباعة تقرير Z-Report بنجاح',
+        appr_desc: 'المشرف المعتمد: عبد الله الشمري • رقم وثيقة الإغلاق: #CLS-88914 • الرصيد تم توريده للخزينة المركزية.',
+        reprint_z_btn: 'إعادة طباعة Z-Report',
+        lang_toggle: 'English (LTR)'
+      },
+      en: {
+        sim_title: 'Quick Cash-Up Scenario Simulator',
+        sim_subtitle: 'Simulate zero variance, shortage, overage, and manager sign-off workflows',
+        scen_1: '1. Matched (0.00 SAR)',
+        scen_2: '2. Cash Shortage (-50.00 SAR)',
+        scen_3: '3. Cash Overage (+70.00 SAR)',
+        scen_4: '4. Waiting Approval',
+        scen_5: '5. Approved & Closed (Z-Report)',
+        shift_badge: 'Morning Shift • Reception Desk 01',
+        cashier_lbl: 'Cashier:',
+        cashier_name: 'Huda Nasser Al-Qahtani',
+        opened_lbl: 'Opened at:',
+        drawer_id: 'Cash Drawer: #DRW-2025-04',
+        sync_status: 'Cloud Sync Active • Connected',
+        denom_title: 'Cash Denomination Breakdown',
+        denom_desc: 'Carefully count physical bills and coins in drawer before shift handoff',
+        btn_autofill: 'Auto Match',
+        btn_reset: 'Reset',
+        actual_lbl: 'Actual Counted Total',
+        bills_sum_lbl: 'Total Bills & Coins',
+        sar_cur: 'SAR',
+        currency_sar: 'SAR',
+        note_500: 'Five Hundred Riyals',
+        note_200: 'Two Hundred Riyals',
+        note_100: 'One Hundred Riyals',
+        note_50: 'Fifty Riyals',
+        note_20: 'Twenty Riyals',
+        note_10: 'Ten Riyals',
+        note_5: 'Five Riyals',
+        note_1: 'One Riyal',
+        type_bill: 'Banknote',
+        type_coin: 'Coin / Note',
+        exp_title: 'Expected Cash Breakdown',
+        system_verified: 'Auto-Audited',
+        float_lbl: 'Drawer Float (Opening Balance)',
+        inv_cash_lbl: 'Clinic Cash Invoices',
+        inv_count: '(6 Consultations & Procedures)',
+        wallet_lbl: 'Cash Wallet Top-ups',
+        wallet_count: '(2 Laser Package Top-ups)',
+        refund_lbl: 'Cash Refunds Processed',
+        refund_count: '(1 Authorized Refund)',
+        exp_sum_lbl: 'Total Expected Cash in Drawer:',
+        exp_formula: '(Float + Received - Refunds)',
+        var_title: 'Variance & Reconciliation Status',
+        notes_lbl: 'Cashier Notes & Variance Explanation:',
+        optional_lbl: 'Mandatory if Shortage/Overage exists',
+        gov_title: 'Governance & Regulatory Compliance (ZATCA):',
+        gov_body: 'An independent shortage or overage accounting voucher will be created automatically; no registered tax invoice will ever be edited or deleted pursuant to ZATCA Phase 2 rules.',
+        btn_submit: 'Submit for Manager Review',
+        btn_print_x: 'Print Preliminary X-Report',
+        wait_title: '⏳ Waiting for Financial Supervisor Review',
+        wait_desc: 'Drawer operations are frozen. Counts documented. On-duty supervisor: Abdullah Al-Shammari (4 min ago).',
+        simulate_appr_btn: 'Simulate Manager Approval',
+        appr_title: 'Shift Closed & Z-Report Generated Successfully',
+        appr_desc: 'Approved by: Abdullah Al-Shammari • Closing Doc: #CLS-88914 • Cash transferred to Central Safe.',
+        reprint_z_btn: 'Reprint Z-Report',
+        lang_toggle: 'العربية (RTL)'
+      }
+    };
+
+    function recalculate() {
+      let total = 0;
+      let totalPieces = 0;
+
+      for (const [denom, count] of Object.entries(counts)) {
+        const value = parseFloat(denom);
+        const subtotal = value * count;
+        total += subtotal;
+        totalPieces += count;
+
+        // update DOM elements
+        const countInput = document.getElementById('count-' + denom);
+        if (countInput) countInput.value = count;
+
+        const subtotalEl = document.getElementById('subtotal-' + denom);
+        if (subtotalEl) {
+          subtotalEl.innerText = subtotal.toLocaleString(currentLanguage === 'ar' ? 'ar-SA' : 'en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ' + (currentLanguage === 'ar' ? 'ر.س' : 'SAR');
+        }
+
+        const calcEl = document.getElementById('calc-' + denom);
+        if (calcEl) calcEl.innerText = count + ' × ' + denom;
+      }
+
+      // Update counted total
+      const totalDisplay = document.getElementById('counted-total-display');
+      if (totalDisplay) {
+        totalDisplay.innerText = total.toLocaleString(currentLanguage === 'ar' ? 'ar-SA' : 'en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      }
+
+      const piecesDisplay = document.getElementById('total-pieces-display');
+      if (piecesDisplay) {
+        piecesDisplay.innerText = totalPieces + ' ' + (currentLanguage === 'ar' ? 'ورقة وقطعة' : 'pieces');
+      }
+
+      // Update variance status
+      updateVariance(total);
+    }
+
+    function updateVariance(actualTotal) {
+      const diff = actualTotal - EXPECTED_TOTAL;
+      const heroBox = document.getElementById('variance-hero-box');
+      const iconBox = document.getElementById('variance-icon-box');
+      const mainIcon = document.getElementById('var-main-icon');
+      const statusBadge = document.getElementById('variance-badge');
+      const amountText = document.getElementById('variance-amount-text');
+      const statusText = document.getElementById('variance-status-text');
+      const pillDesc = document.getElementById('variance-pill-desc');
+      const dynamicNote = document.getElementById('variance-dynamic-note');
+      const noteInput = document.getElementById('cashier-notes');
+
+      const isAr = currentLanguage === 'ar';
+
+      if (Math.abs(diff) < 0.01) {
+        // Zero Variance - Green
+        heroBox.className = "rounded-xl p-4 mb-4 transition-all duration-300 bg-tertiary-fixed/30 text-on-tertiary-fixed-variant flex items-center justify-between";
+        iconBox.className = "w-12 h-12 rounded-xl bg-tertiary text-on-tertiary flex items-center justify-center shrink-0";
+        mainIcon.innerText = "check_circle";
+        statusBadge.className = "px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 bg-tertiary text-on-tertiary";
+        statusText.innerText = isAr ? "متطابق تماماً (Zero Variance)" : "Perfect Match (Zero Variance)";
+        amountText.innerText = "0.00 " + (isAr ? "ر.س" : "SAR");
+        pillDesc.className = "font-label-sm text-label-sm px-2.5 py-1 rounded-lg bg-surface-container-lowest/80 text-tertiary font-bold";
+        pillDesc.innerText = isAr ? "مطابقة تامة 100%" : "100% Balanced";
+        dynamicNote.innerText = isAr 
+          ? "الرصيد الفعلي في الدرج يتطابق بدقة تامة مع القيود المحاسبية للفواتير وحركات الصندوق. جاهز للاعتماد الفوري."
+          : "Actual counted cash matches registered ledger invoices and float balance precisely. Ready for direct sign-off.";
+      } else if (diff < 0) {
+        // Shortage - Red
+        heroBox.className = "rounded-xl p-4 mb-4 transition-all duration-300 bg-error-container text-on-error-container flex items-center justify-between";
+        iconBox.className = "w-12 h-12 rounded-xl bg-error text-on-error flex items-center justify-center shrink-0";
+        mainIcon.innerText = "trending_down";
+        statusBadge.className = "px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 bg-error text-on-error";
+        statusText.innerText = isAr ? "عجز نقدي (Shortage)" : "Cash Shortage (Deficit)";
+        amountText.innerText = diff.toLocaleString(isAr ? 'ar-SA' : 'en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " " + (isAr ? "ر.س" : "SAR");
+        pillDesc.className = "font-label-sm text-label-sm px-2.5 py-1 rounded-lg bg-surface-container-lowest/90 text-error font-bold";
+        pillDesc.innerText = isAr ? "عجز نقدي مطلوب تبريره" : "Deficit - Reason Required";
+        dynamicNote.innerText = isAr
+          ? "يوجد نقص نقدي في الدرج بمقدار " + Math.abs(diff).toFixed(2) + " ر.س. يتطلب إدخال سبب العجز أدناه واعتماد المشرف المالي لقيد سند العجز."
+          : "Drawer has a cash shortage of " + Math.abs(diff).toFixed(2) + " SAR. Explanation is required below before financial supervisor authorization.";
+        
+        if (noteInput && !noteInput.value) {
+          noteInput.placeholder = isAr ? "يرجى كتابة سبب العجز هنا (مثال: خطأ في إرجاع باقي لأحد المرضى...)" : "Please explain shortage reason here...";
+        }
+      } else {
+        // Overage - Amber
+        heroBox.className = "rounded-xl p-4 mb-4 transition-all duration-300 bg-amber-100 text-amber-900 flex items-center justify-between";
+        iconBox.className = "w-12 h-12 rounded-xl bg-amber-600 text-white flex items-center justify-center shrink-0";
+        mainIcon.innerText = "trending_up";
+        statusBadge.className = "px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 bg-amber-600 text-white";
+        statusText.innerText = isAr ? "فائض نقدي (Overage)" : "Cash Overage (Surplus)";
+        amountText.innerText = "+" + diff.toLocaleString(isAr ? 'ar-SA' : 'en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " " + (isAr ? "ر.س" : "SAR");
+        pillDesc.className = "font-label-sm text-label-sm px-2.5 py-1 rounded-lg bg-surface-container-lowest/90 text-amber-800 font-bold";
+        pillDesc.innerText = isAr ? "سيتم قيد سند فائض مستقل" : "Surplus Voucher Documented";
+        dynamicNote.innerText = isAr
+          ? "يوجد فائض في الدرج بمقدار +" + diff.toFixed(2) + " ر.س. سيتم إنشاء سند فائض مستقل وقيد المبلغ في حساب أمانات العيادة نظامياً دون تعديل الفواتير."
+          : "Drawer has a cash surplus of +" + diff.toFixed(2) + " SAR. An independent surplus voucher will be recorded to trust account without altering invoices.";
+      }
+    }
+
+    function adjustCount(denom, delta) {
+      if (isFrozen) return;
+      let next = (counts[denom] || 0) + delta;
+      if (next < 0) next = 0;
+      counts[denom] = next;
+      recalculate();
+    }
+
+    function manualInput(denom) {
+      if (isFrozen) return;
+      const input = document.getElementById('count-' + denom);
+      let val = parseInt(input.value, 10);
+      if (isNaN(val) || val < 0) val = 0;
+      counts[denom] = val;
+      recalculate();
+    }
+
+    function autoFillMatched() {
+      if (isFrozen) return;
+      // Formula matching exactly 3,890.00
+      counts = {
+        '500': 5, // 2500
+        '200': 3, // 600
+        '100': 4, // 400
+        '50': 4,  // 200
+        '20': 4,  // 80
+        '10': 8,  // 80
+        '5': 5,   // 25
+        '1': 5    // 5 -> Sum = 3890.00
+      };
+      recalculate();
+    }
+
+    function resetCounts() {
+      if (isFrozen) return;
+      for (const k in counts) {
+        counts[k] = 0;
+      }
+      recalculate();
+    }
+
+    function setScenario(scen) {
+      // Clear visual button active states
+      document.querySelectorAll('.scen-btn').forEach(btn => {
+        btn.classList.remove('ring-2', 'ring-primary', 'font-bold');
+      });
+
+      const activeBtn = document.getElementById('btn-scen-' + scen);
+      if (activeBtn) activeBtn.classList.add('ring-2', 'ring-primary', 'font-bold');
+
+      const bannerContainer = document.getElementById('state-banner-container');
+      const waitBanner = document.getElementById('banner-waiting');
+      const apprBanner = document.getElementById('banner-approved');
+      const submitBtn = document.getElementById('btn-submit-review');
+      const notesEl = document.getElementById('cashier-notes');
+
+      // Unfreeze by default
+      isFrozen = false;
+      bannerContainer.classList.add('hidden');
+      waitBanner.classList.add('hidden');
+      apprBanner.classList.add('hidden');
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      }
+
+      if (scen === 'matched') {
+        autoFillMatched();
+        if (notesEl) notesEl.value = "";
+      } else if (scen === 'shortage') {
+        // -50 SAR (3,840.00)
+        counts = {
+          '500': 5, // 2500
+          '200': 3, // 600
+          '100': 4, // 400
+          '50': 3,  // 150 (-50)
+          '20': 4,  // 80
+          '10': 8,  // 80
+          '5': 5,   // 25
+          '1': 5    // 5
+        };
+        recalculate();
+        if (notesEl) {
+          notesEl.value = currentLanguage === 'ar' 
+            ? "تم مراجعة الفواتير النقدية، هناك فرق 50 ريال يرجى اعتماده كسند عجز مع المراجعة الأمنية." 
+            : "Cash invoices reviewed; 50 SAR discrepancy noted. Please approve shortage voucher.";
+        }
+      } else if (scen === 'overage') {
+        // +70 SAR (3,960.00)
+        counts = {
+          '500': 5, // 2500
+          '200': 3, // 600
+          '100': 4, // 400
+          '50': 5,  // 250 (+50)
+          '20': 5,  // 100 (+20)
+          '10': 8,  // 80
+          '5': 5,   // 25
+          '1': 5    // 5 -> Sum = 3960.00 (+70)
+        };
+        recalculate();
+        if (notesEl) {
+          notesEl.value = currentLanguage === 'ar' 
+            ? "تم فحص كافة المقبوضات وتأكيد فائض بقيمة 70 ريال يُرحل لحساب أمانات الفائض."
+            : "All receipts verified; 70 SAR surplus confirmed for trust holding allocation.";
+        }
+      } else if (scen === 'waiting') {
+        autoFillMatched();
+        isFrozen = true;
+        bannerContainer.classList.remove('hidden');
+        waitBanner.classList.remove('hidden');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        }
+      } else if (scen === 'approved') {
+        autoFillMatched();
+        isFrozen = true;
+        bannerContainer.classList.remove('hidden');
+        apprBanner.classList.remove('hidden');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        }
+      }
+    }
+
+    function submitForReview() {
+      if (isFrozen) return;
+      setScenario('waiting');
+    }
+
+    function printXReport() {
+      window.print();
+    }
+
+    function toggleLanguage() {
+      currentLanguage = (currentLanguage === 'ar') ? 'en' : 'ar';
+      
+      const htmlEl = document.documentElement;
+      if (currentLanguage === 'en') {
+        htmlEl.setAttribute('dir', 'ltr');
+        htmlEl.setAttribute('lang', 'en');
+      } else {
+        htmlEl.setAttribute('dir', 'rtl');
+        htmlEl.setAttribute('lang', 'ar');
+      }
+
+      // Update text nodes
+      const dict = i18n[currentLanguage];
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (dict[key]) {
+          el.innerText = dict[key];
+        }
+      });
+
+      // Update language toggle button label
+      const langBtn = document.getElementById('lang-btn-text');
+      if (langBtn) {
+        langBtn.innerText = dict.lang_toggle;
+      }
+
+      recalculate();
+    }
+
+    // Initialize initial state
+    window.addEventListener('DOMContentLoaded', () => {
+      autoFillMatched();
+      setScenario('matched');
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest mt-auto shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="w-full px-gutter py-space-md flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant"><div class="flex items-center gap-space-md"><span class="font-body-sm text-body-sm">© 2025 عيادات لوميا الطبية (Lumea Clinic OS). جميع الحقوق محفوظة.</span><span class="font-label-sm text-label-sm bg-surface-container px-space-sm py-0.5 rounded text-on-secondary-container">الإصدار v2.4.0</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-md bg-surface-container-low"><span class="material-symbols-outlined text-tertiary text-[16px]">verified</span><span class="font-label-sm text-label-sm text-on-surface">الفوترة الإلكترونية مرحلة 2 (ZATCA Phase 2)</span></div><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-md bg-surface-container-low"><span class="material-symbols-outlined text-tertiary text-[16px]">lock</span><span class="font-label-sm text-label-sm text-on-surface">نظام حماية البيانات الشخصية (PDPL)</span></div><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-md bg-surface-container-low"><span class="material-symbols-outlined text-tertiary-container text-[16px]">cloud_done</span><span class="font-label-sm text-label-sm text-on-surface">الخوادم السحابية المعتمدة - السعودية</span></div></div></div></footer></body></html>

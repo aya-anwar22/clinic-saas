@@ -1,771 +1,731 @@
 <!DOCTYPE html>
 
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Aura Clinique — Concierge &amp; Reception Portal</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-container":"#856654","surface-tint":"#7b5640","on-primary-fixed":"#2e1505","on-primary-fixed-variant":"#603f2b","secondary-fixed":"#ffdcc5","surface-bright":"#fbf9f6","on-tertiary-fixed":"#2b1709","on-secondary-fixed":"#2d1603","error-container":"#ffdad6","surface-dim":"#dbdad7","surface-container-low":"#f5f3f0","tertiary-fixed-dim":"#e5bfa9","secondary-container":"#ffd1b2","primary-fixed":"#ffdbc8","on-primary-container":"#ffebe1","surface-variant":"#e4e2df","surface-container-high":"#eae8e5","primary":"#6f4c37","primary-fixed-dim":"#ecbda1","on-primary":"#ffffff","on-surface-variant":"#50443e","on-secondary-container":"#7a583f","inverse-on-surface":"#f2f0ed","error":"#ba1a1a","surface":"#fbf9f6","on-error-container":"#93000a","on-tertiary-container":"#ffece2","on-tertiary-fixed-variant":"#5c4131","secondary":"#79573e","on-tertiary":"#ffffff","on-surface":"#1b1c1a","secondary-fixed-dim":"#ebbd9f","on-secondary":"#ffffff","background":"#fbf9f6","inverse-primary":"#ecbda1","primary-container":"#8a644d","on-secondary-fixed-variant":"#5f4029","surface-container":"#efeeeb","tertiary":"#6a4e3d","on-error":"#ffffff","outline":"#82746d","surface-container-highest":"#e4e2df","tertiary-fixed":"#ffdbc8","on-background":"#1b1c1a","outline-variant":"#d4c3bb","inverse-surface":"#30312f","surface-container-lowest":"#ffffff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter-lg":"2rem","gutter-sm":"1rem","margin-desktop":"3rem","margin":"2rem","space-md":"1rem","margin-mobile":"1rem","space-lg":"1.5rem","gutter":"1.5rem","space-sm":"0.5rem","space-xl":"2.5rem","space-xs":"0.25rem"},fontFamily:{"headline-lg":["Space Grotesk"],"title-md":["Inter"],"display-lg":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"],"label-md":["Inter"],"label-lg":["Inter"],"display-lg-mobile":["Space Grotesk"],"body-sm":["Inter"],"headline-md":["Space Grotesk"],"body-md":["Inter"],"title-lg":["Space Grotesk"],"body-lg":["Inter"]},fontSize:{"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"500"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"500"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"label-md":["11px",{"lineHeight":"16px","letterSpacing":"0.06em","fontWeight":"600"}],"label-lg":["13px",{"lineHeight":"18px","letterSpacing":"0.03em","fontWeight":"500"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"title-lg":["18px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full px-gutter-lg"><div class="h-20 flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[22px]">spa</span></div><div class="flex flex-col"><span class="font-title-lg text-title-lg text-on-surface leading-none tracking-tight">AURA CLINIQUE</span><span class="font-label-md text-label-md uppercase text-on-surface-variant tracking-wider mt-space-xs">Aesthetic Medical Suites</span></div></div><div class="h-7 w-[1px] bg-outline-variant/40 hidden md:block"></div><div class="relative hidden sm:flex items-center"><label class="sr-only" for="branch-select">Clinic Branch Location</label><div class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-low text-on-surface cursor-pointer"><span class="material-symbols-outlined text-[18px] text-primary">location_on</span><select class="appearance-none bg-transparent font-label-lg text-label-lg text-on-surface pr-space-lg focus:outline-none cursor-pointer" id="branch-select"><option selected="">Beverly Hills Suite 400</option><option>Riyadh Al-Olaya Flagship</option><option>Dubai DIFC Center</option></select><span class="material-symbols-outlined text-[16px] text-on-surface-variant pointer-events-none absolute right-space-sm">expand_more</span></div></div></div><div class="flex-1 max-w-2xl mx-space-md hidden lg:block"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-space-md text-[20px] text-outline pointer-events-none">search</span><input class="w-full h-11 pl-11 pr-space-lg rounded-xl bg-surface-container-lowest font-body-md text-body-md text-on-surface placeholder:text-outline/70 focus:outline-none shadow-[0_2px_8px_-2px_rgba(28,25,23,0.03)]" placeholder="Search patient by mobile (+966 / +1), National ID / Iqama, or name..." type="text"/></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden xl:flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span><span class="font-label-md text-label-md text-on-surface-variant">Live Queue Telemetry: Synchronized • 3 Rooms Active</span></div><button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-error-container text-on-error-container font-label-lg text-label-lg hover:bg-error hover:text-on-error transition-colors shadow-sm" title="Emergency Code Blue &amp; Urgent Care Toggle" type="button"><span class="material-symbols-outlined text-[18px]">crisis_alert</span><span class="hidden md:inline">Priority Care / Alert</span></button><div class="h-7 w-[1px] bg-outline-variant/40 hidden md:block"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden sm:flex flex-col text-right"><span class="font-label-lg text-label-lg text-on-surface leading-snug">Noura Al-Hassan</span><span class="font-label-md text-label-md text-on-surface-variant">Concierge Lead</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div><nav class="flex items-center gap-space-xs py-space-xs overflow-x-auto border-t border-outline-variant/20" data-active-classes="bg-primary text-on-primary font-title-md shadow-sm"><a aria-current="page" class="px-space-md py-space-sm rounded-lg transition-colors whitespace-nowrap bg-primary text-on-primary font-title-md shadow-sm" data-path="live-reception-queue" href="#">Live Reception Queue</a><a class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors whitespace-nowrap" data-path="patient-intake-check-in" href="#">Intake &amp; Check-In</a><a class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors whitespace-nowrap" data-path="practitioner-room-status" href="#">Suites &amp; Practitioner Allocation</a><a class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors whitespace-nowrap" data-path="treatment-ledger-checkout" href="#">Concierge Billing &amp; Checkout</a><a class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors whitespace-nowrap" data-path="vip-downtime-lounge" href="#">VIP Recovery Lounge</a></nav></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
-<!-- Interactive Modals / Quick Flyouts (Initially hidden, toggled via JS) -->
-<div class="fixed inset-0 z-50 flex items-center justify-center p-space-md bg-inverse-surface/40 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" id="quick-walkin-modal">
-<div class="w-full max-w-xl bg-surface-container-lowest rounded-xl shadow-xl p-space-lg flex flex-col gap-space-md">
-<div class="flex items-center justify-between">
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed-dim":"#d2bbff","on-primary":"#ffffff","tertiary":"#005952","on-tertiary-container":"#8df9ea","on-tertiary-fixed-variant":"#005049","outline":"#7b7487","on-surface":"#1e1927","on-primary-fixed-variant":"#5a00c6","primary-fixed":"#eaddff","on-primary-fixed":"#25005a","surface-tint":"#732ee4","on-error":"#ffffff","on-secondary-fixed":"#21005e","surface-variant":"#e8dff3","on-secondary":"#ffffff","surface-container-high":"#eee4f9","on-primary-container":"#ede0ff","on-surface-variant":"#4a4455","primary-container":"#7c3aed","secondary-fixed-dim":"#cebdff","surface":"#fef7ff","surface-container":"#f4eafe","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","background":"#fef7ff","surface-container-highest":"#e8dff3","surface-bright":"#fef7ff","on-tertiary-fixed":"#00201d","primary":"#630ed4","inverse-primary":"#d2bbff","surface-container-low":"#f9f1ff","error":"#ba1a1a","tertiary-fixed-dim":"#6bd8cb","error-container":"#ffdad6","inverse-surface":"#332e3d","on-error-container":"#93000a","tertiary-fixed":"#89f5e7","secondary":"#674bb5","outline-variant":"#ccc3d8","secondary-container":"#ab8ffe","on-secondary-container":"#3f1e8c","on-background":"#1e1927","surface-dim":"#e0d6ea","on-secondary-fixed-variant":"#4f319c","tertiary-container":"#00746a","inverse-on-surface":"#f7edff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-tablet":"1.25rem","space-lg":"1.25rem","margin-tablet":"1.5rem","space-xl":"2rem","space-md":"0.875rem","margin":"1rem","gutter":"1rem","space-sm":"0.5rem","space-xs":"0.25rem"},fontFamily:{"label-md":["Inter"],"body-sm":["Inter"],"display-lg":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"headline-sm":["Inter"],"label-sm":["Inter"],"timer-display":["Inter"],"body-lg":["Inter"],"label-lg":["Inter"]},fontSize:{"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"display-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"body-md":["15px",{lineHeight:"22px",fontWeight:"400"}],"headline-sm":["18px",{lineHeight:"24px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"timer-display":["16px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"label-lg":["15px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(124,58,237,0.06)]"><div class="h-20 w-full px-gutter-tablet flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">local_hospital</span></div><div class="flex flex-col text-right"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">لوميا ريسيبشن</span><span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">Lumea Reception</span></div></div><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-md py-1.5 rounded-full"><span class="material-symbols-outlined text-primary text-[18px]">storefront</span><span class="font-label-md text-label-md text-on-surface-variant">فرع العليا التخصصي - الرياض</span></div></div><div class="flex-1 max-w-xl hidden md:block"><div class="relative flex items-center"><span class="material-symbols-outlined absolute right-space-md text-outline pointer-events-none text-[20px]">search</span><input class="w-full h-12 pr-12 pl-space-md bg-surface-container-low rounded-xl text-on-surface font-body-md text-body-md placeholder:text-outline placeholder:font-body-sm focus:outline-none focus:bg-surface-container-lowest transition-all shadow-[inset_0_1px_2px_rgba(0,0,0,0.02)]" placeholder="بحث سريع: رقم الجوال، اسم المريض، أو الهوية الوطنية..." type="search"/></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden xl:flex items-center gap-space-xs bg-surface-container-high px-space-md py-1.5 rounded-full" title="حالة الاتصال بالنظام: متصل ومستقر"><span class="w-2.5 h-2.5 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary-container font-semibold">النظام متصل</span></div><button class="h-12 px-space-lg rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg flex items-center gap-space-xs transition-colors shadow-[0_2px_8px_rgba(124,58,237,0.2)]" type="button"><span class="material-symbols-outlined text-[20px]">add_circle</span><span>+ حجز جديد</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">سارة العتيبي</span><span class="font-label-sm text-label-sm text-outline leading-tight">موظفة استقبال</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div><div class="w-full px-gutter-tablet bg-surface-container-lowest flex items-center justify-between overflow-x-auto"><nav class="flex items-center gap-space-sm py-2 min-w-max" data-active-classes="bg-primary-fixed text-on-primary-fixed font-bold rounded-lg"><a aria-current="page" class="h-11 px-space-lg flex items-center transition-colors bg-primary-fixed text-on-primary-fixed font-bold rounded-lg" data-path="patient-queue" href="live-quee.html">طابور الانتظار / Queue</a><a class="h-11 px-space-lg flex items-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors rounded-lg font-label-lg text-label-lg" data-path="appointments" href="booking.html">المواعيد / Bookings</a><a class="h-11 px-space-lg flex items-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors rounded-lg font-label-lg text-label-lg" data-path="pos-checkout" href="POS_Checkout.html">نقاط البيع / POS</a><a class="h-11 px-space-lg flex items-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors rounded-lg font-label-lg text-label-lg" data-path="cash-drawer" href="Shift_and_Cash_Drawer.html">الصندوق / Cash</a></nav><div class="hidden md:flex items-center gap-space-sm py-2 text-outline font-label-sm text-label-sm"><span class="material-symbols-outlined text-[18px]">schedule</span><span>تحديث مباشر</span></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Root Board Wrapper with Dynamic State & Language Controllers -->
+<div class="flex flex-col w-full px-gutter-tablet py-space-md" dir="rtl" id="queue-app-root">
+<!-- Offline Resilience Banner (Sticky, Toggleable) -->
+<div class="w-full mb-space-md rounded-xl bg-inverse-surface text-inverse-on-surface p-space-md shadow-md flex items-center justify-between transition-all" id="offline-banner">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-tertiary-fixed text-[24px]">wifi_off</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-inverse-on-surface font-semibold" data-i18n="offline-title">
+            ⚠️ وضع عدم الاتصال النشط (Offline Mode)
+          </span>
+<span class="font-body-sm text-body-sm text-surface-variant/80" data-i18n="offline-desc">
+            يتم حفظ كافة عمليات الاستقبال محلياً على هذا الجهاز وستتم المزامنة التلقائية اللحظية فور عودة الاتصال بالخادم المركزي.
+          </span>
+</div>
+</div>
 <div class="flex items-center gap-space-sm">
-<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
-<span class="material-symbols-outlined text-[18px]">person_add</span>
-</div>
-<div>
-<h3 class="font-title-lg text-title-lg text-on-surface">Expedited Walk-In Intake</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Immediate queue injection &amp; iPad consent dispatch</p>
-</div>
-</div>
-<button class="p-space-xs rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" onclick="toggleModal('quick-walkin-modal')">
+<button class="min-h-[48px] px-space-lg rounded-xl bg-surface-container-lowest/15 hover:bg-surface-container-lowest/25 text-inverse-on-surface font-label-md text-label-md flex items-center gap-space-xs transition-colors" onclick="triggerSyncSimulation()" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span data-i18n="btn-retry">إعادة المحاولة الآن</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl hover:bg-surface-container-lowest/10 text-inverse-on-surface" onclick="document.getElementById('offline-banner').classList.add('hidden')" type="button">
 <span class="material-symbols-outlined text-[20px]">close</span>
 </button>
 </div>
-<div class="grid grid-cols-2 gap-space-md">
-<div class="flex flex-col gap-space-xs">
-<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Patient Full Name</label>
-<input class="h-10 px-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container" placeholder="e.g. Sofia Al-Nasser" type="text"/>
 </div>
-<div class="flex flex-col gap-space-xs">
-<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Mobile Number (WhatsApp Enabled)</label>
-<input class="h-10 px-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container" placeholder="+966 5..." type="tel"/>
-</div>
-</div>
-<div class="grid grid-cols-2 gap-space-md">
-<div class="flex flex-col gap-space-xs">
-<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Target Treatment</label>
-<select class="h-10 px-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none">
-<option>PicoSure® Pro Pigment Revitalize</option>
-<option>Candela GentleMax Pro® Express</option>
-<option>HydraFacial Deluxe Platinum</option>
-<option>Dermal Consultation &amp; Skin Analysis</option>
-</select>
-</div>
-<div class="flex flex-col gap-space-xs">
-<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Assigned Suite / Lead</label>
-<select class="h-10 px-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none">
-<option>Dr. Vivienne Vance, MD (Suite 4)</option>
-<option>Dr. Tariq Al-Mansoor (Suite 2)</option>
-<option>Nurse Specialist Layla K. (Suite 1)</option>
-<option>Diagnostic Laboratory Bay</option>
-</select>
-</div>
-</div>
-<div class="p-space-sm rounded-lg bg-secondary-container/40 flex items-center gap-space-sm">
-<span class="material-symbols-outlined text-primary text-[20px]">tablet_mac</span>
-<span class="font-body-sm text-body-sm text-on-surface">Auto-routes PDPL liability and medical intake to Reception iPad Lounge Terminal #3.</span>
-</div>
-<div class="flex items-center justify-end gap-space-sm pt-space-xs">
-<button class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container transition-colors" onclick="toggleModal('quick-walkin-modal')">Dismiss</button>
-<button class="px-space-lg py-space-sm rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-colors flex items-center gap-space-xs" onclick="confirmWalkIn()">
-<span class="material-symbols-outlined text-[18px]">bolt</span>
-<span>Enqueue &amp; Dispatch iPad</span>
+<!-- Quick State Sandbox Toolbar (Testing Variants & Language Switcher) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-sm mb-space-lg shadow-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm text-outline px-space-sm" data-i18n="test-modes">حالات العرض التجريبية:</span>
+<button class="mode-btn min-h-[48px] px-space-md rounded-lg font-label-md text-label-md bg-primary-fixed text-on-primary-fixed transition-colors flex items-center gap-space-xs" id="btn-mode-default" onclick="setBoardMode('default')" type="button">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+<span data-i18n="mode-default">الافتراضي (Default)</span>
+</button>
+<button class="mode-btn min-h-[48px] px-space-md rounded-lg font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-space-xs" id="btn-mode-blacklist" onclick="setBoardMode('blacklist')" type="button">
+<span class="material-symbols-outlined text-[18px] text-error">gpp_maybe</span>
+<span data-i18n="mode-blacklist">تنبيه الحظر (Blacklist V1)</span>
+</button>
+<button class="mode-btn min-h-[48px] px-space-md rounded-lg font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-space-xs" id="btn-mode-skeleton" onclick="setBoardMode('skeleton')" type="button">
+<span class="material-symbols-outlined text-[18px]">hourglass_top</span>
+<span data-i18n="mode-skeleton">هياكل التحميل (Skeleton)</span>
+</button>
+<button class="mode-btn min-h-[48px] px-space-md rounded-lg font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-space-xs" id="btn-mode-empty" onclick="setBoardMode('empty')" type="button">
+<span class="material-symbols-outlined text-[18px]">folder_off</span>
+<span data-i18n="mode-empty">شاشة فارغة (Empty State)</span>
 </button>
 </div>
-</div>
-</div>
-<!-- Operational Overview & Live Telemetry Bar -->
-<section class="w-full px-gutter-lg py-space-lg">
-<div class="w-full flex flex-col gap-space-md">
-<!-- Top Title & Quick Actions Row -->
-<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-xs">
-<div class="flex flex-col gap-space-xs">
 <div class="flex items-center gap-space-sm">
-<span class="px-space-xs py-[2px] rounded font-label-md text-label-md uppercase tracking-wider bg-secondary-container text-on-secondary-container">Reception Deck</span>
-<div class="flex items-center gap-1 font-label-md text-label-md text-on-surface-variant">
-<span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
-<span id="sync-indicator">Live Sync ON • 12s ago</span>
-</div>
-</div>
-<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Live Patient Flow &amp; Reception Queue</h1>
-<p class="font-body-md text-body-md text-on-surface-variant">Real-time clinic telemetry, laser suite allocations, and express concierge intake • Tuesday, Oct 24, 2024</p>
-</div>
-<!-- Action cluster -->
-<div class="flex flex-wrap items-center gap-space-sm shrink-0">
-<button class="px-space-lg py-space-sm rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary-container transition-all flex items-center gap-space-xs" onclick="toggleModal('quick-walkin-modal')">
-<span class="material-symbols-outlined text-[20px]">add</span>
-<span>+ Quick Walk-In Check-In</span>
+<!-- RTL / LTR Language Switcher Toggle -->
+<div class="flex items-center bg-surface-container-high rounded-xl p-1">
+<button class="min-h-[40px] px-space-md rounded-lg font-label-md text-label-md bg-primary-container text-on-primary shadow-sm flex items-center gap-1" id="lang-btn-ar" onclick="toggleLanguage('ar')" type="button">
+<span>العربية (RTL)</span>
 </button>
-<button class="px-space-md py-space-sm rounded-xl bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container transition-colors flex items-center gap-space-xs" onclick="triggerQrScan()">
-<span class="material-symbols-outlined text-[18px] text-primary">qr_code_scanner</span>
-<span>Scan Arrival QR</span>
-</button>
-<button class="p-space-sm rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm transition-colors" id="sound-toggle" onclick="toggleMute()" title="Toggle Queue Chime Notifications">
-<span class="material-symbols-outlined text-[20px]" id="sound-icon">notifications_active</span>
+<button class="min-h-[40px] px-space-md rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface flex items-center gap-1" id="lang-btn-en" onclick="toggleLanguage('en')" type="button">
+<span>English (LTR)</span>
 </button>
 </div>
 </div>
-<!-- Real-time KPI Metric Ribbon -->
-<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
-<!-- Metric 1 -->
-<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+</div>
+<!-- Metric Ribbon (Key Queue Stats) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md mb-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
 <div class="flex flex-col">
-<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Checked-In Today</span>
-<div class="flex items-baseline gap-space-xs mt-space-xs">
-<span class="font-headline-md text-headline-md text-on-surface">24</span>
-<span class="font-label-md text-label-md text-emerald-700 font-semibold">+18% vs yesterday</span>
+<span class="font-label-sm text-label-sm text-outline" data-i18n="stat-total-queue">إجمالي المرضى بالمركز</span>
+<span class="font-display-lg text-display-lg text-on-surface font-bold">11</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">groups</span>
 </div>
 </div>
-<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-[22px]">badge</span>
-</div>
-</div>
-<!-- Metric 2 -->
-<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
 <div class="flex flex-col">
-<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Currently Waiting</span>
-<div class="flex items-baseline gap-space-xs mt-space-xs">
-<span class="font-headline-md text-headline-md text-on-surface">4</span>
-<span class="font-label-md text-label-md text-on-surface-variant">Avg wait 7m</span>
+<span class="font-label-sm text-label-sm text-outline" data-i18n="stat-avg-wait">متوسط وقت الانتظار</span>
+<span class="font-display-lg text-display-lg text-tertiary-container font-bold">12 <span class="font-label-md text-label-md text-outline" data-i18n="unit-minutes">دقيقة</span></span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed/30 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[26px]">av_timer</span>
 </div>
 </div>
-<div class="w-10 h-10 rounded-lg bg-secondary-container/40 flex items-center justify-center text-on-secondary-container">
-<span class="material-symbols-outlined text-[22px]">hourglass_top</span>
-</div>
-</div>
-<!-- Metric 3 -->
-<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
 <div class="flex flex-col">
-<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">In Treatment Suites</span>
-<div class="flex items-baseline gap-space-xs mt-space-xs">
-<span class="font-headline-md text-headline-md text-on-surface">5</span>
-<span class="font-label-md text-label-md text-on-surface-variant">83% Utilization</span>
+<span class="font-label-sm text-label-sm text-outline" data-i18n="stat-in-treatment">قيد العلاج الحالي</span>
+<span class="font-display-lg text-display-lg text-primary font-bold">2</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">medical_services</span>
 </div>
 </div>
-<div class="w-10 h-10 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-[22px]">meeting_room</span>
-</div>
-</div>
-<!-- Metric 4 -->
-<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
 <div class="flex flex-col">
-<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Completed Treatments</span>
-<div class="flex items-baseline gap-space-xs mt-space-xs">
-<span class="font-headline-md text-headline-md text-on-surface">15</span>
-<span class="font-label-md text-label-md text-emerald-700">100% NPS Rating</span>
+<span class="font-label-sm text-label-sm text-outline" data-i18n="stat-ready-billing">بانتظار المحاسبة ZATCA</span>
+<span class="font-display-lg text-display-lg text-on-surface font-bold">2</span>
 </div>
-</div>
-<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface-variant">
-<span class="material-symbols-outlined text-[22px]">check_circle</span>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">point_of_sale</span>
 </div>
 </div>
 </div>
-<!-- Practitioner Filters & Quick Query -->
-<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm pt-space-xs">
-<div class="flex items-center gap-space-xs overflow-x-auto w-full sm:w-auto pb-space-xs sm:pb-0" id="filter-container">
-<button class="filter-chip px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-lg text-label-lg whitespace-nowrap shadow-sm" onclick="setFilter('all', this)">All Practitioners</button>
-<button class="filter-chip px-space-md py-space-xs rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container font-label-lg text-label-lg whitespace-nowrap transition-colors" onclick="setFilter('vance', this)">Dr. Vivienne Vance, MD</button>
-<button class="filter-chip px-space-md py-space-xs rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container font-label-lg text-label-lg whitespace-nowrap transition-colors" onclick="setFilter('mansoor', this)">Dr. Tariq Al-Mansoor</button>
-<button class="filter-chip px-space-md py-space-xs rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container font-label-lg text-label-lg whitespace-nowrap transition-colors" onclick="setFilter('layla', this)">Nurse Specialist Layla K.</button>
+<!-- SKELETON STATE VIEW (Hidden by default) -->
+<div class="hidden w-full" id="view-skeleton">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-lg w-full">
+<!-- Col 1 Skeleton -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md animate-pulse">
+<div class="h-10 bg-surface-container-high rounded-lg w-3/4"></div>
+<div class="h-56 bg-surface-container-lowest rounded-xl"></div>
+<div class="h-56 bg-surface-container-lowest rounded-xl"></div>
 </div>
-<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
-<span class="material-symbols-outlined text-[16px]">touch_app</span>
-<span>Click patient card actions to expedite transition</span>
+<!-- Col 2 Skeleton -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md animate-pulse">
+<div class="h-10 bg-surface-container-high rounded-lg w-3/4"></div>
+<div class="h-56 bg-surface-container-lowest rounded-xl"></div>
+<div class="h-56 bg-surface-container-lowest rounded-xl"></div>
+</div>
+<!-- Col 3 Skeleton -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md animate-pulse">
+<div class="h-10 bg-surface-container-high rounded-lg w-3/4"></div>
+<div class="h-56 bg-surface-container-lowest rounded-xl"></div>
+</div>
+<!-- Col 4 Skeleton -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md animate-pulse">
+<div class="h-10 bg-surface-container-high rounded-lg w-3/4"></div>
+<div class="h-56 bg-surface-container-lowest rounded-xl"></div>
 </div>
 </div>
 </div>
-</section>
-<!-- 3-Column Kanban Board -->
-<section class="w-full px-gutter-lg pb-space-xl">
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg items-start">
-<!-- ================= COLUMN 1: ARRIVED / WAITING ================= -->
-<div class="flex flex-col gap-space-md bg-surface-container-low/60 p-space-md rounded-2xl min-h-[700px]">
+<!-- EMPTY STATE VIEW (Hidden by default) -->
+<div class="hidden w-full py-space-xl" id="view-empty">
+<div class="bg-surface-container-lowest rounded-2xl p-space-xl text-center flex flex-col items-center justify-center max-w-xl mx-auto shadow-sm">
+<div class="w-24 h-24 rounded-full bg-primary-fixed flex items-center justify-center text-primary mb-space-lg">
+<span class="material-symbols-outlined text-[48px]">event_available</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-space-xs" data-i18n="empty-title">لا يوجد مراجعين في طابور الانتظار حالياً</h3>
+<p class="font-body-md text-body-md text-outline mb-space-lg max-w-md" data-i18n="empty-desc">
+          جميع المرضى تم استقبالهم أو ليس لديهم مواعيد مجدولة في هذه اللحظة. يمكنك تسجيل مراجع فوري أو استقبال حجز مسبق.
+        </p>
+<button class="min-h-[48px] px-space-xl rounded-xl bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg flex items-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span data-i18n="empty-action">+ تسجيل مراجع جديد الآن</span>
+</button>
+</div>
+</div>
+<!-- MAIN KANBAN BOARD (Default & Blacklist Views) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-lg w-full items-start" id="view-kanban">
+<!-- ================= COLUMN 1: EXPECTED ================= -->
+<div class="bg-surface-container-low rounded-2xl p-space-md flex flex-col gap-space-md shadow-sm">
 <!-- Column Header -->
-<div class="flex items-center justify-between px-space-xs">
-<div class="flex items-center gap-space-sm">
-<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
-<h2 class="font-title-lg text-title-lg text-on-surface">Arrived / Waiting</h2>
-<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold">4</span>
-</div>
-<div class="flex items-center gap-1 font-label-md text-label-md text-on-surface-variant bg-surface-container-lowest px-space-sm py-space-xs rounded-lg shadow-sm">
-<span class="material-symbols-outlined text-[14px]">timer</span>
-<span>Avg 6.8 mins</span>
-</div>
-</div>
-<!-- Cards List -->
-<div class="flex flex-col gap-space-md" id="col-waiting">
-<!-- Card 1: Eleanor Vance -->
-<div class="patient-card bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-practitioner="vance">
-<div class="flex items-start justify-between gap-space-xs">
-<span class="px-space-sm py-[3px] rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">diamond</span>
-                VIP Elite Diamond • Punctual (+5m early)
-              </span>
-<span class="font-label-md text-label-md text-on-surface-variant font-medium">10:30 AM</span>
-</div>
-<div class="flex items-center gap-space-sm mt-space-xs">
-<img class="w-12 h-12 rounded-xl object-cover shrink-0" data-alt="Close up photographic portrait of Eleanor Vance, an elegant woman in her late 30s with flawless glowing skin, calm luxury aesthetic, studio warm neutral lighting, neutral beige clinical background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvNPLcNwtBlKI28rwaUsJ3y5DlnaJqwl2eE3ZENqvIXmgRprnqBvgxhSl-x1leMLxHpYmJxPt1a_yapgNSwiN4xvmS36dkPj6ivg4KLIy3cdWIH6f7qiPgRWX4inAtsC0El43r70V4bC22tA5CsPsq1vGSNkS9b5nAiOP0Rd9mCs-SS_MrBQJfJhYmsR5uyerFeBlVs3iUWqpfDP12ARqRNjBspWCcbBkfO4O13NA"/>
-<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between pb-space-xs">
 <div class="flex items-center gap-space-xs">
-<h3 class="font-title-md text-title-md text-on-surface truncate">Eleanor Vance</h3>
-<span class="font-label-md text-label-md text-on-surface-variant">#AC-8842</span>
+<span class="w-3 h-3 rounded-full bg-outline"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface" data-i18n="col-1-title">المتوقع وصولهم</h2>
 </div>
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate">+1 (310) 849-2910</span>
+<span class="font-label-sm text-label-sm px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant font-bold">4</span>
 </div>
+<!-- Blacklist Demo Card (Toggled or highlighted via state) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm transition-all" id="card-blacklist-sample">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">عهود عبد الله التميمي</span>
+<span class="font-label-sm text-label-sm text-outline">ملف: #LUM-10512</span>
 </div>
-<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
-<div class="flex items-center justify-between">
-<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Booked Service</span>
-<span class="font-label-md text-label-md text-primary font-medium">Dr. Vivienne Vance, MD</span>
+<span class="font-label-sm text-label-sm px-space-xs py-1 rounded-md bg-surface-container-high text-on-surface-variant">10:15 ص</span>
 </div>
-<span class="font-body-md text-body-md text-on-surface font-medium truncate">PicoSure® Pro Cellular Glow (Session 4 of 6)</span>
-<span class="font-label-md text-label-md text-on-surface-variant">Assigned Suite: L'Atelier Suite 4</span>
+<!-- BLACKLIST ALERT BADGE (V1) -->
+<div class="bg-error-container rounded-lg p-space-xs flex items-center gap-space-xs text-on-error-container">
+<span class="material-symbols-outlined text-[18px]">gpp_bad</span>
+<span class="font-label-sm text-label-sm font-bold" data-i18n="badge-blacklist">⛔ تنبيه: مدرج في قائمة الحظر V1 (مراجعة الإدارة)</span>
 </div>
-<div class="flex items-center justify-between text-body-sm pt-space-xs">
-<span class="flex items-center gap-1 font-label-md text-label-md text-emerald-800">
-<span class="material-symbols-outlined text-[16px] text-emerald-700">verified</span>
-                Consent &amp; PDPL Signed
-              </span>
-<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">schedule</span>
-                Waiting: 4m
-              </span>
-</div>
-<div class="flex items-center gap-space-xs pt-space-xs">
-<button class="flex-1 py-space-sm px-space-md rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors flex items-center justify-center gap-space-xs shadow-sm" onclick="transferCard(this, 'col-treatment', 'Suite 4')">
-<span class="material-symbols-outlined text-[18px]">door_open</span>
-<span>Move to Room 4</span>
-</button>
-<button class="p-space-sm rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" onclick="toastNotification('Notification sent to Dr. Vivienne Vance, MD')" title="Notify Clinician via Pager">
-<span class="material-symbols-outlined text-[18px]">notifications</span>
-</button>
-<button class="p-space-sm rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" onclick="toastNotification('Patient chart #AC-8842 opened')" title="Actions menu">
-<span class="material-symbols-outlined text-[18px]">more_vert</span>
-</button>
-</div>
-</div>
-<!-- Card 2: Marcus Sterling -->
-<div class="patient-card bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-practitioner="mansoor">
-<div class="flex items-start justify-between gap-space-xs">
-<span class="px-space-sm py-[3px] rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-semibold flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">priority_high</span>
-                New Patient • Intake Needed
-              </span>
-<span class="font-label-md text-label-md text-on-surface-variant font-medium">10:45 AM</span>
-</div>
-<div class="flex items-center gap-space-sm mt-space-xs">
-<img class="w-12 h-12 rounded-xl object-cover shrink-0" data-alt="Portrait of Marcus Sterling, a sharp dressed modern man with clean groomed beard, natural studio lighting, soft cream aesthetic tones, warm confident gaze" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC31Vm-L8uabs0_oSka_-Sxs_zb3z2hleGcCivqBDa-Qxt-kd1fTDdvxscmmWrO-fR61G0XMKqsVA3o7jVIYbRGGWHQPZpawR8SKtvSMMcGuTxaPiSYTUNG9utFZQZZpp8fajmjpvnL-P3rVKKrDvGItlvKakNycscDpec6Hk0X5VFBo1rZYBoT_YD2W5OtdAiDcFAaIgX4jlkwm5L7LVG_qtOama0Un6D_IZQDcks"/>
-<div class="flex flex-col min-w-0">
+<div class="flex flex-col gap-1 text-body-sm font-body-sm text-on-surface-variant">
 <div class="flex items-center gap-space-xs">
-<h3 class="font-title-md text-title-md text-on-surface truncate">Marcus Sterling</h3>
-<span class="font-label-md text-label-md text-on-surface-variant">#AC-9104</span>
+<span class="material-symbols-outlined text-[16px] text-outline">spa</span>
+<span>استشارة جلدية وليزر عامة</span>
 </div>
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate">+966 50 123 4567</span>
-</div>
-</div>
-<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
-<div class="flex items-center justify-between">
-<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Booked Service</span>
-<span class="font-label-md text-label-md text-primary font-medium">Dr. Tariq Al-Mansoor</span>
-</div>
-<span class="font-body-md text-body-md text-on-surface font-medium truncate">Candela GentleMax Pro® - Beard &amp; Neck</span>
-<span class="font-label-md text-label-md text-on-surface-variant">Assigned Suite: Photonic Lab Suite 2</span>
-</div>
-<div class="flex items-center justify-between text-body-sm pt-space-xs">
-<span class="flex items-center gap-1 font-label-md text-label-md text-error font-medium">
-<span class="material-symbols-outlined text-[16px]">warning</span>
-                Medical Intake Incomplete
-              </span>
-<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">schedule</span>
-                Arrived just now
-              </span>
-</div>
-<div class="flex items-center gap-space-xs pt-space-xs">
-<button class="flex-1 py-space-sm px-space-md rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg hover:bg-on-secondary-fixed-variant transition-colors flex items-center justify-center gap-space-xs shadow-sm" onclick="toastNotification('Intake pushed to Reception iPad #2')">
-<span class="material-symbols-outlined text-[18px]">tablet</span>
-<span>Send Intake to iPad</span>
-</button>
-<button class="px-space-md py-space-sm rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-colors" onclick="toastNotification('Expedited intake verified manually')">
-                Fast Check-In
-              </button>
-</div>
-</div>
-<!-- Card 3: Amira Al-Khatib -->
-<div class="patient-card bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-practitioner="layla">
-<div class="flex items-start justify-between gap-space-xs">
-<span class="px-space-sm py-[3px] rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-semibold">
-                Maintenance Protocol
-              </span>
-<span class="font-label-md text-label-md text-on-surface-variant font-medium">11:00 AM</span>
-</div>
-<div class="flex items-center gap-space-sm mt-space-xs">
-<img class="w-12 h-12 rounded-xl object-cover shrink-0" data-alt="Portrait of Amira Al-Khatib, Middle Eastern woman with radiant complexion and minimalist elegance, subtle gold jewelry, warm softbox lighting, warm alabaster background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4foyFPZ7puAJopm_9l1FxgzI_SU1iPCtEDkJZ5LG9GO9EYmAKGmN6TLiBAIoXftUifoGrkX_o3fUz2J56AlWzKg0GtkTvg13MB7tC2Uyf2fQX6FkbVwZSNwzLnyFaEjUb9BG4-n9cCF4z3333LiXMPSFjAqOZ4tX1qJkqgwDTWr0HE6Cb_GSEV7vXekmh8naAP-2TsBvFwDX5O2UtsJh2R1UV-U8vbZznsRo8mN8"/>
-<div class="flex flex-col min-w-0">
 <div class="flex items-center gap-space-xs">
-<h3 class="font-title-md text-title-md text-on-surface truncate">Amira Al-Khatib</h3>
-<span class="font-label-md text-label-md text-on-surface-variant">#AC-7731</span>
-</div>
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate">+966 55 987 6543</span>
+<span class="material-symbols-outlined text-[16px] text-outline">stethoscope</span>
+<span>د. مها السديري • عيادة 4</span>
 </div>
 </div>
-<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
-<div class="flex items-center justify-between">
-<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Booked Service</span>
-<span class="font-label-md text-label-md text-primary font-medium">Nurse Specialist Layla K.</span>
-</div>
-<span class="font-body-md text-body-md text-on-surface font-medium truncate">HydraFacial Deluxe Platinum Fusion</span>
-<span class="font-label-md text-label-md text-on-surface-variant">Assigned Suite: Hydro-Glow Suite 1</span>
-</div>
-<div class="flex items-center justify-between text-body-sm pt-space-xs">
-<span class="flex items-center gap-1 font-label-md text-label-md text-emerald-800">
-<span class="material-symbols-outlined text-[16px] text-emerald-700">check_circle</span>
-                All Clear
-              </span>
-<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">schedule</span>
-                Waiting: 11m
-              </span>
-</div>
-<div class="flex items-center gap-space-xs pt-space-xs">
-<button class="flex-1 py-space-sm px-space-md rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors flex items-center justify-center gap-space-xs shadow-sm" onclick="transferCard(this, 'col-treatment', 'Suite 1')">
-<span class="material-symbols-outlined text-[18px]">meeting_room</span>
-<span>Move to Room 1</span>
-</button>
-<button class="px-space-md py-space-sm rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-colors flex items-center gap-1" onclick="toastNotification('Herbal collagen tea requested for Amira Al-Khatib')" title="Offer Dermal Beverage">
-<span class="material-symbols-outlined text-[16px]">local_cafe</span>
-<span class="hidden sm:inline">Beverage</span>
+<div class="pt-space-xs flex flex-col gap-space-xs">
+<button class="min-h-[48px] w-full rounded-xl bg-error text-on-error hover:bg-error/90 font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">admin_panel_settings</span>
+<span data-i18n="btn-manager-unlock">تحويل للمشرف لفك الحظر</span>
 </button>
 </div>
 </div>
-<!-- Card 4: Julian Moreau -->
-<div class="patient-card bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-practitioner="vance">
-<div class="flex items-start justify-between gap-space-xs">
-<span class="px-space-sm py-[3px] rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold">
-                Touch-up
-              </span>
-<span class="font-label-md text-label-md text-on-surface-variant font-medium">11:15 AM</span>
-</div>
-<div class="flex items-center gap-space-sm mt-space-xs">
-<img class="w-12 h-12 rounded-xl object-cover shrink-0" data-alt="Portrait of Julian Moreau, French aesthetic patient in his early 40s, stylish tailored linen jacket, soft focused upscale clinical interior background, warm neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvLBNnhQJgTJIUzyzw05y_NHfqg9d13QuVgHVUr2FIiVVWtpm1HIirRmt-7zQJ6yUMs26vQXt7DHwV0QviNy93BqWDJ-kBQBKSuDLHELIo5O7Es3k_Fyu96imkRk-CPp6t9REm2Dc0_aZp_5tkmd-dlFoe-cjsuhsbLdE-Y2i8dquOkgnC8yAXX0LQsgTR0wY7D5nHkSnp6KXoAMsDsKsvLh3aMXKnqUKjxnlFv3Y"/>
-<div class="flex flex-col min-w-0">
+<!-- Patient Card: Noura Al-Harbi -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
 <div class="flex items-center gap-space-xs">
-<h3 class="font-title-md text-title-md text-on-surface truncate">Julian Moreau</h3>
-<span class="font-label-md text-label-md text-on-surface-variant">#AC-6490</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">نورة الحربي</span>
+<span class="material-symbols-outlined text-tertiary-container text-[18px]" title="مريض دائم / VIP">verified</span>
 </div>
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate">+33 6 12 34 56 78</span>
+<span class="font-label-sm text-label-sm text-outline">ملف: #LUM-10492</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-md text-label-md text-primary font-bold">10:30 ص</span>
+<span class="font-label-sm text-label-sm text-outline" data-i18n="time-in-15">بعد 15 دقيقة</span>
 </div>
 </div>
-<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
-<div class="flex items-center justify-between">
-<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Service</span>
-<span class="font-label-md text-label-md text-primary font-medium">Dr. Vivienne Vance, MD</span>
+<!-- Service & Doctor Details -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1 text-body-sm font-body-sm">
+<div class="flex items-center gap-space-xs font-semibold text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">radiology</span>
+<span>جلسة ليزر كانديلا برو - جسم كامل</span>
 </div>
-<span class="font-body-md text-body-md text-on-surface font-medium truncate">Laser Spot Test &amp; Calibration</span>
-<span class="font-label-md text-label-md text-on-surface-variant">Diagnostic Lab Bay</span>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[16px]">person</span>
+<span>د. ريم الفهد • عيادة الليزر 3</span>
 </div>
-<div class="flex items-center justify-between text-body-sm pt-space-xs">
-<span class="font-label-md text-label-md text-on-surface-variant">Arrived early (15m ahead)</span>
-<span class="font-label-md text-label-md text-emerald-800">Checked In</span>
 </div>
-<div class="flex items-center gap-space-xs pt-space-xs">
-<button class="w-full py-space-sm px-space-md rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-space-xs" onclick="toastNotification('Diagnostic Bay prepped and ready for Julian Moreau')">
-<span class="material-symbols-outlined text-[18px]">biotech</span>
-<span>Prep Diagnostic Bay</span>
+<!-- Mini Warning Chips -->
+<div class="flex flex-wrap gap-1">
+<span class="font-label-sm text-label-sm px-space-xs py-1 rounded-md bg-secondary-fixed text-on-secondary-fixed flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">inventory_2</span>
+<span data-i18n="badge-pkg-5">متبقي 5 جلسات من الباقة</span>
+</span>
+<span class="font-label-sm text-label-sm px-space-xs py-1 rounded-md bg-error-container text-on-error-container flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">assignment_late</span>
+<span data-i18n="badge-consent-expired">⚠️ إقرار منتهي الصلاحية</span>
+</span>
+</div>
+<!-- Primary Action Button (>= 48px) -->
+<div class="pt-space-xs">
+<button class="min-h-[48px] w-full rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-sm transition-all active:scale-[0.98]" onclick="quickCheckIn(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+<span data-i18n="btn-check-in">تسجيل الحضور الآن (Check in)</span>
+</button>
+</div>
+</div>
+<!-- Patient Card: Faisal Al-Otaibi -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">فيصل عبد العزيز العتيبي</span>
+<span class="font-label-sm text-label-sm text-outline">ملف: #LUM-11029</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-md text-label-md text-primary font-bold">11:00 ص</span>
+<span class="font-label-sm text-label-sm text-outline" data-i18n="time-in-45">بعد 45 دقيقة</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1 text-body-sm font-body-sm">
+<div class="flex items-center gap-space-xs font-semibold text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">vaccines</span>
+<span>حقن بلازما للشعر (PRP Premium)</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[16px]">person</span>
+<span>د. سارة المنصور • غرفة المعالجة 1</span>
+</div>
+</div>
+<!-- Payment balance badge -->
+<div class="flex flex-wrap gap-1">
+<span class="font-label-sm text-label-sm px-space-xs py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">credit_card</span>
+<span data-i18n="badge-unpaid-pkg">💳 باقة غير مسددة بالكامل</span>
+</span>
+</div>
+<div class="pt-space-xs">
+<button class="min-h-[48px] w-full rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm" onclick="quickCheckIn(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+<span data-i18n="btn-check-in">تسجيل الحضور الآن (Check in)</span>
 </button>
 </div>
 </div>
 </div>
-</div>
-<!-- ================= COLUMN 2: IN ROOM / TREATMENT ================= -->
-<div class="flex flex-col gap-space-md bg-surface-container-low/60 p-space-md rounded-2xl min-h-[700px]">
+<!-- ================= COLUMN 2: CHECKED IN ================= -->
+<div class="bg-surface-container-low rounded-2xl p-space-md flex flex-col gap-space-md shadow-sm">
 <!-- Column Header -->
-<div class="flex items-center justify-between px-space-xs">
-<div class="flex items-center gap-space-sm">
-<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
-<h2 class="font-title-lg text-title-lg text-on-surface">In Room / Treatment</h2>
-<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold">3</span>
-</div>
-<div class="flex items-center gap-1 font-label-md text-label-md text-on-surface-variant bg-surface-container-lowest px-space-sm py-space-xs rounded-lg shadow-sm">
-<span class="material-symbols-outlined text-[14px] text-emerald-700">bolt</span>
-<span>3 Lasers Online</span>
-</div>
-</div>
-<!-- Cards List -->
-<div class="flex flex-col gap-space-md" id="col-treatment">
-<!-- Card 1: Sora Takahashi -->
-<div class="patient-card bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-practitioner="vance">
-<div class="flex items-start justify-between gap-space-xs">
-<span class="px-space-sm py-[3px] rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">door_front</span>
-                Suite 4 — L’Atelier Suite (Active: 22m / 50m)
-              </span>
-<span class="font-label-md text-label-md text-primary font-bold">44%</span>
-</div>
-<!-- Elapsed Treatment Bar -->
-<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
-<div class="bg-primary h-1.5 rounded-full" style="width: 44%"></div>
-</div>
-<div class="flex items-center gap-space-sm mt-space-xs">
-<img class="w-12 h-12 rounded-xl object-cover shrink-0" data-alt="Portrait of Sora Takahashi, Japanese woman in her late 20s, minimalist clean beauty styling, tranquil atmosphere, soft warm studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSg2KxwcVqWEuURshM5OZS--b6jK6Wp89aX4VgVqUD4EYmTlQkgbHLePCpnUtN-iJ4nzgJx-1A6beI-o1T1XRcC8yCdcAFJOABPyQULshf-PwjdfKRWzFnESu8_2UE6sOqF0QIANj0wI9ujV6Cj_qgN7CKbg9CPIBiNmQar_vH7tXOjrdiSTZm5bqeKUTaJxeXhf8t22lQ_2Q5tN2WdK0mZI-X9vfJM_nik8634XM"/>
-<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between pb-space-xs">
 <div class="flex items-center gap-space-xs">
-<h3 class="font-title-md text-title-md text-on-surface truncate">Sora Takahashi</h3>
-<span class="font-label-md text-label-md text-on-surface-variant">#AC-7219</span>
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface" data-i18n="col-2-title">تم تسجيل الحضور</h2>
 </div>
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Dr. Vivienne Vance, MD</span>
+<span class="font-label-sm text-label-sm px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant font-bold">3</span>
 </div>
+<!-- Patient Card: Reem Al-Subaie (Waiting Timer amber warning threshold) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">ريم السبيعي</span>
+<span class="font-label-sm text-label-sm text-outline">ملف: #LUM-09821</span>
 </div>
-<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
-<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Active Clinical Protocol</span>
-<span class="font-body-md text-body-md text-on-surface font-medium truncate">Fraxel Dual 1550/1927 Laser Resurfacing</span>
-<!-- Telemetry Subcard -->
-<div class="mt-space-xs pt-space-xs flex items-center justify-between text-label-md font-label-md text-on-surface-variant bg-surface-container-lowest/80 p-space-xs rounded">
-<span class="flex items-center gap-1 text-primary">
-<span class="material-symbols-outlined text-[14px]">graphic_eq</span>
-                  Laser Running
-                </span>
-<span class="font-mono">840 / 1,500 Pulses</span>
-</div>
-</div>
-<div class="flex items-center gap-space-xs pt-space-xs">
-<button class="flex-1 py-space-sm px-space-md rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-space-xs" onclick="toastNotification('Cryo assistant paged to Suite 4')">
-<span class="material-symbols-outlined text-[18px]">ac_unit</span>
-<span>Call Cryo Assistant</span>
-</button>
-<button class="py-space-sm px-space-md rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-colors flex items-center gap-space-xs" onclick="transferCard(this, 'col-completed', 'Transferred')">
-<span>Chill Lounge</span>
-<span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</button>
-</div>
-</div>
-<!-- Card 2: Dr. Khalid Bin Rashid -->
-<div class="patient-card bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-practitioner="mansoor">
-<div class="flex items-start justify-between gap-space-xs">
-<span class="px-space-sm py-[3px] rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">door_front</span>
-                Suite 2 — Photonic Lab (Finishing)
-              </span>
-<span class="font-label-md text-label-md text-on-secondary-container font-bold">91%</span>
-</div>
-<!-- Elapsed Treatment Bar -->
-<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
-<div class="bg-secondary h-1.5 rounded-full" style="width: 91%"></div>
-</div>
-<div class="flex items-center gap-space-sm mt-space-xs">
-<img class="w-12 h-12 rounded-xl object-cover shrink-0" data-alt="Portrait of Dr. Khalid Bin Rashid, distinguished Middle Eastern gentleman with tailored look, warm relaxed smile, upscale medical office lighting, elegant amber ambience" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbazrB-nlh2pClKYNtKGU70Fvj0ntDWRdTlitIzhPnZHh85uGXHBojJnwS0x0kQDFDqihW0GgVkWAdJFAGysiB4WbE-4SXLQYswQXRoRXRgIy0J9vnPi3OahSWkSzBeQry4rON8ZmNKdJNPaF_3FxquvAVGTPB2ffFzR5Y8WyIjCp4kEhOsDiLa-mY4QPbD71P8i8FF18tGTjawXFVFLHb7kRJSSvVeAUhyl6_uq0"/>
-<div class="flex flex-col min-w-0">
 <div class="flex items-center gap-space-xs">
-<h3 class="font-title-md text-title-md text-on-surface truncate">Dr. Khalid Bin Rashid</h3>
-<span class="font-label-md text-label-md text-on-surface-variant">#AC-8811</span>
+<!-- Live Wait Timer Badge -->
+<span class="font-timer-display text-timer-display px-space-sm py-1 rounded-lg bg-surface-container-high text-secondary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>14 د</span>
+</span>
 </div>
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Dr. Tariq Al-Mansoor</span>
+</div>
+<!-- Pulsing Alert for Wait Duration -->
+<div class="bg-surface-container rounded-lg p-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span data-i18n="timer-wait-14">⏱️ وقت الانتظار الحالي: 14 دقيقة</span>
+</span>
+<span class="font-label-sm text-label-sm text-outline" data-i18n="room-2-label">غرفة 2</span>
+</div>
+<!-- Service Info -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1 text-body-sm font-body-sm">
+<div class="flex items-center gap-space-xs font-semibold text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">clean_hands</span>
+<span>جلسة نضارة ميزوثيرابي متقدمة</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[16px]">clinical_notes</span>
+<span>أخصائية العنود المطيري • غرفة 2</span>
 </div>
 </div>
-<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
-<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Active Clinical Protocol</span>
-<span class="font-body-md text-body-md text-on-surface font-medium truncate">Candela GentleMax Pro® Vascular Clearance</span>
-<span class="font-label-md text-label-md text-secondary font-medium mt-0.5">Note: Post-laser cooling &amp; SPF application</span>
+<!-- Package chip -->
+<div class="flex">
+<span class="font-label-sm text-label-sm px-space-xs py-1 rounded-md bg-tertiary-fixed/40 text-on-tertiary-fixed flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span data-i18n="badge-single-session">جلسة فردية معتمدة ومسددة</span>
+</span>
 </div>
-<div class="flex items-center gap-space-xs pt-space-xs">
-<button class="flex-1 py-space-sm px-space-md rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors flex items-center justify-center gap-space-xs shadow-sm" onclick="transferCard(this, 'col-completed', 'Checkout Ready')">
-<span class="material-symbols-outlined text-[18px]">receipt_long</span>
-<span>Prepare Checkout Ledger</span>
+<!-- Dual Actions for Calling and Starting Session -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<button class="min-h-[48px] rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+<span data-i18n="btn-call-room">استدعاء</span>
 </button>
-<button class="py-space-sm px-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" onclick="toastNotification('Suite 2 housekeeping alert dispatched')" title="Release Suite">
-<span class="material-symbols-outlined text-[18px]">cleaning_services</span>
-</button>
-</div>
-</div>
-<!-- Card 3: Claire Delacroix -->
-<div class="patient-card bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-practitioner="layla">
-<div class="flex items-start justify-between gap-space-xs">
-<span class="px-space-sm py-[3px] rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">door_front</span>
-                Suite 1 — Hydro-Glow Suite (Active: 15m / 45m)
-              </span>
-<span class="font-label-md text-label-md text-on-surface-variant font-bold">33%</span>
-</div>
-<!-- Elapsed Treatment Bar -->
-<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
-<div class="bg-tertiary h-1.5 rounded-full" style="width: 33%"></div>
-</div>
-<div class="flex items-center gap-space-sm mt-space-xs">
-<img class="w-12 h-12 rounded-xl object-cover shrink-0" data-alt="Portrait of Claire Delacroix, European woman with serene expression and glowing skin, high-end dermatologist spa setting, soft neutral lighting, elegant beige tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRGuRF6THedEJnKhgSCSP0ckPBlHZtJERQweS1r3NgJqKl-QdVXGmSrno3lprS8TWusnwqfs_qiw3CdcFGZVGjxXolMVIdBiBjg9S4aT0Fc2PHk0psRBqav1Iq4ESrGczALozbUvVuwW22zvh_-IzWfKhnykcrmNbt0DGoANYdgzI7UxDCDd_uYUhjhlQkU2Lmu5pJkz5jutPBClJf1UoRM5POxbAsaf2FUdHbE0M"/>
-<div class="flex flex-col min-w-0">
-<div class="flex items-center gap-space-xs">
-<h3 class="font-title-md text-title-md text-on-surface truncate">Claire Delacroix</h3>
-<span class="font-label-md text-label-md text-on-surface-variant">#AC-4509</span>
-</div>
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Nurse Specialist Layla K.</span>
-</div>
-</div>
-<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
-<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Active Clinical Protocol</span>
-<span class="font-body-md text-body-md text-on-surface font-medium truncate">SkinCeuticals Infusion &amp; LED Phototherapy</span>
-</div>
-<div class="flex items-center gap-space-xs pt-space-xs">
-<button class="flex-1 py-space-sm px-space-md rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-space-xs" onclick="toastNotification('Opening Suite 1 Occupancy Sensor &amp; Audio Link')">
-<span class="material-symbols-outlined text-[18px]">sensors</span>
-<span>Live Room Status</span>
-</button>
-<button class="py-space-sm px-space-md rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-colors flex items-center gap-1" onclick="toastNotification('Post-Care regimen bag staged at reception')">
-<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
-<span>Prep Post-Care</span>
+<button class="min-h-[48px] rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span data-i18n="btn-start-session">نقل للجلسة</span>
 </button>
 </div>
 </div>
+<!-- Patient Card: Maha Al-Bishi (Waiting over 20m critical timer) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">مها البيشي</span>
+<span class="font-label-sm text-label-sm text-outline">ملف: #LUM-08734</span>
+</div>
+<!-- Critical timer alert -->
+<span class="font-timer-display text-timer-display px-space-sm py-1 rounded-lg bg-error-container text-on-error-container flex items-center gap-1 font-bold">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span>24 د</span>
+</span>
+</div>
+<div class="bg-error-container/40 rounded-lg p-space-xs flex items-center gap-space-xs text-on-error-container">
+<span class="material-symbols-outlined text-[16px]">alarm_on</span>
+<span class="font-label-sm text-label-sm font-semibold" data-i18n="timer-wait-24">تجاوز الحد المسموح: انتظار أكثر من 20 دقيقة</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1 text-body-sm font-body-sm">
+<div class="flex items-center gap-space-xs font-semibold text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">auto_fix_high</span>
+<span>بوتكس تجاعيد الجبهة ومحيط العين</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[16px]">person</span>
+<span>د. ريم الفهد • عيادة 3</span>
 </div>
 </div>
-<!-- ================= COLUMN 3: COMPLETED ================= -->
-<div class="flex flex-col gap-space-md bg-surface-container-low/60 p-space-md rounded-2xl min-h-[700px]">
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<button class="min-h-[48px] rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+<span data-i18n="btn-call-room">استدعاء</span>
+</button>
+<button class="min-h-[48px] rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span data-i18n="btn-start-session">نقل للجلسة</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ================= COLUMN 3: IN SESSION ================= -->
+<div class="bg-surface-container-low rounded-2xl p-space-md flex flex-col gap-space-md shadow-sm">
 <!-- Column Header -->
-<div class="flex items-center justify-between px-space-xs">
-<div class="flex items-center gap-space-sm">
-<span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
-<h2 class="font-title-lg text-title-lg text-on-surface">Completed &amp; Checkout</h2>
-<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-semibold">15</span>
-</div>
-<div class="flex items-center gap-1 font-label-md text-label-md text-on-surface-variant bg-surface-container-lowest px-space-sm py-space-xs rounded-lg shadow-sm">
-<span class="material-symbols-outlined text-[14px]">price_check</span>
-<span>$4,890 Settled</span>
-</div>
-</div>
-<!-- Cards List -->
-<div class="flex flex-col gap-space-md" id="col-completed">
-<!-- Card 1: Lina Faris -->
-<div class="patient-card bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-practitioner="vance">
-<div class="flex items-start justify-between gap-space-xs">
-<span class="px-space-sm py-[3px] rounded-full bg-secondary-container/60 text-on-secondary-container font-label-md text-label-md font-semibold flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">check</span>
-                Payment Settled • Package Deducted
-              </span>
-<span class="font-label-md text-label-md text-on-surface-variant">10:14 AM</span>
-</div>
-<div class="flex items-center gap-space-sm mt-space-xs">
-<img class="w-12 h-12 rounded-xl object-cover shrink-0" data-alt="Portrait of Lina Faris, elegant Middle Eastern woman in her early 30s with glowing skin and stylish soft beige headscarf accent, soft clinic backlight, luxury aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSF71JN-aUUWAJuDWROUxC2PxzGyjPUI6AgUgMhEOZPXy5wg3t7oUiIZ023vuZIUfzQQoB3spAIr7p6XKNHUnFLGK4mMyZZn54dKKXig1srckU55lIppEmK6VCRnVI8KYuIfZbYkrjQeaeRM-CWIxumCrPPakUwK6U9gZv4w01N6NU2x50cdG6Nl3qsmlsyiq1MoiWX3BW2ypgeMvXLhLx7mHJV2rXdKhzm-Ip-GI"/>
-<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between pb-space-xs">
 <div class="flex items-center gap-space-xs">
-<h3 class="font-title-md text-title-md text-on-surface truncate">Lina Faris</h3>
-<span class="font-label-md text-label-md text-on-surface-variant">#AC-3912</span>
+<span class="w-3 h-3 rounded-full bg-tertiary-container animate-pulse"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface" data-i18n="col-3-title">في الجلسة الطبية</h2>
 </div>
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Completed 16m ago • Dr. Vance</span>
+<span class="font-label-sm text-label-sm px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant font-bold">2</span>
+</div>
+<!-- Patient Card: Huda Al-Qahtani -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">هدى عبد العزيز القحطاني</span>
+<span class="font-label-sm text-label-sm text-outline">ملف: #LUM-11940</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-1 rounded-md bg-tertiary-fixed text-on-tertiary-fixed font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span data-i18n="status-active-room">نشطة الآن</span>
+</span>
+</div>
+<!-- Session Elapsed Stopwatch -->
+<div class="bg-surface-container rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[20px]">hourglass_bottom</span>
+<span class="font-timer-display text-timer-display font-semibold" data-i18n="session-elapsed-22">⏳ في العيادة منذ 22 دقيقة</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">الهدف: 30 د</span>
+</div>
+<!-- Session Procedure -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1 text-body-sm font-body-sm">
+<div class="flex items-center gap-space-xs font-semibold text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">grain</span>
+<span>فراكشنال ليزر وتجديد البشرة</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[16px]">medical_services</span>
+<span>د. خالد العمري • عيادة 1</span>
 </div>
 </div>
-<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
-<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Delivered Treatment</span>
-<span class="font-body-md text-body-md text-on-surface font-medium truncate">PicoSure® Pro Cellular Glow (Session 3)</span>
-<div class="mt-space-xs font-label-md text-label-md text-emerald-800 flex items-center justify-between">
-<span>$360.00 Deducted from Wallet</span>
-<span class="font-semibold">$0.00 Due</span>
+<!-- Action Button: Finish Session -->
+<div class="pt-space-xs">
+<button class="min-h-[48px] w-full rounded-xl bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+<span data-i18n="btn-finish-session">إنهاء الجلسة وإحالة للدفع (Ready to pay)</span>
+</button>
+</div>
+</div>
+<!-- Patient Card: Tariq Mansoor -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">طارق منصور اليامي</span>
+<span class="font-label-sm text-label-sm text-outline">ملف: #LUM-07612</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-1 rounded-md bg-tertiary-fixed text-on-tertiary-fixed font-semibold">نشط الآن</span>
+</div>
+<div class="bg-surface-container rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[20px]">hourglass_bottom</span>
+<span class="font-timer-display text-timer-display font-semibold" data-i18n="session-elapsed-08">⏳ في العيادة منذ 8 دقائق</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">الهدف: 15 د</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1 text-body-sm font-body-sm">
+<div class="flex items-center gap-space-xs font-semibold text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">dermatology</span>
+<span>كشف وفحص عينات جلدية دوري</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[16px]">person</span>
+<span>د. مها السديري • عيادة 4</span>
+</div>
+</div>
+<div class="pt-space-xs">
+<button class="min-h-[48px] w-full rounded-xl bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+<span data-i18n="btn-finish-session">إنهاء الجلسة وإحالة للدفع (Ready to pay)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ================= COLUMN 4: READY TO PAY ================= -->
+<div class="bg-surface-container-low rounded-2xl p-space-md flex flex-col gap-space-md shadow-sm">
+<!-- Column Header -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface" data-i18n="col-4-title">جاهز للدفع والمغادرة</h2>
+</div>
+<span class="font-label-sm text-label-sm px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant font-bold">2</span>
+</div>
+<!-- Patient Card: Sarah Al-Dosari -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">سارة محمد الدوسري</span>
+<span class="font-label-sm text-label-sm text-outline">ملف: #LUM-12003</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-1 rounded-md bg-secondary-fixed text-on-secondary-fixed font-semibold" data-i18n="inv-pending">بانتظار المحاسب</span>
+</div>
+<!-- Pending Amount Card -->
+<div class="bg-surface-container rounded-xl p-space-md flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline" data-i18n="inv-total-label">إجمالي الفاتورة الضريبية</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">650.00 ر.س</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">receipt_long</span>
+</div>
+<div class="flex flex-col gap-1 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">done_all</span>
+<span>اكتملت الجلسة: توريد شفايف وليزر كربوني</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-outline">qr_code_2</span>
+<span data-i18n="zatca-ready">جاهز للمطابقة الفورية عبر هيئة الزكاة (ZATCA)</span>
+</div>
+</div>
+<!-- Dual POS & ZATCA Action Buttons -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="min-h-[48px] w-full rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">point_of_sale</span>
+<span data-i18n="btn-pos-checkout">إتمام الدفع في POS (Checkout)</span>
+</button>
+<button class="min-h-[48px] w-full rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">print</span>
+<span data-i18n="btn-zatca-invoice">إصدار الفاتورة الضريبية ZATCA</span>
+</button>
+</div>
+</div>
+<!-- Patient Card: Khalid Al-Ghamdi -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">خالد فهد الغامدي</span>
+<span class="font-label-sm text-label-sm text-outline">ملف: #LUM-09144</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-1 rounded-md bg-secondary-fixed text-on-secondary-fixed font-semibold">بانتظار السداد</span>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline" data-i18n="inv-total-label">إجمالي الفاتورة الضريبية</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">1,250.00 ر.س</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">payments</span>
+</div>
+<div class="flex flex-col gap-1 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">done_all</span>
+<span>اكتملت الجلسة: باقة العناية بالبشرة المتكاملة</span>
 </div>
 </div>
 <div class="flex flex-col gap-space-xs pt-space-xs">
-<div class="flex items-center gap-space-xs">
-<button class="flex-1 py-space-sm px-space-md rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors flex items-center justify-center gap-space-xs shadow-sm" onclick="toastNotification('Booking Calendar opened for Lina Faris (+4 weeks interval)')">
-<span class="material-symbols-outlined text-[18px]">calendar_today</span>
-<span>Book Next Session (4 wks)</span>
-</button>
-<button class="p-space-sm rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" onclick="toastNotification('Directives printed to Reception Printer #1')" title="Print Post-Care Directives">
-<span class="material-symbols-outlined text-[18px]">print</span>
-</button>
-</div>
-<div class="flex items-center justify-between px-space-xs text-on-surface-variant font-label-md text-label-md">
-<span class="flex items-center gap-1 text-primary">
-<span class="material-symbols-outlined text-[14px]">directions_car</span>
-                  VIP Car Service Dispatched (Mercedes S-Class #42)
-                </span>
-</div>
-</div>
-</div>
-<!-- Card 2: David Chen -->
-<div class="patient-card bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-practitioner="mansoor">
-<div class="flex items-start justify-between gap-space-xs">
-<span class="px-space-sm py-[3px] rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">pending_actions</span>
-                Checkout Pending Ledger Sign-off
-              </span>
-<span class="font-label-md text-label-md text-on-surface-variant">09:50 AM</span>
-</div>
-<div class="flex items-center gap-space-sm mt-space-xs">
-<img class="w-12 h-12 rounded-xl object-cover shrink-0" data-alt="Portrait of David Chen, modern gentleman in crisp charcoal collar shirt, looking ahead with gentle smile, warm natural architectural lighting, luxury clinic background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCymhoG2ZOaVgkoqIqn3UUEHdbud7UdgneuV8ADxTiBUK8iis3UmPpvT56OiYyrH7DuhrVfXC2tXGszZADuTUsrt1ccK5cbYD0d0jxX6c3-fL5UguHeXAs76-9bdzH4LJV2Ef2ynDeOobMP5nG3dOsST6OKc4fgbAxrvMI5ADX2SYjlxoFqe9d5mtQK1LpOQp4ueT3R9XWNm-AX9hDBHhNWf5-s7FVOTFgggVdJHlk"/>
-<div class="flex flex-col min-w-0">
-<div class="flex items-center gap-space-xs">
-<h3 class="font-title-md text-title-md text-on-surface truncate">David Chen</h3>
-<span class="font-label-md text-label-md text-on-surface-variant">#AC-5510</span>
-</div>
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Dr. Tariq Al-Mansoor</span>
-</div>
-</div>
-<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
-<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Completed Service</span>
-<span class="font-body-md text-body-md text-on-surface font-medium truncate">UltraClear Dermal Rejuvenation</span>
-<div class="mt-space-xs flex items-center justify-between font-label-md text-label-md text-on-surface">
-<span>Product: CE Ferulic Dermal Serum</span>
-<span class="font-bold text-primary">Pending: $295.00</span>
-</div>
-</div>
-<div class="flex items-center gap-space-xs pt-space-xs">
-<button class="flex-1 py-space-sm px-space-md rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg hover:bg-on-secondary-fixed-variant transition-colors flex items-center justify-center gap-space-xs shadow-sm" onclick="toastNotification('Opening POS Terminal for $295.00')">
-<span class="material-symbols-outlined text-[18px]">credit_card</span>
-<span>Collect Balance ($295.00)</span>
-</button>
-<button class="px-space-md py-space-sm rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-colors" onclick="toastNotification('Skincare handover bag logged')">
-                Handover Bag
-              </button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Persistent Bottom Room Readiness & Telemetry Tray -->
-<aside class="sticky bottom-0 z-40 w-full bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-4px_20px_rgba(0,0,0,0.06)] px-gutter-lg py-space-sm">
-<div class="w-full flex flex-col md:flex-row items-center justify-between gap-space-md">
-<!-- Drawer Label -->
-<div class="flex items-center gap-space-sm shrink-0">
-<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
-<span class="material-symbols-outlined text-[18px]">tune</span>
-</div>
-<div>
-<span class="font-title-md text-title-md text-on-surface leading-tight block">Room Readiness &amp; Device Telemetry</span>
-<span class="font-label-md text-label-md text-on-surface-variant">Automated Turnaround &amp; Sensor Monitor</span>
-</div>
-</div>
-<!-- Suite Status Badges Grid -->
-<div class="flex items-center gap-space-sm overflow-x-auto w-full md:w-auto py-space-xs">
-<!-- Suite 1 -->
-<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-surface-container-low shrink-0">
-<span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
-<div class="flex flex-col">
-<span class="font-label-lg text-label-lg text-on-surface font-semibold">Suite 1: Hydro-Glow</span>
-<span class="font-label-md text-label-md text-emerald-800">Clean &amp; Prepped</span>
-</div>
-</div>
-<!-- Suite 2 -->
-<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-secondary-container/40 shrink-0">
-<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
-<div class="flex flex-col">
-<span class="font-label-lg text-label-lg text-on-surface font-semibold">Suite 2: Photonic Lab</span>
-<span class="font-label-md text-label-md text-on-secondary-container">In Treatment (4m left)</span>
-</div>
-</div>
-<!-- Suite 3 -->
-<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-surface-container shrink-0">
-<span class="w-2.5 h-2.5 rounded-full bg-on-surface-variant animate-spin"></span>
-<div class="flex flex-col">
-<span class="font-label-lg text-label-lg text-on-surface font-semibold">Suite 3: Dermal Suite</span>
-<span class="font-label-md text-label-md text-on-surface-variant">Sanitizing (3m left)</span>
-</div>
-</div>
-<!-- Suite 4 -->
-<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-primary-container/20 shrink-0">
-<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
-<div class="flex flex-col">
-<span class="font-label-lg text-label-lg text-on-surface font-semibold">Suite 4: L’Atelier Suite</span>
-<span class="font-label-md text-label-md text-primary font-medium">PicoSure Active</span>
-</div>
-</div>
-<!-- Bay 5 -->
-<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-surface-container-low shrink-0">
-<span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
-<div class="flex flex-col">
-<span class="font-label-lg text-label-lg text-on-surface font-semibold">Diagnostic Lab Bay</span>
-<span class="font-label-md text-label-md text-emerald-800">Ready</span>
-</div>
-</div>
-</div>
-<!-- Quick Action on bottom bar -->
-<div class="hidden lg:flex items-center gap-space-xs shrink-0">
-<button class="px-space-md py-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg transition-colors flex items-center gap-space-xs" onclick="toastNotification('Automated turnover chime broadcast to staff headsets')">
-<span class="material-symbols-outlined text-[16px]">headset_mic</span>
-<span>Broadcast Turnover</span>
+<button class="min-h-[48px] w-full rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">point_of_sale</span>
+<span data-i18n="btn-pos-checkout">إتمام الدفع في POS (Checkout)</span>
 </button>
 </div>
 </div>
-</aside>
-<!-- Interactive Toast Feedback Banner (Notification stack) -->
-<div class="fixed bottom-20 right-8 z-50 transform translate-y-12 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-space-sm px-space-md py-space-sm rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl font-body-sm text-body-sm" id="live-toast">
-<span class="material-symbols-outlined text-[18px] text-primary-fixed">check_circle</span>
-<span id="toast-message">Action executed successfully</span>
 </div>
-<!-- Inline Interaction Scripts for dynamic Reception operations -->
+</div>
+</div>
+</div>
 <script>
-    function toggleModal(id) {
-      const modal = document.getElementById(id);
-      if (!modal) return;
-      const isVisible = modal.classList.contains('opacity-100');
-      if (isVisible) {
-        modal.classList.remove('opacity-100', 'pointer-events-auto');
-        modal.classList.add('opacity-0', 'pointer-events-none');
+  // Bilingual Content Dictionary
+  const translations = {
+    ar: {
+      "offline-title": "⚠️ وضع عدم الاتصال النشط (Offline Mode)",
+      "offline-desc": "يتم حفظ كافة عمليات الاستقبال محلياً على هذا الجهاز وستتم المزامنة التلقائية اللحظية فور عودة الاتصال بالخادم المركزي.",
+      "btn-retry": "إعادة المحاولة الآن",
+      "test-modes": "حالات العرض التجريبية:",
+      "mode-default": "الافتراضي (Default)",
+      "mode-blacklist": "تنبيه الحظر (Blacklist V1)",
+      "mode-skeleton": "هياكل التحميل (Skeleton)",
+      "mode-empty": "شاشة فارغة (Empty State)",
+      "stat-total-queue": "إجمالي المرضى بالمركز",
+      "stat-avg-wait": "متوسط وقت الانتظار",
+      "stat-in-treatment": "قيد العلاج الحالي",
+      "stat-ready-billing": "بانتظار المحاسبة ZATCA",
+      "unit-minutes": "دقيقة",
+      "empty-title": "لا يوجد مراجعين في طابور الانتظار حالياً",
+      "empty-desc": "جميع المرضى تم استقبالهم أو ليس لديهم مواعيد مجدولة في هذه اللحظة. يمكنك تسجيل مراجع فوري أو استقبال حجز مسبق.",
+      "empty-action": "+ تسجيل مراجع جديد الآن",
+      "col-1-title": "المتوقع وصولهم",
+      "col-2-title": "تم تسجيل الحضور",
+      "col-3-title": "في الجلسة الطبية",
+      "col-4-title": "جاهز للدفع والمغادرة",
+      "badge-blacklist": "⛔ تنبيه: مدرج في قائمة الحظر V1 (مراجعة الإدارة)",
+      "btn-manager-unlock": "تحويل للمشرف لفك الحظر",
+      "time-in-15": "بعد 15 دقيقة",
+      "time-in-45": "بعد 45 دقيقة",
+      "badge-pkg-5": "متبقي 5 جلسات من الباقة",
+      "badge-consent-expired": "⚠️ إقرار منتهي الصلاحية",
+      "badge-unpaid-pkg": "💳 باقة غير مسددة بالكامل",
+      "btn-check-in": "تسجيل الحضور الآن (Check in)",
+      "timer-wait-14": "⏱️ وقت الانتظار الحالي: 14 دقيقة",
+      "timer-wait-24": "تجاوز الحد المسموح: انتظار أكثر من 20 دقيقة",
+      "room-2-label": "غرفة 2",
+      "badge-single-session": "جلسة فردية معتمدة ومسددة",
+      "btn-call-room": "استدعاء",
+      "btn-start-session": "نقل للجلسة",
+      "status-active-room": "نشطة الآن",
+      "session-elapsed-22": "⏳ في العيادة منذ 22 دقيقة",
+      "session-elapsed-08": "⏳ في العيادة منذ 8 دقائق",
+      "btn-finish-session": "إنهاء الجلسة وإحالة للدفع (Ready to pay)",
+      "inv-pending": "بانتظار المحاسب",
+      "inv-total-label": "إجمالي الفاتورة الضريبية",
+      "zatca-ready": "جاهز للمطابقة الفورية عبر هيئة الزكاة (ZATCA)",
+      "btn-pos-checkout": "إتمام الدفع في POS (Checkout)",
+      "btn-zatca-invoice": "إصدار الفاتورة الضريبية ZATCA"
+    },
+    en: {
+      "offline-title": "⚠️ Offline Mode Active (Local Storage)",
+      "offline-desc": "All front-desk transactions are saved locally on this terminal and will auto-sync instantly once server connectivity resumes.",
+      "btn-retry": "Retry Connection",
+      "test-modes": "Interactive Preview States:",
+      "mode-default": "Default Flow",
+      "mode-blacklist": "Blacklist Alert (V1)",
+      "mode-skeleton": "Loading Skeleton",
+      "mode-empty": "Empty State",
+      "stat-total-queue": "Total Patients in Clinic",
+      "stat-avg-wait": "Avg. Waiting Time",
+      "stat-in-treatment": "In Treatment Room",
+      "stat-ready-billing": "Ready for ZATCA Billing",
+      "unit-minutes": "min",
+      "empty-title": "No Patients in Queue Today",
+      "empty-desc": "All appointments have been completed or there are no active walk-ins waiting. You can create a new booking or check-in an arrival.",
+      "empty-action": "+ Check In New Patient Now",
+      "col-1-title": "Expected Arrivals",
+      "col-2-title": "Checked In (Waiting)",
+      "col-3-title": "In Treatment Session",
+      "col-4-title": "Ready for Checkout",
+      "badge-blacklist": "⛔ Alert: Restricted List V1 (Manager Review)",
+      "btn-manager-unlock": "Escalate to Clinic Supervisor",
+      "time-in-15": "In 15 mins",
+      "time-in-45": "In 45 mins",
+      "badge-pkg-5": "5 package sessions remaining",
+      "badge-consent-expired": "⚠️ Consent Form Expired",
+      "badge-unpaid-pkg": "💳 Partially Unpaid Package",
+      "btn-check-in": "Check In Patient Now",
+      "timer-wait-14": "⏱️ Current wait time: 14 mins",
+      "timer-wait-24": "Threshold exceeded: Wait > 20 mins",
+      "room-2-label": "Room 2",
+      "badge-single-session": "Single session approved & paid",
+      "btn-call-room": "Call to Room",
+      "btn-start-session": "Start Session",
+      "status-active-room": "Active in Room",
+      "session-elapsed-22": "⏳ In session for 22 mins",
+      "session-elapsed-08": "⏳ In session for 8 mins",
+      "btn-finish-session": "Complete Session & Send to POS",
+      "inv-pending": "Awaiting Cashier",
+      "inv-total-label": "Total Tax Invoice",
+      "zatca-ready": "Ready for ZATCA Phase 2 E-Invoice QR",
+      "btn-pos-checkout": "Process Checkout at POS",
+      "btn-zatca-invoice": "Issue ZATCA Tax Invoice"
+    }
+  };
+
+  let currentLang = 'ar';
+
+  function toggleLanguage(lang) {
+    currentLang = lang;
+    const root = document.getElementById('queue-app-root');
+    const btnAr = document.getElementById('lang-btn-ar');
+    const btnEn = document.getElementById('lang-btn-en');
+
+    if (lang === 'en') {
+      root.setAttribute('dir', 'ltr');
+      btnEn.className = 'min-h-[40px] px-space-md rounded-lg font-label-md text-label-md bg-primary-container text-on-primary shadow-sm flex items-center gap-1';
+      btnAr.className = 'min-h-[40px] px-space-md rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface flex items-center gap-1';
+    } else {
+      root.setAttribute('dir', 'rtl');
+      btnAr.className = 'min-h-[40px] px-space-md rounded-lg font-label-md text-label-md bg-primary-container text-on-primary shadow-sm flex items-center gap-1';
+      btnEn.className = 'min-h-[40px] px-space-md rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface flex items-center gap-1';
+    }
+
+    // Apply translations
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (translations[lang] && translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+  }
+
+  function setBoardMode(mode) {
+    const kanban = document.getElementById('view-kanban');
+    const skeleton = document.getElementById('view-skeleton');
+    const empty = document.getElementById('view-empty');
+    const blacklistCard = document.getElementById('card-blacklist-sample');
+
+    // Reset buttons style
+    document.querySelectorAll('.mode-btn').forEach(btn => {
+      btn.className = 'mode-btn min-h-[48px] px-space-md rounded-lg font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-space-xs';
+    });
+
+    const activeBtn = document.getElementById('btn-mode-' + mode);
+    if (activeBtn) {
+      activeBtn.className = 'mode-btn min-h-[48px] px-space-md rounded-lg font-label-md text-label-md bg-primary-fixed text-on-primary-fixed font-bold transition-colors flex items-center gap-space-xs';
+    }
+
+    if (mode === 'skeleton') {
+      kanban.classList.add('hidden');
+      skeleton.classList.remove('hidden');
+      empty.classList.add('hidden');
+    } else if (mode === 'empty') {
+      kanban.classList.add('hidden');
+      skeleton.classList.add('hidden');
+      empty.classList.remove('hidden');
+    } else {
+      kanban.classList.remove('hidden');
+      skeleton.classList.add('hidden');
+      empty.classList.add('hidden');
+
+      if (mode === 'blacklist') {
+        blacklistCard.classList.remove('hidden');
+        blacklistCard.classList.add('ring-2', 'ring-error');
+        blacklistCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        modal.classList.add('opacity-100', 'pointer-events-auto');
+        blacklistCard.classList.remove('ring-2', 'ring-error');
       }
     }
+  }
 
-    function toastNotification(message) {
-      const toast = document.getElementById('live-toast');
-      const text = document.getElementById('toast-message');
-      if (!toast || !text) return;
-      text.textContent = message;
-      toast.classList.remove('translate-y-12', 'opacity-0', 'pointer-events-none');
-      toast.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
-      
-      clearTimeout(window.__toastTimeout);
-      window.__toastTimeout = setTimeout(() => {
-        toast.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
-        toast.classList.add('translate-y-12', 'opacity-0', 'pointer-events-none');
-      }, 3500);
-    }
+  function quickCheckIn(buttonElement) {
+    const card = buttonElement.closest('.bg-surface-container-lowest');
+    buttonElement.disabled = true;
+    buttonElement.innerHTML = `
+      <span class="material-symbols-outlined text-[20px] animate-spin">refresh</span>
+      <span>${currentLang === 'ar' ? 'جارٍ تسجيل الحضور...' : 'Checking in...'}</span>
+    `;
+    setTimeout(() => {
+      buttonElement.innerHTML = `
+        <span class="material-symbols-outlined text-[20px]">check_circle</span>
+        <span>${currentLang === 'ar' ? 'تم الحضور بنجاح' : 'Checked In'}</span>
+      `;
+      buttonElement.classList.remove('bg-primary-container', 'hover:bg-primary');
+      buttonElement.classList.add('bg-tertiary-container', 'text-on-tertiary');
+    }, 600);
+  }
 
-    function confirmWalkIn() {
-      toggleModal('quick-walkin-modal');
-      toastNotification('New walk-in patient successfully added to queue and iPad terminal assigned.');
-    }
-
-    function triggerQrScan() {
-      toastNotification('Reception optical camera activated: Hold arrival pass or digital QR code in front of lens.');
-    }
-
-    let isMuted = false;
-    function toggleMute() {
-      isMuted = !isMuted;
-      const icon = document.getElementById('sound-icon');
-      if (icon) {
-        icon.textContent = isMuted ? 'notifications_off' : 'notifications_active';
-      }
-      toastNotification(isMuted ? 'Reception audible alerts muted' : 'Live chimes & arrival audio active');
-    }
-
-    function transferCard(buttonElement, targetColumnId, destinationLabel) {
-      const card = buttonElement.closest('.patient-card');
-      const targetCol = document.getElementById(targetColumnId);
-      if (!card || !targetCol) return;
-
-      card.classList.add('scale-95', 'opacity-50');
+  function triggerSyncSimulation() {
+    const banner = document.getElementById('offline-banner');
+    const retryBtn = banner.querySelector('button');
+    retryBtn.innerHTML = `
+      <span class="material-symbols-outlined text-[18px] animate-spin">sync</span>
+      <span>${currentLang === 'ar' ? 'جارٍ فحص الاتصال...' : 'Checking connection...'}</span>
+    `;
+    setTimeout(() => {
+      banner.classList.add('bg-tertiary-container');
+      banner.querySelector('[data-i18n="offline-title"]').textContent = currentLang === 'ar' ? '✅ تم استعادة الاتصال والمزامنة بنجاح' : '✅ Connection Restored & Synced';
       setTimeout(() => {
-        targetCol.prepend(card);
-        card.classList.remove('scale-95', 'opacity-50');
-        toastNotification('Patient relocated to ' + destinationLabel + ' • Telemetry updated');
-      }, 200);
-    }
-
-    function setFilter(practitionerKey, buttonElement) {
-      document.querySelectorAll('#filter-container .filter-chip').forEach(btn => {
-        btn.classList.remove('bg-primary', 'text-on-primary');
-        btn.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
-      });
-      buttonElement.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
-      buttonElement.classList.add('bg-primary', 'text-on-primary');
-
-      const cards = document.querySelectorAll('.patient-card');
-      cards.forEach(card => {
-        const doc = card.getAttribute('data-practitioner');
-        if (practitionerKey === 'all' || doc === practitionerKey) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-    // Auto-refresh fake telemetry sync countdown
-    let seconds = 12;
-    setInterval(() => {
-      seconds = (seconds > 2) ? seconds - 1 : 15;
-      const syncEl = document.getElementById('sync-indicator');
-      if (syncEl) {
-        syncEl.textContent = 'Live Sync ON • ' + seconds + 's ago';
-      }
+        banner.classList.add('hidden');
+      }, 1800);
     }, 1000);
-  </script>
-</div></main><footer class="w-full bg-surface-container-low mt-space-xl py-space-lg"><div class="w-full px-gutter-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Aura Clinique Global Hospitality &amp; Clinical Practice Core</span></div><div class="flex items-center gap-space-lg font-label-md text-label-md text-on-surface-variant"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px]">lock</span>HIPAA &amp; CCHI Compliant</span><span>v4.2.1-StaffEdge</span><span>Confidential Reception Terminal</span></div></div></footer></body></html>
+  }
+</script></main><footer class="w-full bg-surface-container-lowest py-space-lg shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="w-full px-gutter-tablet flex flex-col sm:flex-row items-center justify-between gap-space-sm text-outline font-label-sm text-label-sm"><span>© 2025 منصة لوميا الطبية - نظام إدارة الاستقبال وتدفق المرضى المعتمد</span><div class="flex items-center gap-space-lg"><span>فرع العليا التخصصي</span><span>الدعم الفني المباشر: 920000000</span></div></div></footer></body></html>
