@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>الفواتير والمستندات الضريبية | عيادات لوميا</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary": "#ffffff",
+            "primary": "#0060ab",
+            "on-primary-fixed": "#001c39",
+            "surface": "#f9f9ff",
+            "secondary-container": "#e6e2dc",
+            "on-tertiary-container": "#003b26",
+            "surface-bright": "#f9f9ff",
+            "inverse-surface": "#263143",
+            "primary-container": "#4f9df7",
+            "on-tertiary-fixed-variant": "#005236",
+            "tertiary-fixed": "#6ffbbe",
+            "primary-fixed-dim": "#a3c9ff",
+            "surface-container": "#e7eeff",
+            "on-background": "#111c2d",
+            "surface-variant": "#d8e3fb",
+            "on-secondary-container": "#666460",
+            "secondary-fixed": "#e6e2dc",
+            "surface-container-highest": "#d8e3fb",
+            "surface-container-low": "#f0f3ff",
+            "on-surface": "#111c2d",
+            "on-primary": "#ffffff",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#c9c6c0",
+            "background": "#f9f9ff",
+            "error-container": "#ffdad6",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed": "#1c1c18",
+            "outline-variant": "#c1c7d4",
+            "tertiary": "#006c49",
+            "surface-dim": "#cfdaf2",
+            "inverse-primary": "#a3c9ff",
+            "outline": "#717783",
+            "on-primary-fixed-variant": "#004883",
+            "on-tertiary-fixed": "#002113",
+            "tertiary-container": "#00b07a",
+            "surface-container-high": "#dee8ff",
+            "primary-fixed": "#d3e3ff",
+            "on-secondary": "#ffffff",
+            "secondary": "#605e5a",
+            "surface-tint": "#0060ab",
+            "on-surface-variant": "#414752",
+            "on-secondary-fixed-variant": "#484742",
+            "tertiary-fixed-dim": "#4edea3",
+            "inverse-on-surface": "#ecf1ff",
+            "on-primary-container": "#003360",
+            "on-error": "#ffffff",
+            "error": "#ba1a1a"
+          },
+          fontFamily: {
+            sans: ["IBM Plex Sans Arabic", "Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    ::-webkit-scrollbar { display: none; }
+  </style>
+</head>
+<body class="bg-surface font-sans text-on-surface flex flex-col min-h-screen antialiased selection:bg-primary/20">
+
+  <!-- Full Web Top Navigation Bar (بدون سايدبار جانبي) -->
+  <header class="sticky top-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand & Navigation Links -->
+      <div class="flex items-center gap-8">
+        <a href="home.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-md">
+            <span class="material-symbols-outlined text-[24px]">spa</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-lg text-primary tracking-tight">عيادات لوميا</span>
+            <span class="text-xs text-on-surface-variant">Lumia Medical Clinics</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-1 bg-surface-container/60 p-1.5 rounded-xl">
+          <a href="home.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">الرئيسية</a>
+          <a href="Book.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">حجز موعد</a>
+          <a href="MyBookings.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">مواعيدي</a>
+          <a href="Invoices.html" class="px-4 py-2 rounded-lg text-sm font-semibold text-primary bg-surface-container-lowest shadow-sm">الفواتير الضريبية</a>
+          <a href="Consents.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">الموافقات الطبية</a>
+          <a href="MyPackages.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">باقاتي</a>
+        </nav>
+      </div>
+
+      <!-- Quick Actions / User Profile -->
+      <div class="flex items-center gap-3">
+        <button class="h-9 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-primary font-medium text-xs flex items-center gap-1.5 transition-colors" id="lang-toggle-btn" onclick="toggleLanguageDirection()" type="button">
+          <span class="material-symbols-outlined text-[16px]">translate</span>
+          <span id="lang-btn-text">English (LTR)</span>
+        </button>
+        <a href="Wallet.html" class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-variant transition-all text-sm font-medium text-on-surface">
+          <span class="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
+          <span>المحفظة</span>
+        </a>
+        <a href="Profile.html" class="flex items-center gap-2 pl-3 pr-1 py-1 rounded-full bg-surface-container border border-outline-variant/30 hover:border-primary transition-all">
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-xs">
+            سارة
+          </div>
+          <span class="hidden lg:inline text-xs font-semibold text-on-surface pl-1">سارة الشريف</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Web Container -->
+  <main class="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 py-8">
+    <div class="flex flex-col w-full gap-6" dir="rtl" id="lumea-tax-root">
+      
+      <!-- Interactive Demo Switcher Bar -->
+      <div class="w-full overflow-x-auto pb-2 pt-1 no-scrollbar bg-surface-container-lowest p-4 rounded-2xl border border-outline-variant/30 shadow-sm">
+        <div class="flex items-center justify-between gap-2">
+          <span class="text-xs font-bold text-on-surface-variant shrink-0">أدوات العرض التفاعلي:</span>
+          <div class="flex items-center gap-2 overflow-x-auto no-scrollbar">
+            <button class="px-3.5 py-1.5 rounded-xl bg-primary text-on-primary font-semibold text-xs transition-all shadow-sm whitespace-nowrap" id="pill-default" onclick="setDemoState('default')" type="button">
+              عرض الكل (الافتراضي)
+            </button>
+            <button class="px-3.5 py-1.5 rounded-xl bg-surface-container text-on-surface-variant font-medium text-xs hover:bg-surface-container-high transition-all whitespace-nowrap" id="pill-invoice" onclick="setDemoState('invoice-sheet')" type="button">
+              تفاصيل الفاتورة الضريبية
+            </button>
+            <button class="px-3.5 py-1.5 rounded-xl bg-surface-container text-on-surface-variant font-medium text-xs hover:bg-surface-container-high transition-all whitespace-nowrap" id="pill-credit" onclick="setDemoState('credit-sheet')" type="button">
+              تفاصيل إشعار دائن
+            </button>
+            <button class="px-3.5 py-1.5 rounded-xl bg-surface-container text-on-surface-variant font-medium text-xs hover:bg-surface-container-high transition-all whitespace-nowrap" id="pill-empty" onclick="setDemoState('empty')" type="button">
+              حالة فارغة (Empty State)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page Header Context & Subtitle -->
+      <div class="flex flex-col gap-1.5 bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 shadow-sm">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+            <span class="text-xs text-tertiary font-bold uppercase tracking-wider" data-i18n="zatca-phase">معتمد وفق منظومة الفوترة الإلكترونية - المرحلة الثانية (ZATCA)</span>
+          </div>
+          <span class="text-xs text-on-surface-variant bg-surface-container px-3 py-1 rounded-full font-mono">ملف المريضة: #LUM-9402</span>
+        </div>
+        <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="header-subtitle">
+          فواتير إلكترونية مبسطة وإشعارات دائنة مشفرة متوافقة بالكامل مع متطلبات هيئة الزكاة والضريبة والجمارك في المملكة العربية السعودية.
+        </p>
+      </div>
+
+      <!-- Summary Banner Card -->
+      <div class="w-full bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="flex flex-col">
+          <span class="text-xs text-on-surface-variant font-medium" data-i18n="total-billed-label">مجموع المبالغ المفوترة (شامل الضريبة)</span>
+          <div class="flex items-baseline gap-1.5 mt-1">
+            <span class="text-3xl font-extrabold text-on-surface tracking-tight font-mono">6,450.00</span>
+            <span class="text-sm font-semibold text-on-surface-variant" data-i18n="currency">ر.س</span>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-6">
+          <div class="flex flex-col sm:items-end">
+            <span class="text-xs text-on-surface-variant font-medium" data-i18n="doc-count-label">عدد المستندات المعتمدة</span>
+            <span class="text-lg font-bold text-primary mt-1" data-i18n="doc-count">4 مستندات ضريبية</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ZATCA Compliance Badge Strip -->
+      <div class="w-full bg-surface-container-low rounded-2xl p-4 flex items-center justify-between gap-4 border border-outline-variant/20">
+        <div class="flex items-center gap-3 min-w-0">
+          <div class="w-10 h-10 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary shrink-0">
+            <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+          </div>
+          <div class="flex flex-col min-w-0">
+            <span class="text-xs font-bold text-on-surface truncate" data-i18n="zatca-badge-title">التكامل التام مع منظومة فواتير (ZATCA Phase 2)</span>
+            <span class="text-[11px] text-on-surface-variant truncate" data-i18n="zatca-badge-sub">تشفير خوارزمي (TLV) وختم زمنـي موثق لكل معاملة مالية وسريرية</span>
+          </div>
+        </div>
+        <span class="text-xs px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-bold shrink-0 shadow-sm" data-i18n="active-status">مفعل نظامياً</span>
+      </div>
+
+      <!-- Search & Filter Controls -->
+      <div class="flex flex-col gap-3">
+        <!-- Search Bar with Calendar Trigger -->
+        <div class="flex items-center gap-3">
+          <div class="relative flex-1">
+            <span class="material-symbols-outlined absolute right-3.5 top-1/2 -translate-y-1/2 text-[20px] text-outline pointer-events-none" id="search-icon">search</span>
+            <input class="w-full h-12 pr-11 pl-4 bg-surface-container-lowest rounded-2xl text-xs text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-low border border-outline-variant/30 shadow-sm transition-colors" data-i18n-placeholder="search-placeholder" id="invoice-search" oninput="handleSearch(this.value)" placeholder="البحث برقم الفاتورة، الخدمة الطبية، أو الفرع..." type="text"/>
+          </div>
+          <button class="h-12 px-4 rounded-2xl bg-surface-container-lowest text-on-surface flex items-center gap-2 border border-outline-variant/30 shrink-0 text-xs font-semibold hover:bg-surface-container-low transition-colors shadow-sm" id="date-filter-btn" onclick="cycleDateFilter()" type="button">
+            <span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
+            <span data-i18n="date-all" id="date-filter-label">كل الفترات</span>
+          </button>
+        </div>
+
+        <!-- Filter Category Chips -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+          <button class="px-4 py-2 rounded-xl bg-primary text-on-primary font-semibold text-xs shrink-0 transition-all shadow-sm" data-i18n="filter-all" id="filter-all" onclick="setDocFilter('all')" type="button">
+            الكل (4 مستندات)
+          </button>
+          <button class="px-4 py-2 rounded-xl bg-surface-container-lowest text-on-surface-variant font-medium text-xs shrink-0 hover:bg-surface-container-low transition-all border border-outline-variant/30" data-i18n="filter-tax" id="filter-invoices" onclick="setDocFilter('tax_invoice')" type="button">
+            فواتير ضريبية مبسطة (3)
+          </button>
+          <button class="px-4 py-2 rounded-xl bg-surface-container-lowest text-on-surface-variant font-medium text-xs shrink-0 hover:bg-surface-container-low transition-all border border-outline-variant/30" data-i18n="filter-credits" id="filter-credits" onclick="setDocFilter('credit_note')" type="button">
+            إشعارات دائنة (1)
+          </button>
+        </div>
+      </div>
+
+      <!-- Documents List Container (Grid View for Desktop) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="documents-list">
+        
+        <!-- CARD 1: Simplified Tax Invoice -->
+        <div class="doc-card group relative bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/30 cursor-pointer active:scale-[0.99] transition-all hover:border-primary shadow-sm hover:shadow-md flex flex-col justify-between" data-id="INV-2026-004417" data-type="tax_invoice" onclick="openInvoiceSheet('INV-2026-004417')">
+          <div>
+            <div class="flex items-start justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-[11px] font-bold" data-i18n="badge-tax-invoice">فاتورة ضريبية مبسطة</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              </div>
+              <button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" onclick="event.stopPropagation(); triggerDownload('INV-2026-004417')" title="تحميل PDF" type="button">
+                <span class="material-symbols-outlined text-[18px]">download</span>
+              </button>
+            </div>
+            
+            <div class="flex items-baseline justify-between mb-2">
+              <span class="text-sm font-bold text-on-surface font-mono tracking-tight" dir="ltr">INV-2026-004417</span>
+              <div class="flex items-baseline gap-1">
+                <span class="text-lg font-extrabold text-on-surface font-mono">500.00</span>
+                <span class="text-xs text-on-surface-variant font-medium" data-i18n="currency">ر.س</span>
+              </div>
+            </div>
+            
+            <p class="text-xs text-on-surface font-semibold line-clamp-1 mb-2" data-i18n="service-1">شحن رصيد المحفظة الطبية (مدى mada)</p>
+            
+            <div class="flex items-center gap-2 text-on-surface-variant text-xs mb-3">
+              <span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+              <span class="truncate" data-i18n="branch-olaya">فرع العليا التخصصي - الرياض</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-3 border-t border-outline-variant/20 text-xs text-on-surface-variant">
+            <span class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-[14px]">schedule</span>
+              <span data-i18n="date-1">14 فبراير 2026 • 03:20 م</span>
+            </span>
+            <span class="text-tertiary font-bold" data-i18n="vat-included-1">شامل الضريبة (65.22 ر.س)</span>
+          </div>
+        </div>
+
+        <!-- CARD 2: Simplified Tax Invoice -->
+        <div class="doc-card group relative bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/30 cursor-pointer active:scale-[0.99] transition-all hover:border-primary shadow-sm hover:shadow-md flex flex-col justify-between" data-id="INV-2026-003892" data-type="tax_invoice" onclick="openInvoiceSheet('INV-2026-003892')">
+          <div>
+            <div class="flex items-start justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-[11px] font-bold" data-i18n="badge-tax-invoice">فاتورة ضريبية مبسطة</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              </div>
+              <button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" onclick="event.stopPropagation(); triggerDownload('INV-2026-003892')" title="تحميل PDF" type="button">
+                <span class="material-symbols-outlined text-[18px]">download</span>
+              </button>
+            </div>
+            
+            <div class="flex items-baseline justify-between mb-2">
+              <span class="text-sm font-bold text-on-surface font-mono tracking-tight" dir="ltr">INV-2026-003892</span>
+              <div class="flex items-baseline gap-1">
+                <span class="text-lg font-extrabold text-on-surface font-mono">4,800.00</span>
+                <span class="text-xs text-on-surface-variant font-medium" data-i18n="currency">ر.س</span>
+              </div>
+            </div>
+            
+            <p class="text-xs text-on-surface font-semibold line-clamp-1 mb-2" data-i18n="service-2">باقة إزالة الشعر كامل الجسم (8 جلسات - كانديلا برو)</p>
+            
+            <div class="flex items-center gap-2 text-on-surface-variant text-xs mb-3">
+              <span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+              <span class="truncate" data-i18n="branch-tahlia">فرع طريق التحلية - جدة</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-3 border-t border-outline-variant/20 text-xs text-on-surface-variant">
+            <span class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-[14px]">schedule</span>
+              <span data-i18n="date-2">10 فبراير 2026 • 11:45 ص</span>
+            </span>
+            <span class="text-tertiary font-bold" data-i18n="vat-included-2">شامل ضريبة 15% (626.09 ر.س)</span>
+          </div>
+        </div>
+
+        <!-- CARD 3: Credit Note (إشعار دائن) -->
+        <div class="doc-card group relative bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/30 cursor-pointer active:scale-[0.99] transition-all hover:border-primary shadow-sm hover:shadow-md flex flex-col justify-between" data-id="CRN-2026-000184" data-type="credit_note" onclick="openCreditSheet('CRN-2026-000184')">
+          <div>
+            <div class="flex items-start justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold" data-i18n="badge-credit-note">إشعار دائن ضريبي</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              </div>
+              <button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" onclick="event.stopPropagation(); triggerDownload('CRN-2026-000184')" title="تحميل PDF" type="button">
+                <span class="material-symbols-outlined text-[18px]">download</span>
+              </button>
+            </div>
+            
+            <div class="flex items-baseline justify-between mb-2">
+              <span class="text-sm font-bold text-on-surface font-mono tracking-tight" dir="ltr">CRN-2026-000184</span>
+              <div class="flex items-baseline gap-1 text-tertiary">
+                <span class="text-lg font-extrabold font-mono">-200.00</span>
+                <span class="text-xs font-medium" data-i18n="currency">ر.س</span>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-1 py-0.5 px-2 rounded-lg bg-surface-container-low text-primary text-[11px] font-semibold w-fit mb-2">
+              <span class="material-symbols-outlined text-[14px]">link</span>
+              <span data-i18n="ref-invoice-label">مرتبط بالفاتورة الأصلية: INV-2026-002910</span>
+            </div>
+
+            <p class="text-xs text-on-surface font-semibold line-clamp-1 mb-2" data-i18n="service-3">استرداد قيمة إلغاء موعد جلسة ليزر قبل 24 ساعة</p>
+            
+            <div class="flex items-center gap-2 text-on-surface-variant text-xs mb-3">
+              <span class="material-symbols-outlined text-[16px] text-outline">account_balance_wallet</span>
+              <span class="truncate" data-i18n="refund-wallet">مسترد بالكامل إلى المحفظة الإلكترونية</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-3 border-t border-outline-variant/20 text-xs text-on-surface-variant">
+            <span class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-[14px]">schedule</span>
+              <span data-i18n="date-3">28 يناير 2026 • 04:10 م</span>
+            </span>
+            <span class="text-tertiary font-bold" data-i18n="vat-credit-3">تسوية ضريبية (-26.09 ر.س)</span>
+          </div>
+        </div>
+
+        <!-- CARD 4: Simplified Tax Invoice -->
+        <div class="doc-card group relative bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/30 cursor-pointer active:scale-[0.99] transition-all hover:border-primary shadow-sm hover:shadow-md flex flex-col justify-between" data-id="INV-2026-002105" data-type="tax_invoice" onclick="openInvoiceSheet('INV-2026-002105')">
+          <div>
+            <div class="flex items-start justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-[11px] font-bold" data-i18n="badge-tax-invoice">فاتورة ضريبية مبسطة</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              </div>
+              <button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" onclick="event.stopPropagation(); triggerDownload('INV-2026-002105')" title="تحميل PDF" type="button">
+                <span class="material-symbols-outlined text-[18px]">download</span>
+              </button>
+            </div>
+            
+            <div class="flex items-baseline justify-between mb-2">
+              <span class="text-sm font-bold text-on-surface font-mono tracking-tight" dir="ltr">INV-2026-002105</span>
+              <div class="flex items-baseline gap-1">
+                <span class="text-lg font-extrabold text-on-surface font-mono">490.00</span>
+                <span class="text-xs text-on-surface-variant font-medium" data-i18n="currency">ر.س</span>
+              </div>
+            </div>
+            
+            <p class="text-xs text-on-surface font-semibold line-clamp-1 mb-2" data-i18n="service-4">جلسة نضارة كربونية متقدمة Spectra Carbon</p>
+            
+            <div class="flex items-center gap-2 text-on-surface-variant text-xs mb-3">
+              <span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+              <span class="truncate" data-i18n="branch-olaya">فرع العليا التخصصي - الرياض</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-3 border-t border-outline-variant/20 text-xs text-on-surface-variant">
+            <span class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-[14px]">schedule</span>
+              <span data-i18n="date-4">12 يناير 2026 • 06:15 م</span>
+            </span>
+            <span class="text-tertiary font-bold" data-i18n="vat-included-4">شامل الضريبة (63.91 ر.س)</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Empty State Container (Hidden by default) -->
+      <div class="hidden flex-col items-center justify-center text-center p-12 bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm my-4" id="empty-state-card">
+        <div class="w-16 h-16 rounded-2xl bg-surface-container flex items-center justify-center text-outline mb-4">
+          <span class="material-symbols-outlined text-[32px]">receipt_long</span>
+        </div>
+        <h3 class="text-base font-bold text-on-surface mb-2" data-i18n="empty-title">لا توجد فواتير أو مستندات في هذه الفترة</h3>
+        <p class="text-xs text-on-surface-variant max-w-sm mb-6 leading-relaxed" data-i18n="empty-desc">
+          لم يتم العثور على أي فواتير أو إشعارات ضريبية مطابقة للتاريخ المحدد. جربي تغيير نطاق البحث أو تصفح جميع المعاملات السابقة.
+        </p>
+        <button class="h-11 px-6 rounded-xl bg-primary text-on-primary font-bold text-xs active:scale-[0.98] transition-transform shadow-sm" data-i18n="reset-filter-btn" onclick="resetFilters()" type="button">
+          إعادة ضبط التصفية
+        </button>
+      </div>
+
+      <!-- Educational Trust Card on ZATCA & Tax Exemption -->
+      <div class="w-full p-5 rounded-2xl bg-surface-container-low border border-outline-variant/20 flex items-start gap-4">
+        <span class="material-symbols-outlined text-[20px] text-primary shrink-0 mt-0.5">info</span>
+        <div class="flex flex-col text-on-surface-variant">
+          <span class="text-xs font-bold text-on-surface mb-1" data-i18n="saudi-tax-title">ملاحظة ضريبية تنظيمية للمواطنين والمقيمين</span>
+          <p class="text-xs leading-relaxed" data-i18n="saudi-tax-desc">
+            تخضع خدمات الجلدية والليزر التجميلية الاختيارية لضريبة القيمة المضافة بنسبة 15% وفق أنظمة هيئة الزكاة والضريبة والجمارك. الخدمات الطبية العلاجية الإلزامية معفاة أو مدعومة بموجب الضوابط المعتمدة.
+          </p>
+        </div>
+      </div>
+
+      <!-- BACKDROP OVERLAY FOR BOTTOM SHEETS -->
+      <div class="fixed inset-0 bg-on-surface/40 backdrop-blur-md z-40 hidden opacity-0 transition-opacity duration-300" id="sheet-backdrop" onclick="closeAllSheets()"></div>
+
+      <!-- BOTTOM SHEET 1: Simplified Tax Invoice Details -->
+      <div class="fixed inset-x-0 bottom-0 z-50 transform translate-y-full transition-transform duration-300 ease-out max-h-[85vh] sm:max-w-xl sm:mx-auto sm:rounded-t-3xl bg-surface-container-lowest rounded-t-3xl shadow-2xl flex flex-col overflow-hidden border-t border-outline-variant/30" id="invoice-sheet">
+        <div class="pt-3 px-6 pb-4 flex flex-col items-center bg-surface-container-low shrink-0 border-b border-outline-variant/20">
+          <div class="w-12 h-1.5 rounded-full bg-outline-variant/60 mb-3 sm:hidden"></div>
+          <div class="w-full flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[20px]">receipt</span>
+              </div>
+              <div class="flex flex-col">
+                <h2 class="text-sm font-bold text-on-surface" data-i18n="sheet-inv-title">تفاصيل الفاتورة الضريبية المبسطة</h2>
+                <span class="text-xs text-on-surface-variant font-mono" id="sheet-inv-id-header">INV-2026-004417</span>
+              </div>
+            </div>
+            <button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" onclick="closeAllSheets()" type="button">
+              <span class="material-symbols-outlined text-[20px]">close</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="flex-1 overflow-y-auto p-6 space-y-4">
+          <!-- Seller and Clinic Legal Identification Box -->
+          <div class="p-4 rounded-2xl bg-surface-container-low flex flex-col gap-2 border border-outline-variant/20">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-on-surface" data-i18n="clinic-legal-name">شركة عيادات لوميا الطبية</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-bold" data-i18n="tax-active">مسجل ضريبياً</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-on-surface-variant">
+              <span class="text-outline" data-i18n="seller-cr">سجل تجاري:</span>
+              <span class="font-mono text-on-surface font-semibold">1010642918</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-on-surface-variant">
+              <span class="text-outline" data-i18n="seller-vat">الرقم الضريبي (VAT):</span>
+              <span class="font-mono text-primary font-bold">310298471200003</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-on-surface-variant">
+              <span class="text-outline" data-i18n="seller-address">العنوان:</span>
+              <span class="text-on-surface" data-i18n="seller-address-val">طريق العروبة، حي العليا، الرياض، المملكة العربية السعودية</span>
+            </div>
+          </div>
+
+          <!-- Patient & Transaction Details -->
+          <div class="grid grid-cols-2 gap-3 p-4 rounded-2xl bg-surface-container border border-outline-variant/20 text-xs">
+            <div class="flex flex-col">
+              <span class="text-on-surface-variant" data-i18n="patient-name-label">اسم المريضة</span>
+              <span class="font-bold text-on-surface mt-0.5" data-i18n="patient-name-val">سارة محمد الشريف</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-on-surface-variant" data-i18n="file-no-label">رقم الملف الطبي</span>
+              <span class="font-mono font-bold text-primary mt-0.5">#LUM-9402</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-on-surface-variant" data-i18n="date-issued-label">تاريخ ووقت الإصدار</span>
+              <span class="font-medium text-on-surface mt-0.5" id="sheet-inv-date">14 فبراير 2026 | 03:20 م</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-on-surface-variant" data-i18n="payment-method-label">طريقة السداد</span>
+              <span class="font-medium text-on-surface mt-0.5" data-i18n="payment-mada">مدى (Mada Debit)</span>
+            </div>
+          </div>
+
+          <!-- Line Items Breakdown Table -->
+          <div class="flex flex-col gap-2">
+            <span class="text-xs font-bold text-on-surface" data-i18n="items-summary-label">تفاصيل البنود والخدمات</span>
+            <div class="rounded-2xl bg-surface-container-lowest border border-outline-variant/30 p-4 shadow-sm flex flex-col gap-2">
+              <div class="flex items-start justify-between gap-2">
+                <span class="text-xs font-semibold text-on-surface" id="sheet-item-name">شحن رصيد المحفظة الرقمية لخدمات الليزر والجلدية</span>
+                <span class="text-xs font-mono text-outline shrink-0">1x</span>
+              </div>
+              <div class="flex items-center justify-between text-xs text-on-surface-variant pt-2 border-t border-outline-variant/20">
+                <span data-i18n="subtotal-before-tax">المبلغ الخاضع للضريبة:</span>
+                <span class="font-mono text-on-surface font-medium" id="sheet-item-subtotal">434.78 ر.س</span>
+              </div>
+              <div class="flex items-center justify-between text-xs text-on-surface-variant">
+                <span data-i18n="vat-15-rate">ضريبة القيمة المضافة (15%):</span>
+                <span class="font-mono text-on-surface font-medium" id="sheet-item-vat">65.22 ر.س</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ZATCA Phase 2 Official QR Code Card -->
+          <div class="flex flex-col items-center justify-center p-5 rounded-2xl bg-surface-container-low text-center border border-outline-variant/20">
+            <div class="p-3 bg-surface-container-lowest rounded-xl shadow-sm mb-2">
+              <svg class="w-28 h-28" fill="none" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+                <rect fill="white" height="140" width="140"></rect>
+                <rect fill="#111c2d" height="36" rx="4" width="36" x="10" y="10"></rect>
+                <rect fill="white" height="24" rx="2" width="24" x="16" y="16"></rect>
+                <rect fill="#0060ab" height="12" rx="1" width="12" x="22" y="22"></rect>
+                <rect fill="#111c2d" height="36" rx="4" width="36" x="94" y="10"></rect>
+                <rect fill="white" height="24" rx="2" width="24" x="100" y="16"></rect>
+                <rect fill="#0060ab" height="12" rx="1" width="12" x="106" y="22"></rect>
+                <rect fill="#111c2d" height="36" rx="4" width="36" x="10" y="94"></rect>
+                <rect fill="white" height="24" rx="2" width="24" x="16" y="100"></rect>
+                <rect fill="#0060ab" height="12" rx="1" width="12" x="22" y="106"></rect>
+                <path d="M52 14h6v6h-6zM64 14h6v6h-6zM76 14h6v6h-6zM52 26h12v6H52zM70 26h12v6H70zM52 38h6v6h-6zM64 38h6v6h-6zM76 38h12v6H76zM14 52h6v6h-6zM26 52h12v6H26zM44 52h6v6h-6zM56 52h6v6h-6zM68 52h12v6H68zM86 52h6v6h-6zM98 52h12v6H98zM116 52h12v6h-12zM14 64h12v6H14zM32 64h6v6h-6zM44 64h12v6H44zM62 64h6v6h-6zM74 64h12v6H74zM92 64h6v6h-6zM104 64h12v6h-12zM122 64h6v6h-6zM14 76h6v6h-6zM26 76h6v6h-6zM38 76h12v6H38zM56 76h6v6h-6zM68 76h6v6h-6zM80 76h12v6H80zM98 76h6v6h-6zM110 76h12v6h-12zM52 94h6v6h-6zM64 94h12v6H64zM82 94h6v6h-6zM94 94h6v6h-6zM106 94h12v6h-12zM124 94h6v6h-6zM52 106h12v6H52zM70 106h6v6h-6zM82 106h12v6H82zM100 106h6v6h-6zM112 106h12v6h-12zM52 118h6v6h-6zM64 118h6v6h-6zM76 118h12v6H76zM94 118h12v6H94zM112 118h6v6h-6zM124 118h6v6h-6z" fill="#111c2d"></path>
+                <circle cx="70" cy="70" fill="#0060ab" r="5"></circle>
+              </svg>
+            </div>
+            <span class="text-xs font-bold text-on-surface" data-i18n="zatca-qr-caption">رمز الاستجابة السريعة المشفر وفق متطلبات ZATCA</span>
+            <span class="text-[11px] text-on-surface-variant mt-0.5" data-i18n="zatca-qr-sub">يتضمن اسم المورد، الرقم الضريبي، الختم الزمني، وإجمالي الضريبة</span>
+          </div>
+
+          <!-- Financial Calculation Summary Box -->
+          <div class="p-4 rounded-2xl bg-surface-container flex flex-col gap-2 border border-outline-variant/20 text-xs">
+            <div class="flex items-center justify-between text-on-surface-variant">
+              <span data-i18n="taxable-subtotal">الإجمالي الخاضع للضريبة (غير شامل الضريبة)</span>
+              <span class="font-mono text-on-surface font-semibold" id="sheet-summary-subtotal">434.78 ر.س</span>
+            </div>
+            <div class="flex items-center justify-between text-on-surface-variant">
+              <span data-i18n="tax-amount-15">ضريبة القيمة المضافة (15%)</span>
+              <span class="font-mono text-tertiary font-semibold" id="sheet-summary-vat">65.22 ر.س</span>
+            </div>
+            <div class="w-full h-px bg-outline-variant/40 my-1"></div>
+            <div class="flex items-baseline justify-between text-on-surface">
+              <span class="font-bold text-sm" data-i18n="total-due-label">المبلغ الإجمالي المستحق</span>
+              <span class="text-base font-extrabold text-primary font-mono" id="sheet-summary-total">500.00 ر.س</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Actions Sticky Strip -->
+        <div class="p-4 bg-surface-container-low shrink-0 flex items-center gap-3 border-t border-outline-variant/20">
+          <button class="flex-1 h-12 rounded-xl bg-primary text-on-primary font-bold text-xs flex items-center justify-center gap-2 active:scale-[0.98] transition-all shadow-sm" onclick="triggerDownload('INV-2026-004417')" type="button">
+            <span class="material-symbols-outlined text-[18px]">download</span>
+            <span data-i18n="download-pdf-label">تحميل الفاتورة PDF (340 KB)</span>
+          </button>
+          <button class="w-12 h-12 rounded-xl bg-surface-container-lowest text-tertiary border border-outline-variant/30 flex items-center justify-center hover:bg-surface-container active:scale-[0.98] transition-all shadow-sm" onclick="shareWhatsApp()" title="مشاركة" type="button">
+            <span class="material-symbols-outlined text-[20px]">share</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- BOTTOM SHEET 2: Credit Note Details -->
+      <div class="fixed inset-x-0 bottom-0 z-50 transform translate-y-full transition-transform duration-300 ease-out max-h-[85vh] sm:max-w-xl sm:mx-auto sm:rounded-t-3xl bg-surface-container-lowest rounded-t-3xl shadow-2xl flex flex-col overflow-hidden border-t border-outline-variant/30" id="credit-sheet">
+        <div class="pt-3 px-6 pb-4 flex flex-col items-center bg-surface-container-low shrink-0 border-b border-outline-variant/20">
+          <div class="w-12 h-1.5 rounded-full bg-outline-variant/60 mb-3 sm:hidden"></div>
+          <div class="w-full flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+                <span class="material-symbols-outlined text-[20px]">assignment_return</span>
+              </div>
+              <div class="flex flex-col">
+                <h2 class="text-sm font-bold text-on-surface" data-i18n="sheet-credit-title">تفاصيل الإشعار الدائن الضريبي</h2>
+                <span class="text-xs text-on-surface-variant font-mono" id="sheet-crn-id-header">CRN-2026-000184</span>
+              </div>
+            </div>
+            <button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" onclick="closeAllSheets()" type="button">
+              <span class="material-symbols-outlined text-[20px]">close</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="flex-1 overflow-y-auto p-6 space-y-4">
+          <!-- Reference Banner -->
+          <div class="p-4 rounded-2xl bg-secondary-container/40 flex flex-col gap-1 border border-outline-variant/20">
+            <div class="flex items-center gap-2 text-on-surface text-xs font-bold">
+              <span class="material-symbols-outlined text-[18px] text-primary">link</span>
+              <span data-i18n="credit-linked-title">مرتبط بالفاتورة الضريبية الأصلية</span>
+            </div>
+            <div class="flex items-center justify-between mt-1 text-xs">
+              <span class="font-mono text-primary font-bold">INV-2026-002910</span>
+              <span class="text-on-surface-variant" data-i18n="original-inv-date">بتاريخ 25 يناير 2026</span>
+            </div>
+          </div>
+
+          <!-- Adjustment Justification Note -->
+          <div class="p-4 rounded-2xl bg-surface-container-low flex flex-col gap-1.5 border border-outline-variant/20 text-xs">
+            <span class="text-outline font-bold" data-i18n="adjustment-reason-title">سبب إصدار الإشعار الدائن:</span>
+            <p class="text-on-surface leading-relaxed" data-i18n="adjustment-reason-val">
+              استرداد قيمة إلغاء موعد جلسة ليزر قبل 24 ساعة بموجب سياسة الإلغاء والاسترداد المعتمدة في عيادات لوميا. تمت إعادة الرصيد إلى المحفظة الطبية للعميلة.
+            </p>
+          </div>
+
+          <!-- Credit Note Calculation Table -->
+          <div class="flex flex-col gap-2">
+            <span class="text-xs font-bold text-on-surface" data-i18n="credit-breakdown-title">بنود التسوية الدائنة</span>
+            <div class="rounded-2xl bg-surface-container-lowest border border-outline-variant/30 p-4 shadow-sm flex flex-col gap-2 text-xs">
+              <div class="flex items-start justify-between">
+                <span class="font-semibold text-on-surface" data-i18n="refunded-laser-item">استرداد موعد جلسة ليزر رتوش ملغاة</span>
+                <span class="font-mono text-tertiary">-1x</span>
+              </div>
+              <div class="flex items-center justify-between text-on-surface-variant pt-2 border-t border-outline-variant/20">
+                <span data-i18n="credit-taxable-amount">المبلغ الخاضع للضريبة المسترد:</span>
+                <span class="font-mono text-tertiary font-medium">-173.91 ر.س</span>
+              </div>
+              <div class="flex items-center justify-between text-on-surface-variant">
+                <span data-i18n="credit-vat-adjusted">تسوية ضريبة القيمة المضافة 15%:</span>
+                <span class="font-mono text-tertiary font-medium">-26.09 ر.س</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Credit ZATCA QR Code -->
+          <div class="flex flex-col items-center justify-center p-5 rounded-2xl bg-surface-container-low text-center border border-outline-variant/20">
+            <div class="p-3 bg-surface-container-lowest rounded-xl shadow-sm mb-2">
+              <svg class="w-28 h-28" fill="none" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+                <rect fill="white" height="140" width="140"></rect>
+                <rect fill="#111c2d" height="36" rx="4" width="36" x="10" y="10"></rect>
+                <rect fill="white" height="24" rx="2" width="24" x="16" y="16"></rect>
+                <rect fill="#4f9df7" height="12" rx="1" width="12" x="22" y="22"></rect>
+                <rect fill="#111c2d" height="36" rx="4" width="36" x="94" y="10"></rect>
+                <rect fill="white" height="24" rx="2" width="24" x="100" y="16"></rect>
+                <rect fill="#4f9df7" height="12" rx="1" width="12" x="106" y="22"></rect>
+                <rect fill="#111c2d" height="36" rx="4" width="36" x="10" y="94"></rect>
+                <rect fill="white" height="24" rx="2" width="24" x="16" y="100"></rect>
+                <rect fill="#4f9df7" height="12" rx="1" width="12" x="22" y="106"></rect>
+                <path d="M52 14h6v6h-6zM64 14h6v6h-6zM52 26h12v6H52zM70 26h12v6H70zM14 52h6v6h-6zM26 52h12v6H26zM68 52h12v6H68zM14 64h12v6H14zM44 64h12v6H44zM74 64h12v6H74zM104 64h12v6h-12zM14 76h6v6h-6zM38 76h12v6H38zM80 76h12v6H80zM52 94h6v6h-6zM82 94h6v6h-6zM106 94h12v6h-12zM52 106h12v6H52zM82 106h12v6H82zM52 118h6v6h-6zM76 118h12v6H76z" fill="#111c2d"></path>
+                <circle cx="70" cy="70" fill="#4f9df7" r="5"></circle>
+              </svg>
+            </div>
+            <span class="text-xs font-bold text-on-surface" data-i18n="zatca-credit-qr-label">رمز ZATCA المشفر للإشعار الدائن</span>
+            <span class="text-[11px] text-on-surface-variant mt-0.5" data-i18n="zatca-credit-qr-sub">إشعار دائن رقم CRN-2026-000184 معتمد نظامياً</span>
+          </div>
+
+          <!-- Financial Totals -->
+          <div class="p-4 rounded-2xl bg-surface-container flex flex-col gap-2 border border-outline-variant/20 text-xs">
+            <div class="flex items-center justify-between text-on-surface-variant">
+              <span data-i18n="credit-subtotal-val">إجمالي المبلغ الدائن (المسترد)</span>
+              <span class="font-mono text-tertiary font-semibold">-173.91 ر.س</span>
+            </div>
+            <div class="flex items-center justify-between text-on-surface-variant">
+              <span data-i18n="credit-tax-val">ضريبة القيمة المضافة الدائنة (15%)</span>
+              <span class="font-mono text-tertiary font-semibold">-26.09 ر.س</span>
+            </div>
+            <div class="w-full h-px bg-outline-variant/40 my-1"></div>
+            <div class="flex items-baseline justify-between text-on-surface">
+              <span class="font-bold text-sm" data-i18n="credit-final-amount">صافي الرصيد المسترد</span>
+              <span class="text-base font-extrabold text-tertiary font-mono">-200.00 ر.س</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="p-4 bg-surface-container-low shrink-0 flex items-center gap-3 border-t border-outline-variant/20">
+          <button class="flex-1 h-12 rounded-xl bg-primary text-on-primary font-bold text-xs flex items-center justify-center gap-2 active:scale-[0.98] transition-all shadow-sm" onclick="triggerDownload('CRN-2026-000184')" type="button">
+            <span class="material-symbols-outlined text-[18px]">download</span>
+            <span data-i18n="download-crn-label">تحميل الإشعار الدائن PDF (285 KB)</span>
+          </button>
+          <button class="w-12 h-12 rounded-xl bg-surface-container-lowest text-tertiary border border-outline-variant/30 flex items-center justify-center hover:bg-surface-container active:scale-[0.98] transition-all shadow-sm" onclick="shareWhatsApp()" title="مشاركة" type="button">
+            <span class="material-symbols-outlined text-[20px]">share</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Notification Toast for Simulated PDF Download -->
+      <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-5 py-3 rounded-2xl bg-inverse-surface text-inverse-on-surface flex items-center gap-2.5 shadow-xl opacity-0 pointer-events-none transition-opacity duration-300 text-xs" id="toast-notification">
+        <span class="material-symbols-outlined text-[18px] text-tertiary-fixed">check_circle</span>
+        <span class="font-medium" id="toast-message">تم بدء تحميل الفاتورة بصيغة PDF...</span>
+      </div>
+
+    </div>
+
+    <!-- JavaScript Business Logic -->
+    <script>
+      let currentLang = 'ar';
+      let activeFilter = 'all';
+      const dateRanges = ['كل الفترات', 'آخر 30 يوم', 'عام 2026', 'الربع الأول 2026'];
+      const dateRangesEn = ['All Periods', 'Last 30 Days', 'Year 2026', 'Q1 2026'];
+      let dateIndex = 0;
+
+      const invoiceDataMap = {
+        'INV-2026-004417': {
+          id: 'INV-2026-004417',
+          date: '14 فبراير 2026 | 03:20 م',
+          dateEn: '14 Feb 2026 | 03:20 PM',
+          item: 'شحن رصيد المحفظة الرقمية لخدمات الليزر والجلدية',
+          itemEn: 'Digital Medical Wallet Top-Up (Laser & Aesthetics)',
+          subtotal: '434.78',
+          vat: '65.22',
+          total: '500.00'
+        },
+        'INV-2026-003892': {
+          id: 'INV-2026-003892',
+          date: '10 فبراير 2026 | 11:45 ص',
+          dateEn: '10 Feb 2026 | 11:45 AM',
+          item: 'باقة إزالة الشعر كامل الجسم (8 جلسات - كانديلا برو)',
+          itemEn: 'Full Body Laser Hair Removal Package (8 Sessions - Candela Pro)',
+          subtotal: '4,173.91',
+          vat: '626.09',
+          total: '4,800.00'
+        },
+        'INV-2026-002105': {
+          id: 'INV-2026-002105',
+          date: '12 يناير 2026 | 06:15 م',
+          dateEn: '12 Jan 2026 | 06:15 PM',
+          item: 'جلسة نضارة كربونية متقدمة Spectra Carbon Peel',
+          itemEn: 'Spectra Carbon Peel Laser Rejuvenation Session',
+          subtotal: '426.09',
+          vat: '63.91',
+          total: '490.00'
+        }
+      };
+
+      const i18nDictionary = {
+        ar: {
+          'zatca-phase': 'معتمد وفق منظومة الفوترة الإلكترونية - المرحلة الثانية (ZATCA)',
+          'header-subtitle': 'فواتير إلكترونية مبسطة وإشعارات دائنة مشفرة متوافقة بالكامل مع متطلبات هيئة الزكاة والضريبة والجمارك في المملكة العربية السعودية.',
+          'total-billed-label': 'مجموع المبالغ المفوترة (شامل الضريبة)',
+          'currency': 'ر.س',
+          'doc-count-label': 'عدد المستندات المعتمدة',
+          'doc-count': '4 مستندات ضريبية',
+          'zatca-badge-title': 'التكامل التام مع منظومة فواتير (ZATCA Phase 2)',
+          'zatca-badge-sub': 'تشفير خوارزمي (TLV) وختم زمنـي موثق لكل معاملة مالية وسريرية',
+          'active-status': 'مفعل نظامياً',
+          'search-placeholder': 'البحث برقم الفاتورة، الخدمة الطبية، أو الفرع...',
+          'date-all': 'كل الفترات',
+          'filter-all': 'الكل (4 مستندات)',
+          'filter-tax': 'فواتير ضريبية مبسطة (3)',
+          'filter-credits': 'إشعارات دائنة (1)',
+          'badge-tax-invoice': 'فاتورة ضريبية مبسطة',
+          'badge-credit-note': 'إشعار دائن ضريبي',
+          'service-1': 'شحن رصيد المحفظة الطبية (مدى mada)',
+          'branch-olaya': 'فرع العليا التخصصي - الرياض',
+          'date-1': '14 فبراير 2026 • 03:20 م',
+          'vat-included-1': 'شامل الضريبة (65.22 ر.س)',
+          'service-2': 'باقة إزالة الشعر كامل الجسم (8 جلسات - كانديلا برو)',
+          'branch-tahlia': 'فرع طريق التحلية - جدة',
+          'date-2': '10 فبراير 2026 • 11:45 ص',
+          'vat-included-2': 'شامل ضريبة 15% (626.09 ر.س)',
+          'ref-invoice-label': 'مرتبط بالفاتورة الأصلية: INV-2026-002910',
+          'service-3': 'استرداد قيمة إلغاء موعد جلسة ليزر قبل 24 ساعة',
+          'refund-wallet': 'مسترد بالكامل إلى المحفظة الإلكترونية',
+          'date-3': '28 يناير 2026 • 04:10 م',
+          'vat-credit-3': 'تسوية ضريبية (-26.09 ر.س)',
+          'service-4': 'جلسة نضارة كربونية متقدمة Spectra Carbon',
+          'date-4': '12 يناير 2026 • 06:15 م',
+          'vat-included-4': 'شامل الضريبة (63.91 ر.س)',
+          'empty-title': 'لا توجد فواتير أو مستندات في هذه الفترة',
+          'empty-desc': 'لم يتم العثور على أي فواتير أو إشعارات ضريبية مطابقة للتاريخ المحدد. جربي تغيير نطاق البحث أو تصفح جميع المعاملات السابقة.',
+          'reset-filter-btn': 'إعادة ضبط التصفية',
+          'saudi-tax-title': 'ملاحظة ضريبية تنظيمية للمواطنين والمقيمين',
+          'saudi-tax-desc': 'تخضع خدمات الجلدية والليزر التجميلية الاختيارية لضريبة القيمة المضافة بنسبة 15% وفق أنظمة هيئة الزكاة والضريبة والجمارك. الخدمات الطبية العلاجية الإلزامية معفاة أو مدعومة بموجب الضوابط المعتمدة.',
+          'sheet-inv-title': 'تفاصيل الفاتورة الضريبية المبسطة',
+          'clinic-legal-name': 'شركة عيادات لوميا الطبية',
+          'tax-active': 'مسجل ضريبياً',
+          'seller-cr': 'سجل تجاري:',
+          'seller-vat': 'الرقم الضريبي (VAT):',
+          'seller-address': 'العنوان:',
+          'seller-address-val': 'طريق العروبة، حي العليا، الرياض، المملكة العربية السعودية',
+          'patient-name-label': 'اسم المريضة',
+          'patient-name-val': 'سارة محمد الشريف',
+          'file-no-label': 'رقم الملف الطبي',
+          'date-issued-label': 'تاريخ ووقت الإصدار',
+          'payment-method-label': 'طريقة السداد',
+          'payment-mada': 'مدى (Mada Debit)',
+          'items-summary-label': 'تفاصيل البنود والخدمات',
+          'subtotal-before-tax': 'المبلغ الخاضع للضريبة:',
+          'vat-15-rate': 'ضريبة القيمة المضافة (15%):',
+          'zatca-qr-caption': 'رمز الاستجابة السريعة المشفر وفق متطلبات ZATCA',
+          'zatca-qr-sub': 'يتضمن اسم المورد، الرقم الضريبي، الختم الزمني، وإجمالي الضريبة',
+          'taxable-subtotal': 'الإجمالي الخاضع للضريبة (غير شامل الضريبة)',
+          'tax-amount-15': 'ضريبة القيمة المضافة (15%)',
+          'total-due-label': 'المبلغ الإجمالي المستحق',
+          'download-pdf-label': 'تحميل الفاتورة PDF (340 KB)',
+          'sheet-credit-title': 'تفاصيل الإشعار الدائن الضريبي',
+          'credit-linked-title': 'مرتبط بالفاتورة الضريبية الأصلية',
+          'original-inv-date': 'بتاريخ 25 يناير 2026',
+          'adjustment-reason-title': 'سبب إصدار الإشعار الدائن:',
+          'adjustment-reason-val': 'استرداد قيمة إلغاء موعد جلسة ليزر قبل 24 ساعة بموجب سياسة الإلغاء والاسترداد المعتمدة في عيادات لوميا. تمت إعادة الرصيد إلى المحفظة الطبية للعميلة.',
+          'credit-breakdown-title': 'بنود التسوية الدائنة',
+          'refunded-laser-item': 'استرداد موعد جلسة ليزر رتوش ملغاة',
+          'credit-taxable-amount': 'المبلغ الخاضع للضريبة المسترد:',
+          'credit-vat-adjusted': 'تسوية ضريبة القيمة المضافة 15%:',
+          'zatca-credit-qr-label': 'رمز ZATCA المشفر للإشعار الدائن',
+          'zatca-credit-qr-sub': 'إشعار دائن رقم CRN-2026-000184 معتمد نظامياً',
+          'credit-subtotal-val': 'إجمالي المبلغ الدائن (المسترد)',
+          'credit-tax-val': 'ضريبة القيمة المضافة الدائنة (15%)',
+          'credit-final-amount': 'صافي الرصيد المسترد',
+          'download-crn-label': 'تحميل الإشعار الدائن PDF (285 KB)'
+        },
+        en: {
+          'zatca-phase': 'Certified under ZATCA Phase 2 E-Invoicing Mandate',
+          'header-subtitle': 'Simplified cryptographic electronic invoices and credit notes fully compliant with ZATCA regulations in Saudi Arabia.',
+          'total-billed-label': 'Total Billed Amount (Inc. VAT)',
+          'currency': 'SAR',
+          'doc-count-label': 'Total Verified Documents',
+          'doc-count': '4 Tax Documents',
+          'zatca-badge-title': 'Full Integration with Fatoora (ZATCA Phase 2)',
+          'zatca-badge-sub': 'Cryptographic TLV stamping and verified timestamps for every medical transaction',
+          'active-status': 'System Active',
+          'search-placeholder': 'Search by invoice number, treatment, or branch...',
+          'date-all': 'All Periods',
+          'filter-all': 'All (4 Documents)',
+          'filter-tax': 'Simplified Tax Invoices (3)',
+          'filter-credits': 'Credit Notes (1)',
+          'badge-tax-invoice': 'Simplified Tax Invoice',
+          'badge-credit-note': 'Tax Credit Note',
+          'service-1': 'Medical Wallet Recharge (mada Debit)',
+          'branch-olaya': 'Olaya Specialized Branch - Riyadh',
+          'date-1': '14 Feb 2026 • 03:20 PM',
+          'vat-included-1': 'Includes 15% VAT (65.22 SAR)',
+          'service-2': 'Full Body Laser Hair Removal (8 Sessions - Candela Pro)',
+          'branch-tahlia': 'Tahlia St. Branch - Jeddah',
+          'date-2': '10 Feb 2026 • 11:45 AM',
+          'vat-included-2': 'Includes 15% VAT (626.09 SAR)',
+          'ref-invoice-label': 'Linked to original invoice: INV-2026-002910',
+          'service-3': 'Cancellation refund for laser session 24h notice',
+          'refund-wallet': 'Fully refunded to patient digital wallet',
+          'date-3': '28 Jan 2026 • 04:10 PM',
+          'vat-credit-3': 'VAT Tax Credit (-26.09 SAR)',
+          'service-4': 'Advanced Spectra Carbon Peel Rejuvenation',
+          'date-4': '12 Jan 2026 • 06:15 PM',
+          'vat-included-4': 'Includes 15% VAT (63.91 SAR)',
+          'empty-title': 'No invoices or documents found in this range',
+          'empty-desc': 'No electronic tax invoices match your selected timeframe. Try modifying your search filter or view all clinic records.',
+          'reset-filter-btn': 'Reset Filter',
+          'saudi-tax-title': 'Regulatory VAT Notice for Citizens & Residents',
+          'saudi-tax-desc': 'Elective cosmetic dermatology and laser treatments are subject to standard 15% VAT according to ZATCA regulations. Essential medical treatments are exempt.',
+          'sheet-inv-title': 'Simplified Tax Invoice Details',
+          'clinic-legal-name': 'Lumea Medical Clinics Co. LLC',
+          'tax-active': 'Tax Registered',
+          'seller-cr': 'CR Number:',
+          'seller-vat': 'VAT Reg Number:',
+          'seller-address': 'Address:',
+          'seller-address-val': 'Al Orouba Rd, Al Olaya Dist, Riyadh, Saudi Arabia',
+          'patient-name-label': 'Patient Name',
+          'patient-name-val': 'Sarah Mohammed Al-Sharif',
+          'file-no-label': 'Medical File ID',
+          'date-issued-label': 'Issue Date & Time',
+          'payment-method-label': 'Payment Method',
+          'payment-mada': 'mada Debit Card',
+          'items-summary-label': 'Itemized Treatment Summary',
+          'subtotal-before-tax': 'Taxable Amount:',
+          'vat-15-rate': 'Value Added Tax (15%):',
+          'zatca-qr-caption': 'ZATCA Compliant Cryptographic QR Code',
+          'zatca-qr-sub': 'Contains seller info, VAT ID, timestamp, and tax totals',
+          'taxable-subtotal': 'Taxable Subtotal (Exclusive of VAT)',
+          'tax-amount-15': 'Value Added Tax (15%)',
+          'total-due-label': 'Total Amount Due',
+          'download-pdf-label': 'Download Invoice PDF (340 KB)',
+          'sheet-credit-title': 'Tax Credit Note Details',
+          'credit-linked-title': 'Linked to Original Tax Invoice',
+          'original-inv-date': 'Issued on 25 Jan 2026',
+          'adjustment-reason-title': 'Credit Adjustment Reason:',
+          'adjustment-reason-val': 'Full appointment fee refund for laser session cancelled 24 hours in advance under Lumea Clinic policy. Amount credited back to patient wallet.',
+          'credit-breakdown-title': 'Credit Adjustment Items',
+          'refunded-laser-item': 'Refund for cancelled laser touch-up session',
+          'credit-taxable-amount': 'Refunded Taxable Subtotal:',
+          'credit-vat-adjusted': '15% VAT Credit Adjustment:',
+          'zatca-credit-qr-label': 'ZATCA Cryptographic Credit QR Code',
+          'zatca-credit-qr-sub': 'Credit Note CRN-2026-000184 electronically verified',
+          'credit-subtotal-val': 'Total Refunded Taxable Amount',
+          'credit-tax-val': 'Total VAT Adjustment (15%)',
+          'credit-final-amount': 'Net Refunded Balance',
+          'download-crn-label': 'Download Credit Note PDF (285 KB)'
+        }
+      };
+
+      function updatePillStyles(activeId) {
+        const pills = ['pill-default', 'pill-invoice', 'pill-credit', 'pill-empty'];
+        pills.forEach(id => {
+          const el = document.getElementById(id);
+          if (el) {
+            if (id === activeId) {
+              el.className = 'px-3.5 py-1.5 rounded-xl bg-primary text-on-primary font-semibold text-xs transition-all shadow-sm whitespace-nowrap';
+            } else {
+              el.className = 'px-3.5 py-1.5 rounded-xl bg-surface-container text-on-surface-variant font-medium text-xs hover:bg-surface-container-high transition-all whitespace-nowrap';
+            }
+          }
+        });
+      }
+
+      function setDemoState(state) {
+        if (state === 'default') {
+          updatePillStyles('pill-default');
+          closeAllSheets();
+          document.getElementById('documents-list').classList.remove('hidden');
+          document.getElementById('empty-state-card').classList.add('hidden');
+          document.getElementById('empty-state-card').classList.remove('flex');
+          setDocFilter('all');
+        } else if (state === 'invoice-sheet') {
+          updatePillStyles('pill-invoice');
+          document.getElementById('documents-list').classList.remove('hidden');
+          document.getElementById('empty-state-card').classList.add('hidden');
+          document.getElementById('empty-state-card').classList.remove('flex');
+          openInvoiceSheet('INV-2026-004417');
+        } else if (state === 'credit-sheet') {
+          updatePillStyles('pill-credit');
+          document.getElementById('documents-list').classList.remove('hidden');
+          document.getElementById('empty-state-card').classList.add('hidden');
+          document.getElementById('empty-state-card').classList.remove('flex');
+          openCreditSheet('CRN-2026-000184');
+        } else if (state === 'empty') {
+          updatePillStyles('pill-empty');
+          closeAllSheets();
+          document.getElementById('documents-list').classList.add('hidden');
+          document.getElementById('empty-state-card').classList.remove('hidden');
+          document.getElementById('empty-state-card').classList.add('flex');
+        }
+      }
+
+      function toggleLanguageDirection() {
+        const root = document.getElementById('lumea-tax-root');
+        const searchIcon = document.getElementById('search-icon');
+        const langBtnText = document.getElementById('lang-btn-text');
+
+        if (currentLang === 'ar') {
+          currentLang = 'en';
+          root.setAttribute('dir', 'ltr');
+          langBtnText.innerText = 'العربية (RTL)';
+          if (searchIcon) {
+            searchIcon.classList.remove('right-3.5');
+            searchIcon.classList.add('left-3.5');
+          }
+          const searchInput = document.getElementById('invoice-search');
+          if (searchInput) {
+            searchInput.classList.remove('pr-11', 'pl-4');
+            searchInput.classList.add('pl-11', 'pr-4');
+          }
+        } else {
+          currentLang = 'ar';
+          root.setAttribute('dir', 'rtl');
+          langBtnText.innerText = 'English (LTR)';
+          if (searchIcon) {
+            searchIcon.classList.remove('left-3.5');
+            searchIcon.classList.add('right-3.5');
+          }
+          const searchInput = document.getElementById('invoice-search');
+          if (searchInput) {
+            searchInput.classList.remove('pl-11', 'pr-4');
+            searchInput.classList.add('pr-11', 'pl-4');
+          }
+        }
+
+        applyTranslations();
+      }
+
+      function applyTranslations() {
+        const dict = i18nDictionary[currentLang];
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (dict[key]) {
+            el.innerText = dict[key];
+          }
+        });
+
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.getAttribute('data-i18n-placeholder');
+          if (dict[key]) {
+            el.setAttribute('placeholder', dict[key]);
+          }
+        });
+
+        const dateLabel = document.getElementById('date-filter-label');
+        if (dateLabel) {
+          dateLabel.innerText = currentLang === 'ar' ? dateRanges[dateIndex] : dateRangesEn[dateIndex];
+        }
+      }
+
+      function setDocFilter(type) {
+        activeFilter = type;
+        const cards = document.querySelectorAll('.doc-card');
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const cardType = card.getAttribute('data-type');
+          if (type === 'all' || cardType === type) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        const filterIds = {
+          all: 'filter-all',
+          tax_invoice: 'filter-invoices',
+          credit_note: 'filter-credits'
+        };
+
+        Object.entries(filterIds).forEach(([key, id]) => {
+          const btn = document.getElementById(id);
+          if (btn) {
+            if (key === type) {
+              btn.className = 'px-4 py-2 rounded-xl bg-primary text-on-primary font-semibold text-xs shrink-0 transition-all shadow-sm';
+            } else {
+              btn.className = 'px-4 py-2 rounded-xl bg-surface-container-lowest text-on-surface-variant font-medium text-xs shrink-0 hover:bg-surface-container-low transition-all border border-outline-variant/30';
+            }
+          }
+        });
+
+        const emptyCard = document.getElementById('empty-state-card');
+        const docList = document.getElementById('documents-list');
+        if (visibleCount === 0) {
+          docList.classList.add('hidden');
+          emptyCard.classList.remove('hidden');
+          emptyCard.classList.add('flex');
+        } else {
+          docList.classList.remove('hidden');
+          emptyCard.classList.add('hidden');
+          emptyCard.classList.remove('flex');
+        }
+      }
+
+      function handleSearch(query) {
+        const q = query.trim().toLowerCase();
+        const cards = document.querySelectorAll('.doc-card');
+        let matches = 0;
+
+        cards.forEach(card => {
+          const text = card.innerText.toLowerCase();
+          const id = (card.getAttribute('data-id') || '').toLowerCase();
+          const matchesFilter = activeFilter === 'all' || card.getAttribute('data-type') === activeFilter;
+
+          if ((text.includes(q) || id.includes(q)) && matchesFilter) {
+            card.classList.remove('hidden');
+            matches++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        const emptyCard = document.getElementById('empty-state-card');
+        const docList = document.getElementById('documents-list');
+        if (matches === 0) {
+          docList.classList.add('hidden');
+          emptyCard.classList.remove('hidden');
+          emptyCard.classList.add('flex');
+        } else {
+          docList.classList.remove('hidden');
+          emptyCard.classList.add('hidden');
+          emptyCard.classList.remove('flex');
+        }
+      }
+
+      function cycleDateFilter() {
+        dateIndex = (dateIndex + 1) % dateRanges.length;
+        const label = document.getElementById('date-filter-label');
+        if (label) {
+          label.innerText = currentLang === 'ar' ? dateRanges[dateIndex] : dateRangesEn[dateIndex];
+        }
+      }
+
+      function resetFilters() {
+        document.getElementById('invoice-search').value = '';
+        dateIndex = 0;
+        const label = document.getElementById('date-filter-label');
+        if (label) {
+          label.innerText = currentLang === 'ar' ? dateRanges[0] : dateRangesEn[0];
+        }
+        setDemoState('default');
+      }
+
+      function openInvoiceSheet(invId) {
+        const data = invoiceDataMap[invId] || invoiceDataMap['INV-2026-004417'];
+        const currency = currentLang === 'ar' ? 'ر.س' : 'SAR';
+
+        document.getElementById('sheet-inv-id-header').innerText = data.id;
+        document.getElementById('sheet-inv-date').innerText = currentLang === 'ar' ? data.date : data.dateEn;
+        document.getElementById('sheet-item-name').innerText = currentLang === 'ar' ? data.item : data.itemEn;
+        document.getElementById('sheet-item-subtotal').innerText = `${data.subtotal} ${currency}`;
+        document.getElementById('sheet-item-vat').innerText = `${data.vat} ${currency}`;
+        document.getElementById('sheet-summary-subtotal').innerText = `${data.subtotal} ${currency}`;
+        document.getElementById('sheet-summary-vat').innerText = `${data.vat} ${currency}`;
+        document.getElementById('sheet-summary-total').innerText = `${data.total} ${currency}`;
+
+        closeSheetSilently('credit-sheet');
+        const sheet = document.getElementById('invoice-sheet');
+        const backdrop = document.getElementById('sheet-backdrop');
+
+        backdrop.classList.remove('hidden');
+        setTimeout(() => backdrop.classList.remove('opacity-0'), 10);
+        sheet.classList.remove('translate-y-full');
+      }
+
+      function openCreditSheet(crnId) {
+        closeSheetSilently('invoice-sheet');
+        const sheet = document.getElementById('credit-sheet');
+        const backdrop = document.getElementById('sheet-backdrop');
+
+        backdrop.classList.remove('hidden');
+        setTimeout(() => backdrop.classList.remove('opacity-0'), 10);
+        sheet.classList.remove('translate-y-full');
+      }
+
+      function closeAllSheets() {
+        const backdrop = document.getElementById('sheet-backdrop');
+        const invSheet = document.getElementById('invoice-sheet');
+        const crnSheet = document.getElementById('credit-sheet');
+
+        invSheet.classList.add('translate-y-full');
+        crnSheet.classList.add('translate-y-full');
+        backdrop.classList.add('opacity-0');
+        setTimeout(() => backdrop.classList.add('hidden'), 300);
+      }
+
+      function closeSheetSilently(sheetId) {
+        const sheet = document.getElementById(sheetId);
+        if (sheet) {
+          sheet.classList.add('translate-y-full');
+        }
+      }
+
+      function triggerDownload(docId) {
+        const toast = document.getElementById('toast-notification');
+        const toastMsg = document.getElementById('toast-message');
+        if (toast && toastMsg) {
+          toastMsg.innerText = currentLang === 'ar' 
+            ? `جاري تحميل ${docId}.pdf مع ختم ZATCA المشفر...` 
+            : `Downloading ${docId}.pdf with ZATCA cryptographic stamp...`;
+          
+          toast.classList.remove('opacity-0', 'pointer-events-none');
+          setTimeout(() => {
+            toast.classList.add('opacity-0', 'pointer-events-none');
+          }, 2800);
+        }
+      }
+
+      function shareWhatsApp() {
+        const toast = document.getElementById('toast-notification');
+        const toastMsg = document.getElementById('toast-message');
+        if (toast && toastMsg) {
+          toastMsg.innerText = currentLang === 'ar'
+            ? 'تم نسخ رابط المستند الضريبي لمشاركته بنجاح'
+            : 'Tax document link copied successfully';
+
+          toast.classList.remove('opacity-0', 'pointer-events-none');
+          setTimeout(() => {
+            toast.classList.add('opacity-0', 'pointer-events-none');
+          }, 2500);
+        }
+      }
+    </script>
+</body>
+</html>

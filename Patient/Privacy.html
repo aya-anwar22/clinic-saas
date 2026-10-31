@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#f9f9ff", "surface": "#f9f9ff", "surface-container": "#e7eeff", "surface-container-highest": "#d8e3fb", "error-container": "#ffdad6", "outline-variant": "#c1c7d4", "on-secondary-container": "#666460", "on-primary": "#ffffff", "error": "#ba1a1a", "inverse-on-surface": "#ecf1ff", "surface-container-low": "#f0f3ff", "on-tertiary-container": "#003b26", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#484742", "on-background": "#111c2d", "secondary-fixed-dim": "#c9c6c0", "primary-container": "#4f9df7", "on-surface": "#111c2d", "primary-fixed-dim": "#a3c9ff", "tertiary-fixed-dim": "#4edea3", "surface-variant": "#d8e3fb", "tertiary-container": "#00b07a", "on-tertiary-fixed-variant": "#005236", "surface-container-high": "#dee8ff", "surface-bright": "#f9f9ff", "surface-dim": "#cfdaf2", "inverse-surface": "#263143", "on-tertiary-fixed": "#002113", "secondary-fixed": "#e6e2dc", "outline": "#717783", "surface-tint": "#0060ab", "primary": "#0060ab", "tertiary": "#006c49", "on-primary-fixed": "#001c39", "on-primary-fixed-variant": "#004883", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#003360", "on-surface-variant": "#414752", "inverse-primary": "#a3c9ff", "primary-fixed": "#d3e3ff", "secondary-container": "#e6e2dc", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "on-error-container": "#93000a", "on-secondary-fixed": "#1c1c18", "on-secondary": "#ffffff", "secondary": "#605e5a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter-lg": "2rem", "gutter-md": "1.5rem", "margin": "1rem", "margin-lg": "3rem", "space-xl": "2.5rem", "space-md": "1rem", "space-sm": "0.5rem", "margin-md": "2rem" }, "fontFamily": { "headline-md": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Inter"], "label-md": ["Inter"], "headline-lg-mobile": ["Inter"], "display": ["Inter"], "label-lg": ["Inter"] }, "fontSize": { "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="الرجوع" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined rtl:rotate-180 text-[24px]">arrow_back</span></button><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">LUMEA</span></div></div><div class="flex-1 mx-space-sm text-center truncate"><h1 class="font-label-lg text-label-lg text-on-surface font-medium truncate">الخصوصية وحقوق البيانات (Pdpl)</h1></div><div class="flex items-center justify-end min-w-[44px]"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_8px_rgba(0,96,171,0.2)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-10 font-body-md text-on-surface">
+<!-- Interactive View State Controller -->
+<div class="px-margin pt-space-sm pb-space-sm">
+<div class="bg-surface-container-high/60 backdrop-blur-md p-1.5 rounded-full flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-1 overflow-x-auto no-scrollbar w-full text-center">
+<button class="flex-1 min-w-[70px] py-1.5 px-3 rounded-full text-label-sm font-label-sm transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm font-semibold" id="tab-default" onclick="setViewMode('default')">
+          الافتراضي
+        </button>
+<button class="flex-1 min-w-[75px] py-1.5 px-3 rounded-full text-label-sm font-label-sm transition-all duration-200 text-on-surface-variant hover:text-on-surface" id="tab-submitted" onclick="setViewMode('submitted')">
+          طلب جديد
+        </button>
+<button class="flex-1 min-w-[75px] py-1.5 px-3 rounded-full text-label-sm font-label-sm transition-all duration-200 text-on-surface-variant hover:text-on-surface" id="tab-deletion" onclick="setViewMode('deletion')">
+          نافذة الحذف
+        </button>
+<button class="flex items-center justify-center gap-1 py-1.5 px-3 rounded-full text-label-sm font-label-sm bg-primary/10 text-primary transition-all duration-200" id="lang-btn" onclick="toggleLanguage()">
+<span class="material-symbols-outlined text-[15px]">translate</span>
+<span id="lang-indicator">EN</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-md px-margin transition-all duration-300" id="screen-container">
+<!-- Reassuring Compliance Intro Banner -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,41,59,0.04)]">
+<div class="absolute -top-12 -left-12 w-32 h-32 rounded-full bg-primary-container/10 blur-2xl pointer-events-none"></div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-tertiary-container/10 text-tertiary w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm font-semibold" data-i18n="badge_compliance">
+              نظام حماية البيانات الشخصية (PDPL) واللوائح الصحية
+            </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface pt-1" data-i18n="intro_title">
+            أمان بياناتك السريرية وحقوقك الرقمية
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed" data-i18n="intro_desc">
+            حقوق بياناتك الشخصية والسريرية تحت سيطرتك الكاملة. نحمي خصوصيتك بأعلى معايير الحوكمة الطبية والتشفير السحابي المحلي داخل المملكة العربية السعودية.
+          </p>
+</div>
+</div>
+</div>
+<!-- Live Toast Notice for interactive state -->
+<div class="hidden transform transition-all duration-300 bg-tertiary text-on-tertiary px-space-md py- space-sm rounded-xl shadow-md flex items-center justify-between gap-space-sm" id="live-notification">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span class="font-label-lg text-label-lg truncate" id="notification-text">تم استلام طلب التصدير بنجاح وسيتم إشعارك.</span>
+</div>
+<button class="p-1 rounded-full hover:bg-white/10 text-on-tertiary" onclick="dismissNotification()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Card 1: Data Export -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,41,59,0.04)] flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">download_for_offline</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" data-i18n="export_title">تصدير بياناتي</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant" data-i18n="export_subtitle">حزمة مشفرة وموقعة إلكترونياً</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span data-i18n="export_status_chip">مكتمل</span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed" data-i18n="export_desc">
+        طلب نسخة رقمية مشفرة وشاملة لكافة بياناتك الشخصية، مواعيدك السابقة، وسجل فواتيرك ونتائج الجلسات السريرية بصيغة معتمدة (PDF / JSON).
+      </p>
+<!-- Status detail box -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-space-xs text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">history</span>
+<span data-i18n="last_export_label">آخر طلب: تم التحميل في 22 يناير 2026</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">24.8 MB</span>
+</div>
+<!-- Action Button -->
+<button class="w-full h-12 bg-primary hover:bg-surface-tint active:scale-[0.99] text-on-primary rounded-xl font-label-lg text-label-lg transition-all flex items-center justify-center gap-2 shadow-[0_4px_12px_rgba(79,157,247,0.25)]" id="export-action-btn" onclick="triggerExportRequest()">
+<span class="material-symbols-outlined text-[20px]">file_download</span>
+<span data-i18n="btn_export">طلب تصدير البيانات (Export Data)</span>
+</button>
+</div>
+<!-- Card 2: Marketing & Communication Consent -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,41,59,0.04)] flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-fixed-variant shrink-0">
+<span class="material-symbols-outlined text-[22px]">campaign</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" data-i18n="mkt_title">الرسائل الترويجية والعروض</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant" data-i18n="mkt_subtitle">قنوات التواصل الإضافية</p>
+</div>
+</div>
+<!-- Accessible Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer select-none">
+<input checked="" class="sr-only peer" id="marketing-toggle" onchange="toggleMarketing(this)" type="checkbox"/>
+<div class="w-12 h-7 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary transition-colors"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed" data-i18n="mkt_desc">
+        استلام التنبيهات الترويجية، العروض الموسمية الحصرية لحقن الليزر وعلاجات النضارة، ورسائل تذكير واتساب التفاعلية.
+      </p>
+<div class="p-space-sm rounded-lg bg-surface-container-high/40 flex items-start gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">info</span>
+<span class="font-body-sm text-body-sm leading-relaxed" data-i18n="mkt_note">
+          إلغاء التفعيل يوقف الرسائل التسويقية فوراً مع استمرار استلام إشعارات المواعيد الطبية الحيوية والفواتير النظامية لضمان سلامة خطتك العلاجية.
+        </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1 font-semibold" id="marketing-status-text">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span data-i18n="mkt_status_active">الموافقة مفعلة حالياً</span>
+</span>
+<button class="font-label-sm text-label-sm text-error hover:underline transition-colors" data-i18n="btn_withdraw" onclick="withdrawMarketingConsent()">
+          الانسحاب الفوري من كافة القوائم
+        </button>
+</div>
+</div>
+<!-- Card 3: Deletion Request (PDPL & Saudi Health Bylaws) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,41,59,0.04)] flex flex-col gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-error-container/40 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[22px]">delete_sweep</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" data-i18n="del_title">طلب حذف / إتلاف البيانات</h3>
+<span class="inline-block mt-0.5 px-2 py-0.5 bg-error-container/30 text-on-error-container rounded font-label-sm text-label-sm font-semibold" data-i18n="del_regulation_tag">
+            نظام مزاولة المهن الصحية ولوائح ZATCA
+          </span>
+</div>
+</div>
+<!-- Legal Reassurance Note -->
+<div class="bg-secondary-container/40 p-space-sm rounded-lg flex flex-col gap-1.5">
+<div class="flex items-center gap-1 text-on-secondary-fixed-variant font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[17px]">gavel</span>
+<span data-i18n="del_legal_header">التزام نظامي للاحتفاظ بالسجلات الطبية</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-secondary-container leading-relaxed" data-i18n="del_legal_desc">
+          بموجب نظام مزاولة المهن الصحية ونظام الفوترة الإلكترونية، يُلزم المركز نظاماً بالاحتفاظ بالسجلات الطبية والملفات السريرية والفواتير الضريبية للمدة النظامية المحددة قانوناً (10 سنوات للبالغين)، بينما يتم إتلاف وحذف تفضيلاتك وتطبيقاتك وإيقاف الاتصالات التسويقية فوراً.
+        </p>
+</div>
+<button class="w-full h-12 bg-surface-container hover:bg-error-container/50 text-error rounded-xl font-label-lg text-label-lg transition-all flex items-center justify-center gap-2 active:scale-[0.99]" onclick="openDeletionSheet()">
+<span class="material-symbols-outlined text-[19px]">person_remove</span>
+<span data-i18n="btn_request_deletion">تقديم طلب حذف البيانات (Submit Deletion Request)</span>
+</button>
+</div>
+<!-- Section 4: Requests Timeline Tracker -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,41,59,0.04)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">timeline</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" data-i18n="timeline_title">متابعة طلبات الحقوق والامتثال</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant" data-i18n="timeline_subtitle">الطلب النشط رقم: #REQ-2026-881</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold" data-i18n="timeline_status_label">
+          تصدير ملف سريري
+        </span>
+</div>
+<!-- Stepper Component -->
+<div class="relative flex flex-col gap-space-lg pt-2 pr-2 rtl:pr-2 rtl:pl-0 ltr:pl-2 ltr:pr-0">
+<!-- Connecting Line -->
+<div class="absolute top-4 bottom-4 rtl:right-[15px] ltr:left-[15px] w-[2px] bg-primary/30"></div>
+<!-- Step 1: Completed -->
+<div class="relative flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm shrink-0 z-10">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface" data-i18n="step1_name">مقدم (Submitted)</span>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary/10 px-2 py-0.5 rounded-full" data-i18n="status_verified">معتمد</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant" data-i18n="step1_date">12 فبراير 2026 • 09:30 ص</span>
+</div>
+</div>
+<!-- Step 2: In Review -->
+<div class="relative flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm shrink-0 z-10">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface" data-i18n="step2_name">قيد التدقيق (In review)</span>
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-2 py-0.5 rounded-full" data-i18n="status_dpo_stage">مسؤول الحماية (DPO)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant" data-i18n="step2_date">مسؤول حماية البيانات • 13 فبراير 2026</span>
+</div>
+</div>
+<!-- Step 3: Completed / Available -->
+<div class="relative flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-sm shrink-0 z-10">
+<span class="material-symbols-outlined text-[18px]">cloud_done</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface" data-i18n="step3_name">جاهز للتحميل (Completed)</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container bg-tertiary-container/20 px-2 py-0.5 rounded-full" data-i18n="status_ready">مشفر AES-256</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant" data-i18n="step3_date">رابط التنزيل متاح حتى 28 فبراير 2026 (ينتهي بعد 14 يوماً)</span>
+<div class="pt-2">
+<button class="h-9 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center gap-1.5 transition-all" onclick="downloadArchiveMock()">
+<span class="material-symbols-outlined text-[16px]">file_open</span>
+<span data-i18n="btn_download_pack">تحميل الأرشيف الآمن (.ZIP)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 5: DPO Support Contact -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,41,59,0.04)] flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">contact_support</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" data-i18n="support_title">هل لديك استفسار حول خصوصيتك؟</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant" data-i18n="support_subtitle">مكتب حماية البيانات الشخصية والامتثال السريري</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed pt-1" data-i18n="support_desc">
+        يمكنك التحدث مباشرة مع مسؤول حماية البيانات في لوميا (DPO) لأي أسئلة تتعلق بمعالجة بياناتك الصحية أو تقديم تظلم رسمي.
+      </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs pt-1">
+<a class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors" href="tel:920000000">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">phone_in_talk</span>
+<span class="font-label-md text-label-md text-on-surface" dir="ltr">920000000</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-i18n="phone_label">الهاتف الموحد</span>
+</a>
+<a class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors" href="mailto:dpo@lumeaclinic.sa">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[18px] text-primary">alternate_email</span>
+<span class="font-label-md text-label-md text-on-surface truncate" dir="ltr">dpo@lumeaclinic.sa</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-i18n="email_label">البريد المعتمد</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Deletion Request Modal Bottom Sheet -->
+<div class="fixed inset-0 z-50 flex items-end justify-center bg-black/40 backdrop-blur-sm hidden transition-opacity duration-300" id="deletion-modal">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-t-2xl p-space-lg flex flex-col gap-space-md shadow-2xl animate-in slide-in-from-bottom max-h-[751px] overflow-y-auto">
+<div class="w-12 h-1 bg-surface-container-highest rounded-full mx-auto -mt-2"></div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-error-container/40 text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">warning</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" data-i18n="modal_del_title">تأكيد طلب إتلاف وتطهير الحساب</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant" data-i18n="modal_del_sub">نظام حماية البيانات الشخصية - مادة (4)</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" onclick="closeDeletionSheet()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p-space-sm rounded-xl bg-error-container/20 text-on-error-container text-body-sm flex flex-col gap-1">
+<span class="font-label-md text-label-md font-semibold" data-i18n="modal_retention_alert">تنبيه قانوني هام للمرضى:</span>
+<span class="leading-relaxed" data-i18n="modal_retention_text">
+          سيتم تعطيل حسابك على البوابة فوراً وحذف تفضيلات التسويق نهائياً. بموجب نظام وزارة الصحة وهيئة الزكاة والضريبة والجمارك (ZATCA)، يتم أرشفة التقارير السريرية وفواتير الليزر إلكترونياً لمدة 10 سنوات لأغراض المسؤولية الطبية ومراجعة الضريبة.
+        </span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface" data-i18n="modal_reason_label">سبب تقديم الطلب (اختياري)</label>
+<select class="w-full h-12 bg-surface-container-low px-space-sm rounded-xl text-body-sm text-on-surface outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20">
+<option data-i18n="opt_1">انتهاء الخطة العلاجية ورغبة في إيقاف الحساب</option>
+<option data-i18n="opt_2">تغيير مقر الإقامة خارج المملكة</option>
+<option data-i18n="opt_3">الرغبة في إدارة الخصوصية وعدم حفظ التفضيلات</option>
+<option data-i18n="opt_4">سبب آخر</option>
+</select>
+</div>
+<div class="flex items-center gap-space-xs pt-1">
+<input class="w-4 h-4 rounded text-primary focus:ring-0" id="confirm-check" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant select-none" data-i18n="modal_agree" for="confirm-check">
+          أقر باطلاعي على فترات الاحتفاظ الإلزامية بالسجلات الطبية الحكومية.
+        </label>
+</div>
+<div class="flex items-center gap-space-sm pt-2">
+<button class="flex-1 h-12 rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg transition-colors" data-i18n="btn_cancel" onclick="closeDeletionSheet()">
+          إلغاء التراجع
+        </button>
+<button class="flex-1 h-12 rounded-xl bg-error text-on-error font-label-lg text-label-lg shadow-sm transition-all" data-i18n="btn_confirm_submit" onclick="confirmDeletionMock()">
+          تأكيد الطلب
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let currentLang = 'ar';
+  
+  const translations = {
+    ar: {
+      badge_compliance: "نظام حماية البيانات الشخصية (PDPL) واللوائح الصحية",
+      intro_title: "أمان بياناتك السريرية وحقوقك الرقمية",
+      intro_desc: "حقوق بياناتك الشخصية والسريرية تحت سيطرتك الكاملة. نحمي خصوصيتك بأعلى معايير الحوكمة الطبية والتشفير السحابي المحلي داخل المملكة العربية السعودية.",
+      export_title: "تصدير بياناتي",
+      export_subtitle: "حزمة مشفرة وموقعة إلكترونياً",
+      export_status_chip: "مكتمل",
+      export_desc: "طلب نسخة رقمية مشفرة وشاملة لكافة بياناتك الشخصية، مواعيدك السابقة، وسجل فواتيرك ونتائج الجلسات السريرية بصيغة معتمدة (PDF / JSON).",
+      last_export_label: "آخر طلب: تم التحميل في 22 يناير 2026",
+      btn_export: "طلب تصدير البيانات (Export Data)",
+      mkt_title: "الرسائل الترويجية والعروض",
+      mkt_subtitle: "قنوات التواصل الإضافية",
+      mkt_desc: "استلام التنبيهات الترويجية، العروض الموسمية الحصرية لحقن الليزر وعلاجات النضارة، ورسائل تذكير واتساب التفاعلية.",
+      mkt_note: "إلغاء التفعيل يوقف الرسائل التسويقية فوراً مع استمرار استلام إشعارات المواعيد الطبية الحيوية والفواتير النظامية لضمان سلامة خطتك العلاجية.",
+      mkt_status_active: "الموافقة مفعلة حالياً",
+      mkt_status_inactive: "تم سحب الموافقة بنجاح",
+      btn_withdraw: "الانسحاب الفوري من كافة القوائم",
+      del_title: "طلب حذف / إتلاف البيانات",
+      del_regulation_tag: "نظام مزاولة المهن الصحية ولوائح ZATCA",
+      del_legal_header: "التزام نظامي للاحتفاظ بالسجلات الطبية",
+      del_legal_desc: "بموجب نظام مزاولة المهن الصحية ونظام الفوترة الإلكترونية، يُلزم المركز نظاماً بالاحتفاظ بالسجلات الطبية والملفات السريرية والفواتير الضريبية للمدة النظامية المحددة قانوناً (10 سنوات للبالغين)، بينما يتم إتلاف وحذف تفضيلاتك وتطبيقاتك وإيقاف الاتصالات التسويقية فوراً.",
+      btn_request_deletion: "تقديم طلب حذف البيانات (Submit Deletion Request)",
+      timeline_title: "متابعة طلبات الحقوق والامتثال",
+      timeline_subtitle: "الطلب النشط رقم: #REQ-2026-881",
+      timeline_status_label: "تصدير ملف سريري",
+      step1_name: "مقدم (Submitted)",
+      step1_date: "12 فبراير 2026 • 09:30 ص",
+      status_verified: "معتمد",
+      step2_name: "قيد التدقيق (In review)",
+      step2_date: "مسؤول حماية البيانات • 13 فبراير 2026",
+      status_dpo_stage: "مسؤول الحماية (DPO)",
+      step3_name: "جاهز للتحميل (Completed)",
+      step3_date: "رابط التنزيل متاح حتى 28 فبراير 2026 (ينتهي بعد 14 يوماً)",
+      status_ready: "مشفر AES-256",
+      btn_download_pack: "تحميل الأرشيف الآمن (.ZIP)",
+      support_title: "هل لديك استفسار حول خصوصيتك؟",
+      support_subtitle: "مكتب حماية البيانات الشخصية والامتثال السريري",
+      support_desc: "يمكنك التحدث مباشرة مع مسؤول حماية البيانات في لوميا (DPO) لأي أسئلة تتعلق بمعالجة بياناتك الصحية أو تقديم تظلم رسمي.",
+      phone_label: "الهاتف الموحد",
+      email_label: "البريد المعتمد",
+      modal_del_title: "تأكيد طلب إتلاف وتطهير الحساب",
+      modal_del_sub: "نظام حماية البيانات الشخصية - مادة (4)",
+      modal_retention_alert: "تنبيه قانوني هام للمرضى:",
+      modal_retention_text: "سيتم تعطيل حسابك على البوابة فوراً وحذف تفضيلات التسويق نهائياً. بموجب نظام وزارة الصحة وهيئة الزكاة والضريبة والجمارك (ZATCA)، يتم أرشفة التقارير السريرية وفواتير الليزر إلكترونياً لمدة 10 سنوات لأغراض المسؤولية الطبية ومراجعة الضريبة.",
+      modal_reason_label: "سبب تقديم الطلب (اختياري)",
+      opt_1: "انتهاء الخطة العلاجية ورغبة في إيقاف الحساب",
+      opt_2: "تغيير مقر الإقامة خارج المملكة",
+      opt_3: "الرغبة في إدارة الخصوصية وعدم حفظ التفضيلات",
+      opt_4: "سبب آخر",
+      modal_agree: "أقر باطلاعي على فترات الاحتفاظ الإلزامية بالسجلات الطبية الحكومية.",
+      btn_cancel: "إلغاء التراجع",
+      btn_confirm_submit: "تأكيد الطلب",
+      notif_export_sent: "تم استلام طلب التصدير بنجاح وسيتم إشعارك فور اكتمال التشفير.",
+      notif_consent_updated: "تم تحديث تفضيلات الاتصال والخصوصية بنجاح.",
+      notif_deletion_submitted: "تم تقديم طلب الحذف وهو قيد مراجعة مسؤول الامتثال (DPO)."
+    },
+    en: {
+      badge_compliance: "Compliant with Saudi PDPL & Health Regulations",
+      intro_title: "Your Clinical Data Security & Digital Rights",
+      intro_desc: "Your personal and medical records are in your full control. We safeguard your privacy in accordance with leading healthcare governance and local cloud encryption inside Saudi Arabia.",
+      export_title: "Export My Data",
+      export_subtitle: "Encrypted & Electronically Certified Package",
+      export_status_chip: "Completed",
+      export_desc: "Request a comprehensive encrypted digital archive containing personal profiles, past clinical sessions, laser dosages, and tax invoices in certified PDF & JSON formats.",
+      last_export_label: "Latest Export: Downloaded Jan 22, 2026",
+      btn_export: "Request Data Export",
+      mkt_title: "Promotional & Marketing Alerts",
+      mkt_subtitle: "Optional Communication Channels",
+      mkt_desc: "Receive laser treatment offers, seasonal specials, and personalized WhatsApp care reminders directly from our aesthetic center.",
+      mkt_note: "Disabling this immediately halts all promotional outreach while keeping vital clinical appointments and tax invoice notifications active.",
+      mkt_status_active: "Consent is currently active",
+      mkt_status_inactive: "Consent withdrawn successfully",
+      btn_withdraw: "Immediate opt-out from all lists",
+      del_title: "Request Data Deletion / Erasure",
+      del_regulation_tag: "Healthcare Practice Law & ZATCA Mandates",
+      del_legal_header: "Statutory Medical Retention Requirement",
+      del_legal_desc: "Under the Saudi Healthcare Practice Code and ZATCA E-Invoicing bylaws, clinics must legally preserve clinical records and tax invoices for the statutory period (10 years for adults). Your portal account, preferences, and marketing outreach are terminated immediately.",
+      btn_request_deletion: "Submit Deletion Request",
+      timeline_title: "Data Rights & Compliance Tracking",
+      timeline_subtitle: "Active Request Ref: #REQ-2026-881",
+      timeline_status_label: "Clinical File Export",
+      step1_name: "Submitted",
+      step1_date: "Feb 12, 2026 • 09:30 AM",
+      status_verified: "Verified",
+      step2_name: "In Review",
+      step2_date: "Data Protection Officer • Feb 13, 2026",
+      status_dpo_stage: "DPO Review",
+      step3_name: "Ready for Download (Completed)",
+      step3_date: "Download link valid until Feb 28, 2026 (14-day expiry)",
+      status_ready: "AES-256 Encrypted",
+      btn_download_pack: "Download Secure Archive (.ZIP)",
+      support_title: "Questions About Your Privacy Rights?",
+      support_subtitle: "Office of Data Protection & Healthcare Compliance",
+      support_desc: "Reach out directly to Lumea's Data Protection Officer (DPO) for questions on your health records handling or to submit a formal grievance.",
+      phone_label: "Toll-Free Helpline",
+      email_label: "Official DPO Inbox",
+      modal_del_title: "Confirm Account Deletion & Erasure",
+      modal_del_sub: "Saudi PDPL - Article (4)",
+      modal_retention_alert: "Statutory Notice for Patients:",
+      modal_retention_text: "Your portal access will be deactivated immediately and preferences erased. By statutory order of the Ministry of Health and ZATCA, clinical summaries and fiscal invoices remain archived electronically for 10 years for medical liability and tax audits.",
+      modal_reason_label: "Reason for request (optional)",
+      opt_1: "Finished treatment plan, closing account",
+      opt_2: "Relocating outside Saudi Arabia",
+      opt_3: "Privacy preference management",
+      opt_4: "Other reason",
+      modal_agree: "I acknowledge the statutory retention requirement for official healthcare files.",
+      btn_cancel: "Cancel",
+      btn_confirm_submit: "Confirm Deletion Request",
+      notif_export_sent: "Data export request submitted. You will be notified once encryption is ready.",
+      notif_consent_updated: "Communication & privacy preferences updated successfully.",
+      notif_deletion_submitted: "Deletion request submitted and transferred to the clinic DPO."
+    }
+  };
+
+  function updateDomLanguage() {
+    const langData = translations[currentLang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (langData[key]) {
+        el.textContent = langData[key];
+      }
+    });
+
+    const rootContainer = document.getElementById('screen-container');
+    const langIndicator = document.getElementById('lang-indicator');
+
+    if (currentLang === 'en') {
+      document.documentElement.setAttribute('dir', 'ltr');
+      document.documentElement.setAttribute('lang', 'en');
+      langIndicator.textContent = 'عربي';
+    } else {
+      document.documentElement.setAttribute('dir', 'rtl');
+      document.documentElement.setAttribute('lang', 'ar');
+      langIndicator.textContent = 'EN';
+    }
+  }
+
+  function toggleLanguage() {
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    updateDomLanguage();
+  }
+
+  function showNotification(message) {
+    const banner = document.getElementById('live-notification');
+    const label = document.getElementById('notification-text');
+    label.textContent = message;
+    banner.classList.remove('hidden');
+    banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function dismissNotification() {
+    document.getElementById('live-notification').classList.add('hidden');
+  }
+
+  function triggerExportRequest() {
+    const msg = translations[currentLang].notif_export_sent;
+    showNotification(msg);
+  }
+
+  function toggleMarketing(el) {
+    const statusText = document.getElementById('marketing-status-text');
+    if (el.checked) {
+      statusText.innerHTML = `
+        <span class="material-symbols-outlined text-[14px]">check_circle</span>
+        <span>${translations[currentLang].mkt_status_active}</span>
+      `;
+      statusText.className = "font-label-sm text-label-sm text-tertiary flex items-center gap-1 font-semibold";
+    } else {
+      statusText.innerHTML = `
+        <span class="material-symbols-outlined text-[14px]">block</span>
+        <span>${translations[currentLang].mkt_status_inactive}</span>
+      `;
+      statusText.className = "font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 font-semibold";
+    }
+    showNotification(translations[currentLang].notif_consent_updated);
+  }
+
+  function withdrawMarketingConsent() {
+    const toggle = document.getElementById('marketing-toggle');
+    toggle.checked = false;
+    toggleMarketing(toggle);
+  }
+
+  function openDeletionSheet() {
+    const modal = document.getElementById('deletion-modal');
+    modal.classList.remove('hidden');
+  }
+
+  function closeDeletionSheet() {
+    const modal = document.getElementById('deletion-modal');
+    modal.classList.add('hidden');
+  }
+
+  function confirmDeletionMock() {
+    closeDeletionSheet();
+    showNotification(translations[currentLang].notif_deletion_submitted);
+  }
+
+  function downloadArchiveMock() {
+    showNotification(currentLang === 'ar' ? 'جاري تجهيز التحميل المشفر...' : 'Initiating secure package download...');
+  }
+
+  function setViewMode(mode) {
+    // Reset tabs
+    ['tab-default', 'tab-submitted', 'tab-deletion'].forEach(id => {
+      const btn = document.getElementById(id);
+      btn.className = "flex-1 min-w-[70px] py-1.5 px-3 rounded-full text-label-sm font-label-sm transition-all duration-200 text-on-surface-variant hover:text-on-surface";
+    });
+
+    const activeBtn = document.getElementById('tab-' + mode);
+    if (activeBtn) {
+      activeBtn.className = "flex-1 min-w-[70px] py-1.5 px-3 rounded-full text-label-sm font-label-sm transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm font-semibold";
+    }
+
+    if (mode === 'default') {
+      closeDeletionSheet();
+      dismissNotification();
+    } else if (mode === 'submitted') {
+      closeDeletionSheet();
+      showNotification(translations[currentLang].notif_export_sent);
+    } else if (mode === 'deletion') {
+      dismissNotification();
+      openDeletionSheet();
+    }
+  }
+
+  // Close modal when tapping overlay backdrop
+  document.getElementById('deletion-modal')?.addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeDeletionSheet();
+    }
+  });
+</script></main></body></html>

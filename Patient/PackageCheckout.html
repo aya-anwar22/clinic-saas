@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-background": "#111c2d", "on-tertiary": "#ffffff", "on-surface": "#111c2d", "surface-tint": "#0060ab", "error-container": "#ffdad6", "on-primary-container": "#003360", "outline-variant": "#c1c7d4", "surface": "#f9f9ff", "surface-container-high": "#dee8ff", "error": "#ba1a1a", "on-tertiary-container": "#003b26", "surface-container-low": "#f0f3ff", "on-tertiary-fixed": "#002113", "on-primary-fixed-variant": "#004883", "inverse-on-surface": "#ecf1ff", "surface-bright": "#f9f9ff", "secondary": "#605e5a", "on-secondary": "#ffffff", "on-primary-fixed": "#001c39", "surface-container-lowest": "#ffffff", "surface-variant": "#d8e3fb", "background": "#f9f9ff", "tertiary-fixed-dim": "#4edea3", "secondary-container": "#e6e2dc", "tertiary-container": "#00b07a", "on-primary": "#ffffff", "tertiary-fixed": "#6ffbbe", "on-secondary-container": "#666460", "inverse-surface": "#263143", "on-tertiary-fixed-variant": "#005236", "primary": "#0060ab", "outline": "#717783", "on-error": "#ffffff", "secondary-fixed": "#e6e2dc", "primary-fixed": "#d3e3ff", "on-secondary-fixed-variant": "#484742", "surface-container": "#e7eeff", "tertiary": "#006c49", "on-surface-variant": "#414752", "surface-dim": "#cfdaf2", "inverse-primary": "#a3c9ff", "surface-container-highest": "#d8e3fb", "on-error-container": "#93000a", "secondary-fixed-dim": "#c9c6c0", "on-secondary-fixed": "#1c1c18", "primary-container": "#4f9df7", "primary-fixed-dim": "#a3c9ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1rem", "margin-md": "2rem", "space-xl": "2.5rem", "gutter-lg": "2rem", "space-sm": "0.5rem", "gutter-md": "1.5rem", "space-md": "1rem", "margin-lg": "3rem" }, fontFamily: { "headline-md": ["IBM Plex Sans Arabic", "Inter"], "body-md": ["IBM Plex Sans Arabic", "Inter"], "label-sm": ["IBM Plex Sans Arabic", "Inter"], "body-sm": ["IBM Plex Sans Arabic", "Inter"], "body-lg": ["IBM Plex Sans Arabic", "Inter"], "headline-lg-mobile": ["IBM Plex Sans Arabic", "Inter"], "headline-sm": ["IBM Plex Sans Arabic", "Inter"], "headline-lg": ["IBM Plex Sans Arabic", "Inter"], "label-lg": ["IBM Plex Sans Arabic", "Inter"], "display": ["IBM Plex Sans Arabic", "Inter"], "label-md": ["IBM Plex Sans Arabic", "Inter"] }, fontSize: { "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;background-color:#FAFAF8;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="الرجوع" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:scale-95 transition-transform" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px] rtl:rotate-180">arrow_back</span></button><div class="flex flex-col"><h1 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Checkout</h1><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[14px] text-tertiary">lock</span><span class="font-label-sm text-label-sm text-on-surface-variant">اتصال آمن ومشفّر 256-bit</span></div></div></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface pb-safe"><div class="flex flex-col w-full text-on-surface" dir="rtl" id="checkout-root">
+<!-- Interactive Demo Switcher Bar -->
+<div class="w-full px-margin py-space-sm bg-surface-container-low shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">tune</span>
+<span class="font-label-sm text-label-sm" id="demo-title-text">مستعرض حالات الدفع التفاعلي (Interactive Demo)</span>
+</div>
+<button class="px-space-sm py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm flex items-center gap-1 active:scale-95 transition-transform" id="lang-toggle-btn" onclick="toggleLanguage()" type="button">
+<span class="material-symbols-outlined text-[14px]">language</span>
+<span id="lang-btn-label">English (LTR)</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 no-scrollbar">
+<button class="demo-pill px-space-sm py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap bg-primary text-on-primary transition-all" id="pill-default" onclick="setDemoState('default')" type="button">
+        الدفع الافتراضي (Default)
+      </button>
+<button class="demo-pill px-space-sm py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap bg-surface-container text-on-surface-variant transition-all" id="pill-wallet" onclick="setDemoState('wallet')" type="button">
+        استخدام المحفظة (Wallet)
+      </button>
+<button class="demo-pill px-space-sm py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap bg-surface-container text-on-surface-variant transition-all" id="pill-processing" onclick="setDemoState('processing')" type="button">
+        جاري المعالجة (Processing)
+      </button>
+<button class="demo-pill px-space-sm py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap bg-surface-container text-on-surface-variant transition-all" id="pill-failed" onclick="setDemoState('failed')" type="button">
+        فشل الدفع (Failed)
+      </button>
+<button class="demo-pill px-space-sm py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap bg-surface-container text-on-surface-variant transition-all" id="pill-success" onclick="setDemoState('success')" type="button">
+        نجاح الدفع (Success)
+      </button>
+</div>
+</div>
+<!-- Content Stream -->
+<div class="w-full px-margin py-space-md flex flex-col gap-space-md max-w-lg mx-auto">
+<!-- Active State: Failed Payment Banner -->
+<div class="hidden flex-col gap-space-sm p-space-md rounded-xl bg-error-container text-on-error-container shadow-sm animate-pulse" id="state-failed-banner">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[24px] text-error shrink-0">error</span>
+<div class="flex flex-col gap-1 min-w-0">
+<span class="font-label-lg text-label-lg font-semibold text-error" data-i18n="failed-head">تعذر إتمام الدفع (Payment Failed)</span>
+<p class="font-body-sm text-body-sm text-on-error-container" data-i18n="failed-desc">لم تتم العملية: تعذر الخصم من البطاقة (رمز 104: رصيد غير كافٍ أو تجاوز الحد اليومي للعمليات المصرفية).</p>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-error text-on-error font-label-md text-label-md flex items-center justify-center gap-space-xs active:scale-95 transition-transform" onclick="setDemoState('default')" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span data-i18n="failed-btn">إعادة المحاولة بطريقة أخرى (Retry Payment)</span>
+</button>
+</div>
+<!-- Active State: Processing Overlay / Block -->
+<div class="hidden flex-col items-center justify-center p-space-lg rounded-xl bg-surface-container-lowest shadow-md text-center gap-space-md" id="state-processing-card">
+<div class="relative w-16 h-16 flex items-center justify-center">
+<div class="w-16 h-16 rounded-full border-4 border-surface-container border-t-primary animate-spin"></div>
+<span class="material-symbols-outlined absolute text-[24px] text-primary">lock</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface" data-i18n="proc-title">جاري معالجة الدفع بأمان...</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs" data-i18n="proc-desc">نرجو الانتظار؛ جاري توثيق المعاملة عبر بروتوكول 3D Secure والربط مع البنك المركزي. يرجى عدم إغلاق الصفحة أو تحديثها.</p>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span data-i18n="proc-badge">تشفير بنكي مباشر 256-bit</span>
+</div>
+</div>
+<!-- Active State: Success View -->
+<div class="hidden flex-col p-space-lg rounded-xl bg-surface-container-lowest shadow-md gap-space-md text-center items-center" id="state-success-card">
+<div class="w-20 h-20 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[44px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex flex-col gap-1 items-center">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface" data-i18n="suc-title">تم سداد الباقة بنجاح!</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" data-i18n="suc-subtitle">رقم المعاملة المرجعي: #LUM-849204-KSA</span>
+</div>
+<!-- State transition chip -->
+<div class="w-full p-space-sm rounded-lg bg-surface-container flex items-center justify-between text-start">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-i18n="suc-status-label">حالة الباقة الطبية</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-label-md text-label-md line-through text-outline" data-i18n="suc-status-pending">بانتظار الدفع</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant rtl:rotate-180">arrow_forward</span>
+<span class="font-label-md text-label-md text-tertiary font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span data-i18n="suc-status-active">نشطة الآن (8 جلسات متاحة)</span>
+</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[28px]">verified</span>
+</div>
+<!-- Clinic Room Image Placeholder -->
+<div class="w-full h-36 rounded-xl overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A serene, ultra-modern luxury dermatology clinic laser suite in Riyadh. Minimalist limestone walls, subtle warm ambient lighting, elegant medical laser equipment by Candela, immaculate clinical treatment bed, soft sky blue and sand accents conveying peaceful Saudi hospitality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC04tYG6dD-cY95-arhX5nS_AXxV28Dnwx3oW1OiiP-kn-GnywPYRKnBoFQBSUdoVIUFZrKYwY8cawpR3v7zwE4ckVh4Ur5BVDfwCkL91stP8oWVkSBB5-BdUkgPPjDUuT7hfEjrvPA8qWNDa2CPmxjxaiTSbSBvgAFP1wdsk6_AQmCD0NdusG-fKEa4JS1RtImq59PkdXBt6edg22xbfToOu3sZo9kbZpAyvyA7tVT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/70 via-transparent to-transparent flex items-end p-space-sm">
+<span class="text-on-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span data-i18n="suc-branch">عيادات لوميا - العليا، الرياض</span>
+</span>
+</div>
+</div>
+<!-- WhatsApp / ZATCA notification -->
+<div class="w-full p-space-sm rounded-lg bg-tertiary-fixed-dim/20 text-on-tertiary-fixed flex items-start gap-space-sm text-start">
+<span class="material-symbols-outlined text-[22px] text-tertiary shrink-0">chat</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface" data-i18n="suc-msg-head">الفاتورة الضريبية الرسمية جاهزة</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant" data-i18n="suc-msg-body">تم إرسال الفاتورة الضريبية المتوافقة مع هيئة الزكاة والضريبة والجمارك (ZATCA) عبر رسالة واتساب إلى رقمك المسجل.</p>
+</div>
+</div>
+<div class="w-full flex flex-col gap-space-xs mt-space-xs">
+<button class="w-full py-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-semibold shadow-md active:scale-95 transition-transform flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+<span data-i18n="suc-book-btn">حجز أول جلسة الآن</span>
+</button>
+<button class="w-full py-2.5 rounded-xl bg-secondary-container text-on-secondary-container font-label-md text-label-md active:scale-95 transition-transform" onclick="setDemoState('default')" type="button">
+<span data-i18n="suc-back-btn">الذهاب إلى باقاتي الطبية</span>
+</button>
+</div>
+</div>
+<!-- MAIN CHECKOUT FLOW (Hidden during processing & success states) -->
+<div class="flex flex-col gap-space-md" id="checkout-main-flow">
+<!-- Section: Order Summary Card -->
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-sm">
+<!-- Header -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface" data-i18n="order-summary-title">ملخص طلب الباقة</h2>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-semibold" data-i18n="pkg-id">باقة #LUM-849</span>
+</div>
+<!-- Package Details -->
+<div class="flex flex-col gap-1.5 pt-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<h3 class="font-body-lg text-body-lg font-semibold text-on-surface" data-i18n="package-name">إزالة الشعر كامل الجسم - 8 جلسات</h3>
+<span class="font-label-lg text-label-lg font-bold text-primary shrink-0">4,800.00 <span class="font-label-sm text-label-sm font-normal" data-i18n="sar">ر.س</span></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant" data-i18n="package-sessions">تشمل 8 جلسات ليزر كاملة مع جلسات الرتوش المجانية خلال 14 يوماً من كل جلسة.</p>
+</div>
+<!-- Visual Image of Laser Tech -->
+<div class="w-full h-28 rounded-lg overflow-hidden relative mt-1">
+<img class="w-full h-full object-cover" data-alt="Close up medical aesthetic shot of Candela GentleLase Pro laser device handpiece with dynamic cooling device spray nozzle in a serene high-end dermatological clinic in Riyadh, clean clinical setup, soft daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZNKcwehBIaZYRWsRMrs5T3qkYsIe998lifxZFkUrXhb-v2zbstk89BFpkJC9UtLtMtSuld4fc_8RlroeFDpVXN7t_7hOCaK_0Qj3rwNZo0cMO7KcOvQFlF6S-cqdFzaKsbw9BZCSeoz3-qZ6UDFv4if_N2eZMy4o9CHWANNA-RPIMgPMOENDATUS6J2DFIu_v4ilB2haA8zaYqkhYAEjnrATgY_Iyy_E3b2RNjgpJ"/>
+<div class="absolute bottom-2 right-2 rtl:right-2 rtl:left-auto ltr:left-2 ltr:right-auto px-space-xs py-1 rounded bg-on-background/75 text-on-tertiary font-label-sm text-label-sm backdrop-blur-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_hospital</span>
+<span data-i18n="candela-badge">كانديلا جينتل ليز برو-يو • تبريد DCD</span>
+</div>
+</div>
+<!-- Badges & Specs -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-tertiary">store</span>
+<span data-i18n="branch-validity">صلاحية الاستخدام: جميع فروع الرياض وجدة (العليا والتحلية)</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span data-i18n="expiry-validity">صالحة لمدة 18 شهراً من تاريخ التفعيل الأول</span>
+</div>
+</div>
+<!-- Financial Breakdown -->
+<div class="mt-space-xs p-space-sm rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span data-i18n="subtotal-label">السعر الأساسي للباقة (Subtotal)</span>
+<span class="font-medium">4,173.91 <span data-i18n="sar">ر.س</span></span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span data-i18n="vat-label">ضريبة القيمة المضافة 15% (ZATCA VAT)</span>
+<span class="material-symbols-outlined text-[14px] text-outline" title="معتمدة من هيئة الزكاة والضريبة والجمارك">info</span>
+</div>
+<span class="font-medium">626.09 <span data-i18n="sar">ر.س</span></span>
+</div>
+<!-- Dynamic Wallet Discount Line -->
+<div class="hidden items-center justify-between font-body-sm text-body-sm text-tertiary font-semibold" id="wallet-breakdown-row">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">account_balance_wallet</span>
+<span data-i18n="wallet-applied-label">رصيد المحفظة المخصوم</span>
+</div>
+<span>- 450.00 <span data-i18n="sar">ر.س</span></span>
+</div>
+<div class="h-px bg-outline-variant/50 my-0.5"></div>
+<div class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-bold">
+<span data-i18n="total-label">المجموع الإجمالي شامل الضريبة</span>
+<span class="text-primary" id="display-total-price">4,800.00 <span class="font-label-md text-label-md font-normal" data-i18n="sar">ر.س</span></span>
+</div>
+</div>
+</div>
+<!-- Section: Wallet Balance Deduction Component -->
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-sm">
+<label class="flex items-start gap-space-sm cursor-pointer select-none" for="wallet-checkbox">
+<input class="mt-1 w-5 h-5 rounded text-primary focus:ring-primary/20 accent-primary cursor-pointer" id="wallet-checkbox" onchange="toggleWalletState(this.checked)" type="checkbox"/>
+<div class="flex-1 flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface" data-i18n="wallet-toggle-title">استخدام رصيد المحفظة الإلكترونية</span>
+<span class="font-label-md text-label-md px-2 py-0.5 rounded-full bg-tertiary-fixed-dim/30 text-on-tertiary-fixed font-semibold" data-i18n="wallet-balance-val">الرصيد: 450.00 ر.س</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" data-i18n="wallet-toggle-sub">يمكنك خصم رصيدك الحالي من المجموع الإجمالي وسداد المبلغ المتبقي عبر وسائل الدفع الأخرى.</p>
+</div>
+</label>
+<!-- Wallet Applied Dynamic Notice -->
+<div class="hidden p-space-sm rounded-lg bg-surface-container-high flex items-center justify-between" id="wallet-active-badge">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span data-i18n="wallet-deducted-note">تم تطبيق خصم 450.00 ر.س من المحفظة</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface" data-i18n="wallet-remaining-note">المتبقي: 4,350.00 ر.س</span>
+</div>
+</div>
+<!-- Section: Payment Method Selector -->
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">credit_card</span>
+<h3 class="font-label-lg text-label-lg font-semibold text-on-surface" data-i18n="pay-methods-title">اختر طريقة الدفع</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-i18n="secure-step">خطوة آمنة ومحمية</span>
+</div>
+<!-- Options List -->
+<div class="flex flex-col gap-space-xs" id="payment-options-container">
+<!-- Option 1: mada -->
+<label class="payment-option relative flex items-center justify-between p-space-sm rounded-xl cursor-pointer transition-all bg-surface-container-high">
+<div class="flex items-center gap-space-sm">
+<input checked="" class="w-5 h-5 accent-primary cursor-pointer" name="pay_method" onchange="onPaymentMethodSelect('mada')" type="radio" value="mada"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface" data-i18n="method-mada">مدى (mada)</span>
+<span class="px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-medium" data-i18n="mada-badge">الأسرع ومفضلة محلياً</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant" data-i18n="mada-sub">بطاقات الخصم المباشر لجميع البنوك السعودية</span>
+</div>
+</div>
+<!-- Mada Visual Emblem -->
+<div class="w-10 h-7 rounded bg-surface-container-lowest flex items-center justify-center font-bold text-[11px] text-primary shadow-xs tracking-wider">
+              mada
+            </div>
+</label>
+<!-- Option 2: Apple Pay -->
+<label class="payment-option relative flex items-center justify-between p-space-sm rounded-xl cursor-pointer transition-all bg-surface-container">
+<div class="flex items-center gap-space-sm">
+<input class="w-5 h-5 accent-primary cursor-pointer" name="pay_method" onchange="onPaymentMethodSelect('apple_pay')" type="radio" value="apple_pay"/>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface" data-i18n="method-apple">Apple Pay</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" data-i18n="apple-sub">دفع فوري بلمسة واحدة عبر Face ID</span>
+</div>
+</div>
+<!-- Apple Pay Emblem -->
+<div class="w-10 h-7 rounded bg-on-surface text-surface-container-lowest flex items-center justify-center shadow-xs">
+<span class="font-bold text-[10px]">Pay</span>
+</div>
+</label>
+<!-- Option 3: Credit Cards -->
+<label class="payment-option relative flex items-center justify-between p-space-sm rounded-xl cursor-pointer transition-all bg-surface-container">
+<div class="flex items-center gap-space-sm">
+<input class="w-5 h-5 accent-primary cursor-pointer" name="pay_method" onchange="onPaymentMethodSelect('credit_card')" type="radio" value="credit_card"/>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface" data-i18n="method-cards">بطاقة ائتمانية (Visa / Mastercard)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" data-i18n="cards-sub">تقبل البطاقات المحلية والدولية</span>
+</div>
+</div>
+<!-- Visa / MC Emblem -->
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-[10px] font-bold text-primary shadow-xs">VISA</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-[10px] font-bold text-error shadow-xs">MC</span>
+</div>
+</label>
+</div>
+<!-- Gateway Guidance Note -->
+<div class="p-space-xs rounded-lg bg-surface-container-low flex items-start gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm" data-i18n="gateway-note">
+            ملاحظة: يتم إدخال بيانات البطاقة وتأكيد التحقق عبر بوابة الدفع الآمنة ورمز 3D Secure لضمان أقصى معايير الحماية المصرفية.
+          </p>
+</div>
+<!-- Trust & Compliance Badges -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<div class="p-space-xs rounded-lg bg-surface-container flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">cloud_done</span>
+<div class="flex flex-col leading-tight">
+<span class="font-label-sm text-label-sm font-semibold" data-i18n="badge-cloud">استضافة سحابية سعودية</span>
+<span class="text-[10px] text-on-surface-variant">CST &amp; NDMO مصرح</span>
+</div>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">receipt_long</span>
+<div class="flex flex-col leading-tight">
+<span class="font-label-sm text-label-sm font-semibold" data-i18n="badge-zatca">فاتورة إلكترونية معتمدة</span>
+<span class="text-[10px] text-on-surface-variant">هيئة الزكاة والضريبة (ZATCA)</span>
+</div>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">security</span>
+<div class="flex flex-col leading-tight">
+<span class="font-label-sm text-label-sm font-semibold">PCI-DSS Level 1</span>
+<span class="text-[10px] text-on-surface-variant">أعلى معايير أمان البطاقات</span>
+</div>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">lock</span>
+<div class="flex flex-col leading-tight">
+<span class="font-label-sm text-label-sm font-semibold">256-bit SSL</span>
+<span class="text-[10px] text-on-surface-variant">تشفير طبي ومصرفي فائق</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer & Primary Button -->
+<div class="flex flex-col gap-space-xs pt-space-xs pb-space-lg">
+<button class="w-full py-3.5 rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm font-semibold shadow-md active:scale-95 transition-transform flex items-center justify-center gap-space-sm" id="primary-pay-button" onclick="triggerCheckoutAction()" type="button">
+<span class="material-symbols-outlined text-[22px]">lock</span>
+<span data-i18n="pay-default-btn" id="primary-pay-text">دفع 4,800.00 ر.س</span>
+</button>
+<p class="font-body-sm text-body-sm text-center text-on-surface-variant px-space-sm" data-i18n="terms-note">
+          بالضغط على تأكيد الدفع، أنت توافق على شروط استبدال واسترجاع الباقات الطبية التابعة لمجموعة عيادات لوميا.
+        </p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let currentLanguage = 'ar';
+  let isWalletApplied = false;
+  let currentState = 'default';
+
+  const translations = {
+    ar: {
+      "demo-title": "مستعرض حالات الدفع التفاعلي (Interactive Demo)",
+      "lang-btn": "English (LTR)",
+      "pill-default": "الدفع الافتراضي (Default)",
+      "pill-wallet": "استخدام المحفظة (Wallet)",
+      "pill-proc": "جاري المعالجة (Processing)",
+      "pill-fail": "فشل الدفع (Failed)",
+      "pill-succ": "نجاح الدفع (Success)",
+      "failed-head": "تعذر إتمام الدفع (Payment Failed)",
+      "failed-desc": "لم تتم العملية: تعذر الخصم من البطاقة (رمز 104: رصيد غير كافٍ أو تجاوز الحد اليومي للعمليات المصرفية).",
+      "failed-btn": "إعادة المحاولة بطريقة أخرى (Retry Payment)",
+      "proc-title": "جاري معالجة الدفع بأمان...",
+      "proc-desc": "نرجو الانتظار؛ جاري توثيق المعاملة عبر بروتوكول 3D Secure والربط مع البنك المركزي. يرجى عدم إغلاق الصفحة أو تحديثها.",
+      "proc-badge": "تشفير بنكي مباشر 256-bit",
+      "suc-title": "تم سداد الباقة بنجاح!",
+      "suc-subtitle": "رقم المعاملة المرجعي: #LUM-849204-KSA",
+      "suc-status-label": "حالة الباقة الطبية",
+      "suc-status-pending": "بانتظار الدفع",
+      "suc-status-active": "نشطة الآن (8 جلسات متاحة)",
+      "suc-branch": "عيادات لوميا - العليا، الرياض",
+      "suc-msg-head": "الفاتورة الضريبية الرسمية جاهزة",
+      "suc-msg-body": "تم إرسال الفاتورة الضريبية المتوافقة مع هيئة الزكاة والضريبة والجمارك (ZATCA) عبر رسالة واتساب إلى رقمك المسجل.",
+      "suc-book-btn": "حجز أول جلسة الآن",
+      "suc-back-btn": "الذهاب إلى باقاتي الطبية",
+      "order-summary-title": "ملخص طلب الباقة",
+      "pkg-id": "باقة #LUM-849",
+      "package-name": "إزالة الشعر كامل الجسم - 8 جلسات",
+      "sar": "ر.س",
+      "package-sessions": "تشمل 8 جلسات ليزر كاملة مع جلسات الرتوش المجانية خلال 14 يوماً من كل جلسة.",
+      "candela-badge": "كانديلا جينتل ليز برو-يو • تبريد DCD",
+      "branch-validity": "صلاحية الاستخدام: جميع فروع الرياض وجدة (العليا والتحلية)",
+      "expiry-validity": "صالحة لمدة 18 شهراً من تاريخ التفعيل الأول",
+      "subtotal-label": "السعر الأساسي للباقة (Subtotal)",
+      "vat-label": "ضريبة القيمة المضافة 15% (ZATCA VAT)",
+      "wallet-applied-label": "رصيد المحفظة المخصوم",
+      "total-label": "المجموع الإجمالي شامل الضريبة",
+      "wallet-toggle-title": "استخدام رصيد المحفظة الإلكترونية",
+      "wallet-balance-val": "الرصيد: 450.00 ر.س",
+      "wallet-toggle-sub": "يمكنك خصم رصيدك الحالي من المجموع الإجمالي وسداد المبلغ المتبقي عبر وسائل الدفع الأخرى.",
+      "wallet-deducted-note": "تم تطبيق خصم 450.00 ر.س من المحفظة",
+      "wallet-remaining-note": "المتبقي: 4,350.00 ر.س",
+      "pay-methods-title": "اختر طريقة الدفع",
+      "secure-step": "خطوة آمنة ومحمية",
+      "method-mada": "مدى (mada)",
+      "mada-badge": "الأسرع ومفضلة محلياً",
+      "mada-sub": "بطاقات الخصم المباشر لجميع البنوك السعودية",
+      "method-apple": "Apple Pay",
+      "apple-sub": "دفع فوري بلمسة واحدة عبر Face ID",
+      "method-cards": "بطاقة ائتمانية (Visa / Mastercard)",
+      "cards-sub": "تقبل البطاقات المحلية والدولية",
+      "gateway-note": "ملاحظة: يتم إدخال بيانات البطاقة وتأكيد التحقق عبر بوابة الدفع الآمنة ورمز 3D Secure لضمان أقصى معايير الحماية المصرفية.",
+      "badge-cloud": "استضافة سحابية سعودية",
+      "badge-zatca": "فاتورة إلكترونية معتمدة",
+      "pay-default-btn": "دفع 4,800.00 ر.س",
+      "pay-wallet-btn": "سداد المتبقي 4,350.00 ر.س",
+      "terms-note": "بالضغط على تأكيد الدفع، أنت توافق على شروط استبدال واسترجاع الباقات الطبية التابعة لمجموعة عيادات لوميا."
+    },
+    en: {
+      "demo-title": "Interactive Demo State Switcher",
+      "lang-btn": "العربية (RTL)",
+      "pill-default": "Default Checkout",
+      "pill-wallet": "Wallet Applied",
+      "pill-proc": "Processing",
+      "pill-fail": "Payment Failed",
+      "pill-succ": "Success State",
+      "failed-head": "Payment Declined",
+      "failed-desc": "Transaction could not be completed: Card debit declined (Code 104: Insufficient funds or daily spending limit exceeded).",
+      "failed-btn": "Retry with Another Method",
+      "proc-title": "Securely processing payment...",
+      "proc-desc": "Please wait; verifying transaction via 3D Secure protocol and central banking gateway. Do not refresh or close this screen.",
+      "proc-badge": "Direct 256-bit Bank Encryption",
+      "suc-title": "Package Paid Successfully!",
+      "suc-subtitle": "Transaction Reference: #LUM-849204-KSA",
+      "suc-status-label": "Medical Package Status",
+      "suc-status-pending": "Pending Payment",
+      "suc-status-active": "Now Active (8 Sessions Available)",
+      "suc-branch": "Lumea Clinics - Al Olaya, Riyadh",
+      "suc-msg-head": "Tax Invoice Ready",
+      "suc-msg-body": "Your official ZATCA compliant e-tax invoice has been dispatched to your registered WhatsApp phone number.",
+      "suc-book-btn": "Book First Session Now",
+      "suc-back-btn": "Go to My Packages",
+      "order-summary-title": "Package Order Summary",
+      "pkg-id": "Package #LUM-849",
+      "package-name": "Full Body Laser Hair Removal - 8 Sessions",
+      "sar": "SAR",
+      "package-sessions": "Includes 8 full-body laser sessions plus complimentary touch-ups within 14 days of each session.",
+      "candela-badge": "Candela GentleLase Pro-U • DCD Cooling",
+      "branch-validity": "Valid at: All Riyadh & Jeddah branches (Olaya & Tahlia)",
+      "expiry-validity": "Valid for 18 months from activation date",
+      "subtotal-label": "Subtotal",
+      "vat-label": "VAT (15% ZATCA Compliant)",
+      "wallet-applied-label": "Wallet Balance Deducted",
+      "total-label": "Grand Total (VAT Included)",
+      "wallet-toggle-title": "Use Digital Wallet Balance",
+      "wallet-balance-val": "Available: SAR 450.00",
+      "wallet-toggle-sub": "Deduct your current balance from the grand total and settle the remainder via your preferred payment method.",
+      "wallet-deducted-note": "SAR 450.00 wallet balance applied",
+      "wallet-remaining-note": "Remaining: SAR 4,350.00",
+      "pay-methods-title": "Select Payment Method",
+      "secure-step": "Secure & Encrypted Step",
+      "method-mada": "mada Debit Card",
+      "mada-badge": "Fastest & Locally Preferred",
+      "mada-sub": "Direct debit card for all Saudi banking institutions",
+      "method-apple": "Apple Pay",
+      "apple-sub": "Instant one-tap checkout with Face ID",
+      "method-cards": "Credit Card (Visa / Mastercard)",
+      "cards-sub": "Accepts all domestic & international credit cards",
+      "gateway-note": "Note: Card credentials and OTP verification are processed via the secure 3D Secure gateway for maximum banking protection.",
+      "badge-cloud": "Saudi Cloud Hosted",
+      "badge-zatca": "ZATCA E-Invoicing",
+      "pay-default-btn": "Pay SAR 4,800.00",
+      "pay-wallet-btn": "Pay Remaining SAR 4,350.00",
+      "terms-note": "By confirming payment, you agree to Lumea Medical Clinics refund & package transfer terms."
+    }
+  };
+
+  function updateTexts() {
+    const t = translations[currentLanguage];
+    document.getElementById('demo-title-text').innerText = t["demo-title"];
+    document.getElementById('lang-btn-label').innerText = t["lang-btn"];
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (t[key]) {
+        el.innerText = t[key];
+      }
+    });
+
+    updatePriceDisplay();
+  }
+
+  function toggleLanguage() {
+    currentLanguage = (currentLanguage === 'ar') ? 'en' : 'ar';
+    const root = document.getElementById('checkout-root');
+    root.setAttribute('dir', currentLanguage === 'ar' ? 'rtl' : 'ltr');
+    updateTexts();
+  }
+
+  function updatePriceDisplay() {
+    const t = translations[currentLanguage];
+    const totalEl = document.getElementById('display-total-price');
+    const btnTextEl = document.getElementById('primary-pay-text');
+    const currency = t["sar"];
+
+    if (isWalletApplied) {
+      totalEl.innerHTML = `4,350.00 <span class="font-label-md text-label-md font-normal">${currency}</span>`;
+      btnTextEl.innerText = currentLanguage === 'ar' ? 'سداد المتبقي 4,350.00 ر.س' : 'Pay Remaining SAR 4,350.00';
+    } else {
+      totalEl.innerHTML = `4,800.00 <span class="font-label-md text-label-md font-normal">${currency}</span>`;
+      btnTextEl.innerText = currentLanguage === 'ar' ? 'دفع 4,800.00 ر.س' : 'Pay SAR 4,800.00';
+    }
+  }
+
+  function toggleWalletState(isChecked) {
+    isWalletApplied = isChecked;
+    const walletRow = document.getElementById('wallet-breakdown-row');
+    const walletNotice = document.getElementById('wallet-active-badge');
+    const walletCheckbox = document.getElementById('wallet-checkbox');
+
+    walletCheckbox.checked = isChecked;
+
+    if (isChecked) {
+      walletRow.classList.remove('hidden');
+      walletRow.classList.add('flex');
+      walletNotice.classList.remove('hidden');
+      walletNotice.classList.add('flex');
+    } else {
+      walletRow.classList.remove('flex');
+      walletRow.classList.add('hidden');
+      walletNotice.classList.remove('flex');
+      walletNotice.classList.add('hidden');
+    }
+
+    updatePriceDisplay();
+  }
+
+  function setDemoState(state) {
+    currentState = state;
+
+    // Reset pill styles
+    document.querySelectorAll('.demo-pill').forEach(pill => {
+      pill.classList.remove('bg-primary', 'text-on-primary');
+      pill.classList.add('bg-surface-container', 'text-on-surface-variant');
+    });
+
+    // Highlight active pill
+    const activePill = document.getElementById(`pill-${state}`);
+    if (activePill) {
+      activePill.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      activePill.classList.add('bg-primary', 'text-on-primary');
+    }
+
+    const mainFlow = document.getElementById('checkout-main-flow');
+    const processingCard = document.getElementById('state-processing-card');
+    const failedBanner = document.getElementById('state-failed-banner');
+    const successCard = document.getElementById('state-success-card');
+
+    // Default cleanup
+    processingCard.classList.remove('flex');
+    processingCard.classList.add('hidden');
+    failedBanner.classList.remove('flex');
+    failedBanner.classList.add('hidden');
+    successCard.classList.remove('flex');
+    successCard.classList.add('hidden');
+    mainFlow.classList.remove('hidden');
+    mainFlow.classList.add('flex');
+
+    if (state === 'default') {
+      toggleWalletState(false);
+    } else if (state === 'wallet') {
+      toggleWalletState(true);
+    } else if (state === 'processing') {
+      mainFlow.classList.remove('flex');
+      mainFlow.classList.add('hidden');
+      processingCard.classList.remove('hidden');
+      processingCard.classList.add('flex');
+    } else if (state === 'failed') {
+      failedBanner.classList.remove('hidden');
+      failedBanner.classList.add('flex');
+    } else if (state === 'success') {
+      mainFlow.classList.remove('flex');
+      mainFlow.classList.add('hidden');
+      successCard.classList.remove('hidden');
+      successCard.classList.add('flex');
+    }
+  }
+
+  function triggerCheckoutAction() {
+    setDemoState('processing');
+    setTimeout(() => {
+      setDemoState('success');
+    }, 1800);
+  }
+
+  function onPaymentMethodSelect(method) {
+    const options = document.querySelectorAll('.payment-option');
+    options.forEach(opt => {
+      const radio = opt.querySelector('input[type="radio"]');
+      if (radio && radio.value === method) {
+        opt.classList.add('bg-surface-container-high');
+        opt.classList.remove('bg-surface-container');
+      } else {
+        opt.classList.remove('bg-surface-container-high');
+        opt.classList.add('bg-surface-container');
+      }
+    });
+  }
+
+  // Initial render setup
+  document.addEventListener('DOMContentLoaded', () => {
+    updateTexts();
+  });
+</script></main></body></html>

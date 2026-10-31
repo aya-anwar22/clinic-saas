@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-primary": "#ffffff",
+          "on-error-container": "#93000a",
+          "inverse-surface": "#293040",
+          "primary-container": "#5b5bd6",
+          "surface-container-high": "#e1e8fd",
+          "on-tertiary-fixed": "#002113",
+          "primary": "#4241bc",
+          "background": "#f9f9ff",
+          "on-primary-container": "#edeaff",
+          "tertiary-container": "#007a53",
+          "on-primary-fixed": "#0a006b",
+          "secondary-fixed": "#c9e6ff",
+          "on-secondary-fixed": "#001e2f",
+          "on-surface-variant": "#464553",
+          "primary-fixed": "#e2dfff",
+          "error-container": "#ffdad6",
+          "on-tertiary": "#ffffff",
+          "tertiary-fixed-dim": "#4edea3",
+          "surface-dim": "#d3daef",
+          "on-error": "#ffffff",
+          "on-secondary-fixed-variant": "#004c6e",
+          "secondary-container": "#39b8fd",
+          "surface": "#f9f9ff",
+          "on-primary-fixed-variant": "#3533b0",
+          "inverse-primary": "#c1c1ff",
+          "surface-container-lowest": "#ffffff",
+          "on-tertiary-container": "#a3ffd0",
+          "outline": "#777585",
+          "on-tertiary-fixed-variant": "#005236",
+          "surface-container-low": "#f1f3ff",
+          "tertiary": "#005f40",
+          "primary-fixed-dim": "#c1c1ff",
+          "inverse-on-surface": "#edf0ff",
+          "secondary": "#006591",
+          "tertiary-fixed": "#6ffbbe",
+          "outline-variant": "#c7c4d6",
+          "on-surface": "#141b2b",
+          "error": "#ba1a1a",
+          "surface-variant": "#dce2f7",
+          "on-background": "#141b2b",
+          "surface-bright": "#f9f9ff",
+          "secondary-fixed-dim": "#89ceff",
+          "surface-container": "#e9edff",
+          "on-secondary": "#ffffff",
+          "surface-tint": "#4e4ec9",
+          "on-secondary-container": "#004666",
+          "surface-container-highest": "#dce2f7"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter-mobile": "0.75rem",
+          "margin": "2rem",
+          "space-xs": "0.25rem",
+          "space-xl": "2rem",
+          "gutter": "1.25rem",
+          "space-md": "0.75rem",
+          "margin-mobile": "1rem",
+          "space-sm": "0.5rem",
+          "space-lg": "1.25rem"
+        },
+        "fontFamily": {
+          "display-lg": [
+            "IBM Plex Sans"
+          ],
+          "body-sm": [
+            "IBM Plex Sans"
+          ],
+          "metric-mono": [
+            "Inter"
+          ],
+          "title-sm": [
+            "IBM Plex Sans"
+          ],
+          "headline-md": [
+            "IBM Plex Sans"
+          ],
+          "body-md": [
+            "IBM Plex Sans"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "IBM Plex Sans"
+          ],
+          "body-lg": [
+            "IBM Plex Sans"
+          ],
+          "headline-lg-mobile": [
+            "IBM Plex Sans"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "display-lg-mobile": [
+            "IBM Plex Sans"
+          ]
+        },
+        "fontSize": {
+          "display-lg": [
+            "36px",
+            {
+              "lineHeight": "48px",
+              "fontWeight": "700"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "metric-mono": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "22px",
+            {
+              "lineHeight": "30px",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "display-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "38px",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-gutter flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[22px]">spa</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-sm text-title-sm text-on-surface font-bold tracking-tight">LUMEA</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant uppercase font-semibold">OS</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">عيادات التجميل والجلدية</span></div></div><div class="h-7 w-[1px] bg-surface-variant hidden lg:block"></div><button class="hidden lg:flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container hover:text-on-surface text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-secondary text-[20px]">location_city</span><div class="flex flex-col text-right"><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">الفرع الحالي</span><span class="font-label-md text-label-md text-on-surface font-semibold">فرع العليا التخصصي - الرياض</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></button><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a aria-current="page" class="px-space-md py-2 transition-colors bg-primary-container text-on-primary font-semibold rounded-lg" data-path="clinical-console" href="#">العيادة والمواعيد</a><a class="px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="patient-records" href="#">سجلات المرضى</a><a class="px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="treatment-protocols" href="#">بروتوكولات الليزر</a><a class="px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="zatca-billing" href="#">الفواتير والامتثال</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs"><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm"><span class="material-symbols-outlined text-[15px] text-tertiary">verified</span><span>ZATCA المرحلة الثانية</span></div><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm"><span class="material-symbols-outlined text-[15px] text-secondary">lock</span><span>نظام حماية البيانات PDPL</span></div></div><div class="h-6 w-[1px] bg-surface-variant hidden md:block"></div><button aria-label="التنبيهات" class="relative p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 left-1.5 flex h-4 min-w-4 px-1 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold leading-none">3</span></button><div class="flex items-center gap-space-sm ps-space-xs"><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold">د. سارة العتيبي</span><span class="font-label-sm text-label-sm text-on-surface-variant">استشاري جلدية وتجميل</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full" id="lumea-notification-hub">
+<!-- Interactive Presentation Control Ribbon -->
+<div class="w-full bg-surface-container-low px-gutter py-space-sm shadow-sm sticky top-20 z-40">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface font-semibold" data-i18n="controlTitle">محاكي أوضاع مركز التنبيهات (Clinical OS Controller):</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<!-- View Mode Switcher -->
+<div class="flex items-center bg-surface-container-lowest p-1 rounded-lg shadow-sm">
+<button class="px-space-md py-1 rounded font-label-sm text-label-sm font-semibold transition-all bg-primary-container text-on-primary" id="btn-view-full" onclick="setViewMode('full')" type="button">
+<span class="material-symbols-outlined text-[15px] align-middle me-1">dashboard</span>
+<span data-i18n="modeFull">عرض كامل (Full Page)</span>
+</button>
+<button class="px-space-md py-1 rounded font-label-sm text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface" id="btn-view-popover" onclick="setViewMode('popover')" type="button">
+<span class="material-symbols-outlined text-[15px] align-middle me-1">open_in_browser</span>
+<span data-i18n="modePopover">قائمة عائمة (Popover Panel)</span>
+</button>
+</div>
+<!-- State Switcher -->
+<div class="flex items-center bg-surface-container-lowest p-1 rounded-lg shadow-sm">
+<button class="px-space-sm py-1 rounded font-label-sm text-label-sm font-semibold transition-all bg-primary text-on-primary" id="state-active-btn" onclick="setState('active')" type="button">
+<span data-i18n="stateActive">النشط (Active)</span>
+</button>
+<button class="px-space-sm py-1 rounded font-label-sm text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface" id="state-empty-btn" onclick="setState('empty')" type="button">
+<span data-i18n="stateEmpty">فارغ (Caught up)</span>
+</button>
+<button class="px-space-sm py-1 rounded font-label-sm text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface" id="state-loading-btn" onclick="setState('loading')" type="button">
+<span data-i18n="stateLoading">تحميل (Skeleton)</span>
+</button>
+</div>
+<!-- Language / Dir Toggle -->
+<button class="flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm transition-colors shadow-sm" id="lang-toggle-btn" onclick="toggleLanguage()" type="button">
+<span class="material-symbols-outlined text-[16px]">translate</span>
+<span id="lang-toggle-label">English (LTR)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Container -->
+<div class="max-w-7xl w-full mx-auto px-gutter py-space-xl flex flex-col gap-space-lg">
+<!-- Screen Meta Bar: Regulatory Trust Stamp & Real-time Indicator -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight" data-i18n="pageTitle">مركز العمليات والتنبيهات السريرية</h1>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span id="badge-urgent-count">3 عاجل</span>
+</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="pageSub">
+          مزامنة لحظية عبر سحابة الصحة المعتمدة Class C، متوافقة مع هيئة الزكاة والضريبة (ZATCA) ونظام حماية البيانات (PDPL).
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-1.5 px-space-md py-1.5 rounded-xl bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">calendar_clock</span>
+<span data-i18n="dateStamp">15 شعبان 1446 هـ | 13 فبراير 2025 م</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-md py-1.5 rounded-xl bg-surface-container-lowest shadow-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">security_update_good</span>
+<span>NCA ECC-1:2018 متوافق</span>
+</div>
+</div>
+</div>
+<!-- POPOVER VIEW SIMULATION WRAPPER (conditionally visible via script) -->
+<div class="hidden flex-col items-end relative w-full mb-space-lg" id="popover-wrapper">
+<div class="w-full bg-surface-container-low rounded-xl p-space-md text-on-surface-variant font-label-md text-label-md flex items-center justify-between mb-2">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">info</span>
+<span data-i18n="popoverNotice">معاينة نمط اللوحة المنبثقة السريعة المباشرة (Quick Popover Drawer) كما تظهر لأطباء الجلدية ومسؤولي التمريض:</span>
+</span>
+<button class="font-label-sm text-label-sm text-primary hover:underline" data-i18n="expandFull" onclick="setViewMode('full')" type="button">توسيع إلى الشاشة الكاملة ←</button>
+</div>
+<!-- Elevated Floating Panel Container (anchored) -->
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-xl shadow-xl p-space-md flex flex-col gap-space-md">
+<!-- Popover Header -->
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+</div>
+<div>
+<h2 class="font-title-sm text-title-sm text-on-surface font-bold" data-i18n="popoverTitle">التنبيهات المباشرة</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant" data-i18n="popoverUnreadCount">4 إشعارات غير مقروءة تتطلب تدخل</span>
+</div>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-container font-semibold transition-colors" data-i18n="markAllRead" onclick="markAllRead()" type="button">
+            تحديد الكل كمقروء
+          </button>
+</div>
+<!-- Popover Compact Cards List -->
+<div class="flex flex-col gap-space-xs max-h-[460px] overflow-y-auto pe-1" id="popover-list">
+<!-- Item 1: ZATCA Critical -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="p-1.5 rounded-lg bg-error-container text-on-error-container shrink-0">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-error font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+                    ZATCA: تأخر إرسال الفاتورة
+                  </span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">
+                    فاتورة INV-2026-004417 لم تُرسل لهيئة الزكاة والضريبة منذ 12 ساعة.
+                  </p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">منذ 12 س</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">فرع العليا التخصصي</span>
+<button class="px-space-sm py-1 rounded bg-error text-on-error font-label-sm text-label-sm font-semibold hover:opacity-95 shadow-sm" type="button">
+                مزامنة ZATCA الآن
+              </button>
+</div>
+</div>
+<!-- Item 2: Override Audit -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="p-1.5 rounded-lg bg-secondary-fixed text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold">تدقيق سريري: تجاوز أمان</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">
+                    د. عمر الشريف تجاوز تحذير الحمل سريرياً لجلسة ليزر كانديلا.
+                  </p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">35 د</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">عيادة ليزر 03</span>
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm font-semibold" type="button">
+                مراجعة السجل
+              </button>
+</div>
+</div>
+<!-- Item 3: Gel Stock -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="p-1.5 rounded-lg bg-surface-container-highest text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">انتهاء صلاحية المستودع</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">
+                    تشغيلة الجل التبريدي Lot GEL-2291 تنتهي خلال 9 أيام.
+                  </p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">2 س</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">مستودع العيادات</span>
+<button class="px-space-sm py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary" type="button">
+                حجز استبدال
+              </button>
+</div>
+</div>
+</div>
+<!-- Popover Footer -->
+<div class="pt-space-sm bg-surface-container-lowest flex items-center justify-between">
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline flex items-center gap-1" onclick="setViewMode('full')" type="button">
+<span data-i18n="viewAllInPage">عرض كل التنبيهات في لوحة التحكم</span>
+<span class="material-symbols-outlined text-[15px]">arrow_back</span>
+</button>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[15px]">settings</span>
+<span data-i18n="settingsMini">الإعدادات</span>
+</a>
+</div>
+</div>
+</div>
+<!-- MAIN VIEWPORT: ACTIVE STATE (FULL PAGE) -->
+<div class="flex flex-col gap-space-lg w-full" id="view-active-container">
+<!-- Action Bar: Filters, Branch Selector, Quick Search -->
+<div class="w-full bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Category Filter Tabs -->
+<div class="flex flex-wrap items-center gap-space-xs" id="category-tab-group">
+<button class="category-btn active px-space-md py-2 rounded-lg font-label-md text-label-md font-semibold transition-all bg-primary-container text-on-primary shadow-sm flex items-center gap-1.5" onclick="filterCategory('all', this)" type="button">
+<span data-i18n="tabAll">الكل</span>
+<span class="px-1.5 py-0.5 rounded-full bg-on-primary/20 text-on-primary font-label-sm text-label-sm" id="cnt-all">14</span>
+</button>
+<button class="category-btn px-space-md py-2 rounded-lg font-label-md text-label-md font-semibold transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface flex items-center gap-1.5" onclick="filterCategory('action', this)" type="button">
+<span data-i18n="tabAction">يتطلب إجراء</span>
+<span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm" id="cnt-action">4</span>
+</button>
+<button class="category-btn px-space-md py-2 rounded-lg font-label-md text-label-md font-semibold transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface flex items-center gap-1.5" onclick="filterCategory('compliance', this)" type="button">
+<span data-i18n="tabCompliance">الامتثال والأنظمة</span>
+<span class="px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm" id="cnt-compliance">2</span>
+</button>
+<button class="category-btn px-space-md py-2 rounded-lg font-label-md text-label-md font-semibold transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface flex items-center gap-1.5" onclick="filterCategory('stock', this)" type="button">
+<span data-i18n="tabStock">المخزون والمعدات</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm" id="cnt-stock">3</span>
+</button>
+</div>
+<!-- Branch Selector & Secondary Utilities -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Branch Dropdown -->
+<div class="flex items-center gap-2 bg-surface-container-low px-space-md py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[18px] text-secondary">storefront</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer" id="branch-filter" onchange="filterBranch(this.value)">
+<option value="all">جميع الفروع (All Branches)</option>
+<option value="olaya">فرع العليا التخصصي - الرياض</option>
+<option value="rawdah">فرع الروضة - جدة</option>
+<option value="khobar">فرع الكورنيش - الخبر</option>
+</select>
+</div>
+<!-- Mark All Read -->
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-semibold transition-colors" onclick="markAllRead()" type="button">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span data-i18n="markAllBtn">تحديد الكل كمقروء</span>
+</button>
+<!-- Notification Settings Trigger -->
+<button class="flex items-center gap-1.5 p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="openSettingsModal()" title="إعدادات التنبيهات" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Bento Grid: Main Feed + Clinic Context Analytics Panel -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Column Left (8 Cols): Feed of Cards -->
+<div class="lg:col-span-8 flex flex-col gap-space-md" id="cards-feed-wrapper">
+<!-- Card 1: Urgent ZATCA E-Invoicing Non-Reporting -->
+<div class="notification-card bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all p-space-lg flex flex-col gap-space-md relative overflow-hidden" data-branch="olaya" data-category="action compliance" data-read="false">
+<div class="absolute top-0 right-0 left-0 h-1 bg-error"></div>
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">account_balance_wallet</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span data-i18n="lblCritical">حرج • ZATCA المرحلة 2</span>
+</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+                      فرع العليا التخصصي - الرياض
+                    </span>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>منذ 12 ساعة</span>
+</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold leading-snug">
+                    فاتورة INV-2026-004417 لم تُرسل لهيئة الزكاة والضريبة والجمارك منذ 12 ساعة
+                  </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    فشلت دورة المزامنة التلقائية مع بوابة (فاتورة Fatoora) بسبب خطأ في التحقق من التوقيع الرقمي ECDSA. يجب إعادة الاعتماد قبل انقضاء مهلة الـ 24 ساعة النظامية لتفادي الغرامات التراكمية.
+                  </p>
+</div>
+</div>
+<!-- Unread status dot -->
+<span class="w-3 h-3 rounded-full bg-error shrink-0 unread-dot" title="غير مقروء"></span>
+</div>
+<!-- Card Bottom Bar: Technical Payload & Action Buttons -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-sm bg-surface-container-lowest">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1 font-metric-mono text-label-sm text-on-surface-variant">
+<span class="font-semibold text-on-surface">Invoice UUID:</span>
+<span class="bg-surface-container-low px-1.5 py-0.5 rounded">9a7c...e014</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>سجل الزكاة مشفر</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-colors" onclick="showAuditModal('ZATCA-INV-2026')" type="button">
+                  سجل الأخطاء
+                </button>
+<button class="px-space-lg py-2 rounded-lg bg-error text-on-error hover:opacity-95 font-label-md text-label-md font-semibold shadow-sm transition-transform active:scale-95 flex items-center gap-1.5" onclick="triggerZatcaSync(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span data-i18n="btnZatcaSync">إعادة الإرسال فوراً (ZATCA Sync)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Candela Laser Handpiece Life (Maintenance) -->
+<div class="notification-card bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all p-space-lg flex flex-col gap-space-md relative overflow-hidden" data-branch="olaya" data-category="action stock" data-read="false">
+<div class="absolute top-0 right-0 left-0 h-1 bg-secondary-container"></div>
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">medical_services</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>صيانة وقائية • جهاز الليزر</span>
+</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+                      غرفة كانديلا 01 - العليا
+                    </span>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>منذ 4 ساعات</span>
+</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold leading-snug">
+                    وصلت قبضة ليزر كانديلا Handpiece H2 إلى 90% من عمر النبضات الافتراضي
+                  </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    سجل العدّاد الداخلي للقبضة 450,210 نبضة من أصل 500,000 نبضة موصى بها من الشركة المصنعة. يرجى فتح تذكرة لصيانة الفايبر والعدسات لضمان ثبات معايير الطاقة (Fluence J/cm²).
+                  </p>
+</div>
+</div>
+<span class="w-3 h-3 rounded-full bg-secondary shrink-0 unread-dot" title="غير مقروء"></span>
+</div>
+<!-- Inline SVG Gauge: Pulse Utilization Sparkbar -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md w-full md:w-auto">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center font-metric-mono font-bold text-secondary text-label-md">
+                  90%
+                </div>
+<div class="flex flex-col flex-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">استهلاك النبضات الفعلي</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">متبقي 49,790 نبضة قبل إيقاف الجلسات تلقائياً</span>
+</div>
+</div>
+<!-- Sparkline Bar -->
+<div class="w-full md:w-56 h-3 bg-surface-container rounded-full overflow-hidden flex">
+<div class="bg-secondary-container h-full rounded-full transition-all duration-1000" style="width: 90%;"></div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>الجهاز: Candela GentleLase Pro-U</span>
+<span>•</span>
+<span>سيريال: SN-CDL-8821</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-colors" type="button">
+                  معايرة المعاملات
+                </button>
+<button class="px-space-lg py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-semibold shadow-sm transition-transform active:scale-95 flex items-center gap-1.5" onclick="scheduleMaintenance(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">build</span>
+<span>طلب صيانة وقائية فورية</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Clinical Override Audit (PDPL / Medical Safety) -->
+<div class="notification-card bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all p-space-lg flex flex-col gap-space-md relative overflow-hidden" data-branch="olaya" data-category="action compliance" data-read="false">
+<div class="absolute top-0 right-0 left-0 h-1 bg-tertiary"></div>
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">gavel</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>سجل أمان سريري • PDPL</span>
+</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+                      عيادة ليزر 03 - الرياض
+                    </span>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>منذ 35 دقيقة</span>
+</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold leading-snug">
+                    قام د. عمر بتجاوز تحذير الحمل سريرياً لمريضة ليزر (Clinical Override Audit)
+                  </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    تم رصد تجاوز مؤشر موانع الاستعمال (Contraindication) لملف المريضة ريم السالم (ملف #4902). سجل النظام تبرير الطبيب بـ: «إجراء ليزر تفتيح كربوني سطحي غير مؤين للوجه مع حماية البطن، وبموافقة المريضة الموقعة نافذ».
+                  </p>
+</div>
+</div>
+<span class="w-3 h-3 rounded-full bg-tertiary shrink-0 unread-dot" title="غير مقروء"></span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-low text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">fingerprint</span>
+<span>توثيق نفاذ PDPL: مكتمل</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">المراجع: د. سارة العتيبي (المدير الطبي)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-colors" type="button">
+                  تحميل الإقرار الرقمي
+                </button>
+<button class="px-space-lg py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-semibold shadow-sm transition-transform active:scale-95 flex items-center gap-1.5" onclick="reviewOverrideAudit()" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>مراجعة تقرير التجاوز والاعتماد</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4: Cooling Gel Batch Expiration (Consumables / Stock) -->
+<div class="notification-card bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all p-space-lg flex flex-col gap-space-md relative overflow-hidden" data-branch="olaya" data-category="action stock" data-read="false">
+<div class="absolute top-0 right-0 left-0 h-1 bg-surface-variant"></div>
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest text-on-surface-variant flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">vaccines</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning_amber</span>
+<span>مخزون طبي • وشك الانتهاء</span>
+</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+                      مستودع العيادات المركزية
+                    </span>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>منذ ساعتين</span>
+</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold leading-snug">
+                    تشغيلة الجل التبريدي Lot GEL-2291 تنتهي صلاحيتها خلال 9 أيام
+                  </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    تبقى 28 عبوة (5 لتر) من تشغيلة الجل المائي الموصل لليزر في المستودع الرئيسي. وفقاً لمعايير الهيئة العامة للغذاء والدواء (SFDA)، سيتم حظر استخدام هذه التشغيلة تلقائياً في جداول الغرف بتاريخ 22 فبراير 2025.
+                  </p>
+</div>
+</div>
+<span class="w-3 h-3 rounded-full bg-outline shrink-0 unread-dot" title="غير مقروء"></span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-3">
+<span class="font-metric-mono text-label-sm text-on-surface-variant font-semibold">SKU: SFDA-MD-99120</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">الكمية المتبقية: 28 وحدة</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-colors" type="button">
+                  تحويل للفروع الأخرى
+                </button>
+<button class="px-space-lg py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-semibold shadow-sm transition-transform active:scale-95 flex items-center gap-1.5" onclick="quarantineBatch(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">assignment_returned</span>
+<span>حجز/استبدال التشغيلة</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 5: Insurance NPHIES Matching Success (Info/Success) -->
+<div class="notification-card bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all p-space-lg flex flex-col gap-space-md relative overflow-hidden" data-branch="rawdah" data-category="compliance" data-read="true">
+<div class="absolute top-0 right-0 left-0 h-1 bg-tertiary-fixed-dim"></div>
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container text-on-tertiary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">task_alt</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>منصة نفيس (NPHIES) • نجاح الربط</span>
+</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+                      فرع الروضة - جدة
+                    </span>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>أمس، 04:15 م</span>
+</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold leading-snug">
+                    اكتمال مطابقة ملف التأمين NPHIES للمريض طارق الشمري
+                  </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    تمت الموافقة المسبقة وتغطية جلسات علاج العد الوردي (Rosacea) بنسبة 80% من شركة بوبا العربية عبر الربط الشبكي المباشر مع المنصة الوطنية الموحدة.
+                  </p>
+</div>
+</div>
+<!-- Already read (no dot) -->
+<span class="font-label-sm text-label-sm text-outline">مقروء</span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>رمز المطالبة: CLM-99412</span>
+<span>•</span>
+<span>المبلغ المعتمد: 1,480 ر.س</span>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>عرض وثيقة التغطية</span>
+</button>
+</div>
+</div>
+<!-- Card 6: Security Audit External Login Alert -->
+<div class="notification-card bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all p-space-lg flex flex-col gap-space-md relative overflow-hidden" data-branch="khobar" data-category="action compliance" data-read="true">
+<div class="absolute top-0 right-0 left-0 h-1 bg-error"></div>
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">lock_reset</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">security</span>
+<span>أمن سيبراني • محاولة دخول غير مصرح بها</span>
+</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+                      فرع الخبر - بوابة الأطباء
+                    </span>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>منذ يومين</span>
+</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold leading-snug">
+                    محاولة تسجيل دخول مشبوهة من IP خارجي مسجلة في سجل تدقيق PDPL
+                  </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    تم عزل الجلسة آلياً وتطبيق قفل أمان ثنائي الخطوة للحساب الإداري بعد 4 محاولات إدخال رمز خاطئ من نطاق جغرافي خارج المملكة.
+                  </p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">مقروء</span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<span class="font-metric-mono text-label-sm text-on-surface-variant">IP: 185.220.101.4 | فحص WAF: محظور بنجاح</span>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>تصدير تقرير الاختراق للهيئة الوطنية للأمن السيبراني</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Column Right (4 Cols): High-Level Clinical Status & System Audit Panel -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Clinical Operational Health Widget -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-title-sm text-title-sm text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">ecg_heart</span>
+<span data-i18n="widgetHealthTitle">جاهزية العيادات والامتثال</span>
+</h2>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-semibold">
+                98.4% متوافق
+              </span>
+</div>
+<!-- Visual Progress Radial Ring (Inline SVG) -->
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-low">
+<div class="relative w-20 h-20 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<!-- Background ring -->
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<!-- Progress ring (approx 85%) -->
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="88, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-metric-mono text-label-md text-on-surface font-bold leading-none">88%</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">الاستجابة</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold" data-i18n="speedMetric">معدل معالجة التنبيهات</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  متوسط زمن معالجة الأعطال الطبية 14 دقيقة عبر كافة غرف الليزر هذا اليوم.
+                </p>
+</div>
+</div>
+<!-- Breakdown list -->
+<div class="flex flex-col gap-space-sm pt-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span>معاملات مالية معلقة ZATCA</span>
+</span>
+<span class="font-metric-mono font-bold text-on-surface">1</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span>أجهزة ليزر قاربت عمر النبضات</span>
+</span>
+<span class="font-metric-mono font-bold text-on-surface">2</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span>تجاوزات سريرية مدققة وموقعة</span>
+</span>
+<span class="font-metric-mono font-bold text-on-surface">4</span>
+</div>
+</div>
+<button class="w-full mt-2 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span data-i18n="exportAuditLog">تصدير تقرير التدقيق الشهري (PDF)</span>
+</button>
+</div>
+<!-- Medical Branch Device Fleet Telemetry -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<h2 class="font-title-sm text-title-sm text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">precision_manufacturing</span>
+<span data-i18n="fleetTitle">أسطول أجهزة الليزر (Telemetry)</span>
+</h2>
+<!-- Device status rows -->
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-2 h-8 rounded-full bg-tertiary"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Candela GentleMax Pro</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">عيادة 01 • درجة الحرارة 18°C</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-bold">جاهز</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-2 h-8 rounded-full bg-secondary"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Fotona Dynamis Pro</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">عيادة 02 • جلسة شد نشطة</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-bold">قيد العمل</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-2 h-8 rounded-full bg-error"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">HydraFacial Elite MD</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">عيادة العناية 04 • فلتر ممتلئ</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-error-container text-on-error-container font-bold">فحص</span>
+</div>
+</div>
+<!-- Clinical Photo Context (Placeholders following Asset Pipeline) -->
+<div class="pt-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-2">معايير الغرف المعتمدة (ISO 14644):</span>
+<div class="grid grid-cols-2 gap-2">
+<div class="relative rounded-lg overflow-hidden h-24 group">
+<img class="w-full h-full object-cover" data-alt="Ultra-clean Saudi aesthetic laser treatment suite with pristine white surgical bed, Candela GentleMax laser console, soft indirect ceiling cove lighting, brushed aluminum details, medical sterile ambiance with warm hospital hospitality feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGngRvy3gnn7Wi_gEtT0MPL-3gzD5nIYosWhNw3AlnYy3q3LKypfNnPX_J6RoK-DL9VdJeOZ1edFkp4xSpYkt5xoTsl0Y5CE2DVQDHDt1Is6U7XTZLsPnUjg9K9wtVhWz80jlEoUrt6k2JuarKh36zvvGEkDNlhl-eiVa0GTQXTjqe5vcLFhg0X7KJSZI23k3nQlJgrJqjlMwx68-0BIVCI9VJAwoHfx7SKaKY19KH"/>
+<div class="absolute inset-0 bg-inverse-surface/40 flex items-end p-1.5">
+<span class="text-white font-label-sm text-[11px] font-semibold">غرفة ليزر 01</span>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden h-24 group">
+<img class="w-full h-full object-cover" data-alt="High precision dermatological diagnostics laboratory console in Riyadh, featuring digital skin analysis displays, clean glass sterile shelving, cool-toned ambient LEDs, and calibrated laser safety eyewear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL_Gb1xR_kOxQcBFJonJQXiRvp8puaVhd8AcIIus5oDXffJkVzJwT1nNRqCvHBH3oxJC07fXBflzCTcjHH1ELbz6-O8n3j33IOQtyrfOUEG5dMdWW1PvtAMDR93u55mTJ2jZ8kEXm4Nz95GUx19pkOd7APwKoQ_DrnsK6juXbHvqgvvB65ieocXlYMOJDNyg6QNe7B81hsyh8sq4FXctd7TFgIkf4u9WkXAn22UmGQ"/>
+<div class="absolute inset-0 bg-inverse-surface/40 flex items-end p-1.5">
+<span class="text-white font-label-sm text-[11px] font-semibold">مختبر البشرة 02</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Regulatory Compliance Cards -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified_user</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">شهادة المطابقة النظامية</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              نظام لوميا مشفر ومربوط بسجل المعاملات المالي المباشر المشفر بهيئة الزكاة والضريبة والجمارك (CSID: Phase 2 Approved).
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- STATE 2: EMPTY STATE (CONDITIONALLY DISPLAYED VIA CONTROLLER) -->
+<div class="hidden flex-col items-center justify-center py-20 px-gutter bg-surface-container-lowest rounded-2xl shadow-sm text-center" id="view-empty-container">
+<div class="relative mb-space-lg">
+<div class="w-24 h-24 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary shadow-sm">
+<span class="material-symbols-outlined text-[48px]">task_alt</span>
+</div>
+<span class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-xs" data-i18n="emptyTitle">
+        أنت على اطلاع تام بكافة المستجدات (You are all caught up)
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mb-space-lg" data-i18n="emptySub">
+        رائع! لا توجد تنبيهات معلقة تتطلب تدخلاً سريرياً أو إجراءً عاجلاً في الفروع المحددة. كافة أجهزة الليزر وفواتير الزكاة وسجلات المرضى مستقرة.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-space-sm">
+<button class="px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-primary shadow-sm transition-transform active:scale-95 flex items-center gap-2" onclick="setState('active')" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span data-i18n="emptyReset">العودة للتنبيهات النشطة</span>
+</button>
+<button class="px-space-lg py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span data-i18n="emptyArchive">تصفح سجل الأرشيف والعمليات السابقة</span>
+</button>
+</div>
+</div>
+<!-- STATE 3: LOADING SKELETONS (CONDITIONALLY DISPLAYED VIA CONTROLLER) -->
+<div class="hidden flex-col gap-space-md w-full" id="view-loading-container">
+<div class="w-full h-12 bg-surface-container-low rounded-xl animate-pulse"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Skeleton Card 1 -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-4 animate-pulse">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-4 w-full">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high shrink-0"></div>
+<div class="flex flex-col gap-2 w-full">
+<div class="flex items-center gap-2">
+<div class="h-4 w-28 bg-surface-container-high rounded-full"></div>
+<div class="h-4 w-24 bg-surface-container-low rounded-md"></div>
+</div>
+<div class="h-6 w-3/4 bg-surface-container-high rounded"></div>
+<div class="h-4 w-full bg-surface-container-low rounded"></div>
+<div class="h-4 w-2/3 bg-surface-container-low rounded"></div>
+</div>
+</div>
+</div>
+<div class="h-9 w-full bg-surface-container-low rounded-lg mt-2"></div>
+</div>
+<!-- Skeleton Card 2 -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-4 animate-pulse">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-4 w-full">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high shrink-0"></div>
+<div class="flex flex-col gap-2 w-full">
+<div class="flex items-center gap-2">
+<div class="h-4 w-32 bg-surface-container-high rounded-full"></div>
+<div class="h-4 w-20 bg-surface-container-low rounded-md"></div>
+</div>
+<div class="h-6 w-2/3 bg-surface-container-high rounded"></div>
+<div class="h-4 w-full bg-surface-container-low rounded"></div>
+</div>
+</div>
+</div>
+<div class="h-9 w-full bg-surface-container-low rounded-lg mt-2"></div>
+</div>
+<!-- Skeleton Card 3 -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-4 animate-pulse">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-4 w-full">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high shrink-0"></div>
+<div class="flex flex-col gap-2 w-full">
+<div class="h-4 w-24 bg-surface-container-high rounded-full"></div>
+<div class="h-4 w-28 bg-surface-container-low rounded-md"></div>
+</div>
+</div>
+</div>
+<div class="h-9 w-full bg-surface-container-low rounded-lg mt-2"></div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<div class="w-full h-80 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm animate-pulse flex flex-col gap-4">
+<div class="h-6 w-1/2 bg-surface-container-high rounded"></div>
+<div class="h-24 w-full bg-surface-container-low rounded-xl"></div>
+<div class="h-4 w-full bg-surface-container-low rounded"></div>
+<div class="h-4 w-3/4 bg-surface-container-low rounded"></div>
+<div class="h-10 w-full bg-surface-container-high rounded-lg mt-auto"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CLINICAL MODAL: NOTIFICATION SETTINGS (Self-contained) -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center bg-inverse-surface/40 backdrop-blur-sm p-4" id="settings-modal">
+<div class="w-full max-w-xl bg-surface-container-lowest rounded-2xl shadow-2xl p-space-xl flex flex-col gap-space-lg max-h-[921px] overflow-y-auto">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">tune</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">تفضيلات إشعارات العيادة</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">التحكم في قنوات الإرسال وتنبيهات أمان المرضى</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="closeSettingsModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Setting Row 1 -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">تنبيهات ZATCA اللحظية</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">إشعار صوتي وعاجل عند تعثر إرسال أي فاتورة ضريبية خلال 6 ساعات.</span>
+</div>
+<input checked="" class="w-5 h-5 accent-primary cursor-pointer" type="checkbox"/>
+</div>
+<!-- Setting Row 2 -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">إنذارات استهلاك نبضات الليزر (90%)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">تنبيه مهندسي الأجهزة الطبية ومديري الفروع لجدولة الصيانة.</span>
+</div>
+<input checked="" class="w-5 h-5 accent-primary cursor-pointer" type="checkbox"/>
+</div>
+<!-- Setting Row 3 -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">تجاوزات الموانع السريرية (PDPL Audit)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">إرسال إشعار فوري للمدير الطبي عند تجاوز أي بروتوكول حمل أو حساسية.</span>
+</div>
+<input checked="" class="w-5 h-5 accent-primary cursor-pointer" type="checkbox"/>
+</div>
+<!-- Setting Row 4 -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">قناة الرسائل القصيرة SMS للأطباء المناوبين</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">إرسال الحالات الحرجة عبر بوابة الرسائل الحكومية المعتمدة.</span>
+</div>
+<input class="w-5 h-5 accent-primary cursor-pointer" type="checkbox"/>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-sm bg-surface-container-lowest">
+<button class="px-space-lg py-2 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container" onclick="closeSettingsModal()" type="button">
+          إلغاء
+        </button>
+<button class="px-space-lg py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-primary shadow-sm" onclick="saveSettings()" type="button">
+          حفظ التفضيلات
+        </button>
+</div>
+</div>
+</div>
+<!-- AUDIT REPORT QUICK MODAL -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center bg-inverse-surface/40 backdrop-blur-sm p-4" id="audit-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-2xl shadow-2xl p-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[24px]">terminal</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold" id="audit-modal-title">سجل تشخيص الفاتورة ZATCA</h2>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="closeAuditModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-md bg-inverse-surface text-inverse-on-surface rounded-xl font-metric-mono text-label-sm overflow-x-auto leading-relaxed">
+<code>
+          [ERR_ZATCA_ECDSA_MISMATCH] 2025-02-13 04:12:09 AST<br/>
+          Invoice: INV-2026-004417<br/>
+          Branch: Olaya Specialized Medical Center (Tax ID: 300984812300003)<br/>
+          Response: HTTP 422 - Cryptographic Stamp Failed Validation<br/>
+          Recommendation: Regenerate invoice private hash and resubmit via ZATCA Phase 2 clearance endpoint.
+        </code>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-2">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold" onclick="closeAuditModal()" type="button">إغلاق</button>
+<button class="px-space-lg py-2 rounded-lg bg-error text-on-error font-label-md text-label-md font-semibold shadow-sm" onclick="triggerZatcaSync(null)" type="button">إعادة المحاولة المشفرة الآن</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Scripting -->
+<script>
+  // Bilingual translation dictionary
+  const i18n = {
+    ar: {
+      controlTitle: "محاكي أوضاع مركز التنبيهات (Clinical OS Controller):",
+      modeFull: "عرض كامل (Full Page)",
+      modePopover: "قائمة عائمة (Popover Panel)",
+      stateActive: "النشط (Active)",
+      stateEmpty: "فارغ (Caught up)",
+      stateLoading: "تحميل (Skeleton)",
+      pageTitle: "مركز العمليات والتنبيهات السريرية",
+      pageSub: "مزامنة لحظية عبر سحابة الصحة المعتمدة Class C، متوافقة مع هيئة الزكاة والضريبة (ZATCA) ونظام حماية البيانات (PDPL).",
+      dateStamp: "15 شعبان 1446 هـ | 13 فبراير 2025 م",
+      popoverNotice: "معاينة نمط اللوحة المنبثقة السريعة المباشرة (Quick Popover Drawer) كما تظهر لأطباء الجلدية ومسؤولي التمريض:",
+      expandFull: "توسيع إلى الشاشة الكاملة ←",
+      popoverTitle: "التنبيهات المباشرة",
+      popoverUnreadCount: "4 إشعارات غير مقروءة تتطلب تدخل",
+      markAllRead: "تحديد الكل كمقروء",
+      viewAllInPage: "عرض كل التنبيهات في لوحة التحكم",
+      settingsMini: "الإعدادات",
+      tabAll: "الكل",
+      tabAction: "يتطلب إجراء",
+      tabCompliance: "الامتثال والأنظمة",
+      tabStock: "المخزون والمعدات",
+      markAllBtn: "تحديد الكل كمقروء",
+      widgetHealthTitle: "جاهزية العيادات والامتثال",
+      speedMetric: "معدل معالجة التنبيهات",
+      exportAuditLog: "تصدير تقرير التدقيق الشهري (PDF)",
+      fleetTitle: "أسطول أجهزة الليزر (Telemetry)",
+      emptyTitle: "أنت على اطلاع تام بكافة المستجدات (You are all caught up)",
+      emptySub: "رائع! لا توجد تنبيهات معلقة تتطلب تدخلاً سريرياً أو إجراءً عاجلاً في الفروع المحددة. كافة أجهزة الليزر وفواتير الزكاة وسجلات المرضى مستقرة.",
+      emptyReset: "العودة للتنبيهات النشطة",
+      emptyArchive: "تصفح سجل الأرشيف والعمليات السابقة",
+      btnZatcaSync: "إعادة الإرسال فوراً (ZATCA Sync)",
+      lblCritical: "حرج • ZATCA المرحلة 2"
+    },
+    en: {
+      controlTitle: "Clinical OS Notification Controller:",
+      modeFull: "Full Page View",
+      modePopover: "Popover Panel",
+      stateActive: "Active (14)",
+      stateEmpty: "Caught Up",
+      stateLoading: "Skeleton",
+      pageTitle: "Clinical Notification & Operations Center",
+      pageSub: "Live sync over Class C Saudi Healthcare Cloud. Fully compliant with ZATCA Phase 2 & PDPL.",
+      dateStamp: "15 Sha'ban 1446 AH | Feb 13, 2025 CE",
+      popoverNotice: "In-situ preview of the Quick Popover Drawer as experienced by dermatologists and nurses:",
+      expandFull: "Expand to Full Workspace →",
+      popoverTitle: "Live Operational Alerts",
+      popoverUnreadCount: "4 unread items require clinical action",
+      markAllRead: "Mark all as read",
+      viewAllInPage: "Open Full Operations Board",
+      settingsMini: "Settings",
+      tabAll: "All",
+      tabAction: "Needs Action",
+      tabCompliance: "Compliance & Regulations",
+      tabStock: "Stock & Devices",
+      markAllBtn: "Mark All as Read",
+      widgetHealthTitle: "Clinic Readiness & Compliance",
+      speedMetric: "Alert Response Velocity",
+      exportAuditLog: "Export Monthly Audit PDF",
+      fleetTitle: "Laser Fleet Telemetry",
+      emptyTitle: "You are all caught up",
+      emptySub: "Splendid! There are zero pending alerts requiring clinical intervention in the selected branches. All laser heads, ZATCA hashes, and NPHIES claims are stable.",
+      emptyReset: "Return to Active Feed",
+      emptyArchive: "Browse Historic Operational Logs",
+      btnZatcaSync: "Retry ZATCA Sync Now",
+      lblCritical: "Critical • ZATCA Phase 2"
+    }
+  };
+
+  let currentLang = 'ar';
+  let currentView = 'full';
+  let currentState = 'active';
+
+  // State Switcher (Active, Empty, Loading)
+  function setState(state) {
+    currentState = state;
+    const activeCont = document.getElementById('view-active-container');
+    const emptyCont = document.getElementById('view-empty-container');
+    const loadingCont = document.getElementById('view-loading-container');
+
+    const activeBtn = document.getElementById('state-active-btn');
+    const emptyBtn = document.getElementById('state-empty-btn');
+    const loadingBtn = document.getElementById('state-loading-btn');
+
+    // Reset buttons styling
+    [activeBtn, emptyBtn, loadingBtn].forEach(btn => {
+      btn.className = "px-space-sm py-1 rounded font-label-sm text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface";
+    });
+
+    if (state === 'active') {
+      activeCont.classList.remove('hidden');
+      emptyCont.classList.add('hidden');
+      loadingCont.classList.add('hidden');
+      activeBtn.className = "px-space-sm py-1 rounded font-label-sm text-label-sm font-semibold transition-all bg-primary text-on-primary";
+    } else if (state === 'empty') {
+      activeCont.classList.add('hidden');
+      emptyCont.classList.remove('hidden');
+      loadingCont.classList.add('hidden');
+      emptyBtn.className = "px-space-sm py-1 rounded font-label-sm text-label-sm font-semibold transition-all bg-primary text-on-primary";
+    } else if (state === 'loading') {
+      activeCont.classList.add('hidden');
+      emptyCont.classList.add('hidden');
+      loadingCont.classList.remove('hidden');
+      loadingBtn.className = "px-space-sm py-1 rounded font-label-sm text-label-sm font-semibold transition-all bg-primary text-on-primary";
+    }
+  }
+
+  // View Mode Switcher (Full Page vs Popover Drawer)
+  function setViewMode(mode) {
+    currentView = mode;
+    const popoverWrapper = document.getElementById('popover-wrapper');
+    const btnFull = document.getElementById('btn-view-full');
+    const btnPopover = document.getElementById('btn-view-popover');
+
+    if (mode === 'popover') {
+      popoverWrapper.classList.remove('hidden');
+      btnPopover.className = "px-space-md py-1 rounded font-label-sm text-label-sm font-semibold transition-all bg-primary-container text-on-primary";
+      btnFull.className = "px-space-md py-1 rounded font-label-sm text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface";
+      window.scrollTo({ top: 120, behavior: 'smooth' });
+    } else {
+      popoverWrapper.classList.add('hidden');
+      btnFull.className = "px-space-md py-1 rounded font-label-sm text-label-sm font-semibold transition-all bg-primary-container text-on-primary";
+      btnPopover.className = "px-space-md py-1 rounded font-label-sm text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface";
+    }
+  }
+
+  // Language / Direction Toggle
+  function toggleLanguage() {
+    currentLang = (currentLang === 'ar') ? 'en' : 'ar';
+    const htmlElem = document.documentElement;
+    const langBtnLabel = document.getElementById('lang-toggle-label');
+
+    if (currentLang === 'en') {
+      htmlElem.setAttribute('dir', 'ltr');
+      htmlElem.setAttribute('lang', 'en');
+      langBtnLabel.textContent = "العربية (RTL)";
+    } else {
+      htmlElem.setAttribute('dir', 'rtl');
+      htmlElem.setAttribute('lang', 'ar');
+      langBtnLabel.textContent = "English (LTR)";
+    }
+
+    // Apply translations
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (i18n[currentLang][key]) {
+        el.textContent = i18n[currentLang][key];
+      }
+    });
+  }
+
+  // Category Filtering
+  function filterCategory(cat, btn) {
+    // Tab styles
+    document.querySelectorAll('.category-btn').forEach(b => {
+      b.className = "category-btn px-space-md py-2 rounded-lg font-label-md text-label-md font-semibold transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface flex items-center gap-1.5";
+    });
+    btn.className = "category-btn px-space-md py-2 rounded-lg font-label-md text-label-md font-semibold transition-all bg-primary-container text-on-primary shadow-sm flex items-center gap-1.5";
+
+    const cards = document.querySelectorAll('.notification-card');
+    cards.forEach(card => {
+      const categories = card.getAttribute('data-category') || '';
+      if (cat === 'all' || categories.includes(cat)) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Branch Filtering
+  function filterBranch(branchVal) {
+    const cards = document.querySelectorAll('.notification-card');
+    cards.forEach(card => {
+      const b = card.getAttribute('data-branch') || '';
+      if (branchVal === 'all' || b === branchVal) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Mark All Read
+  function markAllRead() {
+    document.querySelectorAll('.unread-dot').forEach(dot => dot.remove());
+    document.querySelectorAll('.notification-card').forEach(card => card.setAttribute('data-read', 'true'));
+    const urgentCount = document.getElementById('badge-urgent-count');
+    if (urgentCount) {
+      urgentCount.textContent = "0 معلق";
+      urgentCount.parentElement.className = "px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold flex items-center gap-1";
+    }
+    const popoverCount = document.querySelector('[data-i18n="popoverUnreadCount"]');
+    if (popoverCount) popoverCount.textContent = (currentLang === 'ar') ? "جميع الإشعارات مقروءة ومحدثة" : "All notifications read";
+  }
+
+  // Quick Action feedback
+  function triggerZatcaSync(btn) {
+    const originalText = btn ? btn.innerHTML : '';
+    if (btn) {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">sync</span> جاري التشفير...`;
+      btn.disabled = true;
+    }
+    setTimeout(() => {
+      if (btn) {
+        btn.innerHTML = `<span class="material-symbols-outlined text-[18px]">verified</span> تم الاعتماد بنجاح`;
+        btn.className = "px-space-lg py-2 rounded-lg bg-tertiary text-on-tertiary font-label-md text-label-md font-semibold shadow-sm";
+      }
+      closeAuditModal();
+    }, 1400);
+  }
+
+  function scheduleMaintenance(btn) {
+    btn.innerHTML = `<span class="material-symbols-outlined text-[18px]">check</span> تم إرسال أمر الصيانة`;
+    btn.className = "px-space-lg py-2 rounded-lg bg-tertiary text-on-tertiary font-label-md text-label-md font-semibold";
+  }
+
+  function reviewOverrideAudit() {
+    alert(currentLang === 'ar' ? "تم فتح وثيقة التدقيق السريري للمريضة رقم #4902 والتحقق من التوقيع الرقمي لنفاذ بنجاح." : "Clinical audit dossier #4902 opened with Nafath digital signature validated.");
+  }
+
+  function quarantineBatch(btn) {
+    btn.innerHTML = `<span class="material-symbols-outlined text-[18px]">lock</span> تم الحجز الاحترازي`;
+    btn.className = "px-space-lg py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold";
+  }
+
+  // Modal handlers
+  function openSettingsModal() {
+    document.getElementById('settings-modal').classList.remove('hidden');
+    document.getElementById('settings-modal').classList.add('flex');
+  }
+
+  function closeSettingsModal() {
+    document.getElementById('settings-modal').classList.add('hidden');
+    document.getElementById('settings-modal').classList.remove('flex');
+  }
+
+  function saveSettings() {
+    closeSettingsModal();
+  }
+
+  function showAuditModal(code) {
+    document.getElementById('audit-modal').classList.remove('hidden');
+    document.getElementById('audit-modal').classList.add('flex');
+  }
+
+  function closeAuditModal() {
+    document.getElementById('audit-modal').classList.add('hidden');
+    document.getElementById('audit-modal').classList.remove('flex');
+  }
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] py-space-lg mt-auto"><div class="w-full px-gutter flex flex-col md:flex-row items-center justify-between gap-space-md text-center md:text-right"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-on-surface-variant">نظام تشغيل عيادات لوميا © 2025 Lumea Clinic OS</span><span class="font-label-sm text-label-sm text-on-surface-variant/70">| المملكة العربية السعودية</span></div><div class="flex items-center gap-space-lg"><span class="font-label-sm text-label-sm text-on-surface-variant">معتمد ومتوافق مع هيئة الزكاة والضريبة والجمارك</span><span class="font-label-sm text-label-sm text-on-surface-variant">سحابة طبية آمنة تصنيف Class C</span></div></div></footer></body></html>

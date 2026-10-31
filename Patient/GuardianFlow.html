@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>ربط وتوثيق ولي الأمر | عيادات لوميا</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-error-container": "#93000a",
+            "secondary": "#605e5a",
+            "on-tertiary-container": "#003b26",
+            "on-surface-variant": "#414752",
+            "surface-container-lowest": "#ffffff",
+            "error-container": "#ffdad6",
+            "inverse-on-surface": "#ecf1ff",
+            "on-secondary-fixed-variant": "#484742",
+            "on-tertiary-fixed-variant": "#005236",
+            "tertiary-container": "#00b07a",
+            "surface-variant": "#d8e3fb",
+            "outline-variant": "#c1c7d4",
+            "tertiary-fixed": "#6ffbbe",
+            "primary-container": "#4f9df7",
+            "primary-fixed-dim": "#a3c9ff",
+            "surface-bright": "#f9f9ff",
+            "on-tertiary-fixed": "#002113",
+            "error": "#ba1a1a",
+            "tertiary": "#006c49",
+            "tertiary-fixed-dim": "#4edea3",
+            "on-secondary-fixed": "#1c1c18",
+            "background": "#f9f9ff",
+            "on-primary": "#ffffff",
+            "secondary-fixed": "#e6e2dc",
+            "primary": "#0060ab",
+            "on-primary-fixed": "#001c39",
+            "surface-container": "#e7eeff",
+            "surface-tint": "#0060ab",
+            "secondary-container": "#e6e2dc",
+            "on-surface": "#111c2d",
+            "surface-container-low": "#f0f3ff",
+            "on-background": "#111c2d",
+            "on-secondary-container": "#666460",
+            "on-tertiary": "#ffffff",
+            "surface-dim": "#cfdaf2",
+            "inverse-surface": "#263143",
+            "surface-container-high": "#dee8ff",
+            "on-secondary": "#ffffff",
+            "surface": "#f9f9ff",
+            "inverse-primary": "#a3c9ff",
+            "surface-container-highest": "#d8e3fb",
+            "on-error": "#ffffff",
+            "on-primary-fixed-variant": "#004883",
+            "outline": "#717783",
+            "primary-fixed": "#d3e3ff",
+            "secondary-fixed-dim": "#c9c6c0",
+            "on-primary-container": "#003360"
+          },
+          fontFamily: {
+            sans: ["Inter", "IBM Plex Sans Arabic", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    ::-webkit-scrollbar { display: none; }
+  </style>
+</head>
+<body class="bg-surface font-sans text-on-surface antialiased flex flex-col min-h-screen">
+
+  <!-- Full Web Top Navigation Bar (بدون أي سايدبار جانبي) -->
+  <header class="sticky top-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand & Navigation Links -->
+      <div class="flex items-center gap-8">
+        <a href="home.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-md">
+            <span class="material-symbols-outlined text-[24px]">spa</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-lg text-primary tracking-tight">عيادات لوميا</span>
+            <span class="text-xs text-on-surface-variant">Lumia Medical Clinics</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-1 bg-surface-container/60 p-1.5 rounded-xl">
+          <a href="home.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">الرئيسية</a>
+          <a href="Book.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">حجز موعد</a>
+          <a href="GuardianFlow.html" class="px-4 py-2 rounded-lg text-sm font-semibold text-primary bg-surface-container-lowest shadow-sm">إقرار ولي الأمر</a>
+          <a href="MyBookings.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">مواعيدي</a>
+          <a href="MyPackages.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">باقاتي</a>
+          <a href="Consents.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">الموافقات</a>
+        </nav>
+      </div>
+
+      <!-- Quick Actions / User Profile -->
+      <div class="flex items-center gap-3">
+        <button class="h-9 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-primary font-medium text-xs flex items-center gap-1.5 transition-colors" id="lang-toggle-btn" onclick="toggleLanguage()" type="button">
+          <span class="material-symbols-outlined text-[16px]">translate</span>
+          <span id="lang-btn-text">English (LTR)</span>
+        </button>
+        <a href="Wallet.html" class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-variant transition-all text-sm font-medium text-on-surface">
+          <span class="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
+          <span>المحفظة</span>
+        </a>
+        <a href="Profile.html" class="flex items-center gap-2 pl-3 pr-1 py-1 rounded-full bg-surface-container border border-outline-variant/30 hover:border-primary transition-all">
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-xs">
+            آية
+          </div>
+          <span class="hidden lg:inline text-xs font-semibold text-on-surface pl-1">آية أنور</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Web Container -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-8">
+    <div class="flex flex-col w-full gap-6" dir="rtl" id="registration-app">
+      
+      <!-- Interactive View Switcher Bar (QA / Demo Toolbar) -->
+      <div class="w-full bg-surface-container-lowest p-4 rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col gap-3">
+        <div class="flex items-center justify-between px-1">
+          <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined text-[20px]">tune</span>
+            <span class="text-xs font-semibold text-on-surface">معاينة خطوات التدفق (Flow Switcher)</span>
+          </div>
+          <span class="text-xs text-tertiary font-bold px-2.5 py-1 rounded-full bg-surface-container">مسار توثيق ولي الأمر</span>
+        </div>
+        
+        <!-- Quick State Pills -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+          <button class="step-nav-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs bg-primary text-on-primary font-semibold transition-all shadow-sm" id="tab-btn-1" onclick="switchStep(1)" type="button">
+            1: دخول الولي (OTP)
+          </button>
+          <button class="step-nav-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs bg-surface-container text-on-surface-variant font-medium hover:bg-surface-variant transition-all" id="tab-btn-2" onclick="switchStep(2)" type="button">
+            2: بيانات القاصر
+          </button>
+          <button class="step-nav-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs bg-surface-container text-on-surface-variant font-medium hover:bg-surface-variant transition-all" id="tab-btn-3" onclick="switchStep(3)" type="button">
+            3: إقرار ولي الأمر
+          </button>
+          <button class="step-nav-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs bg-surface-container text-on-surface-variant font-medium hover:bg-surface-variant transition-all" id="tab-btn-4" onclick="switchStep(4)" type="button">
+            4: بطاقة التأكيد
+          </button>
+          <button class="step-nav-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs bg-error-container text-on-error-container font-semibold transition-all shadow-sm" id="tab-btn-error" onclick="switchStep('error')" type="button">
+            حالة: غير مسجل
+          </button>
+        </div>
+      </div>
+
+      <!-- Explanatory Medical & Legal Box -->
+      <div class="w-full bg-surface-container-low rounded-2xl p-5 shadow-sm border border-outline-variant/30 flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center shrink-0 text-primary shadow-sm">
+          <span class="material-symbols-outlined text-[26px]">shield_with_heart</span>
+        </div>
+        <div class="flex flex-col gap-1 min-w-0">
+          <div class="flex items-center gap-2">
+            <h2 class="font-bold text-base text-on-surface" data-key="legal-title">
+              لماذا نحتاج موافقة ولي الأمر؟
+            </h2>
+            <span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary text-xs font-bold">
+              &lt; 18 عاماً
+            </span>
+          </div>
+          <p class="text-xs text-on-surface-variant leading-relaxed" data-key="legal-desc">
+            وفقاً للائحة التنفيذية لنظام مزاولة المهن الصحية ونظام حماية الطفل في المملكة العربية السعودية، يلزم موافقة وتوثيق ولي الأمر أو الوصي الشرعي لفتح ملف طبي وجدولة جلسات الليزر والعناية بالبشرة للمرضى دون سن 18 عاماً.
+          </p>
+        </div>
+      </div>
+
+      <!-- Elegant 4-Step Progress Stepper (Web View) -->
+      <div class="w-full bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/30">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs text-on-surface-variant font-medium" data-key="step-progress-label" id="stepper-label">
+            الخطوة <span id="current-step-num">1</span> من 4
+          </span>
+          <span class="text-xs text-primary font-bold" id="stepper-title-sub">
+            دخول الولي (OTP)
+          </span>
+        </div>
+        
+        <!-- Stepper Track -->
+        <div class="grid grid-cols-4 gap-4 relative items-center">
+          <!-- Step 1 -->
+          <div class="flex flex-col items-center gap-2 cursor-pointer" onclick="switchStep(1)">
+            <div class="w-full h-2 rounded-full bg-primary transition-all" id="step-dot-1"></div>
+            <span class="text-xs text-primary font-bold truncate text-center w-full" data-key="step-1-name">الولي</span>
+          </div>
+          <!-- Step 2 -->
+          <div class="flex flex-col items-center gap-2 cursor-pointer" onclick="switchStep(2)">
+            <div class="w-full h-2 rounded-full bg-secondary-container transition-all" id="step-dot-2"></div>
+            <span class="text-xs text-on-surface-variant font-medium truncate text-center w-full" data-key="step-2-name">القاصر</span>
+          </div>
+          <!-- Step 3 -->
+          <div class="flex flex-col items-center gap-2 cursor-pointer" onclick="switchStep(3)">
+            <div class="w-full h-2 rounded-full bg-secondary-container transition-all" id="step-dot-3"></div>
+            <span class="text-xs text-on-surface-variant font-medium truncate text-center w-full" data-key="step-3-name">الإقرار</span>
+          </div>
+          <!-- Step 4 -->
+          <div class="flex flex-col items-center gap-2 cursor-pointer" onclick="switchStep(4)">
+            <div class="w-full h-2 rounded-full bg-secondary-container transition-all" id="step-dot-4"></div>
+            <span class="text-xs text-on-surface-variant font-medium truncate text-center w-full" data-key="step-4-name">التأكيد</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== STEP 1: GUARDIAN AUTH ==================== -->
+      <div class="step-panel flex flex-col max-w-3xl mx-auto w-full gap-6" id="panel-step-1">
+        
+        <!-- Hero / Clinical Framing Card -->
+        <div class="w-full rounded-2xl bg-surface-container-lowest p-6 shadow-sm border border-outline-variant/30 flex flex-col gap-4">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+              <span class="material-symbols-outlined text-[26px]">verified_user</span>
+            </div>
+            <div class="flex flex-col">
+              <h3 class="font-bold text-lg text-on-surface" data-key="s1-heading">
+                توثيق هوية ولي الأمر
+              </h3>
+              <p class="text-xs text-on-surface-variant mt-0.5" data-key="s1-subtitle">
+                سجل دخولك أولاً لربط حساب التابع بملفك العائلي المعتمد
+              </p>
+            </div>
+          </div>
+          
+          <!-- Absher note -->
+          <div class="p-4 bg-secondary-container/40 rounded-xl flex items-center gap-3 text-on-secondary-variant border border-outline-variant/20">
+            <span class="material-symbols-outlined text-primary text-xl shrink-0">info</span>
+            <span class="text-xs leading-relaxed" data-key="s1-absher-note">
+              يرجى إدخال رقم جوال ولي الأمر المسجل في منصة أبشر / توكلنا لضمان الموثوقية القانونية.
+            </span>
+          </div>
+        </div>
+
+        <!-- Phone Number Input -->
+        <div class="w-full bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/30 flex flex-col gap-4">
+          <label class="font-bold text-sm text-on-surface" data-key="s1-phone-label" for="guardian-phone">
+            رقم جوال ولي الأمر (Guardian Mobile)
+          </label>
+          <div class="flex items-center gap-3">
+            <div class="h-12 px-4 bg-surface-container-low rounded-xl flex items-center gap-2 shrink-0 text-on-surface border border-outline-variant/20">
+              <span class="text-xs font-bold text-tertiary">🇸🇦 +966</span>
+            </div>
+            <div class="relative flex-1">
+              <input class="w-full h-12 px-4 bg-surface-container-low text-on-surface rounded-xl font-bold text-base outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all text-right placeholder:text-outline" dir="ltr" id="guardian-phone" placeholder="50 123 4567" type="tel" value="554891234"/>
+            </div>
+          </div>
+
+          <!-- OTP Method Switcher -->
+          <div class="flex items-center justify-between pt-1">
+            <span class="text-xs text-on-surface-variant" data-key="s1-otp-send-method">طريقة استلام الرمز:</span>
+            <div class="flex items-center gap-2">
+              <button class="px-3 py-1.5 rounded-full bg-tertiary-container/30 text-on-tertiary-container text-xs font-semibold flex items-center gap-1.5" type="button">
+                <span class="material-symbols-outlined text-sm text-tertiary">chat</span>
+                <span>واتساب</span>
+              </button>
+              <button class="px-3 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-semibold flex items-center gap-1.5" type="button">
+                <span class="material-symbols-outlined text-sm text-primary">sms</span>
+                <span>رسالة SMS</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- OTP Code Inputs -->
+        <div class="w-full bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/30 flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <label class="font-bold text-sm text-on-surface" data-key="s1-otp-label">
+              رمز التحقق المؤقت (OTP)
+            </label>
+            <span class="text-xs text-secondary font-bold" id="otp-timer">00:48 ثانية</span>
+          </div>
+          <p class="text-xs text-on-surface-variant" data-key="s1-otp-helper">
+            تم إرسال رمز مكون من 6 أرقام إلى 966554891234+
+          </p>
+
+          <!-- 6-digit boxes -->
+          <div class="flex items-center justify-center gap-3 dir-ltr py-2" dir="ltr">
+            <input class="w-12 h-14 bg-surface-container-low text-on-surface rounded-xl text-center font-bold text-xl focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all outline-none" maxlength="1" type="text" value="4"/>
+            <input class="w-12 h-14 bg-surface-container-low text-on-surface rounded-xl text-center font-bold text-xl focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all outline-none" maxlength="1" type="text" value="9"/>
+            <input class="w-12 h-14 bg-surface-container-low text-on-surface rounded-xl text-center font-bold text-xl focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all outline-none" maxlength="1" type="text" value="1"/>
+            <input class="w-12 h-14 bg-surface-container-low text-on-surface rounded-xl text-center font-bold text-xl focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all outline-none" maxlength="1" type="text" value="7"/>
+            <input class="w-12 h-14 bg-surface-container-low text-on-surface rounded-xl text-center font-bold text-xl focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all outline-none" maxlength="1" type="text" value="3"/>
+            <input class="w-12 h-14 bg-surface-container-low text-on-surface rounded-xl text-center font-bold text-xl focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all outline-none" maxlength="1" type="text" value="0"/>
+          </div>
+
+          <div class="flex items-center justify-between pt-2 border-t border-outline-variant/20">
+            <button class="text-primary text-xs font-bold hover:underline" data-key="s1-resend-btn" type="button">
+              إعادة إرسال الرمز
+            </button>
+            <button class="text-error text-xs font-semibold hover:underline" data-key="s1-simulate-error" onclick="switchStep('error')" type="button">
+              تجربة: الحساب غير مسجل؟
+            </button>
+          </div>
+        </div>
+
+        <!-- Navigation Action -->
+        <div class="flex flex-col gap-2 pt-2">
+          <button class="w-full h-12 rounded-xl bg-primary text-on-primary font-bold text-sm flex items-center justify-center gap-2 shadow-md hover:opacity-95 transition-all" onclick="switchStep(2)" type="button">
+            <span data-key="btn-verify-continue">تحقق ومتابعة لبيانات القاصر</span>
+            <span class="material-symbols-outlined text-lg rtl:rotate-180">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ==================== ERROR STATE PANEL ==================== -->
+      <div class="step-panel hidden max-w-3xl mx-auto w-full flex-col gap-6" id="panel-step-error">
+        <div class="w-full bg-error-container/30 rounded-2xl p-8 shadow-sm border border-error/20 flex flex-col items-center text-center gap-4">
+          <div class="w-16 h-16 rounded-full bg-error-container flex items-center justify-center text-on-error-container shadow-inner">
+            <span class="material-symbols-outlined text-3xl">no_accounts</span>
+          </div>
+          <div class="flex flex-col gap-1.5 max-w-lg">
+            <h3 class="font-bold text-xl text-on-error-container" data-key="err-title">
+              لم يتم العثور على حساب نشط لولي الأمر
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed" data-key="err-desc">
+              لم نتمكن من العثور على حساب مسجل برقم الجوال <span class="font-bold text-on-surface" dir="ltr">+966 55 489 1234</span>. يتطلب نظام لوميا وجود حساب معتمد للولي أولاً ليتمكن من ضم التابعين وإدارة ملفاتهم الطبية بأمان.
+            </p>
+          </div>
+
+          <!-- Action Box -->
+          <div class="w-full bg-surface-container-lowest rounded-xl p-5 flex flex-col gap-2 shadow-sm border border-outline-variant/30 text-start mt-2">
+            <div class="flex items-center gap-2 text-primary">
+              <span class="material-symbols-outlined text-lg">how_to_reg</span>
+              <span class="font-bold text-sm text-on-surface" data-key="err-how-title">كيف نحل هذه المشكلة؟</span>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed" data-key="err-how-desc">
+              يمكنك إنشاء حسابك الشخصي كولي أمر في أقل من دقيقة، ثم العودة لإضافة القاصر وحجز موعده فوراً.
+            </p>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row w-full gap-3 pt-2">
+            <button class="flex-1 h-12 rounded-xl bg-primary text-on-primary font-bold text-sm flex items-center justify-center gap-2 shadow-md hover:opacity-95 transition-all" onclick="alert('سيتم تحويلك لإنشاء حساب ولي أمر جديد');" type="button">
+              <span class="material-symbols-outlined text-xl">person_add</span>
+              <span data-key="err-btn-create">إنشاء حساب جديد لولي الأمر أولاً</span>
+            </button>
+            <button class="flex-1 h-12 rounded-xl bg-secondary-container text-on-secondary-fixed font-semibold text-sm flex items-center justify-center gap-2 hover:bg-surface-container transition-all" onclick="switchStep(1)" type="button">
+              <span class="material-symbols-outlined text-lg">edit</span>
+              <span data-key="err-btn-retry">التحقق من رقم جوال آخر</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== STEP 2: MINOR DETAILS ==================== -->
+      <div class="step-panel hidden max-w-3xl mx-auto w-full flex-col gap-6" id="panel-step-2">
+        
+        <!-- Logged in Guardian Indicator Banner -->
+        <div class="w-full bg-surface-container-lowest rounded-2xl p-4 shadow-sm border border-outline-variant/30 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-container font-bold">
+              <span class="material-symbols-outlined text-xl">verified</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-xs text-on-surface-variant" data-key="s2-active-guardian-label">ولي الأمر الموثق</span>
+              <span class="font-bold text-sm text-on-surface">منيرة عبد الله الرشيد</span>
+            </div>
+          </div>
+          <span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-variant text-xs font-semibold">
+            أبشر موثق ✓
+          </span>
+        </div>
+
+        <!-- Minor Info Form -->
+        <div class="w-full bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/30 flex flex-col gap-5">
+          <div class="flex items-center gap-2 border-b pb-3 border-outline-variant/20">
+            <span class="material-symbols-outlined text-primary text-2xl">child_care</span>
+            <h3 class="font-bold text-base text-on-surface" data-key="s2-form-title">
+              بيانات المريض القاصر (دون 18 عاماً)
+            </h3>
+          </div>
+
+          <!-- Minor Full Name -->
+          <div class="flex flex-col gap-2">
+            <label class="font-semibold text-xs text-on-surface" data-key="s2-name-label" for="minor-name">
+              الاسم الثلاثي للقاصر (كما في الهوية الوطنية / كرت العائلة)
+            </label>
+            <input class="w-full h-12 px-4 bg-surface-container-low text-on-surface rounded-xl font-medium text-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all placeholder:text-outline" id="minor-name" placeholder="مثال: سارة خالد آل سلطان" type="text" value="سارة بنت خالد بن سلطان"/>
+          </div>
+
+          <!-- National ID / Iqama -->
+          <div class="flex flex-col gap-2">
+            <label class="font-semibold text-xs text-on-surface" data-key="s2-id-label" for="minor-id">
+              رقم الهوية الوطنية / الإقامة للتابع
+            </label>
+            <input class="w-full h-12 px-4 bg-surface-container-low text-on-surface rounded-xl font-medium text-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all text-right placeholder:text-outline" dir="ltr" id="minor-id" placeholder="1XXXXXXXXX" type="text" value="1189452031"/>
+          </div>
+
+          <!-- Date of Birth & Auto Age Calculation Badge -->
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <label class="font-semibold text-xs text-on-surface" data-key="s2-dob-label" for="minor-dob">
+                تاريخ ميلاد التابع (ميلادي)
+              </label>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold" id="age-badge">
+                <span class="material-symbols-outlined text-[14px]">cake</span>
+                <span id="age-text">العمر: 15 سنة • أقل من 18</span>
+              </span>
+            </div>
+            <input class="w-full h-12 px-4 bg-surface-container-low text-on-surface rounded-xl font-medium text-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" id="minor-dob" onchange="recalcAge(this.value)" type="date" value="2009-04-12"/>
+          </div>
+
+          <!-- Relationship to minor chips -->
+          <div class="flex flex-col gap-2 pt-1">
+            <label class="font-semibold text-xs text-on-surface" data-key="s2-rel-label">
+              صلة القرابة بالتابع (Relationship)
+            </label>
+            <div class="grid grid-cols-3 gap-3">
+              <button class="rel-pill h-12 rounded-xl bg-primary text-on-primary text-xs font-bold flex items-center justify-center gap-1.5 shadow-sm transition-all" id="rel-mother" onclick="selectRelation('mother')" type="button">
+                <span class="material-symbols-outlined text-lg">face_3</span>
+                <span data-key="rel-mother">الأم (Mother)</span>
+              </button>
+              <button class="rel-pill h-12 rounded-xl bg-surface-container-low text-on-surface text-xs font-medium flex items-center justify-center gap-1.5 shadow-sm transition-all hover:bg-surface-container" id="rel-father" onclick="selectRelation('father')" type="button">
+                <span class="material-symbols-outlined text-lg">face_6</span>
+                <span data-key="rel-father">الأب (Father)</span>
+              </button>
+              <button class="rel-pill h-12 rounded-xl bg-surface-container-low text-on-surface text-xs font-medium flex items-center justify-center gap-1.5 shadow-sm transition-all hover:bg-surface-container" id="rel-guardian" onclick="selectRelation('guardian')" type="button">
+                <span class="material-symbols-outlined text-lg">gavel</span>
+                <span data-key="rel-legal">وصي شرعي</span>
+              </button>
+            </div>
+
+            <!-- Optional Deed Number -->
+            <div class="hidden flex-col gap-2 mt-2 p-4 bg-secondary-container/40 rounded-xl border border-outline-variant/20" id="deed-field-container">
+              <label class="text-xs font-semibold text-on-surface" data-key="s2-deed-label" for="deed-num">
+                رقم صك الولاية الشرعية الصادر من المحكمة (اختياري للإسراع في التحقق)
+              </label>
+              <input class="w-full h-11 px-3.5 bg-surface-container-lowest text-on-surface rounded-xl text-xs font-medium outline-none text-right" dir="ltr" id="deed-num" placeholder="مثال: 421098432" type="text"/>
+            </div>
+          </div>
+
+          <!-- Gender Selection -->
+          <div class="flex flex-col gap-2 pt-1">
+            <label class="font-semibold text-xs text-on-surface" data-key="s2-gender-label">
+              جنس التابع (Gender)
+            </label>
+            <div class="grid grid-cols-2 gap-3">
+              <button class="gender-pill h-12 rounded-xl bg-primary text-on-primary text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all" id="gender-female" onclick="selectGender('female')" type="button">
+                <span class="material-symbols-outlined text-lg">female</span>
+                <span data-key="gender-f">أنثى (Female)</span>
+              </button>
+              <button class="gender-pill h-12 rounded-xl bg-surface-container-low text-on-surface text-xs font-medium flex items-center justify-center gap-2 shadow-sm transition-all hover:bg-surface-container" id="gender-male" onclick="selectGender('male')" type="button">
+                <span class="material-symbols-outlined text-lg">male</span>
+                <span data-key="gender-m">ذكر (Male)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex items-center gap-3 pt-2">
+          <button class="h-12 px-6 rounded-xl bg-secondary-container text-on-secondary-fixed font-semibold text-xs flex items-center justify-center gap-1.5 hover:bg-surface-container transition-all" onclick="switchStep(1)" type="button">
+            <span class="material-symbols-outlined text-lg rtl:rotate-180">arrow_back</span>
+            <span data-key="btn-prev">السابق</span>
+          </button>
+          <button class="flex-1 h-12 rounded-xl bg-primary text-on-primary font-bold text-sm flex items-center justify-center gap-2 shadow-md hover:opacity-95 transition-all" onclick="switchStep(3)" type="button">
+            <span data-key="btn-next-consent">المتابعة لنموذج الإقرار الطبي</span>
+            <span class="material-symbols-outlined text-lg rtl:rotate-180">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ==================== STEP 3: GUARDIAN CONSENT & SIGNATURE ==================== -->
+      <div class="step-panel hidden max-w-3xl mx-auto w-full flex-col gap-6" id="panel-step-3">
+        
+        <!-- Legal Summary Header Card -->
+        <div class="w-full bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/30 flex flex-col gap-3">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+              <span class="material-symbols-outlined text-2xl">assignment_turned_in</span>
+            </div>
+            <div class="flex flex-col">
+              <h3 class="font-bold text-lg text-on-surface" data-key="s3-heading">
+                إقرار وتفويض الولي الطبي
+              </h3>
+              <span class="text-xs text-on-surface-variant mt-0.5" data-key="s3-sub">
+                Medical Treatment &amp; Laser Consent for Minors
+              </span>
+            </div>
+          </div>
+          <p class="text-xs text-on-surface-variant leading-relaxed pt-1" data-key="s3-lead-text">
+            يرجى قراءة البنود النظامية أدناه وتوقيع الإقرار باسمك المعتمد لتمكين الكادر الطبي من فتح الملف وإجراء الجلسات.
+          </p>
+        </div>
+
+        <!-- Detailed Medical Clauses Box -->
+        <div class="w-full bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/30 flex flex-col gap-4">
+          <span class="text-xs font-bold text-primary" data-key="s3-clauses-title">
+            بنود الإقرار الطبي والتفويض:
+          </span>
+
+          <!-- Clause 1 -->
+          <div class="p-4 bg-surface-container-low rounded-xl flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-primary text-on-primary text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">1</span>
+            <div class="flex flex-col">
+              <span class="font-bold text-xs text-on-surface" data-key="clause-1-title">صحة البيانات والصفة الشرعية:</span>
+              <p class="text-xs text-on-surface-variant leading-relaxed mt-1" data-key="clause-1-desc">
+                أقر بصفتي الولي الشرعي بصحة كافة البيانات المدخلة للقاصر (سارة بنت خالد) وأوافق على إنشاء ملفها الطبي في عيادات لوميا.
+              </p>
+            </div>
+          </div>
+
+          <!-- Clause 2 -->
+          <div class="p-4 bg-surface-container-low rounded-xl flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-primary text-on-primary text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">2</span>
+            <div class="flex flex-col">
+              <span class="font-bold text-xs text-on-surface" data-key="clause-2-title">الفحص والتقييم السريري:</span>
+              <p class="text-xs text-on-surface-variant leading-relaxed mt-1" data-key="clause-2-desc">
+                أفوض أطباء وأخصائيي لوميا بإجراء الفحص السريري وتحديد معايير الليزر والبروتوكول الآمن وفق تصنيف بشرة فيتزباتريك المناسب للمريضة.
+              </p>
+            </div>
+          </div>
+
+          <!-- Clause 3 -->
+          <div class="p-4 bg-surface-container-low rounded-xl flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-primary text-on-primary text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">3</span>
+            <div class="flex flex-col">
+              <span class="font-bold text-xs text-on-surface" data-key="clause-3-title">الخصوصية وحماية البيانات:</span>
+              <p class="text-xs text-on-surface-variant leading-relaxed mt-1" data-key="clause-3-desc">
+                يحق للولي والمريضة الاطلاع على السجل العلاجي وسحب أي موافقة اختيارية في أي وقت وفق نظام حماية البيانات الشخصية السعودي (PDPL).
+              </p>
+            </div>
+          </div>
+
+          <!-- Mandatory Agreement Checkbox -->
+          <label class="flex items-start gap-3 p-4 rounded-xl bg-primary-fixed/25 border border-primary/20 cursor-pointer mt-1 select-none">
+            <input checked="" class="mt-1 w-5 h-5 rounded text-primary focus:ring-0 cursor-pointer" id="consent-checkbox" type="checkbox"/>
+            <span class="text-xs font-semibold text-on-surface leading-relaxed" data-key="s3-checkbox-label">
+              أشهد بأنني قرأت وفهمت البنود أعلاه بالكامل، وأوافق عليها بصفتي الولي القانوني للمريضة.
+            </span>
+          </label>
+        </div>
+
+        <!-- Electronic Signature Field -->
+        <div class="w-full bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/30 flex flex-col gap-3">
+          <div class="flex items-center justify-between">
+            <label class="font-bold text-xs text-on-surface" data-key="s3-signature-label" for="guardian-signature">
+              الاسم الكامل لولي الأمر (التوقيع الإلكتروني المعتمد)
+            </label>
+            <span class="text-xs text-tertiary font-bold flex items-center gap-1">
+              <span class="material-symbols-outlined text-sm">draw</span>
+              <span>e-Signature</span>
+            </span>
+          </div>
+          <input class="w-full h-12 px-4 bg-surface-container-low text-on-surface rounded-xl font-bold text-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all text-primary" id="guardian-signature" placeholder="اكتب اسمك الثلاثي للتأكيد الرقمي" type="text" value="منيرة عبد الله الرشيد"/>
+          <p class="text-xs text-on-surface-variant flex items-center gap-2 mt-1" data-key="s3-sign-disclaimer">
+            <span class="material-symbols-outlined text-sm text-secondary">verified</span>
+            <span>تعتبر كتابة اسمك الثلاثي توقيعاً رقمياً ملزماً قانونياً موثقاً بتاريخ ووقت اللحظة.</span>
+          </p>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex items-center gap-3 pt-2">
+          <button class="h-12 px-6 rounded-xl bg-secondary-container text-on-secondary-fixed font-semibold text-xs flex items-center justify-center gap-1.5 hover:bg-surface-container transition-all" onclick="switchStep(2)" type="button">
+            <span class="material-symbols-outlined text-lg rtl:rotate-180">arrow_back</span>
+            <span data-key="btn-prev">السابق</span>
+          </button>
+          <button class="flex-1 h-12 rounded-xl bg-primary text-on-primary font-bold text-sm flex items-center justify-center gap-2 shadow-md hover:opacity-95 transition-all" onclick="switchStep(4)" type="button">
+            <span class="material-symbols-outlined text-xl">check_circle</span>
+            <span data-key="btn-confirm-submit">اعتماد الإقرار وتأكيد الربط</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ==================== STEP 4: CONFIRMATION SUCCESS CARD ==================== -->
+      <div class="step-panel hidden max-w-3xl mx-auto w-full flex-col gap-6" id="panel-step-4">
+        
+        <!-- Success Celebration Card -->
+        <div class="w-full bg-surface-container-lowest rounded-2xl p-8 shadow-sm border border-outline-variant/30 flex flex-col items-center text-center gap-4 relative overflow-hidden">
+          <div class="w-20 h-20 rounded-2xl bg-tertiary-container/30 flex items-center justify-center text-tertiary shadow-inner">
+            <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">family_restroom</span>
+          </div>
+          <div class="flex flex-col gap-1.5 max-w-md">
+            <span class="inline-flex self-center items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container/20 text-on-tertiary-container text-xs font-bold mb-1">
+              <span class="material-symbols-outlined text-sm text-tertiary">check_circle</span>
+              <span>توثيق رسمي مكتمل بنجاح</span>
+            </span>
+            <h3 class="font-bold text-xl text-on-surface" data-key="s4-heading">
+              تم ربط وتوثيق ملف التابع بنجاح!
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed" data-key="s4-subtitle">
+              أصبحت <strong class="text-on-surface">سارة بنت خالد</strong> مضافة الآن ضمن ملفك العائلي المعتمد لدى عيادات لوميا.
+            </p>
+          </div>
+
+          <!-- Clinical & Family Linked Summary Details -->
+          <div class="w-full bg-surface-container-low rounded-xl p-5 flex flex-col gap-3 text-start border border-outline-variant/20 mt-2">
+            <div class="flex items-center justify-between border-b pb-3 border-outline-variant/20">
+              <span class="text-xs text-on-surface-variant" data-key="s4-card-meta">رقم الملف العائلي المشترك</span>
+              <span class="text-sm font-bold text-primary font-mono" dir="ltr">#LUM-FAM-9042</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+              <div class="p-3 bg-surface-container-lowest rounded-xl flex flex-col">
+                <span class="text-xs text-on-surface-variant" data-key="s4-patient-label">المريض القاصر:</span>
+                <span class="font-bold text-sm text-on-surface mt-0.5">سارة بنت خالد</span>
+                <span class="text-xs text-secondary font-medium">15 سنة • أنثى</span>
+              </div>
+              <div class="p-3 bg-surface-container-lowest rounded-xl flex flex-col">
+                <span class="text-xs text-on-surface-variant" data-key="s4-guardian-label">الولي المعتمد:</span>
+                <span class="font-bold text-sm text-on-surface mt-0.5">منيرة عبد الله</span>
+                <span class="text-xs text-tertiary font-semibold">الأم (موثق أبشر)</span>
+              </div>
+            </div>
+
+            <!-- Next Immediate Step Hint -->
+            <div class="p-3 bg-surface-container-highest/60 rounded-xl flex items-center gap-2.5 mt-1">
+              <span class="material-symbols-outlined text-primary text-lg shrink-0">clinical_notes</span>
+              <span class="text-xs text-on-surface-variant" data-key="s4-form-hint">
+                الخطوة التالية الموصى بها: تعبئة نموذج السجل الصحي الأولي لسارة (يستغرق دقيقتين فقط).
+              </span>
+            </div>
+          </div>
+
+          <!-- Action CTAs -->
+          <div class="flex flex-col sm:flex-row w-full gap-3 pt-2">
+            <button class="flex-1 h-12 rounded-xl bg-primary text-on-primary font-bold text-xs flex items-center justify-center gap-2 shadow-md hover:opacity-95 transition-all" onclick="alert('سيتم فتح نموذج التقييم الصحي المخصص لسارة الآن');" type="button">
+              <span class="material-symbols-outlined text-lg">assignment</span>
+              <span data-key="s4-cta-primary">متابعة لتعبئة النموذج الصحي لسارة</span>
+            </button>
+            <a href="home.html" class="flex-1 h-12 rounded-xl bg-surface-container text-on-surface font-semibold text-xs flex items-center justify-center gap-2 hover:bg-surface-variant transition-all">
+              <span class="material-symbols-outlined text-lg">home</span>
+              <span data-key="s4-cta-secondary">الذهاب إلى الملف العائلي في حسابي</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Script -->
+    <script>
+      let currentLanguage = 'ar';
+      let activeStep = 1;
+
+      const translations = {
+        ar: {
+          langBtn: 'English (LTR)',
+          legalTitle: 'لماذا نحتاج موافقة ولي الأمر؟',
+          legalDesc: 'وفقاً للائحة التنفيذية لنظام مزاولة المهن الصحية ونظام حماية الطفل في المملكة العربية السعودية، يلزم موافقة وتوثيق ولي الأمر أو الوصي الشرعي لفتح ملف طبي وجدولة جلسات الليزر والعناية بالبشرة للمرضى دون سن 18 عاماً.',
+          stepProgress: 'الخطوة {step} من 4',
+          step1Name: 'الولي',
+          step2Name: 'القاصر',
+          step3Name: 'الإقرار',
+          step4Name: 'التأكيد',
+          s1Heading: 'توثيق هوية ولي الأمر',
+          s1Subtitle: 'سجل دخولك أولاً لربط حساب التابع بملفك العائلي المعتمد',
+          s1AbsherNote: 'يرجى إدخال رقم جوال ولي الأمر المسجل في منصة أبشر / توكلنا لضمان الموثوقية القانونية.',
+          s1PhoneLabel: 'رقم جوال ولي الأمر (Guardian Mobile)',
+          s1OtpSendMethod: 'طريقة استلام الرمز:',
+          s1OtpLabel: 'رمز التحقق المؤقت (OTP)',
+          s1OtpHelper: 'تم إرسال رمز مكون من 6 أرقام إلى 966554891234+',
+          s1ResendBtn: 'إعادة إرسال الرمز',
+          s1SimulateError: 'تجربة: الحساب غير مسجل؟',
+          btnVerifyContinue: 'تحقق ومتابعة لبيانات القاصر',
+          errTitle: 'لم يتم العثور على حساب نشط لولي الأمر',
+          errDesc: 'لم نتمكن من العثور على حساب مسجل برقم الجوال +966 55 489 1234. يتطلب نظام لوميا وجود حساب معتمد للولي أولاً ليتمكن من ضم التابعين وإدارة ملفاتهم الطبية بأمان.',
+          errHowTitle: 'كيف نحل هذه المشكلة؟',
+          errHowDesc: 'يمكنك إنشاء حسابك الشخصي كولي أمر في أقل من دقيقة، ثم العودة لإضافة القاصر وحجز موعده فوراً.',
+          errBtnCreate: 'إنشاء حساب جديد لولي الأمر أولاً',
+          errBtnRetry: 'التحقق من رقم جوال آخر',
+          s2ActiveGuardian: 'ولي الأمر الموثق',
+          s2FormTitle: 'بيانات المريض القاصر (دون 18 عاماً)',
+          s2NameLabel: 'الاسم الثلاثي للقاصر (كما في الهوية الوطنية / كرت العائلة)',
+          s2IdLabel: 'رقم الهوية الوطنية / الإقامة للتابع',
+          s2DobLabel: 'تاريخ ميلاد التابع (ميلادي)',
+          s2RelLabel: 'صلة القرابة بالتابع (Relationship)',
+          relMother: 'الأم (Mother)',
+          relFather: 'الأب (Father)',
+          relLegal: 'وصي شرعي',
+          s2DeedLabel: 'رقم صك الولاية الشرعية الصادر من المحكمة (اختياري)',
+          s2GenderLabel: 'جنس التابع (Gender)',
+          genderF: 'أنثى (Female)',
+          genderM: 'ذكر (Male)',
+          btnPrev: 'السابق',
+          btnNextConsent: 'المتابعة لنموذج الإقرار الطبي',
+          s3Heading: 'إقرار وتفويض الولي الطبي',
+          s3Sub: 'Medical Treatment & Laser Consent for Minors',
+          s3Lead: 'يرجى قراءة البنود النظامية أدناه وتوقيع الإقرار باسمك المعتمد لتمكين الكادر الطبي من فتح الملف وإجراء الجلسات.',
+          s3ClausesTitle: 'بنود الإقرار الطبي والتفويض:',
+          c1Title: 'صحة البيانات والصفة الشرعية:',
+          c1Desc: 'أقر بصفتي الولي الشرعي بصحة كافة البيانات المدخلة للقاصر (سارة بنت خالد) وأوافق على إنشاء ملفها الطبي في عيادات لوميا.',
+          c2Title: 'الفحص والتقييم السريري:',
+          c2Desc: 'أفوض أطباء وأخصائيي لوميا بإجراء الفحص السريري وتحديد معايير الليزر والبروتوكول الآمن وفق تصنيف بشرة فيتزباتريك للمريضة.',
+          c3Title: 'الخصوصية وحماية البيانات:',
+          c3Desc: 'يحق للولي والمريضة الاطلاع على السجل العلاجي وسحب أي موافقة اختيارية في أي وقت وفق نظام حماية البيانات الشخصية السعودي (PDPL).',
+          s3Checkbox: 'أشهد بأنني قرأت وفهمت البنود أعلاه بالكامل، وأوافق عليها بصفتي الولي القانوني للمريضة.',
+          s3SignLabel: 'الاسم الكامل لولي الأمر (التوقيع الإلكتروني المعتمد)',
+          s3SignDisclaimer: 'تعتبر كتابة اسمك الثلاثي توقيعاً رقمياً ملزماً قانونياً موثقاً بتاريخ ووقت اللحظة.',
+          btnConfirmSubmit: 'اعتماد الإقرار وتأكيد الربط',
+          s4Heading: 'تم ربط وتوثيق ملف التابع بنجاح!',
+          s4Subtitle: 'أصبحت سارة بنت خالد مضافة الآن ضمن ملفك العائلي المعتمد لدى عيادات لوميا.',
+          s4Meta: 'رقم الملف العائلي المشترك',
+          s4PatientLabel: 'المريض القاصر:',
+          s4GuardianLabel: 'الولي المعتمد:',
+          s4Hint: 'الخطوة التالية الموصى بها: تعبئة نموذج السجل الصحي الأولي لسارة (يستغرق دقيقتين فقط).',
+          s4CtaPrimary: 'متابعة لتعبئة النموذج الصحي لسارة',
+          s4CtaSecondary: 'الذهاب إلى الملف العائلي في حسابي'
+        },
+        en: {
+          langBtn: 'العربية (RTL)',
+          legalTitle: 'Why do we need a guardian consent?',
+          legalDesc: 'In accordance with the Saudi Law of Practicing Healthcare Professions and the Child Protection Law, verified legal guardian authorization is required to establish a medical profile and schedule laser or dermatological treatments for patients under 18.',
+          stepProgress: 'Step {step} of 4',
+          step1Name: 'Guardian',
+          step2Name: 'Minor',
+          step3Name: 'Consent',
+          step4Name: 'Confirm',
+          s1Heading: 'Guardian Verification',
+          s1Subtitle: 'Authenticate first to link your minor dependent to your approved family medical profile.',
+          s1AbsherNote: 'Please enter the mobile number registered in Absher / Tawakkalna for legal compliance.',
+          s1PhoneLabel: 'Guardian Mobile Number',
+          s1OtpSendMethod: 'Preferred OTP channel:',
+          s1OtpLabel: 'One-Time Password (OTP)',
+          s1OtpHelper: 'A 6-digit verification code was sent to +966 55 489 1234',
+          s1ResendBtn: 'Resend verification code',
+          s1SimulateError: 'Preview: Account not found?',
+          btnVerifyContinue: 'Verify & Continue to Minor Info',
+          errTitle: 'No Active Guardian Account Found',
+          errDesc: 'We could not find an existing account for +966 55 489 1234. Lumea requires a primary guardian account before adding dependents to manage medical records securely.',
+          errHowTitle: 'How to proceed?',
+          errHowDesc: 'You can register your primary guardian profile in less than a minute, then return to link your dependent seamlessly.',
+          errBtnCreate: 'Create Guardian Profile First',
+          errBtnRetry: 'Verify Another Mobile Number',
+          s2ActiveGuardian: 'Verified Guardian',
+          s2FormTitle: 'Minor Patient Information (< 18 yrs)',
+          s2NameLabel: 'Minor Full Legal Name (as in Family Book / ID)',
+          s2IdLabel: 'National ID / Iqama Number',
+          s2DobLabel: 'Date of Birth (Gregorian)',
+          s2RelLabel: 'Relationship to Minor',
+          relMother: 'Mother',
+          relFather: 'Father',
+          relLegal: 'Legal Guardian',
+          s2DeedLabel: 'Guardianship Deed Number (Court issued - Optional)',
+          s2GenderLabel: 'Minor Gender',
+          genderF: 'Female',
+          genderM: 'Male',
+          btnPrev: 'Back',
+          btnNextConsent: 'Continue to Medical Consent',
+          s3Heading: 'Guardian Medical Authorization',
+          s3Sub: 'Laser & Dermatology Treatment Consent for Minors',
+          s3Lead: 'Please review the clinical stipulations below and sign digitally with your verified name.',
+          s3ClausesTitle: 'Stipulations & Consents:',
+          c1Title: 'Accuracy & Legal Capacity:',
+          c1Desc: 'I certify that I am the legal guardian of the minor (Sara bint Khalid) and authorize opening her medical file at Lumea Clinics.',
+          c2Title: 'Clinical Examination & Lasers:',
+          c2Desc: 'I authorize Lumea certified dermatologists to conduct skin evaluations and administer safe laser settings suited to her Fitzpatrick skin type.',
+          c3Title: 'Privacy & Data Protection:',
+          c3Desc: 'Both patient and guardian retain the right to inspect records and revoke elective consents in accordance with Saudi PDPL regulations.',
+          s3Checkbox: 'I acknowledge that I have read and agree to all medical terms and conditions above.',
+          s3SignLabel: 'Guardian Full Legal Name (Digital e-Signature)',
+          s3SignDisclaimer: 'Typing your full legal name serves as a binding electronic signature stamped with current date and time.',
+          btnConfirmSubmit: 'Authorize & Complete Registration',
+          s4Heading: 'Minor File Successfully Linked!',
+          s4Subtitle: 'Sara bint Khalid has been added to your verified family portal at Lumea Clinics.',
+          s4Meta: 'Family Medical File ID',
+          s4PatientLabel: 'Minor Patient:',
+          s4GuardianLabel: 'Authorized Guardian:',
+          s4Hint: 'Recommended next step: Fill in Sara\'s preliminary health assessment questionnaire (2 mins).',
+          s4CtaPrimary: 'Complete Sara’s Health Form Now',
+          s4CtaSecondary: 'Go to Family Dashboard'
+        }
+      };
+
+      function switchStep(step) {
+        activeStep = step;
+        
+        const panels = document.querySelectorAll('.step-panel');
+        panels.forEach(p => p.classList.add('hidden'));
+
+        const tabs = ['1', '2', '3', '4', 'error'];
+        tabs.forEach(t => {
+          const btn = document.getElementById('tab-btn-' + t);
+          if (btn) {
+            btn.className = "step-nav-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs bg-surface-container text-on-surface-variant font-medium hover:bg-surface-variant transition-all";
+          }
+        });
+
+        if (typeof step === 'number') {
+          const targetPanel = document.getElementById('panel-step-' + step);
+          if (targetPanel) targetPanel.classList.remove('hidden');
+
+          const targetTab = document.getElementById('tab-btn-' + step);
+          if (targetTab) {
+            targetTab.className = "step-nav-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs bg-primary text-on-primary font-semibold transition-all shadow-sm";
+          }
+
+          for (let i = 1; i <= 4; i++) {
+            const dot = document.getElementById('step-dot-' + i);
+            if (i <= step) {
+              dot.className = 'w-full h-2 rounded-full bg-primary transition-all';
+            } else {
+              dot.className = 'w-full h-2 rounded-full bg-secondary-container transition-all';
+            }
+          }
+
+          const stepNumEl = document.getElementById('current-step-num');
+          if (stepNumEl) stepNumEl.innerText = step;
+
+          const subTitles = {
+            1: currentLanguage === 'ar' ? 'دخول الولي (OTP)' : 'Guardian Auth',
+            2: currentLanguage === 'ar' ? 'بيانات القاصر' : 'Minor Details',
+            3: currentLanguage === 'ar' ? 'الإقرار الطبي' : 'Medical Consent',
+            4: currentLanguage === 'ar' ? 'تم التوثيق' : 'Completed'
+          };
+          const subTitleEl = document.getElementById('stepper-title-sub');
+          if (subTitleEl) subTitleEl.innerText = subTitles[step];
+
+        } else if (step === 'error') {
+          const errPanel = document.getElementById('panel-step-error');
+          if (errPanel) errPanel.classList.remove('hidden');
+
+          const errTab = document.getElementById('tab-btn-error');
+          if (errTab) {
+            errTab.className = "step-nav-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs bg-error-container text-on-error-container font-semibold transition-all shadow-sm";
+          }
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      function selectRelation(type) {
+        const mother = document.getElementById('rel-mother');
+        const father = document.getElementById('rel-father');
+        const guardian = document.getElementById('rel-guardian');
+        const deedContainer = document.getElementById('deed-field-container');
+
+        [mother, father, guardian].forEach(el => {
+          el.className = 'rel-pill h-12 rounded-xl bg-surface-container-low text-on-surface text-xs font-medium flex items-center justify-center gap-1.5 shadow-sm transition-all hover:bg-surface-container';
+        });
+
+        if (type === 'mother') {
+          mother.className = 'rel-pill h-12 rounded-xl bg-primary text-on-primary text-xs font-bold flex items-center justify-center gap-1.5 shadow-sm transition-all';
+          if (deedContainer) deedContainer.classList.add('hidden');
+        } else if (type === 'father') {
+          father.className = 'rel-pill h-12 rounded-xl bg-primary text-on-primary text-xs font-bold flex items-center justify-center gap-1.5 shadow-sm transition-all';
+          if (deedContainer) deedContainer.classList.add('hidden');
+        } else if (type === 'guardian') {
+          guardian.className = 'rel-pill h-12 rounded-xl bg-primary text-on-primary text-xs font-bold flex items-center justify-center gap-1.5 shadow-sm transition-all';
+          if (deedContainer) deedContainer.classList.remove('hidden');
+        }
+      }
+
+      function selectGender(gen) {
+        const f = document.getElementById('gender-female');
+        const m = document.getElementById('gender-male');
+        if (gen === 'female') {
+          f.className = 'gender-pill h-12 rounded-xl bg-primary text-on-primary text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all';
+          m.className = 'gender-pill h-12 rounded-xl bg-surface-container-low text-on-surface text-xs font-medium flex items-center justify-center gap-2 shadow-sm transition-all hover:bg-surface-container';
+        } else {
+          m.className = 'gender-pill h-12 rounded-xl bg-primary text-on-primary text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all';
+          f.className = 'gender-pill h-12 rounded-xl bg-surface-container-low text-on-surface text-xs font-medium flex items-center justify-center gap-2 shadow-sm transition-all hover:bg-surface-container';
+        }
+      }
+
+      function recalcAge(dobStr) {
+        if (!dobStr) return;
+        const dob = new Date(dobStr);
+        const diffMs = Date.now() - dob.getTime();
+        const ageDt = new Date(diffMs);
+        const years = Math.abs(ageDt.getUTCFullYear() - 1970);
+        const ageTextEl = document.getElementById('age-text');
+        const ageBadgeEl = document.getElementById('age-badge');
+        
+        if (years < 18) {
+          ageTextEl.innerText = (currentLanguage === 'ar') 
+            ? `العمر: ${years} سنة • أقل من 18` 
+            : `Age: ${years} yrs • Minor (<18)`;
+          ageBadgeEl.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold';
+        } else {
+          ageTextEl.innerText = (currentLanguage === 'ar') 
+            ? `العمر: ${years} سنة • بالغ (18+)` 
+            : `Age: ${years} yrs • Adult (18+)`;
+          ageBadgeEl.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-variant text-xs font-bold';
+        }
+      }
+
+      function toggleLanguage() {
+        currentLanguage = (currentLanguage === 'ar') ? 'en' : 'ar';
+        const app = document.getElementById('registration-app');
+        const t = translations[currentLanguage];
+
+        app.setAttribute('dir', currentLanguage === 'ar' ? 'rtl' : 'ltr');
+        document.getElementById('lang-btn-text').innerText = t.langBtn;
+
+        const map = [
+          ['legal-title', t.legalTitle],
+          ['legal-desc', t.legalDesc],
+          ['step-1-name', t.step1Name],
+          ['step-2-name', t.step2Name],
+          ['step-3-name', t.step3Name],
+          ['step-4-name', t.step4Name],
+          ['s1-heading', t.s1Heading],
+          ['s1-subtitle', t.s1Subtitle],
+          ['s1-absher-note', t.s1AbsherNote],
+          ['s1-phone-label', t.s1PhoneLabel],
+          ['s1-otp-send-method', t.s1OtpSendMethod],
+          ['s1-otp-label', t.s1OtpLabel],
+          ['s1-otp-helper', t.s1OtpHelper],
+          ['s1-resend-btn', t.s1ResendBtn],
+          ['s1-simulate-error', t.s1SimulateError],
+          ['btn-verify-continue', t.btnVerifyContinue],
+          ['err-title', t.errTitle],
+          ['err-desc', t.errDesc],
+          ['err-how-title', t.errHowTitle],
+          ['err-how-desc', t.errHowDesc],
+          ['err-btn-create', t.errBtnCreate],
+          ['err-btn-retry', t.errBtnRetry],
+          ['s2-active-guardian-label', t.s2ActiveGuardian],
+          ['s2-form-title', t.s2FormTitle],
+          ['s2-name-label', t.s2NameLabel],
+          ['s2-id-label', t.s2IdLabel],
+          ['s2-dob-label', t.s2DobLabel],
+          ['s2-rel-label', t.s2RelLabel],
+          ['rel-mother', t.relMother],
+          ['rel-father', t.relFather],
+          ['rel-legal', t.relLegal],
+          ['s2-deed-label', t.s2DeedLabel],
+          ['s2-gender-label', t.s2GenderLabel],
+          ['gender-f', t.genderF],
+          ['gender-m', t.genderM],
+          ['btn-prev', t.btnPrev],
+          ['btn-next-consent', t.btnNextConsent],
+          ['s3-heading', t.s3Heading],
+          ['s3-sub', t.s3Sub],
+          ['s3-lead-text', t.s3Lead],
+          ['s3-clauses-title', t.s3ClausesTitle],
+          ['clause-1-title', t.c1Title],
+          ['clause-1-desc', t.c1Desc],
+          ['clause-2-title', t.c2Title],
+          ['clause-2-desc', t.c2Desc],
+          ['clause-3-title', t.c3Title],
+          ['clause-3-desc', t.c3Desc],
+          ['s3-checkbox-label', t.s3Checkbox],
+          ['s3-signature-label', t.s3SignLabel],
+          ['s3-sign-disclaimer', t.s3SignDisclaimer],
+          ['btn-confirm-submit', t.btnConfirmSubmit],
+          ['s4-heading', t.s4Heading],
+          ['s4-subtitle', t.s4Subtitle],
+          ['s4-card-meta', t.s4Meta],
+          ['s4-patient-label', t.s4PatientLabel],
+          ['s4-guardian-label', t.s4GuardianLabel],
+          ['s4-form-hint', t.s4Hint],
+          ['s4-cta-primary', t.s4CtaPrimary],
+          ['s4-cta-secondary', t.s4CtaSecondary]
+        ];
+
+        map.forEach(([key, val]) => {
+          const el = document.querySelector(`[data-key="${key}"]`);
+          if (el) el.innerText = val;
+        });
+
+        if (typeof activeStep === 'number') {
+          switchStep(activeStep);
+        }
+      }
+    </script>
+  </main>
+</body>
+</html>

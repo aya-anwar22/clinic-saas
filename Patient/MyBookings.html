@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>مواعيدي وجلساتي العلاجية | عيادات لوميا</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary": "#ffffff",
+            "primary": "#0060ab",
+            "on-primary-fixed": "#001c39",
+            "surface": "#f9f9ff",
+            "secondary-container": "#e6e2dc",
+            "on-tertiary-container": "#003b26",
+            "surface-bright": "#f9f9ff",
+            "inverse-surface": "#263143",
+            "primary-container": "#4f9df7",
+            "on-tertiary-fixed-variant": "#005236",
+            "tertiary-fixed": "#6ffbbe",
+            "primary-fixed-dim": "#a3c9ff",
+            "surface-container": "#e7eeff",
+            "on-background": "#111c2d",
+            "surface-variant": "#d8e3fb",
+            "on-secondary-container": "#666460",
+            "secondary-fixed": "#e6e2dc",
+            "surface-container-highest": "#d8e3fb",
+            "surface-container-low": "#f0f3ff",
+            "on-surface": "#111c2d",
+            "on-primary": "#ffffff",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#c9c6c0",
+            "background": "#f9f9ff",
+            "error-container": "#ffdad6",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed": "#1c1c18",
+            "outline-variant": "#c1c7d4",
+            "tertiary": "#006c49",
+            "surface-dim": "#cfdaf2",
+            "inverse-primary": "#a3c9ff",
+            "outline": "#717783",
+            "on-primary-fixed-variant": "#004883",
+            "on-tertiary-fixed": "#002113",
+            "tertiary-container": "#00b07a",
+            "surface-container-high": "#dee8ff",
+            "primary-fixed": "#d3e3ff",
+            "on-secondary": "#ffffff",
+            "secondary": "#605e5a",
+            "surface-tint": "#0060ab",
+            "on-surface-variant": "#414752",
+            "on-secondary-fixed-variant": "#484742",
+            "tertiary-fixed-dim": "#4edea3",
+            "inverse-on-surface": "#ecf1ff",
+            "on-primary-container": "#003360",
+            "on-error": "#ffffff",
+            "error": "#ba1a1a"
+          },
+          fontFamily: {
+            sans: ["IBM Plex Sans Arabic", "Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    ::-webkit-scrollbar { display: none; }
+  </style>
+</head>
+<body class="bg-surface font-sans text-on-surface flex flex-col min-h-screen antialiased selection:bg-primary/20">
+
+  <!-- Full Web Top Navigation Bar (بدون سايدبار جانبي) -->
+  <header class="sticky top-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand & Navigation Links -->
+      <div class="flex items-center gap-8">
+        <a href="home.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-md">
+            <span class="material-symbols-outlined text-[24px]">spa</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-lg text-primary tracking-tight">عيادات لوميا</span>
+            <span class="text-xs text-on-surface-variant">Lumia Medical Clinics</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-1 bg-surface-container/60 p-1.5 rounded-xl">
+          <a href="home.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">الرئيسية</a>
+          <a href="Book.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">حجز موعد</a>
+          <a href="MyBookings.html" class="px-4 py-2 rounded-lg text-sm font-semibold text-primary bg-surface-container-lowest shadow-sm">مواعيدي</a>
+          <a href="Invoices.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">الفواتير الضريبية</a>
+          <a href="Consents.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">الموافقات الطبية</a>
+          <a href="MyPackages.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">باقاتي</a>
+        </nav>
+      </div>
+
+      <!-- Quick Actions / User Profile -->
+      <div class="flex items-center gap-3">
+        <button class="h-9 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-primary font-medium text-xs flex items-center gap-1.5 transition-colors" id="btn-state-lang" onclick="toggleLanguageDirection()" type="button">
+          <span class="material-symbols-outlined text-[16px]">translate</span>
+          <span id="lang-btn-text">English (LTR)</span>
+        </button>
+        <a href="Wallet.html" class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-variant transition-all text-sm font-medium text-on-surface">
+          <span class="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
+          <span>المحفظة</span>
+        </a>
+        <a href="Profile.html" class="flex items-center gap-2 pl-3 pr-1 py-1 rounded-full bg-surface-container border border-outline-variant/30 hover:border-primary transition-all">
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-xs">
+            سارة
+          </div>
+          <span class="hidden lg:inline text-xs font-semibold text-on-surface pl-1">سارة الشريف</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Web Container -->
+  <main class="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 py-8">
+    <div class="flex flex-col w-full gap-6" id="lumea-bookings-root">
+      
+      <!-- Interactive Demo Switcher Bar -->
+      <aside aria-label="أدوات المعاينة التفاعلية" class="bg-surface-container-lowest p-4 rounded-2xl border border-outline-variant/30 shadow-sm">
+        <div class="flex items-center justify-between gap-2 mb-3">
+          <div class="flex items-center gap-2 text-primary font-bold text-xs">
+            <span class="material-symbols-outlined text-[18px]">tune</span>
+            <span id="demo-bar-title">لوحة تجربة الحالات (Demo State Switcher)</span>
+          </div>
+          <span class="text-[11px] bg-surface-container px-2.5 py-0.5 rounded-full text-outline">وضع تفاعلي</span>
+        </div>
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 text-on-surface">
+          <button class="px-4 py-2 rounded-xl bg-primary text-on-primary font-semibold text-xs whitespace-nowrap transition-all shadow-sm" id="btn-state-upcoming" onclick="switchMainTab('upcoming')" type="button">
+            المواعيد القادمة
+          </button>
+          <button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface-variant font-medium text-xs hover:bg-surface-container-high whitespace-nowrap transition-all" id="btn-state-past" onclick="switchMainTab('past')" type="button">
+            المواعيد السابقة
+          </button>
+          <button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface-variant font-medium text-xs hover:bg-surface-container-high whitespace-nowrap transition-all flex items-center gap-1.5" id="btn-state-cancel" onclick="openCancelSheet('إزالة الشعر بالليزر - كامل الساقين', 'الخميس، 12 نوفمبر 2026 • 06:30 م')" type="button">
+            <span class="material-symbols-outlined text-[16px] text-error">event_busy</span>
+            شيت الإلغاء
+          </button>
+          <button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface-variant font-medium text-xs hover:bg-surface-container-high whitespace-nowrap transition-all" id="btn-state-empty" onclick="toggleEmptyState()" type="button">
+            حالة فارغة
+          </button>
+        </div>
+      </aside>
+
+      <!-- Page Header Context -->
+      <section class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 shadow-sm flex items-center justify-between flex-wrap gap-4">
+        <div>
+          <h2 class="text-xl font-bold text-on-surface" id="screen-heading">جلساتي العلاجية ومواعيدي</h2>
+          <p class="text-xs text-on-surface-variant mt-1" id="screen-subheading">متابعة بروتوكولات الليزر وجدول المواعيد المعتمد في عيادات لوميا</p>
+        </div>
+        <div class="w-12 h-12 rounded-2xl bg-primary-fixed/40 flex items-center justify-center text-primary shadow-sm">
+          <span class="material-symbols-outlined text-[24px]">calendar_today</span>
+        </div>
+      </section>
+
+      <!-- Segmented Tabs Bar -->
+      <nav aria-label="أقسام المواعيد" class="bg-surface-container-lowest p-2 rounded-2xl border border-outline-variant/30 shadow-sm flex items-center gap-2">
+        <button class="flex-1 py-3 px-4 rounded-xl bg-primary text-on-primary font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all" id="tab-btn-upcoming" onclick="switchMainTab('upcoming')" type="button">
+          <span id="tab-label-upcoming">المواعيد القادمة</span>
+          <span class="w-5 h-5 rounded-full bg-on-primary/20 text-on-primary text-[10px] flex items-center justify-center font-bold" id="badge-count-upcoming">٢</span>
+        </button>
+        <button class="flex-1 py-3 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-semibold text-xs flex items-center justify-center gap-2 transition-all" id="tab-btn-past" onclick="switchMainTab('past')" type="button">
+          <span id="tab-label-past">المواعيد السابقة</span>
+          <span class="w-5 h-5 rounded-full bg-surface-variant text-on-surface text-[10px] flex items-center justify-center font-bold" id="badge-count-past">٣</span>
+        </button>
+      </nav>
+
+      <!-- TAB 1: Upcoming Bookings Grid Content -->
+      <section class="flex flex-col gap-4" id="panel-upcoming">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
+          <!-- Upcoming Booking Card 1: Laser Hair Removal -->
+          <article class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/30 shadow-sm hover:border-primary transition-all flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 right-0 left-0 h-1.5 bg-primary"></div>
+            
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-container text-xs font-bold">
+                  <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+                  <span class="card-status-confirmed">مؤكد • إشعار مرسل</span>
+                </div>
+                <div class="flex items-center gap-1 text-primary text-xs font-bold">
+                  <span class="material-symbols-outlined text-[16px]">schedule</span>
+                  <span>بعد يومين (48 ساعة)</span>
+                </div>
+              </div>
+
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex flex-col">
+                  <h3 class="text-base font-bold text-on-surface">إزالة الشعر بالليزر - كامل الساقين</h3>
+                  <p class="text-xs text-on-surface-variant mt-0.5">جلسة علاجية رئيسية • الجلسة 4 من أصل 6</p>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">flare</span>
+                </div>
+              </div>
+
+              <!-- Skin Fitzpatrick & Laser Settings Indicator -->
+              <div class="bg-surface-container-low p-3.5 rounded-xl flex items-center justify-between border border-outline-variant/20">
+                <div class="flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-[20px] text-primary">tune</span>
+                  <div class="flex flex-col">
+                    <span class="text-[11px] text-outline">البروتوكول السريري المخصص</span>
+                    <span class="text-xs font-bold text-on-surface">Candela GentleLase Pro-U</span>
+                  </div>
+                </div>
+                <div class="text-left font-mono text-xs bg-surface-container-lowest px-2.5 py-1 rounded-lg text-on-surface border border-outline-variant/30 font-semibold">
+                  755nm • 16 J/cm²
+                </div>
+              </div>
+
+              <!-- Practitioner & Clinic Details -->
+              <div class="flex flex-col gap-2.5 text-xs text-on-surface-variant">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[16px]">medical_services</span>
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span class="font-bold text-on-surface truncate">الأخصائية نورة القحطاني</span>
+                    <span class="text-[11px]">مرخصة من الهيئة السعودية للتخصصات الصحية</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[16px]">location_on</span>
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span class="font-bold text-on-surface truncate">فرع العليا التخصصي - الرياض</span>
+                    <span class="text-[11px]">عيادة الليزر 02 • الطابق الأول</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                  </div>
+                  <div class="flex items-center gap-1 font-bold text-on-surface">
+                    <span>الخميس، 12 نوفمبر 2026</span>
+                    <span class="text-outline">•</span>
+                    <span class="text-primary">06:30 مساءً</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Clinical Preparation Reminder Chip -->
+              <div class="bg-surface-container p-3 rounded-xl flex items-start gap-2.5 border border-outline-variant/20">
+                <span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">info</span>
+                <p class="text-xs text-on-surface leading-relaxed">
+                  <strong>إرشادات ما قبل الجلسة:</strong> يرجى تجنب التعرض المباشر للشمس أو المقشرات قبل 48 ساعة.
+                </p>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-3 pt-4 mt-4 border-t border-outline-variant/20">
+              <button class="flex-1 h-11 rounded-xl bg-surface-container text-primary font-bold text-xs flex items-center justify-center gap-1.5 transition-all hover:bg-surface-variant shadow-sm" onclick="showToast('تم فتح خدمة المراسلة لإعادة الجدولة')" type="button">
+                <span class="material-symbols-outlined text-[18px]">event_repeat</span>
+                <span>إعادة الجدولة</span>
+              </button>
+              <button class="h-11 px-4 rounded-xl bg-error-container text-on-error-container font-bold text-xs flex items-center justify-center gap-1 transition-all hover:opacity-90 shadow-sm" onclick="openCancelSheet('إزالة الشعر بالليزر - كامل الساقين', 'الخميس، 12 نوفمبر 2026 • 06:30 م')" type="button">
+                <span class="material-symbols-outlined text-[18px]">close</span>
+                <span>إلغاء</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Upcoming Booking Card 2: Skin Rejuvenation Spectra Carbon -->
+          <article class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/30 shadow-sm hover:border-primary transition-all flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 right-0 left-0 h-1.5 bg-primary-container"></div>
+            
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-container text-xs font-bold">
+                  <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                  <span class="card-status-confirmed">مؤكد نظامياً</span>
+                </div>
+                <div class="flex items-center gap-1 text-on-surface-variant text-xs font-medium">
+                  <span class="material-symbols-outlined text-[16px]">event</span>
+                  <span>متبقي 19 يوماً</span>
+                </div>
+              </div>
+
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex flex-col">
+                  <h3 class="text-base font-bold text-on-surface">نضارة وتجديد البشرة (Spectra Carbon)</h3>
+                  <p class="text-xs text-on-surface-variant mt-0.5">الليزر الكربوني العلاجي لتنقية المسام وتوحيد التصبغات</p>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">auto_fix_high</span>
+                </div>
+              </div>
+
+              <!-- Practitioner & Clinic Details -->
+              <div class="flex flex-col gap-2.5 text-xs text-on-surface-variant pt-2">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[16px]">person</span>
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span class="font-bold text-on-surface truncate">د. سارة المنصور</span>
+                    <span class="text-[11px]">استشاري الأمراض الجلدية والعلاج بالليزر</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[16px]">domain</span>
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span class="font-bold text-on-surface truncate">فرع طريق التحلية - جدة</span>
+                    <span class="text-[11px]">الجناح الطبي • عيادة الجلدية 05</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                  </div>
+                  <div class="flex items-center gap-1 font-bold text-on-surface">
+                    <span>الأحد، 29 نوفمبر 2026</span>
+                    <span class="text-outline">•</span>
+                    <span class="text-primary">04:00 عصراً</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-3 pt-4 mt-4 border-t border-outline-variant/25">
+              <button class="flex-1 h-11 rounded-xl bg-surface-container text-primary font-bold text-xs flex items-center justify-center gap-1.5 transition-all hover:bg-surface-variant shadow-sm" onclick="showToast('تم فتح خدمة المراسلة لإعادة الجدولة')" type="button">
+                <span class="material-symbols-outlined text-[18px]">event_repeat</span>
+                <span>إعادة الجدولة</span>
+              </button>
+              <button class="h-11 px-4 rounded-xl bg-error-container text-on-error-container font-bold text-xs flex items-center justify-center gap-1 transition-all hover:opacity-90 shadow-sm" onclick="openCancelSheet('نضارة وتجديد البشرة (Spectra Carbon)', 'الأحد، 29 نوفمبر 2026 • 04:00 عصراً')" type="button">
+                <span class="material-symbols-outlined text-[18px]">close</span>
+                <span>إلغاء</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Visual Banner: VIP Aesthetic Concierge Support -->
+        <div class="bg-surface-container-low p-5 rounded-2xl border border-outline-variant/20 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[24px]">support_agent</span>
+          </div>
+          <div class="flex flex-col flex-1">
+            <h4 class="text-sm font-bold text-on-surface">المساعد الطبي الشخصي</h4>
+            <p class="text-xs text-on-surface-variant mt-0.5">هل ترغبين بتعديل تعليمات التخدير الموضعي أو الاستفسار عن بروتوكول الحساسية؟</p>
+          </div>
+          <button class="px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-bold text-xs flex items-center gap-1.5 transition-all shadow-sm" onclick="showToast('جاري الاتصال بمنسقة الرعاية السريرية...')" type="button">
+            <span class="material-symbols-outlined text-[18px]">chat</span>
+            <span>محادثة فورية</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- TAB 2: Past Bookings Grid Content (Hidden by default) -->
+      <section class="hidden flex flex-col gap-4" id="panel-past">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
+          <!-- Past Card 1: Completed Session + Rating prompt -->
+          <article class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/30 shadow-sm flex flex-col justify-between gap-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-primary text-xs font-bold">
+                <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                <span>مكتمل بنجاح</span>
+              </div>
+              <span class="text-xs text-outline">14 أكتوبر 2026</span>
+            </div>
+
+            <div class="flex flex-col">
+              <h3 class="text-base font-bold text-on-surface">إزالة الشعر بالليزر - جلسة الرتوش المجانية</h3>
+              <p class="text-xs text-on-surface-variant mt-0.5">الفرع الرئيسي بالعليا • الأخصائية نورة القحطاني</p>
+            </div>
+
+            <div class="bg-surface-container-low p-4 rounded-xl flex items-center justify-between border border-outline-variant/20">
+              <div class="flex flex-col">
+                <span class="text-xs font-bold text-on-surface">تقييم تجربتك السريرية</span>
+                <span class="text-[11px] text-on-surface-variant">ملاحظاتك تصنع تميزنا الدائم</span>
+              </div>
+              <button class="px-3.5 py-2 rounded-xl bg-primary text-on-primary font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all hover:opacity-90" onclick="openRatingModal('جلسة الرتوش المجانية')" type="button">
+                <span class="material-symbols-outlined text-[16px] text-tertiary-fixed">star</span>
+                <span>قيّمي الزيارة</span>
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between pt-3 border-t border-outline-variant/20 text-xs">
+              <button class="text-primary font-bold flex items-center gap-1 hover:underline" onclick="showToast('جاري استعراض إعدادات الفلوينس ونبضات الليزر')" type="button">
+                <span class="material-symbols-outlined text-[16px]">description</span>
+                <span>عرض ملخص الجلسة الطبي</span>
+              </button>
+              <span class="text-outline">موثق في السجل</span>
+            </div>
+          </article>
+
+          <!-- Past Card 2: Cancelled Session -->
+          <article class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/30 shadow-sm flex flex-col justify-between gap-4 opacity-90">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-error-container text-on-error-container text-xs font-bold">
+                <span class="material-symbols-outlined text-[16px]">cancel</span>
+                <span>ملغي بطلب المراجعة</span>
+              </div>
+              <span class="text-xs text-outline">22 سبتمبر 2026</span>
+            </div>
+
+            <div class="flex flex-col">
+              <h3 class="text-base font-bold text-on-surface">جلسة استشارة ومسح بيكو ليزر (PicoSure)</h3>
+              <p class="text-xs text-on-surface-variant mt-0.5">فرع التحلية - جدة • د. خالد السليمان</p>
+            </div>
+
+            <div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-3 border border-outline-variant/20 text-xs text-on-surface">
+              <span class="material-symbols-outlined text-[20px] text-tertiary shrink-0">account_balance_wallet</span>
+              <p class="leading-relaxed">
+                تم الإلغاء قبل موعد الجلسة بـ 48 ساعة • تم استرداد الرصيد بالكامل (350 ر.س) إلى محفظتك في لوميا.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- EMPTY STATE (Hidden by default) -->
+      <section class="hidden flex-col items-center justify-center text-center py-16 px-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm my-4" id="panel-empty">
+        <div class="w-20 h-20 rounded-2xl bg-primary-fixed/40 flex items-center justify-center text-primary mb-4 shadow-inner relative">
+          <span class="material-symbols-outlined text-[38px]">event_available</span>
+        </div>
+        <h3 class="text-base font-bold text-on-surface mb-2" id="empty-title">لا توجد مواعيد قادمة مسجلة</h3>
+        <p class="text-xs text-on-surface-variant max-w-sm mb-6 leading-relaxed" id="empty-subtitle">
+          بشرتكِ تستحق العناية والاهتمام الدائم! استكشفي جدول الأطباء الآن، واحجزي جلستك القادمة بكل سهولة وراحة.
+        </p>
+        <a href="Book.html" class="h-12 px-8 rounded-xl bg-primary text-on-primary font-bold text-xs flex items-center justify-center gap-2 shadow-md transition-transform active:scale-95">
+          <span class="material-symbols-outlined text-[18px]">calendar_add_on</span>
+          <span id="empty-btn-text">احجزي جلستكِ القادمة</span>
+        </a>
+      </section>
+
+      <!-- Interactive Cancellation Bottom Sheet Modal -->
+      <div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-md hidden flex-col justify-end sm:justify-center sm:items-center sm:p-4 transition-opacity duration-300" id="cancel-sheet-backdrop">
+        <div class="bg-surface-container-lowest rounded-t-3xl sm:rounded-2xl p-6 flex flex-col gap-4 max-w-lg w-full shadow-2xl relative max-h-[85vh] overflow-y-auto border border-outline-variant/30" id="cancel-sheet-container">
+          <div class="w-12 h-1.5 rounded-full bg-outline-variant mx-auto mb-1 sm:hidden"></div>
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-error-container text-on-error-container flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">event_busy</span>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-on-surface" id="sheet-title">إلغاء موعد الجلسة</h3>
+                <p class="text-xs text-on-surface-variant" id="sheet-subtitle">عيادات لوميا التخصصية للجلدية والليزر</p>
+              </div>
+            </div>
+            <button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" onclick="closeCancelSheet()" type="button">
+              <span class="material-symbols-outlined text-[18px]">close</span>
+            </button>
+          </div>
+
+          <div class="bg-surface-container-low p-4 rounded-xl flex flex-col gap-1 border border-outline-variant/20 text-xs">
+            <span class="text-outline">الجلسة المراد إلغاؤها:</span>
+            <div class="font-bold text-on-surface text-sm" id="cancel-target-service">إزالة الشعر بالليزر - كامل الساقين</div>
+            <div class="text-on-surface-variant" id="cancel-target-time">الخميس، 12 نوفمبر 2026 • 06:30 مساءً (فرع العليا)</div>
+          </div>
+
+          <!-- Lumea Official Cancellation Policy Box -->
+          <div class="bg-surface-container p-4 rounded-xl flex flex-col gap-2 border border-outline-variant/20 text-xs">
+            <div class="flex items-center gap-2 text-on-surface font-bold">
+              <span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
+              <span>سياسة الإلغاء والرسوم المعتمدة</span>
+            </div>
+            <p class="text-on-surface-variant leading-relaxed">
+              الإلغاء <strong>مجاني تماماً</strong> حتى 24 ساعة قبل وقت الجلسة المحدد. في حال الإلغاء المتأخر بعد انقضاء هذه المهلة، يتم خصم رسم بقيمة <strong>100 ر.س</strong>.
+            </p>
+            <div class="mt-1 p-3 rounded-xl bg-surface-container-lowest flex items-center justify-between border border-outline-variant/30">
+              <div class="flex items-center gap-1.5 font-bold text-on-surface">
+                <span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+                <span>رسوم الإلغاء الآن:</span>
+              </div>
+              <span class="font-bold text-tertiary">0 ر.س (مجاني)</span>
+            </div>
+          </div>
+
+          <!-- Cancellation Reason Selection -->
+          <div class="flex flex-col gap-2 text-xs">
+            <label class="font-bold text-on-surface" for="cancel-reason-input">يرجى تحديد سبب الإلغاء للمتابعة الطبية:</label>
+            <div class="grid grid-cols-2 gap-2">
+              <button class="cancel-reason-chip py-2.5 px-3 rounded-xl bg-surface-container text-on-surface text-center transition-all font-semibold hover:bg-surface-variant" onclick="selectReason(this)" type="button">
+                ظرف طارئ مفاجئ
+              </button>
+              <button class="cancel-reason-chip py-2.5 px-3 rounded-xl bg-surface-container text-on-surface text-center transition-all font-semibold hover:bg-surface-variant" onclick="selectReason(this)" type="button">
+                تغيير الخطة العلاجية
+              </button>
+              <button class="cancel-reason-chip py-2.5 px-3 rounded-xl bg-surface-container text-on-surface text-center transition-all font-semibold hover:bg-surface-variant" onclick="selectReason(this)" type="button">
+                السفر خارج المدينة
+              </button>
+              <button class="cancel-reason-chip py-2.5 px-3 rounded-xl bg-surface-container text-on-surface text-center transition-all font-semibold hover:bg-surface-variant" onclick="selectReason(this)" type="button">
+                رغبة بفرع آخر
+              </button>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col gap-2 pt-2">
+            <button class="h-12 rounded-xl bg-error text-on-error font-bold text-xs flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-transform" onclick="confirmCancellationAction()" type="button">
+              <span class="material-symbols-outlined text-[18px]">check</span>
+              <span>تأكيد إلغاء الموعد (0 ر.س)</span>
+            </button>
+            <button class="h-12 rounded-xl bg-surface-container text-on-surface font-semibold text-xs flex items-center justify-center transition-transform active:scale-95 hover:bg-surface-variant" onclick="closeCancelSheet()" type="button">
+              الاحتفاظ بالموعد ومتابعة العلاج
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Visit Rating Modal -->
+      <div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-md hidden flex-col justify-center items-center p-4 transition-opacity duration-300" id="rating-modal-backdrop">
+        <div class="bg-surface-container-lowest rounded-2xl p-6 flex flex-col items-center text-center gap-3 max-w-sm w-full shadow-2xl relative border border-outline-variant/30">
+          <button class="absolute top-3 left-3 w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface transition-colors" onclick="closeRatingModal()" type="button">
+            <span class="material-symbols-outlined text-[18px]">close</span>
+          </button>
+          
+          <div class="w-14 h-14 rounded-2xl bg-primary-fixed/40 flex items-center justify-center text-primary mb-1">
+            <span class="material-symbols-outlined text-[28px]">reviews</span>
+          </div>
+          
+          <h3 class="text-base font-bold text-on-surface">تقييم الجلسة السريرية</h3>
+          <p class="text-xs text-on-surface-variant" id="rating-modal-service-name">إزالة الشعر بالليزر - الرتوش</p>
+          
+          <!-- 5-Star Interactive Rating -->
+          <div class="flex items-center gap-2 my-2" id="stars-container">
+            <button class="star-btn text-outline hover:text-tertiary transition-colors" onclick="rateStar(1)" type="button"><span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+            <button class="star-btn text-outline hover:text-tertiary transition-colors" onclick="rateStar(2)" type="button"><span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+            <button class="star-btn text-outline hover:text-tertiary transition-colors" onclick="rateStar(3)" type="button"><span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+            <button class="star-btn text-outline hover:text-tertiary transition-colors" onclick="rateStar(4)" type="button"><span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+            <button class="star-btn text-primary transition-colors" onclick="rateStar(5)" type="button"><span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+          </div>
+          
+          <p class="text-[11px] text-on-surface-variant">التقييم يوجه فريق الجودة لتحسين تجربتكِ في كل زيارة</p>
+          
+          <button class="w-full h-11 rounded-xl bg-primary text-on-primary font-bold text-xs mt-2 transition-transform active:scale-95 shadow-md" onclick="submitRating()" type="button">
+            إرسال التقييم
+          </button>
+        </div>
+      </div>
+
+      <!-- Notification Toast Container -->
+      <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-5 py-3 rounded-2xl shadow-xl text-xs hidden items-center gap-2.5" id="lumea-toast">
+        <span class="material-symbols-outlined text-[18px] text-tertiary-fixed">info</span>
+        <span id="toast-message">تم الإجراء بنجاح</span>
+      </div>
+
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+      let isEnglish = false;
+      let currentActiveTab = 'upcoming';
+
+      function switchMainTab(tab) {
+        currentActiveTab = tab;
+        const upcomingPanel = document.getElementById('panel-upcoming');
+        const pastPanel = document.getElementById('panel-past');
+        const emptyPanel = document.getElementById('panel-empty');
+        const tabBtnUpcoming = document.getElementById('tab-btn-upcoming');
+        const tabBtnPast = document.getElementById('tab-btn-past');
+
+        emptyPanel.classList.add('hidden');
+        emptyPanel.classList.remove('flex');
+
+        if (tab === 'upcoming') {
+          upcomingPanel.classList.remove('hidden');
+          pastPanel.classList.add('hidden');
+
+          tabBtnUpcoming.className = 'flex-1 py-3 px-4 rounded-xl bg-primary text-on-primary font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all';
+          tabBtnPast.className = 'flex-1 py-3 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-semibold text-xs flex items-center justify-center gap-2 transition-all';
+        } else {
+          pastPanel.classList.remove('hidden');
+          upcomingPanel.classList.add('hidden');
+
+          tabBtnPast.className = 'flex-1 py-3 px-4 rounded-xl bg-primary text-on-primary font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all';
+          tabBtnUpcoming.className = 'flex-1 py-3 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-semibold text-xs flex items-center justify-center gap-2 transition-all';
+        }
+      }
+
+      function toggleEmptyState() {
+        const upcomingPanel = document.getElementById('panel-upcoming');
+        const pastPanel = document.getElementById('panel-past');
+        const emptyPanel = document.getElementById('panel-empty');
+
+        upcomingPanel.classList.add('hidden');
+        pastPanel.classList.add('hidden');
+        emptyPanel.classList.remove('hidden');
+        emptyPanel.classList.add('flex');
+        showToast(isEnglish ? 'Switched to Empty State view' : 'تم عرض شاشة الحالة الفارغة');
+      }
+
+      function openCancelSheet(serviceName, dateTime) {
+        const backdrop = document.getElementById('cancel-sheet-backdrop');
+        if (serviceName) {
+          document.getElementById('cancel-target-service').textContent = serviceName;
+        }
+        if (dateTime) {
+          document.getElementById('cancel-target-time').textContent = dateTime;
+        }
+        backdrop.classList.remove('hidden');
+        backdrop.classList.add('flex');
+      }
+
+      function closeCancelSheet() {
+        const backdrop = document.getElementById('cancel-sheet-backdrop');
+        backdrop.classList.add('hidden');
+        backdrop.classList.remove('flex');
+      }
+
+      function selectReason(buttonElement) {
+        const chips = document.querySelectorAll('.cancel-reason-chip');
+        chips.forEach(chip => {
+          chip.classList.remove('bg-primary', 'text-on-primary');
+          chip.classList.add('bg-surface-container', 'text-on-surface');
+        });
+        buttonElement.classList.remove('bg-surface-container', 'text-on-surface');
+        buttonElement.classList.add('bg-primary', 'text-on-primary');
+      }
+
+      function confirmCancellationAction() {
+        closeCancelSheet();
+        showToast(isEnglish ? 'Booking has been cancelled successfully.' : 'تم تأكيد إلغاء الموعد واسترجاع كامل الرصيد');
+        setTimeout(() => {
+          toggleEmptyState();
+        }, 1200);
+      }
+
+      function openRatingModal(serviceName) {
+        document.getElementById('rating-modal-service-name').textContent = serviceName;
+        const modal = document.getElementById('rating-modal-backdrop');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+
+      function closeRatingModal() {
+        const modal = document.getElementById('rating-modal-backdrop');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+
+      function rateStar(starIndex) {
+        const stars = document.querySelectorAll('.star-btn span');
+        stars.forEach((star, idx) => {
+          if (idx < starIndex) {
+            star.classList.remove('text-outline');
+            star.classList.add('text-primary');
+          } else {
+            star.classList.remove('text-primary');
+            star.classList.add('text-outline');
+          }
+        });
+      }
+
+      function submitRating() {
+        closeRatingModal();
+        showToast(isEnglish ? 'Thank you! Rating submitted successfully' : 'شكراً لكِ! تم تسجيل تقييمك بنجاح');
+      }
+
+      function showToast(message) {
+        const toast = document.getElementById('lumea-toast');
+        const toastMessage = document.getElementById('toast-message');
+        toastMessage.textContent = message;
+        toast.classList.remove('hidden');
+        toast.classList.add('flex');
+        setTimeout(() => {
+          toast.classList.add('hidden');
+          toast.classList.remove('flex');
+        }, 2800);
+      }
+
+      function toggleLanguageDirection() {
+        isEnglish = !isEnglish;
+        const htmlTag = document.documentElement;
+        const root = document.getElementById('lumea-bookings-root');
+        const langBtn = document.getElementById('btn-state-lang');
+        const heading = document.getElementById('screen-heading');
+        const subheading = document.getElementById('screen-subheading');
+        const tabUpcomingLabel = document.getElementById('tab-label-upcoming');
+        const tabPastLabel = document.getElementById('tab-label-past');
+        const emptyTitle = document.getElementById('empty-title');
+        const emptySub = document.getElementById('empty-subtitle');
+        const emptyBtn = document.getElementById('empty-btn-text');
+        const demoTitle = document.getElementById('demo-bar-title');
+
+        if (isEnglish) {
+          htmlTag.setAttribute('dir', 'ltr');
+          htmlTag.setAttribute('lang', 'en');
+          langBtn.textContent = 'العربية (RTL)';
+          demoTitle.textContent = 'Demo States Bar';
+          heading.textContent = 'My Clinical Bookings';
+          subheading.textContent = 'Manage and track your clinical laser sessions at Lumea Clinic';
+          tabUpcomingLabel.textContent = 'Upcoming Sessions';
+          tabPastLabel.textContent = 'Past Visits';
+          emptyTitle.textContent = 'No Upcoming Bookings Found';
+          emptySub.textContent = 'Your skin deserves continuous radiance! Book your next session now with our specialists.';
+          emptyBtn.textContent = 'Book Your Session Now';
+          showToast('Switched to English view');
+        } else {
+          htmlTag.setAttribute('dir', 'rtl');
+          htmlTag.setAttribute('lang', 'ar');
+          langBtn.textContent = 'English (LTR)';
+          demoTitle.textContent = 'لوحة تجربة الحالات (Demo State Switcher)';
+          heading.textContent = 'جلساتي العلاجية ومواعيدي';
+          subheading.textContent = 'متابعة بروتوكولات الليزر وجدول المواعيد المعتمد في عيادات لوميا';
+          tabUpcomingLabel.textContent = 'المواعيد القادمة';
+          tabPastLabel.textContent = 'المواعيد السابقة';
+          emptyTitle.textContent = 'لا توجد مواعيد قادمة مسجلة';
+          emptySub.textContent = 'بشرتكِ تستحق العناية والاهتمام الدائم! استكشفي جدول الأطباء الآن، واحجزي جلستك القادمة بكل سهولة وراحة.';
+          emptyBtn.textContent = 'احجزي جلستكِ القادمة';
+          showToast('تم التحويل إلى اللغة العربية');
+        }
+      }
+    </script>
+  </main>
+</body>
+</html>

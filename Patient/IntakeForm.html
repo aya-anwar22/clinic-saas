@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>نموذج السجل الطبي والإقرار الصحي | عيادات لوميا</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary": "#ffffff",
+            "primary": "#0060ab",
+            "on-primary-fixed": "#001c39",
+            "surface": "#f9f9ff",
+            "secondary-container": "#e6e2dc",
+            "on-tertiary-container": "#003b26",
+            "surface-bright": "#f9f9ff",
+            "inverse-surface": "#263143",
+            "primary-container": "#4f9df7",
+            "on-tertiary-fixed-variant": "#005236",
+            "tertiary-fixed": "#6ffbbe",
+            "primary-fixed-dim": "#a3c9ff",
+            "surface-container": "#e7eeff",
+            "on-background": "#111c2d",
+            "surface-variant": "#d8e3fb",
+            "on-secondary-container": "#666460",
+            "secondary-fixed": "#e6e2dc",
+            "surface-container-highest": "#d8e3fb",
+            "surface-container-low": "#f0f3ff",
+            "on-surface": "#111c2d",
+            "on-primary": "#ffffff",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#c9c6c0",
+            "background": "#f9f9ff",
+            "error-container": "#ffdad6",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed": "#1c1c18",
+            "outline-variant": "#c1c7d4",
+            "tertiary": "#006c49",
+            "surface-dim": "#cfdaf2",
+            "inverse-primary": "#a3c9ff",
+            "outline": "#717783",
+            "on-primary-fixed-variant": "#004883",
+            "on-tertiary-fixed": "#002113",
+            "tertiary-container": "#00b07a",
+            "surface-container-high": "#dee8ff",
+            "primary-fixed": "#d3e3ff",
+            "on-secondary": "#ffffff",
+            "secondary": "#605e5a",
+            "surface-tint": "#0060ab",
+            "on-surface-variant": "#414752",
+            "on-secondary-fixed-variant": "#484742",
+            "tertiary-fixed-dim": "#4edea3",
+            "inverse-on-surface": "#ecf1ff",
+            "on-primary-container": "#003360",
+            "on-error": "#ffffff",
+            "error": "#ba1a1a"
+          },
+          fontFamily: {
+            sans: ["IBM Plex Sans Arabic", "Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    ::-webkit-scrollbar { display: none; }
+  </style>
+</head>
+<body class="bg-surface font-sans text-on-surface flex flex-col min-h-screen antialiased selection:bg-primary/20">
+
+  <!-- Full Web Top Navigation Bar (بدون سايدبار جانبي) -->
+  <header class="sticky top-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand & Navigation Links -->
+      <div class="flex items-center gap-8">
+        <a href="home.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-md">
+            <span class="material-symbols-outlined text-[24px]">spa</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-lg text-primary tracking-tight">عيادات لوميا</span>
+            <span class="text-xs text-on-surface-variant">Lumia Medical Clinics</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-1 bg-surface-container/60 p-1.5 rounded-xl">
+          <a href="home.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">الرئيسية</a>
+          <a href="Book.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">حجز موعد</a>
+          <a href="MyBookings.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">مواعيدي</a>
+          <a href="Consents.html" class="px-4 py-2 rounded-lg text-sm font-semibold text-primary bg-surface-container-lowest shadow-sm">الموافقات والنموذج الطبي</a>
+          <a href="MyPackages.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">باقاتي</a>
+          <a href="GuardianFlow.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">إقرار ولي الأمر</a>
+        </nav>
+      </div>
+
+      <!-- Quick Actions / User Profile -->
+      <div class="flex items-center gap-3">
+        <button class="h-9 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-primary font-medium text-xs flex items-center gap-1.5 transition-colors" id="lang-toggle" onclick="toggleLanguage()" type="button">
+          <span class="material-symbols-outlined text-[16px]">translate</span>
+          <span id="lang-label">English</span>
+        </button>
+        <a href="Wallet.html" class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-variant transition-all text-sm font-medium text-on-surface">
+          <span class="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
+          <span>المحفظة</span>
+        </a>
+        <a href="Profile.html" class="flex items-center gap-2 pl-3 pr-1 py-1 rounded-full bg-surface-container border border-outline-variant/30 hover:border-primary transition-all">
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-xs">
+            ليلى
+          </div>
+          <span class="hidden lg:inline text-xs font-semibold text-on-surface pl-1">ليلى أحمد</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Web Container -->
+  <main class="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 py-8">
+    <div class="flex flex-col w-full gap-6 select-none" id="lumea-intake-app">
+      
+      <!-- Top Clinical Status Banner & Stepper Header -->
+      <div class="w-full bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col gap-4">
+        
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b pb-4 border-outline-variant/20">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-primary-fixed/40 flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined text-2xl">health_and_safety</span>
+            </div>
+            <div>
+              <h1 class="text-xl font-bold text-on-surface">نموذج التقييم الصحي والبروتوكول السريري</h1>
+              <div class="flex items-center gap-2 text-xs text-on-surface-variant mt-0.5">
+                <span class="flex items-center gap-1 text-tertiary font-semibold">
+                  <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+                  <span data-i18n="status_saved">محفوظ تلقائياً في السجل الطبي</span>
+                </span>
+                <span>•</span>
+                <span class="flex items-center gap-1 text-outline">
+                  <span class="material-symbols-outlined text-sm text-tertiary">cloud_done</span>
+                  <span>متوافق مع معايير وزارة الصحة و PDPL</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shortcuts & Warning Trigger -->
+          <div class="flex items-center gap-2">
+            <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-error-container text-on-error-container text-xs font-semibold hover:opacity-90 transition-all" onclick="triggerWarningDemo()" title="محاكاة تحذير طبي تلقائي" type="button">
+              <span class="material-symbols-outlined text-sm">notification_important</span>
+              <span>تحذير سريري تجريبي</span>
+            </button>
+            <a href="Consents.html" class="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-surface-container text-on-surface text-xs font-medium hover:bg-surface-variant transition-all">
+              <span class="material-symbols-outlined text-sm">close</span>
+              <span>إلغاء وعودة</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Stepper Indicator Info -->
+        <div class="flex items-center justify-between text-xs">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+            <span class="font-bold text-primary" id="step-count-text">الخطوة ١ من ٧</span>
+            <span class="text-outline-variant">•</span>
+            <span class="font-semibold text-on-surface" id="step-title-crumb">تحديد نوع البشرة</span>
+          </div>
+          <span class="text-xs text-on-surface-variant">مرتبط بالموعد رقم #LUM-8842</span>
+        </div>
+
+        <!-- Scrollable Stepper Pills -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar scroll-smooth" id="step-pills-bar">
+          <button class="step-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs flex items-center gap-2 transition-all bg-primary text-on-primary shadow-sm font-bold" data-pill="1" onclick="goToStep(1)" type="button">
+            <span class="w-5 h-5 rounded-full bg-on-primary/20 flex items-center justify-center text-[10px]">١</span>
+            <span data-i18n="pill_1">نوع البشرة</span>
+          </button>
+          <button class="step-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs flex items-center gap-2 transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-pill="2" onclick="goToStep(2)" type="button">
+            <span class="w-5 h-5 rounded-full bg-surface-variant flex items-center justify-center text-[10px]">٢</span>
+            <span data-i18n="pill_2">الحساسية والمزمنة</span>
+          </button>
+          <button class="step-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs flex items-center gap-2 transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-pill="3" onclick="goToStep(3)" type="button">
+            <span class="w-5 h-5 rounded-full bg-surface-variant flex items-center justify-center text-[10px]">٣</span>
+            <span data-i18n="pill_3">الروكتان والأدوية</span>
+          </button>
+          <button class="step-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs flex items-center gap-2 transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-pill="4" onclick="goToStep(4)" type="button">
+            <span class="w-5 h-5 rounded-full bg-surface-variant flex items-center justify-center text-[10px]">٤</span>
+            <span data-i18n="pill_4">الحمل والرضاعة</span>
+          </button>
+          <button class="step-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs flex items-center gap-2 transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-pill="5" onclick="goToStep(5)" type="button">
+            <span class="w-5 h-5 rounded-full bg-surface-variant flex items-center justify-center text-[10px]">٥</span>
+            <span data-i18n="pill_5">الندبات والجُدرة</span>
+          </button>
+          <button class="step-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs flex items-center gap-2 transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-pill="6" onclick="goToStep(6)" type="button">
+            <span class="w-5 h-5 rounded-full bg-surface-variant flex items-center justify-center text-[10px]">٦</span>
+            <span data-i18n="pill_6">الشمس والتان</span>
+          </button>
+          <button class="step-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs flex items-center gap-2 transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-pill="7" onclick="goToStep(7)" type="button">
+            <span class="w-5 h-5 rounded-full bg-surface-variant flex items-center justify-center text-[10px]">٧</span>
+            <span data-i18n="pill_7">المراجعة والإرسال</span>
+          </button>
+        </div>
+
+        <!-- Animated Progress Bar -->
+        <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+          <div class="h-full bg-primary transition-all duration-300 ease-out rounded-full" id="progress-bar-fill" style="width: 14.28%;"></div>
+        </div>
+      </div>
+
+      <!-- Soft Warning Global Toast (Dismissible) -->
+      <div class="hidden p-4 rounded-2xl bg-error-container text-on-error-container shadow-md border border-error/20 transition-all animate-bounce" id="clinical-warning-toast">
+        <div class="flex items-start gap-3">
+          <div class="w-10 h-10 rounded-xl bg-error flex items-center justify-center shrink-0 text-on-error shadow-sm">
+            <span class="material-symbols-outlined text-[20px]">verified_user</span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-sm" data-i18n="warn_title">تنبيه سريري مسبق • بروتوكول الأمان</span>
+              <button class="text-on-error-container hover:opacity-70 p-1" onclick="dismissWarningToast()" type="button">
+                <span class="material-symbols-outlined text-[18px]">close</span>
+              </button>
+            </div>
+            <p class="text-xs mt-1 leading-relaxed" data-i18n="warn_desc">ستقوم طبيبتك المختصة بمراجعة هذه المعطيات (الروكتان / التسمير) لاختيار طول الموجة الأنسب وتجنب أي تصبغات.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Multi-Step Form Surface -->
+      <form class="flex flex-col gap-6" id="intake-form" onsubmit="handleFormSubmit(event)">
+        
+        <!-- ================= STEP 1: SKIN FITZPATRICK TYPE ================= -->
+        <div class="step-page flex flex-col gap-5" id="step-1">
+          <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="material-symbols-outlined text-primary text-[24px]">palette</span>
+              <h2 class="font-bold text-lg text-on-surface" data-i18n="s1_headline">مقياس فيتزباتريك لتحديد نوع البشرة</h2>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="s1_sub">
+              اختاري النوع الأقرب لطبيعة بشرتك عند التعرض لأشعة الشمس الطبيعية بدون واقٍ، لمساعدتنا في معايرة طاقة الليزر المناسبة.
+            </p>
+          </div>
+
+          <!-- 6 Fitzpatrick Swatch Cards Grid (2 Cols on Mobile, 3 Cols on Web) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="fitzpatrick-selector">
+            <!-- Type I -->
+            <label class="fitz-card cursor-pointer p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary transition-all shadow-sm flex items-start gap-3 relative group">
+              <input checked="" class="sr-only" name="skin_type" onchange="selectFitz(this)" type="radio" value="I"/>
+              <div class="w-12 h-12 rounded-xl shrink-0 shadow-inner flex items-center justify-center font-bold text-xs text-on-surface" style="background-color: #F7E4D8;">
+                Type I
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-bold text-sm text-on-surface" data-i18n="s1_t1_title">النوع الأول (I)</span>
+                  <span class="card-indicator w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[14px]">check</span></span>
+                </div>
+                <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="s1_t1_desc">بشرة عاجية ناصعة البياض، تحترق دائماً ولا تكتسب سُمرة إطلاقاً.</p>
+              </div>
+            </label>
+
+            <!-- Type II -->
+            <label class="fitz-card cursor-pointer p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary transition-all shadow-sm flex items-start gap-3 relative group">
+              <input class="sr-only" name="skin_type" onchange="selectFitz(this)" type="radio" value="II"/>
+              <div class="w-12 h-12 rounded-xl shrink-0 shadow-inner flex items-center justify-center font-bold text-xs text-on-surface" style="background-color: #ECD3BE;">
+                Type II
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-bold text-sm text-on-surface" data-i18n="s1_t2_title">النوع الثاني (II)</span>
+                  <span class="card-indicator hidden w-5 h-5 rounded-full bg-primary items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[14px]">check</span></span>
+                </div>
+                <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="s1_t2_desc">بشرة فاتحة، تحترق بسهولة ونادراً ما تكتسب القليل من السُمرة.</p>
+              </div>
+            </label>
+
+            <!-- Type III -->
+            <label class="fitz-card cursor-pointer p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary transition-all shadow-sm flex items-start gap-3 relative group">
+              <input class="sr-only" name="skin_type" onchange="selectFitz(this)" type="radio" value="III"/>
+              <div class="w-12 h-12 rounded-xl shrink-0 shadow-inner flex items-center justify-center font-bold text-xs text-on-surface" style="background-color: #D9B38C;">
+                Type III
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-bold text-sm text-on-surface" data-i18n="s1_t3_title">النوع الثالث (III)</span>
+                  <span class="card-indicator hidden w-5 h-5 rounded-full bg-primary items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[14px]">check</span></span>
+                </div>
+                <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="s1_t3_desc">بشرة قمحية معتدلة، قد تصاب بحروق خفيفة وتكتسب سُمرة ذهبية تدريجياً.</p>
+              </div>
+            </label>
+
+            <!-- Type IV -->
+            <label class="fitz-card cursor-pointer p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary transition-all shadow-sm flex items-start gap-3 relative group">
+              <input class="sr-only" name="skin_type" onchange="selectFitz(this)" type="radio" value="IV"/>
+              <div class="w-12 h-12 rounded-xl shrink-0 shadow-inner flex items-center justify-center font-bold text-xs text-on-primary" style="background-color: #BA8B5A;">
+                Type IV
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-bold text-sm text-on-surface" data-i18n="s1_t4_title">النوع الرابع (IV)</span>
+                  <span class="card-indicator hidden w-5 h-5 rounded-full bg-primary items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[14px]">check</span></span>
+                </div>
+                <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="s1_t4_desc">بشرة حنطية خليجية شائعة، نادراً ما تحترق وتسمر بسهولة وسرعة.</p>
+              </div>
+            </label>
+
+            <!-- Type V -->
+            <label class="fitz-card cursor-pointer p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary transition-all shadow-sm flex items-start gap-3 relative group">
+              <input class="sr-only" name="skin_type" onchange="selectFitz(this)" type="radio" value="V"/>
+              <div class="w-12 h-12 rounded-xl shrink-0 shadow-inner flex items-center justify-center font-bold text-xs text-on-primary" style="background-color: #8B5A2B;">
+                Type V
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-bold text-sm text-on-surface" data-i18n="s1_t5_title">النوع الخامس (V)</span>
+                  <span class="card-indicator hidden w-5 h-5 rounded-full bg-primary items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[14px]">check</span></span>
+                </div>
+                <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="s1_t5_desc">بشرة سمراء داكنة، نادراً جداً ما تلتهب أو تحترق، وتكتسب سمرة عميقة.</p>
+              </div>
+            </label>
+
+            <!-- Type VI -->
+            <label class="fitz-card cursor-pointer p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary transition-all shadow-sm flex items-start gap-3 relative group">
+              <input class="sr-only" name="skin_type" onchange="selectFitz(this)" type="radio" value="VI"/>
+              <div class="w-12 h-12 rounded-xl shrink-0 shadow-inner flex items-center justify-center font-bold text-xs text-on-primary" style="background-color: #4A2E1B;">
+                Type VI
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-bold text-sm text-on-surface" data-i18n="s1_t6_title">النوع السادس (VI)</span>
+                  <span class="card-indicator hidden w-5 h-5 rounded-full bg-primary items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[14px]">check</span></span>
+                </div>
+                <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="s1_t6_desc">بشرة شديدة السمرة داكنة جداً، لا تصاب بأي حروق شمسية وتتحمل الليزر المخصص.</p>
+              </div>
+            </label>
+          </div>
+
+          <!-- Clinical Device Insight Card -->
+          <div class="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/20 flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0">
+              <span class="material-symbols-outlined text-[22px]">tune</span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="font-bold text-xs text-on-surface" data-i18n="s1_laser_note">المطابقة الطبية المعتمدة في لوميا</div>
+              <p class="text-xs text-on-surface-variant mt-0.5 leading-relaxed">الأنواع I-III تناسب أجهزة الألكسندرايت (755nm)، والأنواع IV-VI تعتمد تقنية الإن دي ياغ (1064nm) فائقة الأمان.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= STEP 2: ALLERGIES & CONDITIONS ================= -->
+        <div class="step-page hidden flex flex-col gap-5" id="step-2">
+          <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="material-symbols-outlined text-primary text-[24px]">medical_services</span>
+              <h2 class="font-bold text-lg text-on-surface" data-i18n="s2_headline">الحساسية والحالات الجلدية المزمنة</h2>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="s2_sub">
+              حددي أي حالات تنطبق عليكِ لحماية بشرتك واختيار مستحضرات التبريد والتخدير الملائمة.
+            </p>
+          </div>
+
+          <!-- Quick Option: No Allergies -->
+          <label class="cursor-pointer p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:bg-surface-container-low transition-all shadow-sm flex items-center justify-between" id="label-no-allergy">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-tertiary/10 text-tertiary flex items-center justify-center">
+                <span class="material-symbols-outlined text-[22px]">check_circle</span>
+              </div>
+              <div>
+                <span class="font-bold text-sm text-on-surface block" data-i18n="s2_none_title">لا أعاني من أي حساسية أو أمراض مزمنة</span>
+                <span class="text-xs text-outline" data-i18n="s2_none_sub">خيار سريع وواضح للمتابعة المباشرة</span>
+              </div>
+            </div>
+            <input class="w-5 h-5 rounded accent-primary cursor-pointer" id="check-no-allergy" onchange="toggleNoAllergies(this)" type="checkbox"/>
+          </label>
+
+          <!-- Multi-select Conditions -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="allergy-group">
+            <label class="cond-card cursor-pointer p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:bg-surface-container-low transition-all shadow-sm flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">healing</span>
+                </div>
+                <span class="text-xs font-semibold text-on-surface" data-i18n="s2_c1">حساسية جلدية أو إكزيما نشطة في موضع الإجراء</span>
+              </div>
+              <input class="w-5 h-5 rounded accent-primary cursor-pointer shrink-0" name="allergies" onchange="checkAllergyOption()" type="checkbox" value="eczema"/>
+            </label>
+
+            <label class="cond-card cursor-pointer p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:bg-surface-container-low transition-all shadow-sm flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">vaccines</span>
+                </div>
+                <span class="text-xs font-semibold text-on-surface" data-i18n="s2_c2">حساسية من كريمات التخدير الموضعي (Lidocaine)</span>
+              </div>
+              <input class="w-5 h-5 rounded accent-primary cursor-pointer shrink-0" name="allergies" onchange="checkAllergyOption()" type="checkbox" value="anesthetic"/>
+            </label>
+
+            <label class="cond-card cursor-pointer p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:bg-surface-container-low transition-all shadow-sm flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">dermatology</span>
+                </div>
+                <span class="text-xs font-semibold text-on-surface" data-i18n="s2_c3">البهاق أو الصدفية أو ظاهرة كويبنر (Koebner)</span>
+              </div>
+              <input class="w-5 h-5 rounded accent-primary cursor-pointer shrink-0" name="allergies" onchange="checkAllergyOption()" type="checkbox" value="vitiligo"/>
+            </label>
+
+            <label class="cond-card cursor-pointer p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:bg-surface-container-low transition-all shadow-sm flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">flash_on</span>
+                </div>
+                <span class="text-xs font-semibold text-on-surface" data-i18n="s2_c4">تاريخ نوبات صرع حساس للومضات الضوئية</span>
+              </div>
+              <input class="w-5 h-5 rounded accent-primary cursor-pointer shrink-0" name="allergies" onchange="checkAllergyOption()" type="checkbox" value="epilepsy"/>
+            </label>
+          </div>
+
+          <!-- Specific Details Box -->
+          <div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col gap-2">
+            <label class="font-bold text-xs text-on-surface" data-i18n="s2_notes_lbl" for="allergy-notes">تفاصيل إضافية أو أي حساسية دوائية أخرى (اختياري):</label>
+            <textarea class="w-full bg-surface-container-low rounded-xl p-3.5 text-xs text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest border border-outline-variant/20 transition-all resize-none" id="allergy-notes" placeholder="اكتبي أي ملاحظات أو أسماء أدوية تسبب لك حساسية..." rows="3"></textarea>
+          </div>
+        </div>
+
+        <!-- ================= STEP 3: MEDICATIONS & ISOTRETINOIN ================= -->
+        <div class="step-page hidden flex flex-col gap-5" id="step-3">
+          <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="material-symbols-outlined text-primary text-[24px]">pill</span>
+              <h2 class="font-bold text-lg text-on-surface" data-i18n="s3_headline">الأدوية الحالية والروكتان</h2>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="s3_sub">
+              بعض الأدوية ترفع حساسية الجلد للضوء أو تؤثر على تجدد الأنسجة، وسلامتك هي أولويتنا القصوى دائماً.
+            </p>
+          </div>
+
+          <!-- CRITICAL QUESTION: Isotretinoin -->
+          <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm border border-outline-variant/30 flex flex-col gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[24px]">medication_liquid</span>
+              </div>
+              <div>
+                <span class="font-bold text-sm text-on-surface block leading-snug" data-i18n="s3_roacc_q">هل تناولتِ دواء الروكتان (Isotretinoin / Curacne / Roaccutane) خلال الـ 6 أشهر الماضية؟</span>
+                <span class="text-xs text-outline mt-1 block" data-i18n="s3_roacc_hint">دواء حب الشباب المعروف الذي يتطلب فترة تعافي للبشرة</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 mt-1">
+              <label class="cursor-pointer p-4 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex items-center justify-between border border-outline-variant/20">
+                <span class="font-bold text-xs text-on-surface" data-i18n="common_no">لا، لم أتناوله</span>
+                <input checked="" class="w-4 h-4 accent-primary" name="roaccutane_used" onchange="toggleRoaccWarning(false)" type="radio" value="no"/>
+              </label>
+              <label class="cursor-pointer p-4 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex items-center justify-between border border-outline-variant/20">
+                <span class="font-bold text-xs text-error" data-i18n="common_yes">نعم، تناولته</span>
+                <input class="w-4 h-4 accent-error" name="roaccutane_used" onchange="toggleRoaccWarning(true)" type="radio" value="yes"/>
+              </label>
+            </div>
+
+            <!-- Conditional Soft Warning for Roaccutane -->
+            <div class="hidden p-4 rounded-xl bg-error-container/40 border border-error/20 text-on-error-container shadow-inner" id="roacc-warning-panel">
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[20px] text-error shrink-0">error</span>
+                <div class="text-xs leading-relaxed" data-i18n="s3_roacc_alert">
+                  <strong>ملاحظة سريرية مهمة:</strong> تناول الروكتان يتطلب عادةً فاصل زمني من 3 إلى 6 أشهر قبل علاجات الليزر لتفادي ترقق الجلد وضعف الالتئام. ستراجع طبيبتك جدولك السريري لتحديد الموعد الأمثل بحفظ تام لصحتك.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Other Photosensitizing Medications -->
+          <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm border border-outline-variant/30 flex flex-col gap-4">
+            <span class="font-bold text-xs text-on-surface" data-i18n="s3_other_title">أدوية أخرى مستخدمة حالياً أو مؤخراً:</span>
+            <div class="flex flex-col gap-2">
+              <label class="cursor-pointer p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between">
+                <span class="text-xs text-on-surface" data-i18n="s3_med1">مضادات حيوية تزيد حساسية الضوء (مثل التتراسيكلين، الدوكسيسيكلين)</span>
+                <input class="w-4 h-4 accent-primary" name="photosens_meds" type="checkbox" value="antibiotics"/>
+              </label>
+              <label class="cursor-pointer p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between">
+                <span class="text-xs text-on-surface" data-i18n="s3_med2">استخدام الريتينول (Retinol / Differin) أو مقشرات كيميائية في الـ 14 يوماً الماضية</span>
+                <input class="w-4 h-4 accent-primary" name="photosens_meds" type="checkbox" value="retinol"/>
+              </label>
+              <label class="cursor-pointer p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between">
+                <span class="text-xs text-on-surface" data-i18n="s3_med3">مميعات الدم القوية أو الأسبرين المنتظم</span>
+                <input class="w-4 h-4 accent-primary" name="photosens_meds" type="checkbox" value="blood_thinners"/>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= STEP 4: PREGNANCY & BREASTFEEDING ================= -->
+        <div class="step-page hidden flex flex-col gap-5" id="step-4">
+          <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="material-symbols-outlined text-primary text-[24px]">pregnant_woman</span>
+              <h2 class="font-bold text-lg text-on-surface" data-i18n="s4_headline">الحمل والرضاعة الطبيعية</h2>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="s4_sub">
+              بروتوكول السلامة الطبية في عيادات لوميا يمنع إجراء جلسات الليزر التجميلي أثناء فترة الحمل حفاظاً على سلامتك وسلامة جنينك.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4" id="pregnancy-group">
+            <label class="cursor-pointer p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:bg-surface-container-low transition-all shadow-sm flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">check</span>
+                </div>
+                <div>
+                  <span class="font-bold text-xs text-on-surface block" data-i18n="s4_opt1_title">لا يوجد حمل ولا رضاعة</span>
+                  <span class="text-[11px] text-outline" data-i18n="s4_opt1_sub">مؤهلة للجلسة</span>
+                </div>
+              </div>
+              <input checked="" class="w-4 h-4 accent-primary" name="maternal_status" onchange="togglePregnancyNote(false)" type="radio" value="none"/>
+            </label>
+
+            <label class="cursor-pointer p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:bg-surface-container-low transition-all shadow-sm flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">family_restroom</span>
+                </div>
+                <div>
+                  <span class="font-bold text-xs text-error block" data-i18n="s4_opt2_title">يوجد حمل حالياً</span>
+                  <span class="text-[11px] text-outline" data-i18n="s4_opt2_sub">يتطلب تأجيل الموعد</span>
+                </div>
+              </div>
+              <input class="w-4 h-4 accent-error" name="maternal_status" onchange="togglePregnancyNote(true)" type="radio" value="pregnant"/>
+            </label>
+
+            <label class="cursor-pointer p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:bg-surface-container-low transition-all shadow-sm flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">child_care</span>
+                </div>
+                <div>
+                  <span class="font-bold text-xs text-on-surface block" data-i18n="s4_opt3_title">رضاعة طبيعية</span>
+                  <span class="text-[11px] text-outline" data-i18n="s4_opt3_sub">آمن مع الاحتياط</span>
+                </div>
+              </div>
+              <input class="w-4 h-4 accent-primary" name="maternal_status" onchange="togglePregnancyNote(false)" type="radio" value="breastfeeding"/>
+            </label>
+          </div>
+
+          <!-- Pregnancy Soft Notice -->
+          <div class="hidden p-5 rounded-2xl bg-error-container/40 border border-error/20 text-on-error-container shadow-inner" id="pregnancy-notice">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="material-symbols-outlined text-error text-[20px]">favorite</span>
+              <span class="font-bold text-sm" data-i18n="s4_alert_title">تهانينا ونتمنى لكِ دوام الصحة والعافية!</span>
+            </div>
+            <p class="text-xs leading-relaxed" data-i18n="s4_alert_desc">
+              لحمايتكِ وحماية جنينك، نتبع إرشادات وزارة الصحة السعودية التي توصي بإيقاف جلسات الليزر حتى انقضاء فترة الحمل. يمكنكِ استرداد الرصيد أو حجز موعد لاحق بعد الولادة بكل سهولة.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= STEP 5: KELOID & SCARRING ================= -->
+        <div class="step-page hidden flex flex-col gap-5" id="step-5">
+          <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="material-symbols-outlined text-primary text-[24px]">personal_injury</span>
+              <h2 class="font-bold text-lg text-on-surface" data-i18n="s5_headline">التندب وتكوّن الجدرة (Keloid)</h2>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="s5_sub">
+              معرفة استجابة التئام بشرتك تساعد الكادر الطبي في ضبط تردد النبضات بدقة ومنع أي أثر غير مرغوب.
+            </p>
+          </div>
+
+          <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+                <span class="material-symbols-outlined text-[24px]">accessibility_new</span>
+              </div>
+              <div>
+                <span class="font-bold text-sm text-on-surface block leading-snug" data-i18n="s5_q">هل لاحظتِ سابقاً تشكّل ندبات بارزة، متضخمة أو مرتفعة عن سطح الجلد (جُدرة / كيلود) بعد جروح بسيطة أو خياطة جراحية؟</span>
+                <span class="text-xs text-outline mt-1 block" data-i18n="s5_q_sub">خاصة في مناطق الكتفين، الصدر، أو شحمة الأذن</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-2">
+              <label class="cursor-pointer p-4 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex items-center justify-between border border-outline-variant/20">
+                <span class="font-bold text-xs text-on-surface" data-i18n="common_no">لا، أبداً</span>
+                <input checked="" class="w-4 h-4 accent-primary" name="keloid_history" type="radio" value="no"/>
+              </label>
+              <label class="cursor-pointer p-4 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex items-center justify-between border border-outline-variant/20">
+                <span class="font-bold text-xs text-on-surface" data-i18n="common_unsure">غير متأكدة</span>
+                <input class="w-4 h-4 accent-primary" name="keloid_history" type="radio" value="unsure"/>
+              </label>
+              <label class="cursor-pointer p-4 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex items-center justify-between border border-outline-variant/20">
+                <span class="font-bold text-xs text-on-surface" data-i18n="common_yes">نعم، لدي قابلية</span>
+                <input class="w-4 h-4 accent-primary" name="keloid_history" type="radio" value="yes"/>
+              </label>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/20 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0">
+              <span class="material-symbols-outlined text-[20px]">verified</span>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="s5_tip">
+              في حال وجود قابلية للتندب، تقوم الطبيبة بإجراء اختبار نبضة تجريبية (Spot Test) مسبق لمراقبة سرعة التعافي التام.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= STEP 6: SUN EXPOSURE & TANNING ================= -->
+        <div class="step-page hidden flex flex-col gap-5" id="step-6">
+          <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="material-symbols-outlined text-primary text-[24px]">wb_sunny</span>
+              <h2 class="font-bold text-lg text-on-surface" data-i18n="s6_headline">التعرض للشمس والتان الحديث</h2>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="s6_sub">
+              البشرة المسمّرة حديثاً تفرز صبغة ميلانين نشطة في الطبقات السطحية، مما يتطلب تقديراً دقيقاً لتفادي أي تصبغات مؤقتة.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm border border-outline-variant/30 flex flex-col gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-primary-fixed/40 text-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[24px]">beach_access</span>
+              </div>
+              <div>
+                <span class="font-bold text-sm text-on-surface block leading-snug" data-i18n="s6_q">هل تعرضتِ لأشعة شمس مباشرة مكثفة أو قمتِ بعمل تان (شمسي أو سرير سولاريوم) خلال الـ 4 أسابيع الماضية؟</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 mt-1">
+              <label class="cursor-pointer p-4 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex items-center justify-between border border-outline-variant/20">
+                <span class="font-bold text-xs text-on-surface" data-i18n="common_no">لا، لم أتعرض</span>
+                <input checked="" class="w-4 h-4 accent-primary" name="recent_tan" onchange="toggleTanDetails(false)" type="radio" value="no"/>
+              </label>
+              <label class="cursor-pointer p-4 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex items-center justify-between border border-outline-variant/20">
+                <span class="font-bold text-xs text-on-surface" data-i18n="common_yes">نعم، تعرضت</span>
+                <input class="w-4 h-4 accent-primary" name="recent_tan" onchange="toggleTanDetails(true)" type="radio" value="yes"/>
+              </label>
+            </div>
+
+            <!-- Conditional Tan Date Picker & Soft Warning -->
+            <div class="hidden flex flex-col gap-3 mt-2 pt-2 border-t border-outline-variant/20" id="tan-details-panel">
+              <div class="bg-surface-container-low p-4 rounded-xl">
+                <label class="block font-bold text-xs text-on-surface mb-1.5" data-i18n="s6_date_lbl" for="tan-date">تاريخ آخر تعرض مباشر للشمس أو جلسة تسمير:</label>
+                <input class="w-full bg-surface-container-lowest p-3 rounded-lg text-xs font-semibold text-on-surface focus:outline-none border border-outline-variant/30 shadow-sm" id="tan-date" type="date"/>
+              </div>
+              <div class="p-3.5 rounded-xl bg-surface-container-high text-on-surface-variant flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[20px] shrink-0">info</span>
+                <p class="text-xs leading-relaxed" data-i18n="s6_soft_note">
+                  تنصح التوصيات الجلدية بفاصل زمني من 2 إلى 4 أسابيع بعد التان لضمان هدوء الميلانين السطحي وتحقيق أعلى نتائج إزالة الشعر بأمان كامل.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= STEP 7: REVIEW & SUBMIT ================= -->
+        <div class="step-page hidden flex flex-col gap-5" id="step-7">
+          <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30">
+            <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-tertiary text-[24px]">assignment_turned_in</span>
+                <h2 class="font-bold text-lg text-on-surface" data-i18n="s7_headline">مراجعة الإجابات والإقرار الطبي</h2>
+              </div>
+              <span class="flex items-center gap-1.5 text-xs text-tertiary font-bold bg-tertiary-container/20 px-3 py-1 rounded-full">
+                <span class="material-symbols-outlined text-sm">done_all</span>
+                <span data-i18n="s7_saved_chip">محفوظ تلقائياً</span>
+              </span>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="s7_sub">
+              راجعي ملخص بياناتك المسجلة. يمكنك الضغط على أي قسم للتعديل السريع قبل الإرسال النهائي.
+            </p>
+          </div>
+
+          <!-- Clinical Answers Review Cards Mosaic -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="summary-cards-container">
+            
+            <!-- Summary: Skin Type -->
+            <div class="p-4 rounded-2xl bg-surface-container-lowest shadow-sm border border-outline-variant/30 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl shadow-inner flex items-center justify-center text-xs font-bold" id="sum-swatch" style="background-color: #F7E4D8;">I</div>
+                <div>
+                  <span class="text-[11px] text-outline block" data-i18n="pill_1">نوع البشرة</span>
+                  <span class="text-xs text-on-surface font-bold" id="sum-skin-text">النوع الأول (I) - عاجية فاتحة</span>
+                </div>
+              </div>
+              <button class="text-xs text-primary font-bold hover:underline" data-i18n="common_edit" onclick="goToStep(1)" type="button">تعديل</button>
+            </div>
+
+            <!-- Summary: Allergies -->
+            <div class="p-4 rounded-2xl bg-surface-container-lowest shadow-sm border border-outline-variant/30 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-[20px]">medical_information</span>
+                </div>
+                <div>
+                  <span class="text-[11px] text-outline block" data-i18n="pill_2">الحساسية والمزمنة</span>
+                  <span class="text-xs text-on-surface font-bold" id="sum-allergy-text">لا توجد حساسية مسجلة</span>
+                </div>
+              </div>
+              <button class="text-xs text-primary font-bold hover:underline" data-i18n="common_edit" onclick="goToStep(2)" type="button">تعديل</button>
+            </div>
+
+            <!-- Summary: Roaccutane -->
+            <div class="p-4 rounded-2xl bg-surface-container-lowest shadow-sm border border-outline-variant/30 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-[20px]">medication</span>
+                </div>
+                <div>
+                  <span class="text-[11px] text-outline block" data-i18n="pill_3">الروكتان والأدوية</span>
+                  <span class="text-xs text-on-surface font-bold" id="sum-roacc-text">لم يتم تناول الروكتان خلال 6 أشهر</span>
+                </div>
+              </div>
+              <button class="text-xs text-primary font-bold hover:underline" data-i18n="common_edit" onclick="goToStep(3)" type="button">تعديل</button>
+            </div>
+
+            <!-- Summary: Pregnancy -->
+            <div class="p-4 rounded-2xl bg-surface-container-lowest shadow-sm border border-outline-variant/30 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-[20px]">pregnant_woman</span>
+                </div>
+                <div>
+                  <span class="text-[11px] text-outline block" data-i18n="pill_4">الحمل والرضاعة</span>
+                  <span class="text-xs text-on-surface font-bold" id="sum-preg-text">لا يوجد حمل أو رضاعة</span>
+                </div>
+              </div>
+              <button class="text-xs text-primary font-bold hover:underline" data-i18n="common_edit" onclick="goToStep(4)" type="button">تعديل</button>
+            </div>
+
+            <!-- Summary: Keloids -->
+            <div class="p-4 rounded-2xl bg-surface-container-lowest shadow-sm border border-outline-variant/30 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-[20px]">healing</span>
+                </div>
+                <div>
+                  <span class="text-[11px] text-outline block" data-i18n="pill_5">الندبات والجُدرة</span>
+                  <span class="text-xs text-on-surface font-bold" id="sum-keloid-text">لا يوجد تاريخ لتكون الجدرة</span>
+                </div>
+              </div>
+              <button class="text-xs text-primary font-bold hover:underline" data-i18n="common_edit" onclick="goToStep(5)" type="button">تعديل</button>
+            </div>
+
+            <!-- Summary: Tanning -->
+            <div class="p-4 rounded-2xl bg-surface-container-lowest shadow-sm border border-outline-variant/30 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-[20px]">wb_sunny</span>
+                </div>
+                <div>
+                  <span class="text-[11px] text-outline block" data-i18n="pill_6">الشمس والتان</span>
+                  <span class="text-xs text-on-surface font-bold" id="sum-tan-text">لا يوجد تان حديث</span>
+                </div>
+              </div>
+              <button class="text-xs text-primary font-bold hover:underline" data-i18n="common_edit" onclick="goToStep(6)" type="button">تعديل</button>
+            </div>
+
+          </div>
+
+          <!-- Legal & Clinical Consent -->
+          <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm border border-outline-variant/30 flex flex-col gap-3">
+            <label class="flex items-start gap-3 cursor-pointer select-none">
+              <input class="w-5 h-5 rounded accent-primary mt-0.5 shrink-0 cursor-pointer" id="consent-check" required="" type="checkbox"/>
+              <span class="text-xs font-medium text-on-surface leading-relaxed" data-i18n="s7_consent_text">
+                أقر بأن جميع البيانات السريرية والصحية المدونة أعلاه دقيقة ومكتملة، وأوافق على معالجة ملفي الطبي وفق لوائح وزارة الصحة السعودية ونظام حماية البيانات الشخصية (PDPL) المعتمد في عيادات لوميا.
+              </span>
+            </label>
+          </div>
+
+          <!-- Success State Banner -->
+          <div class="hidden p-6 rounded-2xl bg-tertiary-container/20 text-on-surface shadow-sm border border-tertiary/30 animate-fade-in" id="submit-success-banner">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-tertiary text-on-tertiary flex items-center justify-center shrink-0 shadow-md">
+                <span class="material-symbols-outlined text-2xl">verified</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="font-bold text-base text-tertiary" data-i18n="s7_success_title">تم اعتماد النموذج الطبي بنجاح!</div>
+                <p class="text-xs text-on-surface-variant mt-1 leading-relaxed" data-i18n="s7_success_desc">
+                  تم ربط بياناتك السريرية بملف موعدك القادم رقم #LUM-8842. الطبيبة المشرفة ستكون على اطلاع مسبق بكافة تفاصيل حالتك لضمان تجربة آمنة وفائقة العناية.
+                </p>
+                <div class="mt-4 flex items-center gap-3">
+                  <a href="MyBookings.html" class="px-5 py-2 rounded-xl bg-tertiary text-on-tertiary text-xs font-bold shadow-sm hover:opacity-95 transition-all">العودة لمواعيدي</a>
+                  <a href="home.html" class="px-5 py-2 rounded-xl bg-surface-container text-on-surface text-xs font-semibold hover:bg-surface-variant transition-all">الرئيسية</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- Web Action Toolbar / Footer Navigation -->
+      <div class="w-full bg-surface-container-lowest p-4 rounded-2xl shadow-sm border border-outline-variant/30 flex items-center justify-between gap-4">
+        <!-- Back Button -->
+        <button class="h-12 px-6 rounded-xl bg-secondary-container text-on-secondary-fixed font-semibold text-xs flex items-center justify-center gap-2 transition-all hover:bg-surface-container disabled:opacity-40 disabled:pointer-events-none" disabled="" id="prev-btn" onclick="previousStep()" type="button">
+          <span class="material-symbols-outlined text-lg rtl:rotate-180" id="prev-icon">arrow_forward</span>
+          <span data-i18n="btn_prev">السابق</span>
+        </button>
+
+        <!-- Microcopy Note -->
+        <div class="hidden sm:flex items-center gap-1.5 text-xs text-outline">
+          <span class="material-symbols-outlined text-sm text-tertiary">lock</span>
+          <span data-i18n="footer_security">محفوظ تلقائياً • متوافق مع معايير الأمان الصحي المعتمدة</span>
+        </div>
+
+        <!-- Next / Submit Action -->
+        <button class="h-12 px-8 rounded-xl bg-primary text-on-primary font-bold text-xs flex items-center justify-center gap-2 shadow-md transition-all hover:opacity-95" id="next-btn" onclick="nextStep()" type="button">
+          <span data-i18n="btn_next" id="next-btn-text">المتابعة للخطوة التالية</span>
+          <span class="material-symbols-outlined text-lg rtl:rotate-180" id="next-icon">arrow_back</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Interactive Script Logic -->
+    <script>
+      let currentStep = 1;
+      const totalSteps = 7;
+      let isEnglish = false;
+
+      const skinData = {
+        'I': { color: '#F7E4D8', titleAr: 'النوع الأول (I) - عاجية فاتحة', titleEn: 'Type I - Very Fair / Ivory' },
+        'II': { color: '#ECD3BE', titleAr: 'النوع الثاني (II) - فاتحة ناعمة', titleEn: 'Type II - Fair / Light' },
+        'III': { color: '#D9B38C', titleAr: 'النوع الثالث (III) - قمحية معتدلة', titleEn: 'Type III - Medium Olive' },
+        'IV': { color: '#BA8B5A', titleAr: 'النوع الرابع (IV) - حنطية خليجية', titleEn: 'Type IV - Moderate Brown' },
+        'V': { color: '#8B5A2B', titleAr: 'النوع الخامس (V) - سمراء داكنة', titleEn: 'Type V - Dark Brown' },
+        'VI': { color: '#4A2E1B', titleAr: 'النوع السادس (VI) - شديدة السمرة', titleEn: 'Type VI - Deeply Pigmented' }
+      };
+
+      const i18n = {
+        ar: {
+          status_saved: 'محفوظ تلقائياً في السجل الطبي',
+          step_fmt: (cur, tot) => `الخطوة ${toArabicNumeral(cur)} من ${toArabicNumeral(tot)}`,
+          titles: [
+            'تحديد نوع البشرة',
+            'الحساسية والمزمنة',
+            'الروكتان والأدوية',
+            'الحمل والرضاعة',
+            'الندبات وتكون الجُدرة',
+            'الشمس والتان الحديث',
+            'المراجعة والإقرار الطبي'
+          ],
+          pill_1: 'نوع البشرة',
+          pill_2: 'الحساسية والمزمنة',
+          pill_3: 'الروكتان والأدوية',
+          pill_4: 'الحمل والرضاعة',
+          pill_5: 'الندبات والجُدرة',
+          pill_6: 'الشمس والتان',
+          pill_7: 'المراجعة والإرسال',
+          btn_prev: 'السابق',
+          btn_next: 'المتابعة للخطوة التالية',
+          btn_submit: 'إرسال النموذج وتأكيد البيانات',
+          footer_security: 'محفوظ تلقائياً • متوافق مع معايير الأمان الصحي المعتمدة',
+          warn_title: 'تنبيه سريري مسبق • بروتوكول الأمان',
+          warn_desc: 'ستقوم طبيبتك المختصة بمراجعة هذه المعطيات (الروكتان / التسمير) لاختيار طول الموجة الأنسب وتجنب أي تصبغات.',
+          common_edit: 'تعديل',
+          common_yes: 'نعم',
+          common_no: 'لا',
+          common_unsure: 'غير متأكدة',
+          s7_saved_chip: 'محفوظ تلقائياً'
+        },
+        en: {
+          status_saved: 'Auto-saved to medical chart',
+          step_fmt: (cur, tot) => `Step ${cur} of ${tot}`,
+          titles: [
+            'Skin Fitzpatrick Type',
+            'Allergies & Conditions',
+            'Medications & Roaccutane',
+            'Pregnancy & Nursing',
+            'Keloids & Scarring',
+            'Sun & Tanning History',
+            'Review & Clinical Consent'
+          ],
+          pill_1: 'Skin Type',
+          pill_2: 'Allergies',
+          pill_3: 'Roaccutane',
+          pill_4: 'Pregnancy',
+          pill_5: 'Keloids',
+          pill_6: 'Sun Exposure',
+          pill_7: 'Review & Submit',
+          btn_prev: 'Previous',
+          btn_next: 'Continue to Next Step',
+          btn_submit: 'Submit & Confirm Intake',
+          footer_security: 'Auto-saved • Fully compliant with Saudi MOH & PDPL health protocols',
+          warn_title: 'Clinical Advisory • Safety Protocol',
+          warn_desc: 'Your specialist dermatologist will review medications & sun exposure to calibrate exact laser parameters.',
+          common_edit: 'Edit',
+          common_yes: 'Yes',
+          common_no: 'No',
+          common_unsure: 'Unsure',
+          s7_saved_chip: 'Saved automatically'
+        }
+      };
+
+      function toArabicNumeral(n) {
+        const arabicDigits = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+        return String(n).replace(/[0-9]/g, d => arabicDigits[d]);
+      }
+
+      function goToStep(stepNumber) {
+        if (stepNumber < 1 || stepNumber > totalSteps) return;
+        currentStep = stepNumber;
+
+        for (let i = 1; i <= totalSteps; i++) {
+          const page = document.getElementById(`step-${i}`);
+          if (page) {
+            if (i === currentStep) {
+              page.classList.remove('hidden');
+            } else {
+              page.classList.add('hidden');
+            }
+          }
+        }
+
+        const progressPercent = (currentStep / totalSteps) * 100;
+        const bar = document.getElementById('progress-bar-fill');
+        if (bar) bar.style.width = `${progressPercent}%`;
+
+        updateHeaderAndPills();
+
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtnText = document.getElementById('next-btn-text');
+        const nextIcon = document.getElementById('next-icon');
+
+        if (prevBtn) prevBtn.disabled = (currentStep === 1);
+
+        const langDict = isEnglish ? i18n.en : i18n.ar;
+        if (currentStep === totalSteps) {
+          nextBtnText.textContent = langDict.btn_submit;
+          nextIcon.textContent = 'check';
+          refreshSummaryView();
+        } else {
+          nextBtnText.textContent = langDict.btn_next;
+          nextIcon.textContent = isEnglish ? 'arrow_forward' : 'arrow_back';
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      function nextStep() {
+        if (currentStep === totalSteps) {
+          document.getElementById('intake-form').dispatchEvent(new Event('submit', { cancelable: true }));
+        } else {
+          goToStep(currentStep + 1);
+        }
+      }
+
+      function previousStep() {
+        if (currentStep > 1) {
+          goToStep(currentStep - 1);
+        }
+      }
+
+      function updateHeaderAndPills() {
+        const langDict = isEnglish ? i18n.en : i18n.ar;
+        
+        const countEl = document.getElementById('step-count-text');
+        if (countEl) countEl.textContent = langDict.step_fmt(currentStep, totalSteps);
+
+        const titleCrumb = document.getElementById('step-title-crumb');
+        if (titleCrumb) titleCrumb.textContent = langDict.titles[currentStep - 1];
+
+        const pills = document.querySelectorAll('.step-pill');
+        pills.forEach(pill => {
+          const pIndex = parseInt(pill.getAttribute('data-pill'), 10);
+          if (pIndex === currentStep) {
+            pill.className = "step-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs flex items-center gap-2 transition-all bg-primary text-on-primary shadow-sm font-bold";
+            pill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          } else {
+            pill.className = "step-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs flex items-center gap-2 transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface";
+          }
+        });
+      }
+
+      function selectFitz(radioInput) {
+        const cards = document.querySelectorAll('.fitz-card');
+        cards.forEach(c => {
+          const ind = c.querySelector('.card-indicator');
+          if (ind) ind.classList.add('hidden');
+          c.classList.remove('border-primary');
+          c.classList.add('border-outline-variant/30');
+        });
+
+        const activeCard = radioInput.closest('.fitz-card');
+        if (activeCard) {
+          const ind = activeCard.querySelector('.card-indicator');
+          if (ind) ind.classList.remove('hidden');
+          activeCard.classList.remove('border-outline-variant/30');
+          activeCard.classList.add('border-primary');
+        }
+      }
+
+      function toggleNoAllergies(checkbox) {
+        const allergies = document.querySelectorAll('input[name="allergies"]');
+        if (checkbox.checked) {
+          allergies.forEach(cb => {
+            cb.checked = false;
+            cb.disabled = true;
+          });
+          const notes = document.getElementById('allergy-notes');
+          if (notes) notes.value = '';
+        } else {
+          allergies.forEach(cb => cb.disabled = false);
+        }
+      }
+
+      function checkAllergyOption() {
+        const noAllergyCheck = document.getElementById('check-no-allergy');
+        if (noAllergyCheck && noAllergyCheck.checked) {
+          noAllergyCheck.checked = false;
+        }
+      }
+
+      function toggleRoaccWarning(show) {
+        const panel = document.getElementById('roacc-warning-panel');
+        if (panel) {
+          if (show) {
+            panel.classList.remove('hidden');
+            showWarningToast();
+          } else {
+            panel.classList.add('hidden');
+          }
+        }
+      }
+
+      function togglePregnancyNote(show) {
+        const note = document.getElementById('pregnancy-notice');
+        if (note) {
+          if (show) {
+            note.classList.remove('hidden');
+          } else {
+            note.classList.add('hidden');
+          }
+        }
+      }
+
+      function toggleTanDetails(show) {
+        const panel = document.getElementById('tan-details-panel');
+        if (panel) {
+          if (show) {
+            panel.classList.remove('hidden');
+            showWarningToast();
+          } else {
+            panel.classList.add('hidden');
+          }
+        }
+      }
+
+      function showWarningToast() {
+        const toast = document.getElementById('clinical-warning-toast');
+        if (toast) toast.classList.remove('hidden');
+      }
+
+      function dismissWarningToast() {
+        const toast = document.getElementById('clinical-warning-toast');
+        if (toast) toast.classList.add('hidden');
+      }
+
+      function triggerWarningDemo() {
+        const toast = document.getElementById('clinical-warning-toast');
+        if (toast) {
+          toast.classList.remove('hidden');
+          toast.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+
+      function toggleLanguage() {
+        isEnglish = !isEnglish;
+        const app = document.getElementById('lumea-intake-app');
+        const langBtn = document.getElementById('lang-label');
+        
+        if (isEnglish) {
+          if (app) app.setAttribute('dir', 'ltr');
+          if (langBtn) langBtn.textContent = 'العربية';
+          document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (i18n.en[key]) el.textContent = i18n.en[key];
+          });
+        } else {
+          if (app) app.setAttribute('dir', 'rtl');
+          if (langBtn) langBtn.textContent = 'English';
+          document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (i18n.ar[key]) el.textContent = i18n.ar[key];
+          });
+        }
+
+        updateHeaderAndPills();
+        refreshSummaryView();
+      }
+
+      function refreshSummaryView() {
+        const selectedSkin = document.querySelector('input[name="skin_type"]:checked')?.value || 'I';
+        const skinInfo = skinData[selectedSkin] || skinData['I'];
+        const sumSwatch = document.getElementById('sum-swatch');
+        const sumSkinText = document.getElementById('sum-skin-text');
+        if (sumSwatch) {
+          sumSwatch.style.backgroundColor = skinInfo.color;
+          sumSwatch.textContent = selectedSkin;
+        }
+        if (sumSkinText) {
+          sumSkinText.textContent = isEnglish ? skinInfo.titleEn : skinInfo.titleAr;
+        }
+
+        const noAllergy = document.getElementById('check-no-allergy')?.checked;
+        const sumAllergy = document.getElementById('sum-allergy-text');
+        if (sumAllergy) {
+          if (noAllergy) {
+            sumAllergy.textContent = isEnglish ? 'No allergies reported' : 'لا توجد حساسية مسجلة';
+          } else {
+            const checkedAllergies = document.querySelectorAll('input[name="allergies"]:checked');
+            if (checkedAllergies.length > 0) {
+              sumAllergy.textContent = isEnglish ? `${checkedAllergies.length} conditions reported` : `تم تحديد ${checkedAllergies.length} حالات للمراجعة`;
+            } else {
+              sumAllergy.textContent = isEnglish ? 'Standard profile' : 'الملف قياسي - بدون حساسية ملحوظة';
+            }
+          }
+        }
+
+        const roaccVal = document.querySelector('input[name="roaccutane_used"]:checked')?.value;
+        const sumRoacc = document.getElementById('sum-roacc-text');
+        if (sumRoacc) {
+          if (roaccVal === 'yes') {
+            sumRoacc.textContent = isEnglish ? '⚠️ Used within 6 months (Flagged)' : '⚠️ تم تناوله مؤخراً (مدرج للمراجعة الطبية)';
+            sumRoacc.className = 'text-xs text-error font-bold';
+          } else {
+            sumRoacc.textContent = isEnglish ? 'Not taken within 6 months' : 'لم يتم تناول الروكتان خلال الـ 6 أشهر الماضية';
+            sumRoacc.className = 'text-xs text-on-surface font-bold';
+          }
+        }
+
+        const pregVal = document.querySelector('input[name="maternal_status"]:checked')?.value;
+        const sumPreg = document.getElementById('sum-preg-text');
+        if (sumPreg) {
+          if (pregVal === 'pregnant') {
+            sumPreg.textContent = isEnglish ? 'Currently pregnant (Postponed)' : 'يوجد حمل (يُرجى التأجيل لحين الولادة)';
+            sumPreg.className = 'text-xs text-error font-bold';
+          } else if (pregVal === 'breastfeeding') {
+            sumPreg.textContent = isEnglish ? 'Breastfeeding (Precautions noted)' : 'رضاعة طبيعية (تم تدوين الاحتياطات)';
+            sumPreg.className = 'text-xs text-on-surface font-bold';
+          } else {
+            sumPreg.textContent = isEnglish ? 'No pregnancy or breastfeeding' : 'لا يوجد حمل أو رضاعة طبيعية';
+            sumPreg.className = 'text-xs text-on-surface font-bold';
+          }
+        }
+
+        const keloidVal = document.querySelector('input[name="keloid_history"]:checked')?.value;
+        const sumKeloid = document.getElementById('sum-keloid-text');
+        if (sumKeloid) {
+          if (keloidVal === 'yes') {
+            sumKeloid.textContent = isEnglish ? 'History of Keloids (Spot Test)' : 'تاريخ تكون جدرة (يوصى بنبضة تجريبية)';
+          } else if (keloidVal === 'unsure') {
+            sumKeloid.textContent = isEnglish ? 'Unsure (Will assess)' : 'غير متأكدة (سيتم الفحص بالعيادة)';
+          } else {
+            sumKeloid.textContent = isEnglish ? 'No keloid formation history' : 'لا يوجد أي تاريخ لتكون الجدرة';
+          }
+        }
+
+        const tanVal = document.querySelector('input[name="recent_tan"]:checked')?.value;
+        const sumTan = document.getElementById('sum-tan-text');
+        if (sumTan) {
+          if (tanVal === 'yes') {
+            const tanDate = document.getElementById('tan-date')?.value || '';
+            sumTan.textContent = isEnglish ? `Recent tan (${tanDate || 'Within 4 wks'})` : `تعرض حديث للتان (${tanDate || 'خلال ٤ أسابيع'})`;
+            sumTan.className = 'text-xs text-primary font-bold';
+          } else {
+            sumTan.textContent = isEnglish ? 'No recent sun exposure' : 'لا يوجد تان أو تعرض شمسي حديث';
+            sumTan.className = 'text-xs text-on-surface font-bold';
+          }
+        }
+      }
+
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        const consent = document.getElementById('consent-check');
+        if (!consent || !consent.checked) {
+          alert(isEnglish ? 'Please agree to the medical consent declaration before submitting.' : 'يرجى الموافقة على الإقرار الطبي لإتمام الإرسال.');
+          if (consent) consent.focus();
+          return;
+        }
+
+        const banner = document.getElementById('submit-success-banner');
+        if (banner) {
+          banner.classList.remove('hidden');
+          banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        const nextBtn = document.getElementById('next-btn');
+        if (nextBtn) {
+          nextBtn.className = "h-12 px-8 rounded-xl bg-tertiary text-on-tertiary font-bold text-xs flex items-center justify-center gap-2 shadow-md pointer-events-none";
+          const nextBtnText = document.getElementById('next-btn-text');
+          if (nextBtnText) nextBtnText.textContent = isEnglish ? 'Intake Form Confirmed ✓' : 'تم تأكيد النموذج الطبي بنجاح ✓';
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        goToStep(1);
+      });
+    </script>
+  </main>
+</body>
+</html>

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-variant": "#dce2f7",
+          "secondary": "#006591",
+          "tertiary-container": "#007a53",
+          "secondary-fixed-dim": "#89ceff",
+          "inverse-on-surface": "#edf0ff",
+          "on-surface": "#141b2b",
+          "on-secondary": "#ffffff",
+          "tertiary-fixed": "#6ffbbe",
+          "on-tertiary-fixed": "#002113",
+          "primary": "#4241bc",
+          "on-background": "#141b2b",
+          "on-primary": "#ffffff",
+          "error": "#ba1a1a",
+          "on-primary-fixed": "#0a006b",
+          "on-error-container": "#93000a",
+          "surface-container-highest": "#dce2f7",
+          "surface-tint": "#4e4ec9",
+          "surface-container-low": "#f1f3ff",
+          "on-tertiary": "#ffffff",
+          "surface-bright": "#f9f9ff",
+          "on-secondary-container": "#004666",
+          "tertiary-fixed-dim": "#4edea3",
+          "secondary-container": "#39b8fd",
+          "on-primary-fixed-variant": "#3533b0",
+          "outline": "#777585",
+          "tertiary": "#005f40",
+          "on-secondary-fixed": "#001e2f",
+          "outline-variant": "#c7c4d6",
+          "secondary-fixed": "#c9e6ff",
+          "primary-fixed-dim": "#c1c1ff",
+          "background": "#f9f9ff",
+          "on-primary-container": "#edeaff",
+          "on-surface-variant": "#464553",
+          "surface-container-high": "#e1e8fd",
+          "surface-container-lowest": "#ffffff",
+          "surface-container": "#e9edff",
+          "on-tertiary-container": "#a3ffd0",
+          "primary-container": "#5b5bd6",
+          "inverse-primary": "#c1c1ff",
+          "surface": "#f9f9ff",
+          "surface-dim": "#d3daef",
+          "error-container": "#ffdad6",
+          "inverse-surface": "#293040",
+          "primary-fixed": "#e2dfff",
+          "on-error": "#ffffff",
+          "on-secondary-fixed-variant": "#004c6e",
+          "on-tertiary-fixed-variant": "#005236"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin-mobile": "1rem",
+          "space-lg": "1.25rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem",
+          "space-xl": "2rem",
+          "space-md": "0.75rem",
+          "margin": "2rem",
+          "gutter": "1.25rem",
+          "gutter-mobile": "0.75rem"
+        },
+        "fontFamily": {
+          "display-lg-mobile": [
+            "IBM Plex Sans"
+          ],
+          "title-sm": [
+            "IBM Plex Sans"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "headline-lg-mobile": [
+            "IBM Plex Sans"
+          ],
+          "metric-mono": [
+            "Inter"
+          ],
+          "body-lg": [
+            "IBM Plex Sans"
+          ],
+          "display-lg": [
+            "IBM Plex Sans"
+          ],
+          "headline-md": [
+            "IBM Plex Sans"
+          ],
+          "headline-lg": [
+            "IBM Plex Sans"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "body-sm": [
+            "IBM Plex Sans"
+          ],
+          "body-md": [
+            "IBM Plex Sans"
+          ]
+        },
+        "fontSize": {
+          "display-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "38px",
+              "fontWeight": "700"
+            }
+          ],
+          "title-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg-mobile": [
+            "22px",
+            {
+              "lineHeight": "30px",
+              "fontWeight": "600"
+            }
+          ],
+          "metric-mono": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ],
+          "display-lg": [
+            "36px",
+            {
+              "lineHeight": "48px",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-body-md text-on-surface min-h-screen antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><main class="w-full min-h-screen flex flex-col justify-center items-center p-0"><div class="flex flex-col w-full">
+<div class="w-full flex flex-col lg:flex-row bg-background text-on-surface antialiased" dir="rtl" id="login-screen-root">
+<!-- LEFT/HERO PANEL: Brand, Clinical Rigor & Regulatory Showcase (Side A) -->
+<section class="w-full lg:w-1/2 relative overflow-hidden bg-surface-container-low flex flex-col justify-between p-6 sm:p-10 lg:p-12 order-2 lg:order-1 min-h-[640px] lg:min-h-full">
+<!-- Decorative Laser Optics SVG Ambient Ring -->
+<div class="absolute -top-24 -start-24 w-96 h-96 rounded-full bg-primary-fixed-dim/30 blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-10 -end-10 w-80 h-80 rounded-full bg-secondary-fixed/40 blur-2xl pointer-events-none"></div>
+<!-- Subtle Clinical Grid Lines & Pulse Watermark (Inline SVG) -->
+<svg class="absolute inset-0 w-full h-full opacity-15 pointer-events-none text-primary" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="laser-grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.75"></path>
+</pattern>
+</defs>
+<rect fill="url(#laser-grid)" height="100%" width="100%"></rect>
+<circle cx="85%" cy="30%" fill="none" r="160" stroke="currentColor" stroke-dasharray="6 6" stroke-width="1.5"></circle>
+<circle cx="85%" cy="30%" fill="none" r="220" stroke="currentColor" stroke-width="1"></circle>
+<path d="M 0 350 Q 250 280 500 360 T 1000 320" fill="none" stroke="currentColor" stroke-width="2"></path>
+</svg>
+<!-- Top Header / Identity Area -->
+<div class="relative z-10 space-y-6">
+<div class="flex items-center gap-3.5">
+<img alt="Lumea Clinic OS Logo" class="w-12 h-12 rounded-xl object-contain bg-surface-container-lowest shadow-sm p-1.5" src="https://lh3.googleusercontent.com/aida/AEtjO1UQGSLqC_mz9_viDgK3e58MI42bZYozu3l4t1H2QrjJJIIFPhyL-xREf8js9w2nEg5Ix20zIWQy7-4-7WA64GJaflaf75vwGHSZf4CmM0JOjD7ZYaVkMSZofWLkzVkdQdUGVIAWrqzZ2zvRNYjxtZKYqOKumB_tfCmxL-SiRWf7jQ5P3EvlDrL0N-VZV7C5KnDWNgQXZ6gjQnVsFrRiwphtE7GPtJLIChxZAABKXahFlg"/>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-display-lg text-title-sm text-primary font-bold tracking-tight" data-i18n="brand_en">Lumea Clinic OS</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant">v4.2 PRO</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant font-medium" data-i18n="brand_ar">نظام لوميا لإدارة العيادات الطبية والتجميلية</p>
+</div>
+</div>
+<!-- Headline & Aesthetic Laser Proposition -->
+<div class="space-y-3 pt-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-lowest shadow-sm text-label-sm font-label-sm text-primary">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+<span data-i18n="network_badge">الشبكة السحابية المشتركة • الرياض | جدة | الخبر</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold leading-tight" data-i18n="hero_title">
+            المنصة السحابية الموحدة لعيادات الجلدية، جراحة التجميل، وبروتوكولات الليزر
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl leading-relaxed" data-i18n="hero_desc">
+            تحكم فوري ودقيق في طاقة النبضات، معايير الأجهزة (Candela, Fotona, Cynosure)، وجدولة الاستشارات التجميلية مع التزام تام باللوائح الصحية السعودية.
+          </p>
+</div>
+</div>
+<!-- Center Feature / Real-time Multi-Branch Metric Card -->
+<div class="relative z-10 my-8 bg-surface-container-lowest/90 backdrop-blur-md rounded-xl p-5 shadow-sm space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-headline-md">hub</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold" data-i18n="branch_status_title">حالة المزامنة بين الفروع النشطة</span>
+</div>
+<span class="font-metric-mono text-label-sm text-tertiary font-bold bg-tertiary-fixed/30 px-2.5 py-0.5 rounded-full" data-i18n="live_sync">100% متزامن</span>
+</div>
+<div class="grid grid-cols-3 gap-3 pt-1">
+<div class="bg-surface-container-low rounded-lg p-3 text-center">
+<div class="font-metric-mono text-metric-mono font-bold text-primary">14</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant truncate" data-i18n="metric_branches">فروع معتمدة</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 text-center">
+<div class="font-metric-mono text-metric-mono font-bold text-secondary">180K+</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant truncate" data-i18n="metric_sessions">جلسة ليزر موثقة</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 text-center">
+<div class="font-metric-mono text-metric-mono font-bold text-tertiary">0.08s</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant truncate" data-i18n="metric_latency">زمن استجابة السيرفر</div>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-label-md text-tertiary">verified</span>
+<span data-i18n="audit_trail">سجل تدقيق العمليات الطبية محمي بنظام PDPL</span>
+</span>
+<span class="font-metric-mono text-label-sm text-outline">KSA-CENTRAL-01</span>
+</div>
+</div>
+<!-- Regulatory Badges & Compliance Row -->
+<div class="relative z-10 space-y-3.5 pt-2">
+<div class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider font-semibold" data-i18n="reg_compliance_header">
+          الاعتمادات والتكاملات التنظيمية الحكومية (المملكة العربية السعودية)
+        </div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+<!-- ZATCA Phase 2 -->
+<div class="bg-surface-container-lowest/80 rounded-lg p-2.5 shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-title-sm" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<div class="min-w-0">
+<div class="text-label-sm font-label-sm font-bold text-on-surface leading-tight">ZATCA المرحلة 2</div>
+<div class="text-label-sm font-label-sm text-tertiary truncate" data-i18n="zatca_status">ربط فوترة حية</div>
+</div>
+</div>
+<!-- PDPL Data Protection -->
+<div class="bg-surface-container-lowest/80 rounded-lg p-2.5 shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-title-sm" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+<div class="min-w-0">
+<div class="text-label-sm font-label-sm font-bold text-on-surface leading-tight">نظام PDPL</div>
+<div class="text-label-sm font-label-sm text-primary truncate" data-i18n="pdpl_status">حماية البيانات</div>
+</div>
+</div>
+<!-- NPHIES & Wasfaty -->
+<div class="bg-surface-container-lowest/80 rounded-lg p-2.5 shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-title-sm" style="font-variation-settings: 'FILL' 1;">clinical_notes</span>
+<div class="min-w-0">
+<div class="text-label-sm font-label-sm font-bold text-on-surface leading-tight">NPHIES &amp; وصفتي</div>
+<div class="text-label-sm font-label-sm text-secondary truncate" data-i18n="nphies_status">ربط تأميني معتمد</div>
+</div>
+</div>
+<!-- Local Cloud Hosting -->
+<div class="bg-surface-container-lowest/80 rounded-lg p-2.5 shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-title-sm" style="font-variation-settings: 'FILL' 1;">cloud_done</span>
+<div class="min-w-0">
+<div class="text-label-sm font-label-sm font-bold text-on-surface leading-tight">سيرفرات محلية</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant truncate" data-i18n="datacenter_status">استضافة الرياض</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- RIGHT/LOGIN PANEL: Authentication Portal (Side B) -->
+<section class="w-full lg:w-1/2 flex flex-col justify-between p-6 sm:p-10 lg:p-12 bg-surface order-1 lg:order-2">
+<!-- Top Action Bar: Lang Toggle & System Health -->
+<div class="flex items-center justify-between pb-6 gap-3 flex-wrap">
+<!-- Live System Node Indicator -->
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low text-label-sm font-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span data-i18n="system_status">النظام متاح • الخوادم داخل المملكة 🇸🇦</span>
+</div>
+<!-- Language Switcher Pill Toggle -->
+<div class="inline-flex items-center p-1 rounded-full bg-surface-container-high">
+<button class="px-3 py-1 text-label-sm font-label-sm rounded-full transition-all bg-surface-container-lowest text-primary shadow-sm font-bold" id="lang-btn-ar" type="button">
+            العربية (AR)
+          </button>
+<button class="px-3 py-1 text-label-sm font-label-sm rounded-full transition-all text-on-surface-variant font-medium hover:text-on-surface" id="lang-btn-en" type="button">
+            English (EN)
+          </button>
+</div>
+</div>
+<!-- Main Login Flow Container -->
+<div class="w-full max-w-md mx-auto my-auto space-y-6">
+<!-- Interactive QA / Review State Switcher Bar -->
+<div class="bg-surface-container-low rounded-xl p-2.5">
+<div class="flex items-center justify-between mb-2 px-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-sm text-primary">toggle_on</span>
+<span data-i18n="state_tester_label">معاينة الحالات التفاعلية (State Switcher):</span>
+</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
+<button class="state-pill text-label-sm font-label-sm py-1.5 px-2 rounded-lg bg-primary text-on-primary font-semibold text-center transition-all shadow-sm" id="btn-state-default" type="button">
+              افتراضي
+            </button>
+<button class="state-pill text-label-sm font-label-sm py-1.5 px-2 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high text-center transition-all" id="btn-state-error" type="button">
+              خطأ تحقق
+            </button>
+<button class="state-pill text-label-sm font-label-sm py-1.5 px-2 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high text-center transition-all" id="btn-state-locked" type="button">
+              كلمة مرور خاطئة
+            </button>
+<button class="state-pill text-label-sm font-label-sm py-1.5 px-2 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high text-center transition-all" id="btn-state-loading" type="button">
+              جاري التحميل
+            </button>
+</div>
+</div>
+<!-- Form Card Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-6 sm:p-8 space-y-6">
+<!-- Card Header -->
+<div class="space-y-1.5">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold" data-i18n="form_title">
+              تسجيل دخول الكادر الطبي والإداري
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="form_subtitle">
+              أدخل بيانات الاعتماد المعتمدة للوصول إلى فرعك وصلاحيات العيادة
+            </p>
+</div>
+<!-- Role Quick-fill Pills -->
+<div class="space-y-2">
+<span class="text-label-sm font-label-sm text-outline font-semibold uppercase tracking-wider block" data-i18n="role_quickfill_label">
+              اختيار دور وظيفي سريع للتجربة:
+            </span>
+<div class="flex flex-wrap gap-2">
+<button class="role-chip inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-label-sm font-label-sm text-on-surface transition-all" id="role-doctor" type="button">
+<span class="material-symbols-outlined text-body-sm text-primary">stethoscope</span>
+<span>د. سارة العتيبي (جلدية)</span>
+</button>
+<button class="role-chip inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-label-sm font-label-sm text-on-surface transition-all" id="role-reception" type="button">
+<span class="material-symbols-outlined text-body-sm text-secondary">badge</span>
+<span>نورة الشمري (استقبال)</span>
+</button>
+<button class="role-chip inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-label-sm font-label-sm text-on-surface transition-all" id="role-manager" type="button">
+<span class="material-symbols-outlined text-body-sm text-tertiary">admin_panel_settings</span>
+<span>م. خالد (مدير الفرع)</span>
+</button>
+</div>
+</div>
+<!-- Wrong Password Security Alert Banner (Toggled via JS) -->
+<div class="hidden rounded-xl bg-error-container p-4 text-on-error-container space-y-1 animate-fadeIn" id="alert-banner-error">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-headline-md text-error">gpp_maybe</span>
+<span class="font-title-sm text-title-sm font-bold text-error" data-i18n="alert_error_title">كلمة المرور غير صحيحة</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-error-container leading-relaxed ps-7" data-i18n="alert_error_desc">
+              متبقي 3 محاولات تسجيل دخول قبل تعليق الحساب مؤقتاً لحماية السجلات الطبية وفق معايير PDPL.
+            </p>
+</div>
+<!-- Form Element -->
+<form class="space-y-4" id="lumea-login-form" onsubmit="event.preventDefault(); triggerSubmitState();">
+<!-- Email Field -->
+<div class="space-y-1.5">
+<label class="block text-label-md font-label-md font-semibold text-on-surface" data-i18n="field_email_label" for="staff-email">
+                البريد الإلكتروني المهني
+              </label>
+<div class="relative flex items-center">
+<span class="absolute start-3.5 text-on-surface-variant material-symbols-outlined text-headline-md pointer-events-none">
+                  alternate_email
+                </span>
+<input class="w-full h-11 ps-11 pe-4 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md font-body-md focus:bg-surface-container-lowest focus:outline-none shadow-sm transition-all" id="staff-email" name="email" placeholder="name@derma-lumea.sa" required="" type="email" value="s.otaibi@derma-lumea.sa"/>
+</div>
+<p class="hidden text-body-sm font-body-sm text-error flex items-center gap-1 pt-1" data-i18n="email_error_msg" id="email-validation-msg">
+<span class="material-symbols-outlined text-body-sm">error</span>
+<span>يرجى إدخال بريد إلكتروني صالح ومعتمد لدى منظومة العيادة</span>
+</p>
+</div>
+<!-- Password Field -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="block text-label-md font-label-md font-semibold text-on-surface" data-i18n="field_password_label" for="staff-password">
+                  كلمة المرور
+                </label>
+<a class="text-label-sm font-label-sm font-medium text-primary hover:text-primary-container hover:underline transition-all" data-i18n="forgot_password" href="#recovery">
+                  نسيت كلمة المرور؟
+                </a>
+</div>
+<div class="relative flex items-center">
+<span class="absolute start-3.5 text-on-surface-variant material-symbols-outlined text-headline-md pointer-events-none">
+                  lock
+                </span>
+<input class="w-full h-11 ps-11 pe-11 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md font-body-md focus:bg-surface-container-lowest focus:outline-none shadow-sm transition-all" id="staff-password" name="password" placeholder="••••••••••••" required="" type="password" value="LaserPulse#2025!"/>
+<button aria-label="Toggle Password Visibility" class="absolute end-3 text-on-surface-variant hover:text-on-surface p-1 flex items-center justify-center transition-colors" id="toggle-password-visibility" type="button">
+<span class="material-symbols-outlined text-headline-md" id="eye-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Options Row: Remember Device & Session Duration -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2.5 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" id="remember-device" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface-variant font-medium" data-i18n="remember_me">
+                  تذكر هذا الجهاز (30 يوماً في الفرع)
+                </span>
+</label>
+<span class="text-label-sm font-label-sm text-outline hidden sm:inline" data-i18n="session_timeout">
+                انتهاء الجلسة تلقائياً: 8 س
+              </span>
+</div>
+<!-- Submit Primary Action Button -->
+<div class="pt-2">
+<button class="w-full h-12 bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm font-semibold rounded-xl shadow-md flex items-center justify-center gap-2.5 transition-all active:scale-[0.99]" id="submit-login-btn" type="submit">
+<!-- Normal Content State -->
+<span class="material-symbols-outlined text-headline-md" id="btn-icon">login</span>
+<span data-i18n="submit_btn" id="btn-text">تسجيل الدخول إلى النظام</span>
+<!-- Spinner Element (hidden by default) -->
+<svg class="hidden animate-spin h-5 w-5 text-on-primary" fill="none" id="btn-spinner" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+</button>
+</div>
+</form>
+<!-- Branch Quick Selector Footer Hint -->
+<div class="pt-2 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant bg-surface-container-low rounded-lg p-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-headline-md text-primary">domain</span>
+<div>
+<span class="text-label-sm font-label-sm block text-outline" data-i18n="current_branch_label">الفرع المخصص لجهازك:</span>
+<span class="font-bold text-on-surface text-body-sm" data-i18n="current_branch_val">فرع العليا التخصصي - الرياض (عيادة 04)</span>
+</div>
+</div>
+<button class="text-label-sm font-label-sm text-primary font-semibold hover:underline" data-i18n="change_branch" type="button">
+              تغيير الفرع
+            </button>
+</div>
+</div>
+</div>
+<!-- Bottom Meta Footer -->
+<footer class="pt-8 space-y-2 text-center sm:text-start">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-body-sm font-body-sm text-on-surface-variant">
+<!-- Live Islamic Hijri & Gregorian Calendar Sync -->
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-body-md text-tertiary">calendar_month</span>
+<span class="font-medium font-metric-mono" data-i18n="date_stamp" id="calendar-stamp">الخميس، 15 شعبان 1446 هـ | 13 فبراير 2025 م</span>
+</div>
+<!-- Medical Hotline & Emergency Staff Assist -->
+<div class="flex items-center gap-2 text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-body-md text-secondary">support_agent</span>
+<span data-i18n="tech_support">الدعم الفني الطبي: </span>
+<a class="font-metric-mono font-bold text-on-surface hover:text-primary" href="tel:920008899">92000-LUMEA (58632)</a>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-2 pt-2 text-label-sm font-label-sm text-outline">
+<span data-i18n="footer_encryption">Lumea OS v4.2.8 • تشفير أمني عالي 256-bit AES متوافق مع هيئة الأمن السيبراني (NCA)</span>
+<span data-i18n="rights_reserved">جميع الحقوق محفوظة لعيادات لوميا الطبية بالمملكة © 2025</span>
+</div>
+</footer>
+</section>
+</div>
+<!-- Client-side Interactive Logic (Language switch, State Simulator, Role Prefill) -->
+<script>
+    (function () {
+      const root = document.getElementById('login-screen-root');
+      const emailInput = document.getElementById('staff-email');
+      const passwordInput = document.getElementById('staff-password');
+      const togglePasswordBtn = document.getElementById('toggle-password-visibility');
+      const eyeIcon = document.getElementById('eye-icon');
+      const submitBtn = document.getElementById('submit-login-btn');
+      const btnText = document.getElementById('btn-text');
+      const btnIcon = document.getElementById('btn-icon');
+      const btnSpinner = document.getElementById('btn-spinner');
+      const alertBanner = document.getElementById('alert-banner-error');
+      const emailErrorMsg = document.getElementById('email-validation-msg');
+
+      // State Buttons
+      const btnStateDefault = document.getElementById('btn-state-default');
+      const btnStateError = document.getElementById('btn-state-error');
+      const btnStateLocked = document.getElementById('btn-state-locked');
+      const btnStateLoading = document.getElementById('btn-state-loading');
+      const statePills = [btnStateDefault, btnStateError, btnStateLocked, btnStateLoading];
+
+      // Lang Buttons
+      const btnAr = document.getElementById('lang-btn-ar');
+      const btnEn = document.getElementById('lang-btn-en');
+
+      let currentLang = 'ar';
+
+      // Bilingual dictionary for dynamic toggling
+      const dict = {
+        ar: {
+          brand_en: "Lumea Clinic OS",
+          brand_ar: "نظام لوميا لإدارة العيادات الطبية والتجميلية",
+          network_badge: "الشبكة السحابية المشتركة • الرياض | جدة | الخبر",
+          hero_title: "المنصة السحابية الموحدة لعيادات الجلدية، جراحة التجميل، وبروتوكولات الليزر",
+          hero_desc: "تحكم فوري ودقيق في طاقة النبضات، معايير الأجهزة (Candela, Fotona, Cynosure)، وجدولة الاستشارات التجميلية مع التزام تام باللوائح الصحية السعودية.",
+          branch_status_title: "حالة المزامنة بين الفروع النشطة",
+          live_sync: "100% متزامن",
+          metric_branches: "فروع معتمدة",
+          metric_sessions: "جلسة ليزر موثقة",
+          metric_latency: "زمن استجابة السيرفر",
+          audit_trail: "سجل تدقيق العمليات الطبية محمي بنظام PDPL",
+          reg_compliance_header: "الاعتمادات والتكاملات التنظيمية الحكومية (المملكة العربية السعودية)",
+          zatca_status: "ربط فوترة حية",
+          pdpl_status: "حماية البيانات",
+          nphies_status: "ربط تأميني معتمد",
+          datacenter_status: "استضافة الرياض",
+          system_status: "النظام متاح • الخوادم داخل المملكة 🇸🇦",
+          state_tester_label: "معاينة الحالات التفاعلية (State Switcher):",
+          form_title: "تسجيل دخول الكادر الطبي والإداري",
+          form_subtitle: "أدخل بيانات الاعتماد المعتمدة للوصول إلى فرعك وصلاحيات العيادة",
+          role_quickfill_label: "اختيار دور وظيفي سريع للتجربة:",
+          alert_error_title: "كلمة المرور غير صحيحة",
+          alert_error_desc: "متبقي 3 محاولات تسجيل دخول قبل تعليق الحساب مؤقتاً لحماية السجلات الطبية وفق معايير PDPL.",
+          field_email_label: "البريد الإلكتروني المهني",
+          email_error_msg: "يرجى إدخال بريد إلكتروني صالح ومعتمد لدى منظومة العيادة",
+          field_password_label: "كلمة المرور",
+          forgot_password: "نسيت كلمة المرور؟",
+          remember_me: "تذكر هذا الجهاز (30 يوماً في الفرع)",
+          session_timeout: "انتهاء الجلسة تلقائياً: 8 س",
+          submit_btn: "تسجيل الدخول إلى النظام",
+          current_branch_label: "الفرع المخصص لجهازك:",
+          current_branch_val: "فرع العليا التخصصي - الرياض (عيادة 04)",
+          change_branch: "تغيير الفرع",
+          date_stamp: "الخميس، 15 شعبان 1446 هـ | 13 فبراير 2025 م",
+          tech_support: "الدعم الفني الطبي: ",
+          footer_encryption: "Lumea OS v4.2.8 • تشفير أمني عالي 256-bit AES متوافق مع هيئة الأمن السيبراني (NCA)",
+          rights_reserved: "جميع الحقوق محفوظة لعيادات لوميا الطبية بالمملكة © 2025"
+        },
+        en: {
+          brand_en: "Lumea Clinic OS",
+          brand_ar: "Aesthetic & Laser Medical Clinic Operating System",
+          network_badge: "Unified Cloud Network • Riyadh | Jeddah | Khobar",
+          hero_title: "Unified Cloud Operating System for Dermatology, Aesthetics & Laser Protocols",
+          hero_desc: "Precise control over laser fluence, pulse width, multi-device parameters (Candela, Fotona, Cynosure), and aesthetic bookings with strict Saudi healthcare regulatory compliance.",
+          branch_status_title: "Active Multi-Branch Synchronization",
+          live_sync: "100% Synced",
+          metric_branches: "Certified Branches",
+          metric_sessions: "Documented Laser Sessions",
+          metric_latency: "Server Latency",
+          audit_trail: "Clinical audit trail encrypted under Saudi PDPL",
+          reg_compliance_header: "Government Regulatory Integrations (Kingdom of Saudi Arabia)",
+          zatca_status: "Phase 2 Live Invoicing",
+          pdpl_status: "Data Privacy Certified",
+          nphies_status: "NPHIES & Wasfaty Ready",
+          datacenter_status: "Riyadh In-Kingdom Cloud",
+          system_status: "Operational • Servers in KSA 🇸🇦",
+          state_tester_label: "Live State Switcher:",
+          form_title: "Staff & Practitioner Portal Sign In",
+          form_subtitle: "Enter authorized clinic credentials to access branch resources",
+          role_quickfill_label: "Quick Role Fill Presets:",
+          alert_error_title: "Incorrect Password",
+          alert_error_desc: "3 attempts remaining before temporary account lockout under PDPL security protocols.",
+          field_email_label: "Professional Clinic Email",
+          email_error_msg: "Please enter a valid authorized clinic email address",
+          field_password_label: "Password",
+          forgot_password: "Forgot Password?",
+          remember_me: "Remember this workstation (30 Days)",
+          session_timeout: "Auto session timeout: 8h",
+          submit_btn: "Sign In to Clinic System",
+          current_branch_label: "Designated Workstation Branch:",
+          current_branch_val: "Olaya Specialized Branch - Riyadh (Room 04)",
+          change_branch: "Switch Branch",
+          date_stamp: "Thursday, 15 Sha'ban 1446 AH | 13 Feb 2025",
+          tech_support: "Clinical IT Hotline: ",
+          footer_encryption: "Lumea OS v4.2.8 • 256-bit AES Clinical Encryption compliant with NCA KSA",
+          rights_reserved: "All rights reserved. Lumea Aesthetic Medical Clinics © 2025"
+        }
+      };
+
+      function updateLanguage(lang) {
+        currentLang = lang;
+        root.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+        
+        if (lang === 'ar') {
+          btnAr.className = "px-3 py-1 text-label-sm font-label-sm rounded-full transition-all bg-surface-container-lowest text-primary shadow-sm font-bold";
+          btnEn.className = "px-3 py-1 text-label-sm font-label-sm rounded-full transition-all text-on-surface-variant font-medium hover:text-on-surface";
+        } else {
+          btnEn.className = "px-3 py-1 text-label-sm font-label-sm rounded-full transition-all bg-surface-container-lowest text-primary shadow-sm font-bold";
+          btnAr.className = "px-3 py-1 text-label-sm font-label-sm rounded-full transition-all text-on-surface-variant font-medium hover:text-on-surface";
+        }
+
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (dict[lang][key]) {
+            el.textContent = dict[lang][key];
+          }
+        });
+      }
+
+      btnAr.addEventListener('click', () => updateLanguage('ar'));
+      btnEn.addEventListener('click', () => updateLanguage('en'));
+
+      // Toggle Password Visibility
+      togglePasswordBtn.addEventListener('click', () => {
+        const isPassword = passwordInput.getAttribute('type') === 'password';
+        passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+        eyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+      });
+
+      // Role Presets Fill
+      document.getElementById('role-doctor').addEventListener('click', () => {
+        emailInput.value = 's.otaibi@derma-lumea.sa';
+        passwordInput.value = 'DermaDr#2025Pulse';
+        resetErrors();
+      });
+
+      document.getElementById('role-reception').addEventListener('click', () => {
+        emailInput.value = 'n.shammary@derma-lumea.sa';
+        passwordInput.value = 'FrontDesk*Riyadh9';
+        resetErrors();
+      });
+
+      document.getElementById('role-manager').addEventListener('click', () => {
+        emailInput.value = 'k.khalid@derma-lumea.sa';
+        passwordInput.value = 'ExecAdmin%LumeaKSA';
+        resetErrors();
+      });
+
+      // State Switcher Handlers
+      function setActiveStateButton(activeBtn) {
+        statePills.forEach(btn => {
+          btn.className = "state-pill text-label-sm font-label-sm py-1.5 px-2 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high text-center transition-all";
+        });
+        activeBtn.className = "state-pill text-label-sm font-label-sm py-1.5 px-2 rounded-lg bg-primary text-on-primary font-semibold text-center transition-all shadow-sm";
+      }
+
+      function resetErrors() {
+        emailInput.classList.remove('bg-error-container', 'text-on-error-container');
+        emailInput.classList.add('bg-surface-container-lowest', 'text-on-surface');
+        emailErrorMsg.classList.add('hidden');
+        alertBanner.classList.add('hidden');
+        
+        // Reset button
+        submitBtn.disabled = false;
+        btnSpinner.classList.add('hidden');
+        btnIcon.classList.remove('hidden');
+        btnText.textContent = dict[currentLang].submit_btn;
+      }
+
+      btnStateDefault.addEventListener('click', () => {
+        setActiveStateButton(btnStateDefault);
+        resetErrors();
+      });
+
+      btnStateError.addEventListener('click', () => {
+        setActiveStateButton(btnStateError);
+        resetErrors();
+        emailInput.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+        emailInput.classList.add('bg-error-container', 'text-on-error-container');
+        emailErrorMsg.classList.remove('hidden');
+        emailInput.focus();
+      });
+
+      btnStateLocked.addEventListener('click', () => {
+        setActiveStateButton(btnStateLocked);
+        resetErrors();
+        alertBanner.classList.remove('hidden');
+        passwordInput.value = 'WrongSecret99!';
+      });
+
+      btnStateLoading.addEventListener('click', () => {
+        setActiveStateButton(btnStateLoading);
+        resetErrors();
+        submitBtn.disabled = true;
+        btnIcon.classList.add('hidden');
+        btnSpinner.classList.remove('hidden');
+        btnText.textContent = currentLang === 'ar' ? 'جاري التحقق من الصلاحيات والربط الآمن...' : 'Verifying credentials & audit token...';
+      });
+
+      window.triggerSubmitState = function() {
+        btnStateLoading.click();
+        setTimeout(() => {
+          btnStateDefault.click();
+        }, 2200);
+      };
+
+    })();
+  </script>
+</div></main></body></html>

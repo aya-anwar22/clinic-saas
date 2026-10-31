@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>الموافقات والخصوصية | عيادات لوميا</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "error-container": "#ffdad6",
+            "on-tertiary-container": "#003b26",
+            "on-primary": "#ffffff",
+            "surface-container-high": "#dee8ff",
+            "surface-container-low": "#f0f3ff",
+            "primary-fixed": "#d3e3ff",
+            "on-error-container": "#93000a",
+            "primary-fixed-dim": "#a3c9ff",
+            "background": "#f9f9ff",
+            "secondary-container": "#e6e2dc",
+            "outline": "#717783",
+            "on-secondary-container": "#666460",
+            "inverse-primary": "#a3c9ff",
+            "surface-tint": "#0060ab",
+            "on-primary-fixed-variant": "#004883",
+            "outline-variant": "#c1c7d4",
+            "surface-dim": "#cfdaf2",
+            "on-secondary-fixed-variant": "#484742",
+            "primary": "#0060ab",
+            "surface-variant": "#d8e3fb",
+            "surface-container-lowest": "#ffffff",
+            "error": "#ba1a1a",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed": "#002113",
+            "surface-container": "#e7eeff",
+            "primary-container": "#4f9df7",
+            "on-primary-fixed": "#001c39",
+            "on-error": "#ffffff",
+            "surface-bright": "#f9f9ff",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed": "#6ffbbe",
+            "on-primary-container": "#003360",
+            "inverse-surface": "#263143",
+            "on-background": "#111c2d",
+            "surface": "#f9f9ff",
+            "secondary-fixed": "#e6e2dc",
+            "surface-container-highest": "#d8e3fb",
+            "tertiary-container": "#00b07a",
+            "on-surface": "#111c2d",
+            "secondary": "#605e5a",
+            "on-tertiary-fixed-variant": "#005236",
+            "inverse-on-surface": "#ecf1ff",
+            "tertiary": "#006c49",
+            "tertiary-fixed-dim": "#4edea3",
+            "on-secondary-fixed": "#1c1c18",
+            "on-surface-variant": "#414752",
+            "secondary-fixed-dim": "#c9c6c0"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    ::-webkit-scrollbar { display: none; }
+  </style>
+</head>
+<body class="bg-surface font-sans text-on-surface antialiased flex flex-col min-h-screen">
+
+  <!-- Full Web Top Navigation Bar (بدون سايدبار) -->
+  <header class="sticky top-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand & Navigation Links -->
+      <div class="flex items-center gap-8">
+        <a href="home.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-md">
+            <span class="material-symbols-outlined text-[24px]">spa</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-lg text-primary tracking-tight">عيادات لوميا</span>
+            <span class="text-xs text-on-surface-variant">Lumia Medical Clinics</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-1 bg-surface-container/60 p-1.5 rounded-xl">
+          <a href="home.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">الرئيسية</a>
+          <a href="Book.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">حجز موعد</a>
+          <a href="MyBookings.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">مواعيدي</a>
+          <a href="MyPackages.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">باقاتي</a>
+          <a href="Consents.html" class="px-4 py-2 rounded-lg text-sm font-semibold text-primary bg-surface-container-lowest shadow-sm">الموافقات والخصوصية</a>
+          <a href="Invoices.html" class="px-4 py-2 rounded-lg text-sm font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest transition-all">الفواتير</a>
+        </nav>
+      </div>
+
+      <!-- Quick Actions / User Profile -->
+      <div class="flex items-center gap-3">
+        <button class="h-9 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-primary font-medium text-xs flex items-center gap-1.5 transition-colors" onclick="toggleLanguageDirection()" type="button">
+          <span class="material-symbols-outlined text-[16px]">translate</span>
+          <span id="lang-btn-text">EN</span>
+        </button>
+        <a href="Wallet.html" class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-variant transition-all text-sm font-medium text-on-surface">
+          <span class="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
+          <span>المحفظة</span>
+        </a>
+        <a href="Profile.html" class="flex items-center gap-2 pl-3 pr-1 py-1 rounded-full bg-surface-container border border-outline-variant/30 hover:border-primary transition-all">
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-xs">
+            آية
+          </div>
+          <span class="hidden lg:inline text-xs font-semibold text-on-surface pl-1">آية أنور</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Web Container -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-8">
+    <div class="flex flex-col w-full space-y-6 text-on-surface" id="lumea-consents-app" dir="rtl">
+      
+      <!-- Interactive Demo / State Switcher Toolbar -->
+      <section class="bg-surface-container-lowest p-4 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col gap-3">
+        <div class="flex items-center justify-between px-1">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+            <span class="text-xs font-semibold text-on-surface-variant">لوحة معاينة الحالات السريرية (Interactive State Switcher)</span>
+          </div>
+          <span class="text-xs text-tertiary px-2.5 py-1 rounded-full bg-surface-container font-semibold">نظام متصل • Live</span>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          <button class="state-btn py-2 px-3 rounded-xl bg-primary text-on-primary text-xs font-semibold text-center transition-all shadow-sm" id="btn-state-default" onclick="setDemoState('default')" type="button">
+            الحالة المعتمدة
+          </button>
+          <button class="state-btn py-2 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-medium text-center transition-all" id="btn-state-pending" onclick="setDemoState('pending')" type="button">
+            تحديث معلق (v3.2)
+          </button>
+          <button class="state-btn py-2 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-medium text-center transition-all" id="btn-state-withdrawn" onclick="setDemoState('withdrawn')" type="button">
+            سحب الإذن (Revoked)
+          </button>
+          <button class="state-btn py-2 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-medium text-center transition-all flex items-center justify-center gap-1" id="btn-state-lang" onclick="toggleLanguageDirection()" type="button">
+            <span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+            <span>English (LTR)</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Clinic Identity & Regulatory Trust Anchor Card -->
+      <section class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-4 min-w-0">
+          <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-primary">
+            <span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+          </div>
+          <div class="flex flex-col min-w-0">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-base text-on-surface truncate">مركز لوميا لليزر والجلدية التخصصي</span>
+              <span class="w-2 h-2 rounded-full bg-tertiary shrink-0"></span>
+            </div>
+            <p class="text-xs text-on-surface-variant truncate mt-0.5">
+              سجل الامتثال: MOH-SA-488219 • متوافق مع نظام حماية البيانات الشخصية (PDPL)
+            </p>
+          </div>
+        </div>
+        <div class="hidden sm:flex flex-col items-end shrink-0">
+          <span class="text-xs text-on-surface-variant">آخر تدقيق نظامي</span>
+          <span class="text-sm text-primary font-bold">10 يناير 2026 م</span>
+        </div>
+      </section>
+
+      <!-- 1. Re-acceptance Notice Banner -->
+      <section class="relative overflow-hidden bg-primary-fixed/30 rounded-2xl p-6 shadow-sm border border-primary/20 transition-all duration-300" id="banner-reacceptance">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shrink-0 text-on-primary">
+            <span class="material-symbols-outlined text-[22px]">notification_important</span>
+          </div>
+          <div class="flex flex-col gap-2 min-w-0 flex-1">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-base text-on-primary-fixed">
+                تحديث وثيقة إقرار العلاج السريري (الإصدار v3.2)
+              </h3>
+              <button aria-label="إخفاء التنبيه" class="text-on-surface-variant hover:text-on-surface p-1 rounded-full hover:bg-surface-container transition-colors" onclick="dismissBanner()" type="button">
+                <span class="material-symbols-outlined text-[20px]">close</span>
+              </button>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              تم تحديث معايير السلامة الخاصة ببروتوكولات التبريد بالليزر (Cryo-cooling) ومضاعفات التعرض لأشعة الشمس. يُلزم مراجعة الإقرار وتجديد الموافقة الإلكترونية قبل موعد جلستك القادمة.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 mt-2">
+              <button class="h-10 px-5 rounded-xl bg-primary text-on-primary font-semibold text-xs flex items-center gap-2 shadow-sm hover:opacity-95 transition-all" onclick="openReviewModal()" type="button">
+                <span class="material-symbols-outlined text-[16px]">draw</span>
+                <span>مراجعة وتجديد الإقرار الآن (Review &amp; Renew)</span>
+              </button>
+              <span class="text-xs text-on-surface-variant font-medium">
+                الموعد القادم: 18 فبراير 2026 م
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Telemetry & Status Ribbon -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="bg-surface-container-lowest p-4 rounded-2xl text-center shadow-sm border border-outline-variant/30 flex flex-col items-center">
+          <span class="text-xs text-on-surface-variant">الموافقات الإلزامية</span>
+          <span class="text-xl font-bold text-on-surface mt-1">2 / 2</span>
+          <span class="text-xs text-tertiary flex items-center gap-1 mt-1 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> سارية نظاماً
+          </span>
+        </div>
+        <div class="bg-surface-container-lowest p-4 rounded-2xl text-center shadow-sm border border-outline-variant/30 flex flex-col items-center">
+          <span class="text-xs text-on-surface-variant">الموافقات الاختيارية</span>
+          <span class="text-xl font-bold text-on-surface mt-1" id="optional-count-metric">1 / 2</span>
+          <span class="text-xs text-on-surface-variant flex items-center gap-1 mt-1">
+            بناءً على اختيارك
+          </span>
+        </div>
+        <div class="bg-surface-container-lowest p-4 rounded-2xl text-center shadow-sm border border-outline-variant/30 flex flex-col items-center">
+          <span class="text-xs text-on-surface-variant">سجل التشفير</span>
+          <span class="text-xl font-bold text-primary mt-1">AES-256</span>
+          <span class="text-xs text-outline flex items-center gap-1 mt-1">
+            خوادم سعودية محصنة
+          </span>
+        </div>
+      </div>
+
+      <!-- SECTION A: Mandatory Clinical & Health Consents -->
+      <section class="space-y-4">
+        <div class="flex items-center justify-between px-1">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-primary"></span>
+            <h2 class="text-lg font-bold text-on-surface">
+              القسم الأول: الموافقات السريرية والصحية الإلزامية
+            </h2>
+          </div>
+          <span class="text-xs text-error font-bold px-3 py-1 rounded-full bg-error-container/40">
+            إلزامية لاستمرار الرعاية
+          </span>
+        </div>
+        <p class="text-xs text-on-surface-variant px-1">
+          هذه الإقرارات تتطلبها الأنظمة الطبية لوزارة الصحة ونظام مزاولة المهن الصحية، لضمان سلامتكم وملاءمة العلاج بالليزر.
+        </p>
+
+        <!-- CARD 1: Processing Health Data -->
+        <article class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/30 space-y-4 transition-all">
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-surface-container text-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[24px]">medical_information</span>
+              </div>
+              <div class="flex flex-col">
+                <h3 class="font-bold text-base text-on-surface">معالجة بياناتي وسجلاتي الصحية</h3>
+                <span class="text-xs text-on-surface-variant mt-0.5">Processing of Clinical &amp; Health Records • الإصدار v3.0</span>
+              </div>
+            </div>
+            <span class="shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-tertiary/10 text-tertiary text-xs font-semibold">
+              <span class="material-symbols-outlined text-[16px]">lock</span>
+              <span>مفعل وإلزامي</span>
+            </span>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-on-surface-variant bg-surface-container/40 p-3 rounded-xl">
+            <div class="flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px] text-outline">history_edu</span>
+              <span>تاريخ القبول: 14 أكتوبر 2025 م</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px] text-outline">gavel</span>
+              <span>مستند إلى المادة (5) من نظام PDPL</span>
+            </div>
+          </div>
+
+          <p class="text-sm text-on-surface-variant leading-relaxed">
+            نستخدم بياناتك وسجلك الطبي السريري فقط لتشخيص حالتك ومعايرة أجهزة الليزر بأمان من قبل الطاقم الطبي المعتمد، ولا يتم مشاركتها خارج المنظومة الطبية.
+          </p>
+
+          <div class="pt-1">
+            <button class="flex items-center justify-between w-full text-primary hover:text-primary/80 transition-colors py-1" onclick="toggleAccordion('acc-legal-1', 'icon-acc-1')" type="button">
+              <span class="text-xs font-semibold flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[18px]">policy</span>
+                <span>قراءة النص النظامي الكامل وسند المعالجة (Legal Clause)</span>
+              </span>
+              <span class="material-symbols-outlined text-[18px] transition-transform duration-200" id="icon-acc-1">expand_more</span>
+            </button>
+            <div class="hidden mt-3 p-4 rounded-xl bg-surface-container-low text-xs text-on-surface-variant leading-relaxed space-y-2" id="acc-legal-1">
+              <p>وفقاً للائحة التنفيذية لنظام حماية البيانات الشخصية الصادر بالمرسوم الملكي رقم (م/19): تقر وتوافق على قيام مجمع لوميا الطبي بحفظ ومعالجة البيانات الحيوية والتشخيصية.</p>
+              <p>تُحفظ السجلات للمدة النظامية المقررة بـ (10) سنوات بموجب لوائح وزارة الصحة.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 2: General Treatment & Laser Consent -->
+        <article class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/30 space-y-4 transition-all" id="card-treatment-consent">
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-surface-container text-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[24px]">cloud_upload</span>
+              </div>
+              <div class="flex flex-col">
+                <div class="flex items-center gap-2">
+                  <h3 class="font-bold text-base text-on-surface">الموافقة العامة على الإجراءات السريرية والليزر</h3>
+                  <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full font-bold" id="badge-treatment-new">تحديث جديد v3.2</span>
+                </div>
+                <span class="text-xs text-on-surface-variant mt-0.5">General Clinical Laser &amp; Dermatological Procedures</span>
+              </div>
+            </div>
+            <span class="shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant text-xs font-medium" id="badge-treatment-status">
+              <span class="material-symbols-outlined text-[16px] text-primary">pending_actions</span>
+              <span id="txt-treatment-status">مراجعة معلقة</span>
+            </span>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-on-surface-variant bg-surface-container/40 p-3 rounded-xl">
+            <div class="flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px] text-outline">verified</span>
+              <span>الإصدار السابق v3.1 معتمد حتى 18 فبراير 2026 م</span>
+            </div>
+            <div class="flex items-center gap-1.5 text-primary font-medium">
+              <span class="material-symbols-outlined text-[16px]">info</span>
+              <span>يتطلب اعتماد التحديث قبل الجلسة القادمة</span>
+            </div>
+          </div>
+
+          <p class="text-sm text-on-surface-variant leading-relaxed">
+            الموافقة المسبقة على خطة العلاج المعتمدة من الاستشاري، وإرشادات السلامة الخاصة بجلسات الليزر (Alexandrite 755nm / Nd:YAG 1064nm) والعناية بالبشرة.
+          </p>
+
+          <div class="pt-1">
+            <button class="flex items-center justify-between w-full text-primary hover:text-primary/85 transition-colors py-1" onclick="toggleAccordion('acc-legal-2', 'icon-acc-2')" type="button">
+              <span class="text-xs font-semibold flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[18px]">warning</span>
+                <span>قائمة موانع الاستعمال والآثار الجانبية والاشتراطات السريرية</span>
+              </span>
+              <span class="material-symbols-outlined text-[18px] transition-transform duration-200" id="icon-acc-2">expand_more</span>
+            </button>
+            <div class="hidden mt-3 p-4 rounded-xl bg-surface-container-low text-xs text-on-surface-variant leading-relaxed space-y-2" id="acc-legal-2">
+              <p class="font-bold text-on-surface">موانع العلاج المؤقتة التي يجب الإفصاح عنها فوراً:</p>
+              <ul class="list-disc list-inside space-y-1">
+                <li>تناول علاجات الآيزوتريتينوين (الروكتان) خلال الأشهر الستة الماضية.</li>
+                <li>التعرض الحديث للتسمير (Tanning) أو أشعة الشمس المباشرة الشديدة خلال 14 يوماً.</li>
+                <li>وجود حمل أو أمراض حساسية الضوء النشطة.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-2 flex items-center justify-between">
+            <span class="text-xs text-on-surface-variant">توثيق رقمي بواسطة النفاذ الوطني / البصمة</span>
+            <button class="h-10 px-5 rounded-xl bg-primary text-on-primary font-semibold text-xs flex items-center gap-1.5 shadow-sm hover:opacity-95 transition-all" id="btn-update-consent" onclick="openReviewModal()" type="button">
+              <span class="material-symbols-outlined text-[16px]">draw</span>
+              <span>تحديث الإقرار (Update)</span>
+            </button>
+          </div>
+        </article>
+      </section>
+
+      <!-- SECTION B: Optional Permissions & Marketing -->
+      <section class="space-y-4 pt-2">
+        <div class="flex items-center justify-between px-1">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-secondary"></span>
+            <h2 class="text-lg font-bold text-on-surface">
+              القسم الثاني: التفضيلات والموافقات الاختيارية
+            </h2>
+          </div>
+          <span class="text-xs text-primary font-bold px-3 py-1 rounded-full bg-surface-container">
+            تحكم كامل وسحب فوري
+          </span>
+        </div>
+        <p class="text-xs text-on-surface-variant px-1">
+          يمكنك تفعيل أو إلغاء هذه الصلاحيات في أي وقت بضغطة زر دون أي تأثير على الرعاية والعلاج المجدول لك.
+        </p>
+
+        <!-- CARD 3: Before & After Photos -->
+        <article class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/30 space-y-4 transition-all" id="card-photos">
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-surface-container text-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[24px]">photo_camera</span>
+              </div>
+              <div class="flex flex-col">
+                <div class="flex items-center gap-2">
+                  <h3 class="font-bold text-base text-on-surface">الصور الطبية قبل وبعد الجلسات</h3>
+                  <span class="text-xs bg-surface-container text-on-surface-variant px-2 py-0.5 rounded font-medium">v2.1 • اختياري</span>
+                </div>
+                <span class="text-xs text-on-surface-variant mt-0.5">Clinical Progress Photography (Confidential File Only)</span>
+              </div>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer shrink-0">
+              <input checked="" class="sr-only peer" id="toggle-photos" onchange="handlePhotoToggle(this.checked)" type="checkbox"/>
+              <div class="w-12 h-7 bg-surface-container peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-surface peer-checked:bg-primary after:content-[''] after:absolute after:top-[2px] after:start-[3px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all after:shadow-sm"></div>
+            </label>
+          </div>
+
+          <div class="flex items-center justify-between text-xs text-on-surface-variant bg-surface-container/40 p-3 rounded-xl">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-tertiary" id="photo-dot"></span>
+              <span class="text-on-surface font-semibold" id="photo-status-text">مفعلة حالياً • تم منح الإذن في: 05 يناير 2026 م</span>
+            </div>
+            <button class="text-error font-medium hover:underline flex items-center gap-1" id="btn-withdraw-photos" onclick="withdrawPhotoConsent()" type="button">
+              <span class="material-symbols-outlined text-[16px]">cancel</span>
+              <span>سحب الموافقة الآن</span>
+            </button>
+          </div>
+
+          <p class="text-sm text-on-surface-variant leading-relaxed">
+            التقاط صور سريرية رقمية مقربة لتقييم استجابة الجلد ومقارنة النتائج داخل ملفك الطبي الخاص المشفر فقط. لا يتم استخدامها لأي غرض ترويجي.
+          </p>
+        </article>
+
+        <!-- CARD 4: Marketing on WhatsApp & SMS -->
+        <article class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/30 space-y-4 transition-all" id="card-marketing">
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[24px]">mark_chat_read</span>
+              </div>
+              <div class="flex flex-col">
+                <div class="flex items-center gap-2">
+                  <h3 class="font-bold text-base text-on-surface">الرسائل التسويقية والعروض عبر واتساب و SMS</h3>
+                  <span class="text-xs bg-surface-container text-on-surface-variant px-2 py-0.5 rounded font-medium">v1.0 • اختياري</span>
+                </div>
+                <span class="text-xs text-on-surface-variant mt-0.5">Marketing Offers &amp; Promotional Notifications</span>
+              </div>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer shrink-0">
+              <input class="sr-only peer" id="toggle-marketing" onchange="handleMarketingToggle(this.checked)" type="checkbox"/>
+              <div class="w-12 h-7 bg-surface-container peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-surface peer-checked:bg-primary after:content-[''] after:absolute after:top-[2px] after:start-[3px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all after:shadow-sm"></div>
+            </label>
+          </div>
+
+          <div class="flex items-center justify-between text-xs text-on-surface-variant bg-surface-container/40 p-3 rounded-xl">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-outline" id="mkt-dot"></span>
+              <span class="text-on-surface-variant font-medium" id="mkt-status-text">غير مفعل (مغلق افتراضياً) • لن تتلقى رسائل ترويجية</span>
+            </div>
+            <span class="text-outline font-medium" id="mkt-helper">يمكنك التفعيل متى شئت</span>
+          </div>
+
+          <p class="text-sm text-on-surface-variant leading-relaxed">
+            استلام تنبيهات العروض الترويجية الحصرية، وباقات الجلسات الموسمية. (تنبيهات المواعيد الطبية مستمرة دوماً ومستثناة من هذا الخيار).
+          </p>
+        </article>
+      </section>
+
+      <!-- 4. Legal Transparency & Patient Rights Footer Box -->
+      <section class="bg-surface-container-high/40 rounded-2xl p-6 shadow-sm border border-outline-variant/30 space-y-4">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-primary">
+            <span class="material-symbols-outlined text-[24px]">balance</span>
+          </div>
+          <div class="flex flex-col gap-1.5 min-w-0 flex-1">
+            <h3 class="font-bold text-base text-on-surface flex items-center gap-2">
+              <span>حقوقك القانونية وشفافية البيانات</span>
+              <span class="text-xs bg-surface-container text-primary px-2.5 py-0.5 rounded-full font-bold">PDPL Protected</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              وفقاً لنظام حماية البيانات الشخصية السعودي (PDPL)، يحق لك طلب نسخة كاملة من بياناتك، أو طلب تصحيحها، أو سحب موافقاتك الاختيارية في أي وقت دون أن يؤثر ذلك بأي شكل على جودة رعايتك الطبية.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <button class="h-12 px-4 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface font-semibold text-xs flex items-center justify-center gap-2 transition-all shadow-sm" onclick="downloadAuditPdf()" type="button">
+            <span class="material-symbols-outlined text-primary text-[20px]">download_for_offline</span>
+            <span>تحميل سجل الموافقات الموثق (PDF Audit Log)</span>
+          </button>
+          <button class="h-12 px-4 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface font-semibold text-xs flex items-center justify-center gap-2 transition-all shadow-sm" onclick="openDataSubjectRequestModal()" type="button">
+            <span class="material-symbols-outlined text-outline text-[20px]">manage_search</span>
+            <span>طلب تصحيح أو تقييد البيانات (DPO Request)</span>
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-on-surface-variant px-1 pt-2 border-t border-outline-variant/20">
+          <span>مسؤول حماية البيانات (DPO): dpo@lumeaclinic.sa</span>
+          <span>الرياض، المملكة العربية السعودية</span>
+        </div>
+      </section>
+
+      <!-- Notification Toast Container -->
+      <div class="fixed bottom-6 start-6 sm:w-96 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 transition-all duration-300 opacity-0 pointer-events-none transform translate-y-3 z-50" id="toast-notification">
+        <span class="material-symbols-outlined text-tertiary-fixed text-[24px]" id="toast-icon">check_circle</span>
+        <div class="flex flex-col min-w-0 flex-1">
+          <span class="font-bold text-xs truncate" id="toast-title">تم تحديث الإعدادات</span>
+          <span class="text-xs text-surface-dim truncate mt-0.5" id="toast-desc">تم حفظ تفضيلاتك بنجاح في السجل الطبي</span>
+        </div>
+      </div>
+
+      <!-- Review & Renew Modal Overlay -->
+      <div class="fixed inset-0 bg-inverse-surface/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-200" id="modal-review">
+        <div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-6 shadow-2xl flex flex-col gap-4 border border-outline-variant/30 max-h-[90vh] overflow-y-auto">
+          <div class="flex items-center justify-between border-b pb-3 border-outline-variant/20">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-[18px]">verified</span>
+              </div>
+              <h3 class="font-bold text-base text-on-surface">تجديد إقرار العلاج بالليزر (v3.2)</h3>
+            </div>
+            <button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="closeReviewModal()" type="button">
+              <span class="material-symbols-outlined text-[20px]">close</span>
+            </button>
+          </div>
+          <div class="space-y-2.5 text-xs text-on-surface-variant bg-surface-container-low p-4 rounded-xl leading-relaxed">
+            <p class="font-bold text-on-surface">إقرار المريض الإلكتروني وفق المعايير السريرية 2026:</p>
+            <p>1. أقر بأني اطلعت على خطة علاج الليزر وتفاصيل الطول الموجي المحدد لبشرتي (Alexandrite 755nm / Nd:YAG 1064nm).</p>
+            <p>2. ألتزم بعدم استخدام المقشرات الكيميائية أو التعرض المباشر للشمس قبل 72 ساعة من الجلسة وبعدها.</p>
+            <p>3. أفهم أن استجابتي لليزر تختلف بحسب طبيعة الميلانين، وأني على علم بكافة الآثار الجانبية الطبيعية المحتملة.</p>
+          </div>
+          <div class="flex items-center gap-3 p-3 bg-surface-container/60 rounded-xl">
+            <input class="w-5 h-5 rounded text-primary focus:ring-0" id="modal-consent-checkbox" type="checkbox"/>
+            <label class="text-xs font-semibold text-on-surface cursor-pointer select-none" for="modal-consent-checkbox">
+              قرأت الإقرار أعلاه وأوافق على تجديد الإذن السريري إلكترونياً
+            </label>
+          </div>
+          <div class="flex items-center justify-end gap-3 pt-2">
+            <button class="h-10 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold text-xs" onclick="closeReviewModal()" type="button">
+              إلغاء
+            </button>
+            <button class="h-10 px-5 rounded-xl bg-primary text-on-primary font-bold text-xs shadow-sm hover:opacity-95 transition-all" onclick="confirmModalAcceptance()" type="button">
+              تأكيد واعتماد الإقرار
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scripts -->
+      <script>
+        let isRTL = true;
+        let currentState = 'default';
+
+        function showToast(title, desc, icon = 'check_circle', isError = false) {
+          const toast = document.getElementById('toast-notification');
+          const toastTitle = document.getElementById('toast-title');
+          const toastDesc = document.getElementById('toast-desc');
+          const toastIcon = document.getElementById('toast-icon');
+
+          if (!toast) return;
+
+          toastTitle.textContent = title;
+          toastDesc.textContent = desc;
+          toastIcon.textContent = icon;
+          toastIcon.className = `material-symbols-outlined text-[24px] ${isError ? 'text-error' : 'text-tertiary-fixed'}`;
+
+          toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+          toast.classList.add('opacity-100', 'translate-y-0');
+
+          setTimeout(() => {
+            toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+            toast.classList.remove('opacity-100', 'translate-y-0');
+          }, 3400);
+        }
+
+        function toggleAccordion(contentId, iconId) {
+          const content = document.getElementById(contentId);
+          const icon = document.getElementById(iconId);
+          if (!content) return;
+
+          if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            if (icon) icon.style.transform = 'rotate(180deg)';
+          } else {
+            content.classList.add('hidden');
+            if (icon) icon.style.transform = 'rotate(0deg)';
+          }
+        }
+
+        function handlePhotoToggle(isChecked) {
+          const photoDot = document.getElementById('photo-dot');
+          const photoStatusText = document.getElementById('photo-status-text');
+          const withdrawBtn = document.getElementById('btn-withdraw-photos');
+          const metricCount = document.getElementById('optional-count-metric');
+          const mktChecked = document.getElementById('toggle-marketing').checked;
+
+          if (isChecked) {
+            if (photoDot) photoDot.className = 'w-2.5 h-2.5 rounded-full bg-tertiary';
+            if (photoStatusText) {
+              photoStatusText.textContent = isRTL 
+                ? 'مفعلة حالياً • تم منح الإذن في: ' + new Date().toLocaleDateString('ar-SA')
+                : 'Granted & Active • Authorized on ' + new Date().toLocaleDateString('en-US');
+            }
+            if (withdrawBtn) withdrawBtn.classList.remove('hidden');
+            showToast(
+              isRTL ? 'تم تفعيل تصوير المتابعة' : 'Photo Consent Enabled', 
+              isRTL ? 'الصور تقتصر على ملفك الطبي الداخلي فقط' : 'Photos are confidential in your clinical file'
+            );
+          } else {
+            if (photoDot) photoDot.className = 'w-2.5 h-2.5 rounded-full bg-outline';
+            if (photoStatusText) {
+              photoStatusText.textContent = isRTL 
+                ? 'تم سحب الإذن • لن يتم التقاط صور سريرية'
+                : 'Withdrawn • No clinical photos will be taken';
+            }
+            if (withdrawBtn) withdrawBtn.classList.add('hidden');
+            showToast(
+              isRTL ? 'تم سحب الإذن بنجاح' : 'Permission Revoked', 
+              isRTL ? 'يحق لك إعادة التفعيل في أي وقت قبل الجلسة' : 'You can re-enable anytime prior to treatment', 
+              'info'
+            );
+          }
+
+          if (metricCount) {
+            const activeCount = (isChecked ? 1 : 0) + (mktChecked ? 1 : 0);
+            metricCount.textContent = `${activeCount} / 2`;
+          }
+        }
+
+        function withdrawPhotoConsent() {
+          const toggle = document.getElementById('toggle-photos');
+          if (toggle && toggle.checked) {
+            toggle.checked = false;
+            handlePhotoToggle(false);
+          }
+        }
+
+        function handleMarketingToggle(isChecked) {
+          const mktDot = document.getElementById('mkt-dot');
+          const mktStatusText = document.getElementById('mkt-status-text');
+          const mktHelper = document.getElementById('mkt-helper');
+          const metricCount = document.getElementById('optional-count-metric');
+          const photoChecked = document.getElementById('toggle-photos').checked;
+
+          if (isChecked) {
+            if (mktDot) mktDot.className = 'w-2.5 h-2.5 rounded-full bg-tertiary';
+            if (mktStatusText) {
+              mktStatusText.textContent = isRTL 
+                ? 'مفعل • ستصلك العروض وباقات العناية عبر واتساب' 
+                : 'Active • Marketing updates sent via WhatsApp';
+              mktStatusText.className = 'text-on-surface font-semibold';
+            }
+            if (mktHelper) mktHelper.textContent = isRTL ? 'يمكنك الإلغاء في أي وقت' : 'Revoke anytime';
+            showToast(
+              isRTL ? 'تم الاشتراك بالعروض' : 'Marketing Enabled', 
+              isRTL ? 'ستصلك رسائل ترويجية مخفضة ومختارة فقط' : 'You will receive selective promotions'
+            );
+          } else {
+            if (mktDot) mktDot.className = 'w-2.5 h-2.5 rounded-full bg-outline';
+            if (mktStatusText) {
+              mktStatusText.textContent = isRTL 
+                ? 'غير مفعل (مغلق افتراضياً) • لن تتلقى رسائل ترويجية' 
+                : 'Disabled (Opted out) • No promotional messages';
+              mktStatusText.className = 'text-on-surface-variant';
+            }
+            if (mktHelper) mktHelper.textContent = isRTL ? 'يمكنك التفعيل متى شئت' : 'Opt in anytime';
+            showToast(
+              isRTL ? 'تم إلغاء التنبيهات التسويقية' : 'Marketing Opted Out', 
+              isRTL ? 'ستصلك فقط التنبيهات والمواعيد الطبية الإلزامية' : 'Essential appointment reminders remain active'
+            );
+          }
+
+          if (metricCount) {
+            const activeCount = (photoChecked ? 1 : 0) + (isChecked ? 1 : 0);
+            metricCount.textContent = `${activeCount} / 2`;
+          }
+        }
+
+        function dismissBanner() {
+          const banner = document.getElementById('banner-reacceptance');
+          if (banner) {
+            banner.classList.add('opacity-0', 'scale-95');
+            setTimeout(() => banner.remove(), 250);
+            showToast(
+              isRTL ? 'تم تأجيل التنبيه' : 'Notice Dismissed', 
+              isRTL ? 'تذكر مراجعة الإقرار قبل موعدك القادم' : 'Please renew consent before next appointment'
+            );
+          }
+        }
+
+        function openReviewModal() {
+          const modal = document.getElementById('modal-review');
+          const chk = document.getElementById('modal-consent-checkbox');
+          if (chk) chk.checked = false;
+          if (modal) {
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.classList.add('opacity-100');
+          }
+        }
+
+        function closeReviewModal() {
+          const modal = document.getElementById('modal-review');
+          if (modal) {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.classList.remove('opacity-100');
+          }
+        }
+
+        function confirmModalAcceptance() {
+          const chk = document.getElementById('modal-consent-checkbox');
+          if (!chk || !chk.checked) {
+            alert(isRTL ? 'يرجى تأشير مربع الموافقة للاستمرار' : 'Please check the consent box to proceed');
+            return;
+          }
+
+          closeReviewModal();
+          const banner = document.getElementById('banner-reacceptance');
+          if (banner) banner.remove();
+
+          const badgeStatus = document.getElementById('badge-treatment-status');
+          const txtStatus = document.getElementById('txt-treatment-status');
+          const btnUpdate = document.getElementById('btn-update-consent');
+          const badgeNew = document.getElementById('badge-treatment-new');
+
+          if (badgeStatus) {
+            badgeStatus.className = 'shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-tertiary/10 text-tertiary text-xs font-semibold';
+          }
+          if (txtStatus) {
+            txtStatus.textContent = isRTL ? 'معتمد ومحدث (v3.2)' : 'Approved & Current (v3.2)';
+          }
+          if (badgeNew) {
+            badgeNew.className = 'text-xs bg-tertiary/10 text-tertiary px-2 py-0.5 rounded-full font-bold';
+            badgeNew.textContent = isRTL ? 'تم التجديد' : 'Renewed';
+          }
+          if (btnUpdate) {
+            btnUpdate.classList.add('hidden');
+          }
+
+          showToast(
+            isRTL ? 'تم تجديد الموافقة السريرية' : 'Consent Successfully Renewed',
+            isRTL ? 'تم توثيق النسخة v3.2 في سجلك الطبي بنجاح' : 'v3.2 officially logged in your clinical records'
+          );
+        }
+
+        function setDemoState(state) {
+          currentState = state;
+          document.querySelectorAll('.state-btn').forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary');
+            b.classList.add('bg-surface-container', 'text-on-surface');
+          });
+
+          const activeBtn = document.getElementById(`btn-state-${state}`);
+          if (activeBtn) {
+            activeBtn.classList.remove('bg-surface-container', 'text-on-surface');
+            activeBtn.classList.add('bg-primary', 'text-on-primary');
+          }
+
+          const togglePhotos = document.getElementById('toggle-photos');
+          const toggleMkt = document.getElementById('toggle-marketing');
+
+          if (state === 'default') {
+            if (togglePhotos) { togglePhotos.checked = true; handlePhotoToggle(true); }
+            if (toggleMkt) { toggleMkt.checked = false; handleMarketingToggle(false); }
+            showToast(isRTL ? 'الوضع الافتراضي للمريض' : 'Default Patient State', isRTL ? 'الموافقات الإلزامية مفعلة، والصور مقبولة' : 'Mandatory active, photos approved');
+          } else if (state === 'pending') {
+            openReviewModal();
+          } else if (state === 'withdrawn') {
+            if (togglePhotos) { togglePhotos.checked = false; handlePhotoToggle(false); }
+            if (toggleMkt) { toggleMkt.checked = false; handleMarketingToggle(false); }
+            showToast(isRTL ? 'تم سحب جميع الاختيارات' : 'All Discretionary Consents Revoked', isRTL ? 'تم تعيين جميع الصلاحيات الاختيارية على معطّلة' : 'All optional permissions disabled', 'warning');
+          }
+        }
+
+        function toggleLanguageDirection() {
+          isRTL = !isRTL;
+          const html = document.documentElement;
+          const app = document.getElementById('lumea-consents-app');
+          const langBtnText = document.getElementById('lang-btn-text');
+
+          if (isRTL) {
+            html.setAttribute('dir', 'rtl');
+            html.setAttribute('lang', 'ar');
+            app.setAttribute('dir', 'rtl');
+            if (langBtnText) langBtnText.textContent = 'EN';
+            showToast('تم التحويل إلى العربية', 'واجهة مستخدم عربية بالكامل متوافقة مع الأنظمة السعودية');
+          } else {
+            html.setAttribute('dir', 'ltr');
+            html.setAttribute('lang', 'en');
+            app.setAttribute('dir', 'ltr');
+            if langBtnText.textContent = 'عربي';
+            showToast('Switched to English', 'LTR clinical consent view active with PDPL compliance');
+          }
+        }
+
+        function downloadAuditPdf() {
+          showToast(
+            isRTL ? 'جارٍ إنشاء تقرير التدقيق الموثق...' : 'Generating Cryptographic PDF...',
+            isRTL ? 'سجل البصمة الزمنية المشفر متوافق مع نظام PDPL' : 'Includes timestamp and MOH compliance hash'
+          );
+        }
+
+        function openDataSubjectRequestModal() {
+          showToast(
+            isRTL ? 'قناة التواصل مع مسؤول البيانات DPO' : 'Data Subject Rights Request',
+            isRTL ? 'تم توجيه طلبك إلى فريق الامتثال الطبي (خلال 72 ساعة)' : 'Request dispatched to Lumea Compliance DPO (72h turnaround)',
+            'contact_support'
+          );
+        }
+      </script>
+    </div>
+  </main>
+</body>
+</html>
